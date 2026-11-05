@@ -1,0 +1,35 @@
+{
+  "name": "zoo-market",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "layers/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @zoo/host",
+    "build:business": "npm run build -w @zoo/business",
+    "dev": "npm run dev -w @zoo/host",
+    "dev:business": "npm run dev -w @zoo/business",
+    "preview:business": "npm run preview -w @zoo/business",
+    "typecheck:business": "npm run typecheck -w @zoo/business",
+    "i18n:todo": "node scripts/i18n-check.mjs",
+    "lint": "eslint .",
+    "postinstall": "npm run postinstall -w @zoo/host",
+    "preview": "npm run preview -w @zoo/host",
+    "qr": "node scripts/make-qr.mjs",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:icons": "node tests/icons.test.mjs",
+    "typecheck": "npm run typecheck -w @zoo/host"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.9.0",
+    "@playwright/test": "^1.63.0",
+    "eslint": "^9.39.0",
+    "qrcode": "^1.5.4",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.2.0"
+  },
+  "version": "0.0.0"
+}

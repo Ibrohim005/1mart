@@ -1,0 +1,83 @@
+{
+  "shell": {
+    "topbar": {
+      "city": "Shahar:",
+      "cityName": "Toshkent",
+      "chooseCity": "Shahar va yetkazib berish manzilini tanlash",
+      "pickupPoints": "Topshirish punktlari",
+      "becomeSeller": "Sotuvchi bo'lish",
+      "faq": "Savol-javob",
+      "myOrders": "Buyurtmalarim"
+    },
+    "header": {
+      "home": "1mart — bosh sahifa",
+      "catalog": "Katalog",
+      "searchPlaceholder": "Mahsulotlar va turkumlarni qidirish",
+      "searchLabel": "1mart bo'yicha qidiruv",
+      "search": "Qidirish",
+      "suggestions": "Qidiruv takliflari",
+      "login": "Kirish",
+      "profile": "Profil",
+      "favorites": "Saralangan",
+      "cart": "Savat",
+      "categoriesNav": "Ommabop turkumlar",
+      "more": "Yana"
+    },
+    "catalog": {
+      "popular": "Ommabop: {title}",
+      "title": "Turkumlar",
+      "allIn": "Bo'limdagi barcha mahsulotlar",
+      "empty": "Bu bo'limda hozircha ichki turkumlar yo'q",
+      "units": {
+        "kg": "kg",
+        "g": "g",
+        "l": "l",
+        "ml": "ml"
+      }
+    },
+    "home": {
+      "companyTitle": "Kompaniya uchun xaridlar",
+      "companyText": "Kompaniya balansidan yoki korporativ karta bilan",
+      "title": "1mart — O'zbekiston bo'ylab yetkazib beriladigan mahsulotlar internet-do'koni",
+      "weeklyDiscounts": "Hafta chegirmalari",
+      "endsIn": "Aksiya tugashiga",
+      "days": "{count} k",
+      "bestsellers": "Eng ko'p sotilganlar",
+      "newArrivals": "Yangi mahsulotlar",
+      "recommendations": "Tavsiyalar",
+      "showMore": "Yana ko'rsatish",
+      "showAll": "Barchasini ko'rish",
+      "allCategories": "Barcha turkumlar",
+      "loadError": "Mahsulotlarni yuklab bo'lmadi",
+      "retry": "Qayta urinish",
+      "noMore": "Siz barcha mahsulotlarni ko'rdingiz"
+    },
+    "footer": {
+      "tagline": "Kompaniyalar uchun B2B marketpleys: O'zbekiston bo'ylab yetkazib beriladigan minglab mahsulotlar.",
+      "about": "Biz haqimizda",
+      "aboutMarket": "1mart haqida",
+      "pickupPoints": "Topshirish punktlari",
+      "vacancies": "Bo'sh ish o'rinlari",
+      "users": "Foydalanuvchilarga",
+      "contact": "Biz bilan bog'lanish",
+      "faq": "Savol-javob",
+      "delivery": "Yetkazib berish",
+      "returns": "Mahsulotni qaytarish",
+      "business": "Tadbirkorlarga",
+      "sellOn1mart": "1mart'da soting",
+      "sellerLogin": "Sotuvchilar uchun kirish",
+      "socials": "1mart ijtimoiy tarmoqlarda",
+      "terms": "Foydalanuvchi kelishuvi",
+      "privacy": "Maxfiylik siyosati",
+      "copyright": "© {year} «Octagram» AJ. Barcha huquqlar himoyalangan"
+    },
+    "card": {
+      "toCart": "Savatga",
+      "addToCart": "«{title}»ni savatga qo'shish",
+      "rating": "Reyting {value}"
+    },
+    "checkout": {
+      "title": "Buyurtmani rasmiylashtirish"
+    }
+  }
+}

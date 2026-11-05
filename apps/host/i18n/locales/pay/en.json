@@ -1,0 +1,305 @@
+{
+  "pay": {
+    "common": {
+      "cancel": "Cancel",
+      "close": "Close",
+      "continue": "Continue"
+    },
+    "checkout": {
+      "title": "Checkout",
+      "steps": "Delivery → Payment → Confirmation",
+      "seoTitle": "Checkout — 1mart",
+      "empty": "No items selected for this order"
+    },
+    "delivery": {
+      "title": "Delivery",
+      "method": "Delivery method",
+      "courier": "Courier",
+      "pickup": "Pickup point",
+      "changeAddress": "Change",
+      "chooseService": "Delivery service",
+      "choosePoint": "Choose a pickup point",
+      "eta": "Arrives {date}",
+      "pickupFrom": "Ready from {date}",
+      "paylovLogistics": "1mart",
+      "providers": {
+        "express24": "Express 24",
+        "maxsus": "Maxsus Courier",
+        "yandex": "Yandex Delivery"
+      }
+    },
+    "payment": {
+      "card": "Corporate card",
+      "addCard": "Add a corporate card",
+      "expires": "exp. {date}",
+      "holdHint": "The amount is reserved. Once the order is confirmed, the money goes to the seller's settlement account. Fee: 0 UZS.",
+      "balance": "Company balance",
+      "available": "Available: {sum}",
+      "short": "Short by {sum}",
+      "topUp": "Top up",
+      "cardNote": "UzCard, Humo, Visa, Mastercard"
+    },
+    "summary": {
+      "delivery": "Delivery",
+      "commission": "Fee",
+      "free": "Free",
+      "total": "To pay",
+      "pay": "Pay {sum}",
+      "processing": "Processing…",
+      "holdNote": "The amount is reserved. Once the order is confirmed, the money goes to the seller's settlement account. If the seller declines, it is returned the same way.",
+      "legal": "By placing the order you accept the 1mart offer and consent to personal data processing"
+    },
+    "antifraud": {
+      "title": "Confirm the operation",
+      "lead": "Confirm that you are carrying out this operation personally, without the involvement or instructions of fraudsters.",
+      "point1": "1mart and bank staff never ask for SMS codes or card details.",
+      "point2": "Do not continue if someone rushes, threatens you or asks to move money to a “safe account”.",
+      "point3": "Check the amount and recipient before confirming.",
+      "purchaseAmount": "Purchase amount",
+      "checkbox": "I am carrying out this operation myself, without instructions from third parties"
+    },
+    "otp": {
+      "title": "SMS code",
+      "text": "We sent a 6-character code to {phone}. It is valid for 59 seconds.",
+      "cell": "Character {n}",
+      "attempts": "Attempts left: {n}",
+      "demoCode": "Test code (demo only):",
+      "confirm": "Confirm payment",
+      "resendIn": "Resend code in {s} s",
+      "resend": "Resend code",
+      "wrong": "Wrong code. Attempts left: {n}",
+      "expired": "The code has expired. Request a new one.",
+      "failed": "Could not verify the code. Please try again.",
+      "lockedTitle": "Actions are restricted for 15 minutes",
+      "lockedText": "The code was entered incorrectly three times. Financial operations are temporarily unavailable for your security.",
+      "lockedLeft": "Try again in {time}"
+    },
+    "funds": {
+      "title": "Insufficient funds",
+      "cardText": "The bank declined the payment: insufficient funds on the card. Choose another payment method.",
+      "required": "To pay",
+      "otherCard": "Choose another card",
+      "balanceText": "The company balance is too low. Top it up by transfer from your settlement account or pay with a corporate card.",
+      "available": "Available on balance",
+      "short": "Short by",
+      "topUp": "Top up balance",
+      "payByCard": "Pay with a corporate card",
+      "payByBalance": "Pay from balance"
+    },
+    "stock": {
+      "title": "Out of stock",
+      "text": "These items ran out at the seller while you were checking out. Remove them to pay for the rest.",
+      "itemNote": "{n} pcs requested — not available",
+      "remove": "Remove from order",
+      "removeAll": "Remove all and continue",
+      "summaryNote": "Remove the out-of-stock items"
+    },
+    "addCard": {
+      "title": "New corporate card",
+      "number": "Card number",
+      "expires": "Expiry",
+      "note": "Only cards issued to a company: UzCard, Humo, Visa, Mastercard. We store only the first 6 and last 4 digits.",
+      "save": "Add card",
+      "done": "Card linked",
+      "errorNumber": "Check the card number",
+      "errorExpires": "Check the card expiry date",
+      "errorCorporate": "This is a personal card. 1mart accepts corporate cards only"
+    },
+    "error": {
+      "title": "Payment failed",
+      "text": "No money was charged. Check your connection and try again."
+    },
+    "success": {
+      "title": "Order placed",
+      "text": "The funds are reserved and the order has been sent to the seller. Once confirmed, the money goes to the seller's settlement account.",
+      "order": "Order number",
+      "orders": "Order numbers",
+      "reserved": "Reserved",
+      "status": "Payment status",
+      "receipt": "Receipt",
+      "toOrder": "View order",
+      "toCatalog": "To catalog"
+    },
+    "receipt": {
+      "title": "Payment receipt",
+      "operator": "Operator",
+      "inn": "TIN",
+      "transaction": "Transaction ID",
+      "date": "Date and time",
+      "method": "Payment method",
+      "orders": "Orders",
+      "print": "Print"
+    },
+    "paymentStatus": {
+      "held": "Funds reserved",
+      "charged": "Paid, funds charged",
+      "refunded": "Funds returned"
+    },
+    "steps": {
+      "awaiting": "Awaiting seller",
+      "confirmed": "Confirmed",
+      "handedToDelivery": "Handed to delivery",
+      "readyForPickup": "Ready for pickup",
+      "delivered": "Delivered",
+      "received": "Received"
+    },
+    "orderState": {
+      "created": {
+        "title": "Order accepted",
+        "text": "The seller will confirm the order"
+      },
+      "paid": {
+        "title": "Order paid",
+        "text": "The seller will confirm the order"
+      },
+      "processing": {
+        "title": "Order is being processed",
+        "text": "The seller is preparing the order"
+      },
+      "onTheWay": {
+        "title": "Order on the way",
+        "text": "Expected delivery — {date}"
+      },
+      "awaitingSeller": {
+        "title": "Awaiting seller confirmation",
+        "text": "Funds are reserved and will be charged as soon as the seller confirms the order."
+      },
+      "confirmed": {
+        "title": "Order confirmed",
+        "text": "Payment charged, the order is being processed. Expected delivery — {date}"
+      },
+      "handedToDelivery": {
+        "title": "Handed to delivery",
+        "text": "The courier service is delivering your order. Expected delivery — {date}",
+        "textNoDate": "The delivery service will confirm the date"
+      },
+      "readyForPickup": {
+        "title": "Ready for pickup",
+        "text": "Your order is waiting at the 1mart pickup point"
+      },
+      "delivered": {
+        "title": "Order delivered",
+        "text": "Delivered {at}. Rate the purchase or request a return"
+      },
+      "canceled": {
+        "title": "Order canceled",
+        "text": "Order canceled {at}. Funds returned"
+      },
+      "rejectedBySeller": {
+        "title": "Canceled by seller",
+        "text": "The seller could not fulfil the order. The reserved funds have been returned"
+      },
+      "returnRequested": {
+        "title": "Return requested",
+        "text": "Return request accepted {at}. The seller will review it; money goes back to the same payment method"
+      }
+    },
+    "orders": {
+      "tracking": "Tracking number",
+      "cancel": "Cancel order",
+      "cancelConfirmText": "You can cancel until the seller confirms. The reservation is released and money returns to the same payment method.",
+      "cancelReason": "Canceled by the buyer",
+      "cancelDone": "Order canceled, funds returned",
+      "return": "Request a return",
+      "review": "Leave a review",
+      "reviewDone": "Thank you! Your review has been sent",
+      "refunded": "Funds returned to: {method}",
+      "rejectedToast": "The seller declined the order. Funds returned",
+      "statusChanged": "Order status: {status}"
+    },
+    "return": {
+      "title": "Request a return",
+      "reason": "Return reason",
+      "reasons": {
+        "defect": "Defect or damage",
+        "notAsDescribed": "Not as described",
+        "wrongItem": "Wrong item delivered",
+        "changedMind": "Changed my mind"
+      },
+      "details": "Comment",
+      "detailsPlaceholder": "Describe the problem (optional)",
+      "photos": "Photos (optional, up to 5)",
+      "addPhotos": "Add photos ({n} of 5)",
+      "note": "The seller will review the request. Money goes back to the method you paid with.",
+      "submit": "Send request",
+      "done": "Return requested"
+    },
+    "cart": {
+      "paymentTitle": "Pay from company balance or with a corporate card",
+      "deliveryNote": "Express 24, Maxsus Courier, Yandex Delivery or a pickup point"
+    },
+    "pdp": {
+      "title": "Payment methods",
+      "hint": "The amount is reserved and goes to the seller's settlement account once the order is confirmed",
+      "buyBoxHint": "Pay from company balance or with a corporate card",
+      "balanceNote": "Topped up by transfer from the company's settlement account"
+    },
+    "confirm": {
+      "title": "Pay from balance",
+      "amount": "Order total",
+      "left": "Left on balance",
+      "submit": "Confirm payment"
+    },
+    "balance": {
+      "title": "Company balance",
+      "seoTitle": "Company balance - 1mart",
+      "available": "Available for purchases",
+      "reserved": "Reserved for orders: {sum}",
+      "company": "Company",
+      "editCompany": "Edit bank details",
+      "backToCheckout": "Back to checkout",
+      "topUpTitle": "Top up balance",
+      "amount": "Amount, UZS",
+      "createInvoice": "Create invoice",
+      "amountError": "Enter the top-up amount",
+      "createError": "Could not save. Please try again.",
+      "topUpHint": "We'll issue an invoice with 1mart's bank details. Transfer the money from your company account and it appears on the balance once received.",
+      "invoicesTitle": "Top-up invoices",
+      "invoicesEmpty": "No invoices yet",
+      "invoiceNumber": "Invoice {number}",
+      "view": "Bank details",
+      "operationsTitle": "Money flow",
+      "operationsEmpty": "No operations yet",
+      "status": {
+        "awaiting": "Awaiting transfer",
+        "credited": "Credited"
+      },
+      "op": {
+        "topup": "Top-up, invoice {reference}",
+        "payment": "Payment for order {reference}",
+        "refund": "Refund for order {reference}"
+      }
+    },
+    "invoice": {
+      "demoNotice": "These are test bank details. Do not send real money to them.",
+      "amount": "Amount to transfer",
+      "recipient": "Recipient",
+      "purpose": "Payment purpose",
+      "purposeText": "1mart balance top-up, invoice {number}, payer INN {inn}",
+      "note": "The transfer must come from the settlement account of {company}.",
+      "copied": "Copied",
+      "copyError": "Could not copy",
+      "copyField": "Copy: {field}",
+      "copyAll": "Copy all bank details",
+      "demoCredit": "Simulate incoming transfer",
+      "credited": "Money credited to the balance"
+    },
+    "company": {
+      "title": "Company bank details",
+      "name": "Company name",
+      "inn": "INN",
+      "bank": "Bank",
+      "mfo": "MFO",
+      "account": "Settlement account",
+      "save": "Save",
+      "saved": "Bank details saved",
+      "error": {
+        "name": "Enter the company name",
+        "inn": "INN must be 9 digits",
+        "bank": "Enter the bank",
+        "mfo": "MFO must be 5 digits",
+        "account": "Settlement account must be 20 digits"
+      }
+    }
+  }
+}

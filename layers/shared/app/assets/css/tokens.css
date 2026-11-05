@@ -1,0 +1,160 @@
+/*
+ * Дизайн-токены Paylov Market (визуальный язык Zoo Market, палитра и шрифт Paylov).
+ * Все значения взяты напрямую из Figma-файла «Zooelon» (страница Market web site),
+ * ничего не подобрано на глаз. Макет свёрстан под ширину 1440 с контейнером 1240.
+ */
+:root {
+  /* --- Цвета: зелёный 1mart и холодные нейтрали, как в apps/business. --- */
+  --color-brand: #2CDD41;          /* верхняя плашка, кнопки «Категории» и «Корзинка» — зелёный 1mart */
+  --color-text: #111111;
+  --color-text-black: #000000;     /* подписи в шапке */
+  --color-text-muted: #6D6D6D;
+  --color-surface: #FFFFFF;
+  --color-page: #F6F6F6;
+  --color-field: #F0F1F3;
+  --color-icon-circle: #F0F1F3;
+  --color-avatar: #27383F;         /* аватар пользователя */
+  --color-danger: #FF4747;         /* счётчик корзины */
+
+  /* Палитра Paylov: оттенки бренда, тёмно-синий подвала, акцент */
+  --color-brand-dark: #22C636;     /* наведение на кнопки бренда */
+  --color-brand-darker: #119A24;   /* нажатие */
+  --color-brand-light: #6BF57C;
+  /* Подложка выбранного и активного состояния. Мятная заливка удешевляла витрину,
+     поэтому токен нейтральный: выбранное читается по рамке --color-brand.
+     apps/business переопределяет его своим значением в business.css. */
+  --color-brand-tint: var(--color-field);
+  --color-on-brand: #FFFFFF;       /* текст и иконки на зелёной заливке: решение заказчика, контраст с #2CDD41 около 1.9:1 */
+  --color-brand-text: #0E7C1D;     /* зелёный текст на светлом фоне: контраст 5.4:1 */
+  --color-brand-text-hover: #0A5214;
+  /* Чёрная акционная карточка с зелёным свечением: белый текст поверх неё читается. */
+  --promo-dark-bg:
+    radial-gradient(120% 140% at 88% 8%, rgb(44 221 65 / 24%) 0%, transparent 46%),
+    linear-gradient(152deg, #1C1C1C 0%, #121212 58%, #0B0B0B 100%);
+  --color-navy: #141414;
+  --color-navy-2: #262626;
+  --color-gray: #767676;
+  --color-accent: #FA8231;         /* акцент: скидки, таймер */
+  --color-topbar: #F0F1F3;
+  --color-line: #EAEAEA;
+
+  /* --- Скелетоны загрузки --- */
+  /* Тёплый тон между кремовым фоном и рамкой; блик на полтона светлее. */
+  --skeleton-base: #EDEEF0;
+  --skeleton-shine: #F6F7F8;
+
+
+  /* --- Бейджи карточки товара (значения из макета) --- */
+  --badge-discount-bg: #F7B460;        /* скидка до 50% */
+  --badge-discount-deep-bg: #F76060;   /* скидка от 50% */
+  --badge-cheaper-bg: #CDF6D4;
+  --badge-cheaper-text: #119A24;
+  --badge-shipping-bg: #D9B8FF;
+  --badge-shipping-text: #6126A6;
+  --badge-new-bg: #8CBAFF;
+  --badge-new-text: #1A4099;
+  --badge-installment-bg: #FFE600;
+  --badge-installment-text: #000000;
+
+  /* --- Типографика --- */
+  /* Шрифты системы 1mart (public/fonts):
+       Inter     — текст интерфейса;
+       Vela Sans — дисплейный: заголовки, баннеры, бейджи, крупные числа.
+     Rubik в дисплейной цепочке — запасной на время, пока не добавлен файл
+     VelaSans-Variable.woff2 (см. main.css). `sans-serif` — последний фолбэк. */
+  --font-ui: 'Inter', sans-serif;
+  --font-display: 'Vela Sans', 'Rubik', sans-serif;
+  --font-section: 'Vela Sans', 'Rubik', sans-serif;
+  --font-specs: 'Inter', sans-serif;
+  --font-badge: 'Vela Sans', 'Rubik', sans-serif;
+
+  /*
+   * Роли текста. Компоненты берут целиком `font: var(--type-…)`, а размер, начертание
+   * и шрифт не задают сами: чтобы поменять стиль всего сайта, достаточно правки здесь.
+   * Новый заголовок, поле или кнопка должны брать роль отсюда, а не свои числа.
+   */
+  --type-page-title: 700 28px/36px var(--font-display);    /* заголовок страницы */
+  --type-section-title: 700 22px/28px var(--font-display); /* блок страницы */
+  --type-dialog-title: 700 22px/28px var(--font-display);  /* заголовок окна */
+  --type-card-title: 700 17px/22px var(--font-display);    /* заголовок карточки */
+  --type-label: 500 14px/20px var(--font-ui);              /* подпись над полем */
+  --type-input: 500 15px/20px var(--font-ui);              /* текст в поле */
+  --type-button: 600 15px/20px var(--font-ui);             /* кнопка */
+  --type-button-sm: 600 14px/18px var(--font-ui);          /* маленькая кнопка внутри блока */
+  --input-color: var(--color-text);
+  --input-placeholder: var(--color-gray);
+  --label-color: var(--color-text-muted);
+
+  /* --- Сетка --- */
+  --container-width: 1240px;
+  --page-gutter: 100px;            /* (1440 - 1240) / 2 */
+
+  /* --- Единая стилистика: диалоги, кнопки, поля --- */
+  /* Значения сняты с экранов SIng / Card / Location / Procode.
+     Все диалоги и кнопки в проекте берут размеры отсюда — ничего
+     не задаётся «на глаз» в отдельных компонентах. */
+  --overlay-bg: rgb(82 82 82 / 60%);
+  --overlay-z: 300;
+
+  --dialog-width: 586px;
+  --dialog-radius: 30px;
+  --dialog-padding: 22px;
+
+  --close-size: 34px;
+  --close-bg: rgb(207 194 194 / 40%);
+  --close-bg-hover: rgb(207 194 194 / 70%);
+  --close-icon: 18.5px;
+
+  --control-height: 56px;          /* основная кнопка диалога */
+  --control-radius: 16px;
+
+  --field-height: 48px;
+  --field-radius: 14px;
+
+  --card-radius: 20.6px;
+  --section-gap: 48px;             /* отступ контейнера страницы до общих блоков */
+
+  /* Два контура: белый внутри виден на зелёной плашке шапки, зелёный
+     снаружи — на белом фоне. Одноцветное зелёное кольцо на своём же
+     фоне практически не читалось. */
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 5px rgb(44 221 65 / 85%);
+
+  /*
+   * Шкала кеглей. Построена на значениях, которые в макете встречаются чаще
+   * всего: они и стали ступенями. Редкие соседние величины (16.2, 16.45, 16.9
+   * и подобные) подтянуты к ближайшей — на глаз разницы нет, а разнобой уходит.
+   * Карточка товара сюда не входит: её размеры считаются от --u, потому что
+   * макет даёт три масштаба одной карточки.
+   */
+  --text-2xs: 12px;
+  --text-xs: 13px;
+  --text-sm: 14px;
+  --text-md: 15px;
+  --text-base: 16px;
+  --text-lg: 17.4px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 22px;
+  --text-4xl: 24px;
+  --text-5xl: 25px;
+  --text-6xl: 26px;
+  --text-7xl: 28px;
+  --text-8xl: 30px;
+  --text-9xl: 32px;
+  --text-10xl: 45.4px;
+
+  /* Баннерный кегль: 37.6 / 38.3 / 38.7 из макета сведены к одному */
+  --text-display: 38.3px;
+
+  /* --- Шапка ---
+   * Три ряда, как у Uzum: служебная строка (уезжает при прокрутке),
+   * основная полоса и строка категорий (обе залипают).
+   * --header-height — та часть шапки, что остаётся на экране при прокрутке:
+   * от неё отсчитываются липкие боковые колонки страниц. */
+  --header-topbar-height: 36px;
+  --header-mainbar-height: 76px;
+  --header-catbar-height: 44px;
+  --header-height: calc(var(--header-mainbar-height) + var(--header-catbar-height));
+  --sticky-gap: 16px;
+  --sticky-top: calc(var(--header-height) + var(--sticky-gap));
+}

@@ -1,0 +1,83 @@
+{
+  "shell": {
+    "topbar": {
+      "city": "City:",
+      "cityName": "Tashkent",
+      "chooseCity": "Choose city and delivery address",
+      "pickupPoints": "Pickup points",
+      "becomeSeller": "Become a seller",
+      "faq": "Q&A",
+      "myOrders": "My orders"
+    },
+    "header": {
+      "home": "1mart — home",
+      "catalog": "Catalog",
+      "searchPlaceholder": "Search for products and categories",
+      "searchLabel": "Search 1mart",
+      "search": "Search",
+      "suggestions": "Search suggestions",
+      "login": "Sign in",
+      "profile": "Profile",
+      "favorites": "Favorites",
+      "cart": "Cart",
+      "categoriesNav": "Popular categories",
+      "more": "More"
+    },
+    "catalog": {
+      "popular": "Popular: {title}",
+      "title": "Categories",
+      "allIn": "All products in this section",
+      "empty": "No subcategories here yet",
+      "units": {
+        "kg": "kg",
+        "g": "g",
+        "l": "L",
+        "ml": "ml"
+      }
+    },
+    "home": {
+      "companyTitle": "Purchases for your company",
+      "companyText": "From the company balance or by corporate card",
+      "title": "1mart — online store with delivery across Uzbekistan",
+      "weeklyDiscounts": "Deals of the week",
+      "endsIn": "Ends in",
+      "days": "{count} d",
+      "bestsellers": "Bestsellers",
+      "newArrivals": "New arrivals",
+      "recommendations": "Recommended for you",
+      "showMore": "Show more",
+      "showAll": "View all",
+      "allCategories": "All categories",
+      "loadError": "Couldn't load products",
+      "retry": "Try again",
+      "noMore": "You've seen all products"
+    },
+    "footer": {
+      "tagline": "A B2B marketplace for companies: thousands of products delivered across Uzbekistan.",
+      "about": "About us",
+      "aboutMarket": "About 1mart",
+      "pickupPoints": "Pickup points",
+      "vacancies": "Careers",
+      "users": "For customers",
+      "contact": "Contact us",
+      "faq": "Q&A",
+      "delivery": "Delivery",
+      "returns": "Returns",
+      "business": "For business",
+      "sellOn1mart": "Sell on 1mart",
+      "sellerLogin": "Seller sign-in",
+      "socials": "1mart on social media",
+      "terms": "Terms of use",
+      "privacy": "Privacy policy",
+      "copyright": "© {year} Octagram JSC. All rights reserved"
+    },
+    "card": {
+      "toCart": "Add to cart",
+      "addToCart": "Add “{title}” to cart",
+      "rating": "Rating {value}"
+    },
+    "checkout": {
+      "title": "Checkout"
+    }
+  }
+}

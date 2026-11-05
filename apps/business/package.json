@@ -1,0 +1,30 @@
+{
+  "name": "@zoo/business",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_OPTIONS=--max-old-space-size=8192 nuxt dev",
+    "build": "nuxt build",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/image": "^2.1.0",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@pinia/nuxt": "^1.0.2",
+    "@vueuse/nuxt": "^15.0.0",
+    "nuxt": "^4.5.2",
+    "pinia": "^4.0.3",
+    "vue": "^3.5.43",
+    "vue-router": "^4.6.0"
+  },
+  "devDependencies": {
+    "@zoo/merchant": "*",
+    "@zoo/merchant-mock": "*",
+    "@zoo/seller-landing": "*",
+    "@zoo/shared": "*"
+  },
+  "version": "0.0.0"
+}

@@ -1,0 +1,263 @@
+/*
+ * Шрифты 1mart (лицензия SIL OFL 1.1). Раздаём сами, без Google.
+ *   Vela Sans — фирменный дисплейный: заголовки, баннеры, бейджи, крупные числа.
+ *     Статические начертания заказчика (400/500/600/700/800), формат TTF —
+ *     вариативного файла не было, поэтому по весу на файл; браузер тянет только
+ *     тот вес, что реально используется на странице.
+ *   Inter — основной текст интерфейса.
+ * Rubik оставлен запасным дисплейным в цепочке font-family (tokens.css) на
+ * случай, если какой-то вес Vela Sans не загрузится.
+ */
+@font-face {
+  font-family: 'Vela Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/VelaSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Vela Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/VelaSans-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Vela Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/VelaSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Vela Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/VelaSans-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Vela Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/VelaSans-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('/fonts/Rubik-Variable.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('/fonts/Rubik-Italic-Variable.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Inter-Variable.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Inter-Italic-Variable.woff2') format('woff2');
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  /* Макет фиксированный, 1440. На более узком окне страница не сжимается,
+     а прокручивается по горизонтали — иначе блоки наезжают друг на друга. */
+  min-width: 1440px;
+  font-family: var(--font-ui);
+  color: var(--color-text);
+  background: var(--color-page);
+  -webkit-font-smoothing: antialiased;
+
+  /*
+   * Защита от длинных переводов. Макет размечен под русский текст, а на
+   * узбекской кириллице, английском и каракалпакском строки длиннее, и среди
+   * них попадаются слова, которые негде перенести. Без этого одно такое слово
+   * растягивает колонку и даёт горизонтальную прокрутку всей странице.
+   * Свойство наследуется, поэтому правило одно на всё приложение.
+   */
+  overflow-wrap: break-word;
+}
+
+
+
+/*
+ * Полосы прокрутки. На macOS они всплывают поверх содержимого и почти не видны,
+ * а на Windows и там, где включено «показывать всегда», это толстая серая лента
+ * поперёк блока — под полками товаров она читалась как ошибка вёрстки.
+ *
+ * Делаем её тонкой и неяркой везде, а у горизонтальных каруселей убираем
+ * совсем: они листаются колесом, перетаскиванием и стрелками, а обрезанная
+ * у края карточка и так говорит, что дальше есть ещё.
+ */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD3DC transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track { background: transparent; }
+
+*::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: #CBD3DC;
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #A9B4C0;
+  background-clip: content-box;
+}
+
+/* Горизонтальные карусели: полоса не нужна вовсе */
+.scroll-x {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-x::-webkit-scrollbar { display: none; }
+/*
+ * Элемент flex по умолчанию не сжимается меньше своего содержимого: длинный
+ * заголовок в колонке раздвигал соседей вместо того, чтобы перенестись.
+ * Разрешаем сжатие тем, у кого внутри текст, — всем подряд нельзя,
+ * иначе поедут ряды с картинками фиксированного размера.
+ */
+.text-fit {
+  min-width: 0;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/*
+ * Базовые состояния интерактива — одно место на весь проект.
+ * Компоненты переопределяют их только там, где макет требует другого.
+ */
+button, a, input, select, textarea, [tabindex] {
+  transition: background-color 0.15s ease, color 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+/*
+ * Кольцо фокуса рисуем обводкой, а не тенью: обводка повторяет скругление
+ * элемента, а тень — нет. На поиске в шапке это было особенно заметно:
+ * поле внутри скруглённой плашки прямых углов не имеет, а зелёная рамка
+ * обводила его жёстким прямоугольником.
+ *
+ * Белая прослойка нужна на зелёной плашке шапки: одна зелёная обводка
+ * на зелёном фоне не видна.
+ */
+:where(button, a, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-surface);
+}
+
+/*
+ * Наведение. Селектор целиком обёрнут в :where, поэтому его вес — только :hover
+ * (0-1-0), и любой компонент со своим правилом наведения перебивает базовое.
+ * Меняем непрозрачность, а не filter: filter делает элемент содержащим блоком
+ * для absolute-потомков и сдвигает бейджи на карточках.
+ */
+@media (hover: hover) {
+  :where(button, a, [role='button'], [tabindex='0']):where(:not(:disabled)):where(:not([aria-disabled='true'])):hover {
+    opacity: 0.82;
+  }
+}
+
+/* Нажатие должно давать отклик даже там, где вариант не задан явно */
+:where(button):not(:disabled):active { transform: translateY(1px); }
+
+:where(button):disabled { cursor: default; }
+
+/* Ссылка-текст внутри контента подчёркивается при наведении */
+:where(p, li, span) > a:hover { text-decoration: underline; }
+/*
+ * Заголовок страницы, которого нет в макете. Скринридеру и поисковику нужен
+ * h1 на каждой странице, визуально он не появляется.
+ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/*
+ * Боковая колонка остаётся на месте при прокрутке: фильтры каталога,
+ * блок покупки, «Ваш заказ», меню кабинета. Рядом лежащий контент
+ * прокручивается как обычно.
+ *
+ * Родитель обязан быть `align-items: flex-start` — иначе колонка
+ * растягивается на всю высоту строки и залипать нечему.
+ *
+ * Колонка выше экрана прокручивается внутри себя: без этого её нижняя
+ * часть (последние фильтры, способы оплаты) становится недостижимой.
+ */
+/*
+ * Закреплённая боковая колонка. Высоту не ограничиваем и ничего не режем:
+ * колонка выше экрана раньше обрезалась по нижнему краю, и до её низа было
+ * не добраться. Колонку, которая не помещается на экран, доводит до конца
+ * плагин sticky-aside.client.ts — он двигает `top` по ходу прокрутки.
+ */
+.sticky-aside {
+  position: sticky;
+  top: var(--sticky-top);
+  align-self: flex-start;
+}
+
+/*
+ * Если колонка — flex-контейнер, её содержимое при max-height начинает
+ * сжиматься вместо того, чтобы уйти в прокрутку: переключатель «Животные /
+ * Зоотовары» так схлопнулся с 60px до 25px. Высоту детей фиксируем.
+ */
+.sticky-aside > * { flex-shrink: 0; }
+
+
+img, svg { display: block; }
+/* Поля ввода не наследуют шрифт сами — без этого браузер ставит им Arial */
+button, input, select, textarea { font: inherit; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+@media (width >= 1440px) {
+  .container { padding-inline: 0; }
+}
+
+/* Поля и кнопки без своих стилей сразу получают общий текст: см. роли в tokens.css */
+input,
+textarea,
+select { font: var(--type-input); }
+
+button { font-family: var(--font-ui); }

@@ -1,0 +1,834 @@
+{
+  "account": {
+    "orders": "My orders",
+    "promo": "Discounts and promo codes",
+    "reviews": "My reviews",
+    "reviewsDone": "Already rated",
+    "reviewsWaiting": "Awaiting rating",
+    "seller": "Become a seller",
+    "settings": "Settings",
+    "step": {
+      "accepted": "Order accepted",
+      "packing": "Packing",
+      "onTheWay": "On the way",
+      "readyForPickup": "Ready for pickup",
+      "delivered": "Delivered",
+      "received": "Picked up"
+    },
+    "orderState": {
+      "created": {
+        "title": "Order accepted",
+        "text": "The seller will confirm your order and start packing"
+      },
+      "paid": {
+        "title": "Order paid",
+        "text": "The seller will confirm your order and start packing"
+      },
+      "processing": {
+        "title": "Packing your order",
+        "text": "The seller is preparing your order for shipping"
+      },
+      "onTheWay": {
+        "title": "Order on the way",
+        "text": "Expected delivery — {date}",
+        "textNoDate": "The seller will contact you to confirm the delivery date"
+      },
+      "readyForPickup": {
+        "title": "Ready for pickup",
+        "text": "Your order is waiting at the pickup point"
+      },
+      "delivered": {
+        "title": "Order delivered",
+        "text": "Delivered on {at}. Rate your purchase"
+      },
+      "canceled": {
+        "title": "Order canceled",
+        "text": "Canceled on {at}"
+      }
+    },
+    "action": {
+      "cancel": "Cancel order",
+      "repeat": "Repeat order",
+      "review": "Rate purchase",
+      "cancelConfirm": "Cancel order {number}?",
+      "cancelConfirmText": "You can cancel until the order ships. The money is returned the same way it was paid.",
+      "cancelDone": "Order canceled",
+      "repeatDone": "Items added to cart",
+      "actionError": "Something went wrong. Try again"
+    }
+  },
+  "auth": {
+    "continue": "Continue",
+    "errorPassword": "Enter a password — at least 4 characters",
+    "errorPasswordMatch": "Passwords do not match",
+    "errorPhone": "Enter the full phone number",
+    "forgotPassword": "Forgot your password?",
+    "haveAccount": "Have an account?",
+    "needAccount": "Account required",
+    "newPasswordLabel": "New password",
+    "newPasswordTitle": "New password",
+    "noAccount": "No account?",
+    "passwordChanged": "Password changed",
+    "passwordChangedText": "Sign in with the new password — access is already open",
+    "passwordLabel": "Your password",
+    "phoneLabel": "Your number",
+    "recoverHint": "Enter your number — we will send a code to change the password",
+    "recoverSubmit": "Get the code",
+    "recoverTitle": "Password recovery",
+    "register": "Sign up",
+    "registerTitle": "Sign up",
+    "repeatPasswordLabel": "Repeat the password",
+    "resend": "Send again",
+    "savePassword": "Save the password",
+    "signIn": "Sign in",
+    "smsHint": "Enter the code sent to your number",
+    "errorPasswordShort": "Enter a password — at least 8 characters",
+    "nameLabel": "Your name",
+    "namePlaceholder": "Optional"
+  },
+  "badge": {
+    "cheaper": "Price dropped",
+    "freeShipping": "Free delivery",
+    "new": "New"
+  },
+  "breadcrumbs": {
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "favorites": "Favorites",
+    "home": "Home",
+    "orders": "My orders",
+    "search": "Search"
+  },
+  "cart": {
+    "checkout": "Check out",
+    "fromFavorites": "Remove from favorites",
+    "remove": "Delete",
+    "removedFromFavorites": "Item removed from favorites",
+    "selectAll": "Select all",
+    "toFavorites": "To favorites",
+    "total": "Total",
+    "useful": "You may need this",
+    "usefulNote": "Items for you",
+    "notSelected": "Not selected"
+  },
+  "catalog": {
+    "all": "All",
+    "animals": "Categories",
+    "category": "Category",
+    "chooseCategory": "Choose a category",
+    "correctedNotice": "Showing results for “{query}”",
+    "correctedOriginal": "Search for “{query}”",
+    "didYouMean": "Did you mean",
+    "emptyCategoryText": "Items will appear as soon as sellers add them. Take a look at nearby categories.",
+    "emptyCategoryTitle": "This category is empty for now",
+    "emptyFiltersText": "Try changing the filters or resetting them to see more options",
+    "emptyFiltersTitle": "Nothing found for these filters",
+    "emptyText": "Check the spelling or try a different query",
+    "emptyTitle": "Nothing found for this query",
+    "goods": "Products",
+    "outOfStock": "Out of stock",
+    "pickCategory": "Choose a category",
+    "productsCount": "{count} product | {count} products",
+    "reset": "Reset",
+    "resetFilters": "Reset filters",
+    "services": "Services",
+    "show": "Show"
+  },
+  "common": {
+    "addAddress": "Add a new address",
+    "addCard": "Add a card",
+    "apply": "Apply",
+    "back": "Back",
+    "becomeSeller": "Become a seller",
+    "cart": "Cart",
+    "catalog": "Categories",
+    "chooseLanguage": "Choose language",
+    "clear": "Clear",
+    "close": "Close",
+    "collapse": "Collapse",
+    "currency": "UZS",
+    "deliveryAddress": "Delivery address",
+    "favorites": "Favorites",
+    "glavnuyu": "To the home page",
+    "hlebnyeKroshki": "Breadcrumbs",
+    "itemsCount": "{count} {word}",
+    "kodovoeSlovo": "Code word",
+    "login": "Sign in",
+    "logout": "Sign out",
+    "more": "Details",
+    "nomerTelefona": "Phone number",
+    "notFound": "Nothing found",
+    "ocenka": "rating | ratings",
+    "otzyv": "review | reviews",
+    "pageNotFound": "Page not found",
+    "perMonth": "{sum} UZS/mo",
+    "pokazatEsche": "Show more",
+    "poluchatel": "Recipient",
+    "profileMenu": "Profile menu",
+    "promokody": "Promo codes",
+    "retry": "Retry",
+    "save": "Save",
+    "searchLabel": "Search the catalog",
+    "searchPlaceholder": "Search products and categories",
+    "showAll": "View all",
+    "skidka": "Discount",
+    "skipToContent": "Skip to main content",
+    "sposobOplaty": "Payment method",
+    "summa": "Amount",
+    "tovar": "item | items",
+    "undo": "Undo",
+    "uvelichitKolichestvo": "Increase quantity",
+    "vashZakaz": "Your order",
+    "vvediteKodovoeSlovo": "Enter the code word",
+    "vyberiteAdresDostavki": "Choose a delivery address",
+    "zdesPokaPusto": "Nothing here yet",
+    "decreaseQuantity": "Decrease quantity",
+    "removeFromCart": "Remove from cart"
+  },
+  "footer": {
+    "categories": "Categories",
+    "platform": "Platform",
+    "rights": "© 1mart, Octagram JSC. All rights reserved.",
+    "rules": "Rules",
+    "support": "Support",
+    "socialMedia": "Social media:",
+    "buyers": "For buyers",
+    "sellers": "For sellers",
+    "company": "Company",
+    "sellerCabinet": "Seller cabinet",
+    "delivery": "Delivery"
+  },
+  "home": {
+    "daysLeft": "{count} days left",
+    "downloadApp": "Download the mobile app",
+    "recommended": "Recommended",
+    "viewed": "You viewed",
+    "weeklyDiscounts": "Deals of the week",
+    "wow": "Wow deals"
+  },
+  "ui": {
+    "account": {
+      "favorites": {
+        "nazhmiteTovarahKotoryeOsobenno": "Tap ♡ on the items you like most — they will appear here",
+        "zdesSohranimVashiLyubimye": "We will keep your favorite items here",
+        "seoTitle": "Favorites | 1mart"
+      },
+      "menu": {
+        "lichnyyKabinet": "My account"
+      },
+      "orderCard": {
+        "dataZakaza": "Order date:",
+        "nomerZakaza": "Order number:",
+        "podrobneeZakaze": "Order details"
+      },
+      "ordersItem": {
+        "detaliDostavki": "Delivery details",
+        "kurerIliProdavec": "Courier or seller",
+        "kureromAdresu": "Courier to your address",
+        "obschayaStoimost": "Total",
+        "pomosch": "Help",
+        "zakazNayden": "Order not found",
+        "seoTitle": "Order | 1mart",
+        "itemsCount": "{count} {word}",
+        "qty": "{count} pcs",
+        "samovyvoz": "Pickup from the pickup point"
+      },
+      "reviews": {
+        "dannyyMomentNetVybrannyh": "You have no selected products at the moment",
+        "zdesPoyavyatsyaTovaryKotorye": "Items you can rate after delivery will appear here",
+        "seoTitle": "My reviews | 1mart",
+        "rateStars": "Rate {rating} out of 5"
+      },
+      "seller": {
+        "ostavitZayavku": "Submit an application",
+        "prodavayteZhivotnyhTovaryNih": "Sell your products on 1mart: listing is free, commission is charged only on completed orders, and payouts go to your bank account.",
+        "seoTitle": "Become a seller | 1mart",
+        "zapolniteAnketu": "Fill in the form",
+        "nazvanieHozyaystva": "Store name, taxpayer ID, region and contact details",
+        "prishliteDokumenty": "Send the documents",
+        "veterinarnyeSpravki": "Sole proprietor or company registration certificate and product certificates",
+        "nachniteProdavat": "Start selling",
+        "razmestiteObyavleniya": "Add products and receive orders"
+      },
+      "settings": {
+        "dataRozhdeniya": "Date of birth",
+        "pol": "Gender",
+        "polnoeImya": "Full name",
+        "zagruzitFoto": "Upload a photo",
+        "seoTitle": "Settings | 1mart",
+        "male": "Male",
+        "female": "Female",
+        "vvediteTekst": "Enter text",
+        "saving": "Saving…",
+        "savedDone": "Saved",
+        "logout": "Sign out"
+      },
+      "transactionCard": {
+        "nomerZakaz": "Order",
+        "refund": "Order refund"
+      },
+      "promo": {
+        "ispolzovan": "Used",
+        "prosrochen": "Expired",
+        "kodSostoit": "The code is 6–20 Latin letters and digits",
+        "takoyPromokodUzheDobavlen": "This promo code has already been added",
+        "seoTitle": "Discounts and promo codes | 1mart"
+      },
+      "orders": {
+        "aktivnye": "Active",
+        "istoriyaTranzakciy": "Transaction history",
+        "seoTitle": "My orders | 1mart",
+        "vashiZakazyPoyavyatsyaEtom": "Your orders will appear here",
+        "loadError": "Could not load orders",
+        "loadErrorText": "Check your connection and try again",
+        "expectedAt": "Expected delivery",
+        "deliveryPrice": "Delivery cost",
+        "comment": "Order note",
+        "stepOf": "Step {current} of {total}",
+        "showMore": "Show more"
+      },
+      "placed": {
+        "help": "Help",
+        "stepsLabel": "Order stages"
+      }
+    },
+    "appshell": {
+      "addPromoModal": {
+        "dobavitPromokod": "Add a promo code"
+      },
+      "addressDetailsModal": {
+        "etazh": "Floor",
+        "kudaDostavitZakaz": "Where should we deliver the order?",
+        "kvartira": "Apartment *",
+        "naprimerKakDobratsyaIli": "For example, how to get there or when to call you",
+        "nomerKv": "Apt. no.",
+        "opredelitMoeMestopolozhenie": "Detect my location",
+        "otdalit": "Zoom out",
+        "parolPodezda": "Entrance code",
+        "podezd": "Entrance",
+        "priblizit": "Zoom in",
+        "prodolzhit": "Continue",
+        "tekstKommentariya": "Comment text",
+        "ukazhiteDopolnitelnoInformaciyuZakazu": "Add any extra information for the order.",
+        "vvediteTekstKommentariya": "Enter the comment text",
+        "geoUnsupported": "Your browser cannot determine location",
+        "geoDenied": "Location access denied",
+        "geoFailed": "Could not determine your location",
+        "region": "Region",
+        "regionPlaceholder": "Choose a region"
+      },
+      "appFooter": {
+        "zooelonMarketpleysDomashnihZhivotnyh": "1mart is a B2B marketplace for companies. Electronics, clothing, home goods and thousands of other products delivered across Uzbekistan.",
+        "oProekte": "About the project",
+        "blog": "Blog",
+        "dlyaPartnerov": "For partners",
+        "razmestitObyavlenie": "How to become a seller",
+        "tovary": "Products",
+        "veterinary": "Pick-up points",
+        "termsConditions": "Terms & Conditions",
+        "polzovatelskoeSoglashenie": "Terms of use",
+        "politikaKonfidencialnosti": "Privacy policy",
+        "pravilaPublikacii": "Posting rules",
+        "cookie": "Cookie",
+        "arhivDokumentov": "Document archive",
+        "centrPomoschi": "Help center",
+        "faq": "FAQ",
+        "napisatNam": "Contact us",
+        "podatZhalobu": "File a complaint",
+        "liveChat": "Live chat"
+      },
+      "authModal": {
+        "parol": "Password"
+      },
+      "locationModal": {
+        "dobavitAdres": "Add an address",
+        "vybratAdres": "Choose an address",
+        "empty": "No saved addresses yet — add your first one"
+      },
+      "registerModal": {
+        "prodolzhayaYaSoglashayusPolitikoy": "By continuing, I agree to the personal data policy and the offer"
+      },
+      "reviewModal": {
+        "anonimnyyOtzyv": "Anonymous review",
+        "drugimPokupatelyamOchenNuzhen": "Other buyers really need a detailed review — tell them what you liked",
+        "nedostatki": "Cons",
+        "obyazatelnoUchtemOcenkuDostavki": "We always count delivery and service ratings — they affect the seller’s rating",
+        "ostavitOtzyv": "Leave a review",
+        "otpravitOtzyv": "Send the review",
+        "preimuschestva": "Pros",
+        "quality": "Product quality",
+        "service": "Service at order handover",
+        "speed": "Delivery speed",
+        "ratingOf5": "{rating} out of 5"
+      },
+      "promoModal": {
+        "until": "until {date}"
+      },
+      "appHeader": {
+        "cartWithCount": "Cart, {count} {word}"
+      }
+    },
+    "cart": {
+      "cart": {
+        "vseKarty": "All cards",
+        "tovarIzbrannom": "Item added to favorites",
+        "tovarUdalenKorziny": "Item removed from the cart",
+        "seoTitle": "Cart | 1mart",
+        "vyberiteKartuOplaty": "Choose a card to pay with:"
+      },
+      "empty": {
+        "nachniteGlavnoyStranicyNuzhnyy": "Start from the home page — find what you need through search or browse our picks",
+        "pustayaKorzinaEtoKak": "An empty cart is like a blank sheet of paper."
+      },
+      "item": {
+        "umenshit": "Decrease",
+        "uvelichit": "Increase",
+        "vyborPokupateley": "BUYERS’ CHOICE",
+        "sellerLabel": "Seller: “{title}”",
+        "selectProduct": "Select {title}"
+      },
+      "summary": {
+        "vasBesplatnayaDostavka": "You have free delivery"
+      }
+    },
+    "catalog": {
+      "appPromo": {
+        "dostupnoGooglePlay": "Available on Google Play",
+        "mobilnoePrilozhenieZooelon": "1mart mobile app",
+        "qrKodZagruzkiPrilozheniya": "QR code to download the app",
+        "zagruzitAppStore": "Download on the App Store"
+      },
+      "categoryPickerModal": {
+        "poiskKategorii": "Category search"
+      },
+      "filterPanel": {
+        "unitK": "{n}K",
+        "unitM": "{n}M",
+        "unitB": "{n}B",
+        "text": "To",
+        "text2": "From",
+        "priceFrom": "Price from",
+        "priceTo": "Price to",
+        "showMore": "{count} more"
+      },
+      "heroCarousel": {
+        "bannery": "Banners",
+        "predyduschiyBanner": "Previous banner",
+        "sleduyuschiyBanner": "Next banner",
+        "bannerNumber": "Banner {index}"
+      },
+      "pages": {
+        "zooelonMarketpleysZhivotnyhZootovarov": "1mart — a B2B marketplace for companies"
+      },
+      "infoItem": {
+        "blogBody": "New in the catalog, purchasing tips and platform news.",
+        "partnersBody": "Partnership terms for sellers, brands and delivery services.",
+        "postAdBody": "Open a store on 1mart — seller verification takes up to one business day.",
+        "termsBody": "Terms of use for the 1mart marketplace.",
+        "privacyBody": "How we process and protect users’ personal data.",
+        "rulesBody": "Requirements for product cards, photos and descriptions.",
+        "cookieBody": "Which cookies we use and why.",
+        "documentsBody": "Public documents and offers.",
+        "helpBody": "Answers to common questions about orders, payment, delivery and returns.",
+        "servicesBody": "Delivery, pick-up points, company balance and corporate card payment.",
+        "faqBody": "Frequently asked questions from buyers and sellers.",
+        "contactBody": "Contact support — we reply within one business day.",
+        "complaintBody": "Describe the problem with the order or seller — we will review your request.",
+        "chatBody": "Support chat is available from 9:00 to 21:00.",
+        "deliveryBody": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers or to a 1mart pick-up point.",
+        "termsConditionsBody": "Terms of use for the 1mart marketplace.",
+        "aboutH1": "What 1mart is",
+        "aboutP1_1": "1mart is a B2B marketplace for companies, operated by Octagram JSC, Tashkent.",
+        "aboutP1_2": "You will find electronics, home appliances, clothing, shoes, home, beauty, sports and kids products from verified sellers all over Uzbekistan.",
+        "aboutH2": "How it works",
+        "aboutP2_1": "Choose a product, add it to the cart and place an order. An Express 24, Maxsus Courier or Yandex Delivery courier will bring it — or collect it at a pick-up point.",
+        "aboutP2_2": "Companies pay for orders from an on-site balance, topped up by transfer from their settlement account, or with a corporate card. The amount is reserved and goes to the seller's settlement account once the order is confirmed.",
+        "aboutH3": "Safe shopping",
+        "aboutP3_1": "Every seller passes a document check, and buyer ratings and reviews are shown on the product page.",
+        "aboutP3_2": "If a product does not fit or does not match its description, request a return within 10 days in “My orders”.",
+        "blogH1": "What we write about",
+        "blogP1_1": "Reviews of new categories, purchasing tips for companies, platform changes and terms for sellers.",
+        "blogH2": "Our first articles are on the way",
+        "blogP2_1": "This section is being filled. Follow 1mart on Telegram and Instagram for announcements of deals and new articles.",
+        "partnersH1": "Who it is for",
+        "partnersP1_1": "Stores and brands, manufacturers, distributors and delivery services that want to sell across Uzbekistan.",
+        "partnersH2": "What you get",
+        "partnersP2_1": "A storefront with photos and specifications, company orders from the catalog and search, statistics and review management.",
+        "partnersP2_2": "Commission depends on the product category, and payouts go to your bank account. Submit an application and we will send the rates.",
+        "partnersH3": "How to start",
+        "partnersP3_1": "Fill in the form, send your registration documents and wait for verification — it usually takes one business day.",
+        "postAdH1": "What you need to start selling",
+        "postAdP1_1": "A registered sole proprietorship or company, a bank account for payouts, and products with photos, prices and descriptions.",
+        "postAdP1_2": "Electronics and kids' products need certificates of conformity; branded items need proof of authenticity.",
+        "postAdH2": "Review times",
+        "postAdP2_1": "Seller verification takes up to one business day, product cards up to 24 hours. If something is missing, we will tell you what to add.",
+        "postAdH3": "What cannot be sold",
+        "postAdP3_1": "Counterfeits and replicas passed off as originals, products without mandatory certificates, medicines, weapons and anything prohibited by the law of Uzbekistan.",
+        "servicesH1": "What we offer",
+        "servicesP1_1": "Courier delivery and pick-up points across Uzbekistan, a company balance topped up by invoice, and corporate card payment.",
+        "servicesH2": "How it works",
+        "servicesP2_1": "Delivery options and prices are shown at checkout. The money is reserved and goes to the seller once the order is confirmed.",
+        "servicesP2_2": "After checkout, the courier or pick-up point will notify you when the order is ready.",
+        "helpH1": "Orders",
+        "helpP1_1": "The order status is shown in the “My orders” section, along with the number, date, contents and total.",
+        "helpP1_2": "You can cancel an order until it is handed over for delivery — the button appears on the order card.",
+        "helpH2": "Delivery",
+        "helpP2_1": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers and to 1mart pick-up points. The delivery date is shown on the product card.",
+        "helpP2_2": "The courier contacts you before setting off to confirm the time.",
+        "helpH3": "Payment and returns",
+        "helpP3_1": "Pay from company balance or with a corporate card.",
+        "helpP3_2": "You can return a product within 10 days in “My orders”. The money is refunded the same way you paid.",
+        "helpH4": "Did not find an answer",
+        "helpP4_1": "Write to us through the form on the “Contact us” page — we reply within one business day.",
+        "deliveryH1": "Courier delivery",
+        "deliveryP1_1": "Orders are delivered by Express 24, Maxsus Courier and Yandex Delivery couriers: from one day in Tashkent, 2–5 days to the regions. The courier will call before arriving.",
+        "deliveryH2": "Pick-up points",
+        "deliveryP2_1": "Delivery to a 1mart pick-up point is free. Orders are kept for 7 days; check the product and its contents when you collect it.",
+        "deliveryH3": "If delivery is delayed",
+        "deliveryP3_1": "Write to us via “Contact us” with your order number — we will contact the delivery service and get back to you.",
+        "chatH1": "Working hours",
+        "chatP1_1": "Support chat is available from 9:00 to 21:00 Tashkent time.",
+        "chatH2": "What to prepare",
+        "chatP2_1": "Your order number and a short description of the issue — that way we reply faster.",
+        "chatH3": "Outside working hours",
+        "chatP3_1": "Leave a message via the “Contact us” form: we will reply at the start of the next business day.",
+        "cookieH1": "Why cookies are needed",
+        "cookieP1_1": "Cookies store your chosen language, cart contents and sign-in — without them this data would be lost when moving between pages.",
+        "cookieH2": "Which ones we use",
+        "cookieP2_1": "Technical — sign-in, cart, language. Analytical — anonymized visit statistics.",
+        "cookieH3": "How to opt out",
+        "cookieP3_1": "You can disable cookies in your browser settings. After that the cart and sign-in will not work.",
+        "documentsH1": "What is here",
+        "documentsP1_1": "The platform’s public documents and offers.",
+        "documentsH2": "The section is in preparation",
+        "documentsP2_1": "The documents will appear here once reviewed by a lawyer. For now you can request a copy via the “Contact us” form.",
+        "termsH1": "Subject of the agreement",
+        "termsP1_1": "The agreement sets out the terms under which buyers and sellers use the 1mart marketplace (operated by Octagram JSC).",
+        "termsH2": "The text is in preparation",
+        "termsP2_1": "The full text is being reviewed by a lawyer and will be published here. Until then the terms shown on product cards and at checkout apply.",
+        "privacyH1": "What data we collect",
+        "privacyP1_1": "An employee's name and phone, company details, delivery address and order history. We need them to place and deliver an order.",
+        "privacyH2": "The text is in preparation",
+        "privacyP2_1": "The full text of the policy is being reviewed by a lawyer and will be published here.",
+        "rulesH1": "Product card requirements",
+        "rulesP1_1": "Your own photos on a light background, an accurate title with brand and model, an honest description, and an up-to-date price and stock.",
+        "rulesH2": "What is prohibited",
+        "rulesP2_1": "Other people's photos, counterfeits passed off as originals, an inflated “old” price to fake a discount, hidden defects.",
+        "rulesH3": "Violations",
+        "rulesP3_1": "The card is removed from sale and the seller is told why. Repeated violations lead to the store being blocked.",
+        "termsConditionsH1": "Terms of use",
+        "termsConditionsP1_1": "Terms of use for the 1mart marketplace.",
+        "termsConditionsH2": "In preparation",
+        "termsConditionsP2_1": "The full text is being reviewed by a lawyer and will be published here.",
+        "contactH1": "How to reach us",
+        "contactP1_1": "Contact support — we reply within one business day.",
+        "contactP1_2": "If your question is about an order, include its number: that way we reply faster.",
+        "complaintH1": "What to describe",
+        "complaintP1_1": "Describe the problem with the order or seller — we will review your request.",
+        "complaintP1_2": "Include the order number, the date and exactly what went wrong.",
+        "rulesP2_2": "Medicines, weapons, tobacco and other goods whose online sale is prohibited by the law of Uzbekistan.",
+        "rulesH4": "How to appeal a decision",
+        "rulesP4_1": "If a card was removed and you disagree, write via “File a complaint”: give the product SKU and attach documents."
+      },
+      "sortBar": {
+        "rekomenduemye": "Recommended",
+        "snachalaDeshevye": "Cheapest first",
+        "snachalaDorogie": "Most expensive first",
+        "reytingu": "By rating",
+        "novinki": "New arrivals"
+      },
+      "search": {
+        "allProducts": "All products"
+      },
+      "categoryItem": {
+        "notFound": "Category not found"
+      },
+      "sellerItem": {
+        "emptyTitle": "This seller has no products yet",
+        "emptyText": "Check back later or browse other sellers' products in the catalog.",
+        "notFound": "Seller not found",
+        "allProducts": "All seller’s products",
+        "seoDescription": "Products from {title} on 1mart: delivery across Uzbekistan, payment from company balance or with a corporate card."
+      },
+      "contactForm": {
+        "titleContact": "Write to us",
+        "titleComplaint": "Describe your complaint",
+        "name": "How should we address you",
+        "order": "Order number (if any)",
+        "message": "Message",
+        "submit": "Send",
+        "sending": "Sending…",
+        "done": "Your request has been received. We will reply within one business day.",
+        "errorName": "Enter a name — at least two characters",
+        "errorPhone": "Check the phone number",
+        "errorMessage": "Describe your question in more detail — at least ten characters"
+      },
+      "infoPage": {
+        "nav": {
+          "label": "Help sections",
+          "buyers": "For buyers",
+          "sellers": "For sellers",
+          "company": "About",
+          "legal": "Documents"
+        },
+        "cta": {
+          "title": "Did not find an answer?",
+          "text": "Write to us - we reply within one business day.",
+          "contact": "Contact us",
+          "help": "Help center"
+        },
+        "faq": {
+          "title": "Questions and answers",
+          "intro": "Answers to common questions from buying companies and sellers.",
+          "search": "Search questions",
+          "topicsLabel": "Question topics",
+          "empty": "Nothing found. Try another word or write to us.",
+          "topics": {
+            "all": "All",
+            "payment": "Payment",
+            "orders": "Orders",
+            "delivery": "Delivery",
+            "returns": "Returns",
+            "sellers": "For sellers"
+          },
+          "items": {
+            "payHow": {
+              "q": "How does a company pay for an order",
+              "a": "From the company balance on the site or with a corporate card. You choose the method at checkout."
+            },
+            "payTopUp": {
+              "q": "How do I top up the balance",
+              "a": "In \"Company balance\", enter the amount and create an invoice. Transfer the money from the company settlement account using the invoice details. It appears on the balance once received."
+            },
+            "payPersonal": {
+              "q": "Can I pay with a personal card or in installments",
+              "a": "No. 1mart works with companies only: we accept the company balance and corporate cards."
+            },
+            "payMoney": {
+              "q": "When does the seller get the money",
+              "a": "The amount is reserved at checkout. Once the order is confirmed it goes to the seller settlement account. If the order is rejected or cancelled it returns the same way."
+            },
+            "ordStatus": {
+              "q": "Where can I see the order status",
+              "a": "In \"My orders\", along with the order number, date, items and amount."
+            },
+            "ordCancel": {
+              "q": "Can I cancel an order",
+              "a": "Yes, until it is handed over for delivery. The cancel button appears on the order card."
+            },
+            "ordOriginal": {
+              "q": "How do I know a product is original",
+              "a": "Sellers of branded goods confirm authenticity with documents. If in doubt, write to support."
+            },
+            "delWho": {
+              "q": "Who delivers the order",
+              "a": "Express 24, Maxsus Courier and Yandex Delivery couriers. You can also choose a 1mart pickup point, which is free."
+            },
+            "delTime": {
+              "q": "How long does delivery take",
+              "a": "From one day in Tashkent, 2-5 days to the regions. The date and cost are shown at checkout."
+            },
+            "delPickup": {
+              "q": "How long is an order kept at a pickup point",
+              "a": "7 days. Check the goods and the set when you collect them."
+            },
+            "retHow": {
+              "q": "How do I return a product",
+              "a": "Request a return in \"My orders\" within 10 days. The product must keep its condition and packaging."
+            },
+            "retMoney": {
+              "q": "Where does the money go",
+              "a": "Back the way the order was paid: to the company balance or the corporate card."
+            },
+            "selStart": {
+              "q": "How do I start selling",
+              "a": "You need a registered sole proprietor or company, a settlement account for payouts, and products with photos, prices and descriptions. Fill in the form and send the documents."
+            },
+            "selCheck": {
+              "q": "How long does verification take",
+              "a": "Seller verification takes up to one business day, a product card up to 24 hours."
+            },
+            "selFee": {
+              "q": "What is the commission",
+              "a": "It depends on the product category. Send a request and we will share the rates."
+            }
+          }
+        },
+        "delivery": {
+          "intro": "We deliver by courier across Uzbekistan or to a 1mart pickup point.",
+          "courier": {
+            "title": "By courier",
+            "fact1": "Express 24, Maxsus Courier or Yandex Delivery",
+            "fact2": "From one day in Tashkent, 2-5 days to the regions",
+            "fact3": "The courier calls before arriving"
+          },
+          "pickup": {
+            "title": "Pickup point",
+            "fact1": "Delivery is free",
+            "fact2": "The order is kept for 7 days",
+            "fact3": "Check the goods and the set when you collect them"
+          },
+          "stepsTitle": "How delivery works",
+          "step1": {
+            "title": "Checkout",
+            "text": "Choose the method and address. The date and cost are shown right away."
+          },
+          "step2": {
+            "title": "Confirmation",
+            "text": "The amount is reserved while the seller confirms the order."
+          },
+          "step3": {
+            "title": "Handed to delivery",
+            "text": "The status is shown in \"My orders\"."
+          },
+          "step4": {
+            "title": "Receipt",
+            "text": "The courier brings the order, or it waits at the pickup point."
+          }
+        },
+        "returns": {
+          "intro": "You can return a product within 10 days of receiving it.",
+          "step1": {
+            "title": "Request a return",
+            "text": "Open the order in \"My orders\" within 10 days."
+          },
+          "step2": {
+            "title": "Prepare the product",
+            "text": "The product must keep its condition and packaging."
+          },
+          "step3": {
+            "title": "Get your money back",
+            "text": "The money returns the way the order was paid: to the company balance or the corporate card."
+          },
+          "toOrders": "Go to \"My orders\""
+        }
+      }
+    },
+    "checkout": {
+      "checkout": {
+        "dostavkaProdavca": "Seller delivery",
+        "oplataProshla": "Payment completed",
+        "oshibkaPriOplate": "Payment error",
+        "zakazOzhidanii": "Order pending",
+        "vypolnenieProshedsheeProsmotretSvoy": "You can view your order in the “My orders” section",
+        "ozhidaemOplatuKakTolko": "We are waiting for the payment. As soon as it goes through, the order will be sent to the seller",
+        "priObrabotkePlatezhaProizoshla": "An error occurred while processing the payment. Please try again",
+        "addressEmpty": "Add an address",
+        "addressMapPoint": "Map point {lat}, {lng}",
+        "addressNoDetails": "No details",
+        "addressPartEntrance": "entrance {value}",
+        "addressPartFlat": "apt. {value}",
+        "addressPartFloor": "floor {value}",
+        "addressSaveError": "Could not save the address. Try again"
+      },
+      "deliveryCard": {
+        "kakRabotaetDostavkaProdavca": "How delivery works",
+        "prodavecSvyazhetsyaChtobyUtochnit": "The seller will contact you to confirm the delivery date and time",
+        "vybratDrugoy": "Choose another"
+      },
+      "orderSummary": {
+        "besplatno": "free",
+        "dostavka": "Delivery",
+        "oplate": "To pay",
+        "promokod": "promo code",
+        "razmeschayaZakazVySoglashaetes": "By placing the order you consent to personal data processing and accept the terms of use",
+        "uchtenyVseAkciiSkidki": "All promotions, discounts and loyalty programs are included",
+        "promokoda": "promo codes",
+        "promokodov": "promo codes",
+        "promoLabel": "Promo code {code}",
+        "youHavePromos": "You have {count} {word}",
+        "deliveryUnavailable": "not possible",
+        "deliveryBlockedNote": "{sellers} does not deliver to this address. Choose another address or remove their items from the order."
+      }
+    },
+    "host": {
+      "error": {
+        "notFoundTitle": "No such page",
+        "genericTitle": "Something went wrong",
+        "notFoundText": "The page may have been deleted or the link has a typo. Start from the home page — you will find what you need quickly",
+        "genericText": "We are already fixing it. Try refreshing the page or going back home"
+      }
+    },
+    "pdp": {
+      "about": {
+        "tovareIliZhivotnom": "About the product"
+      },
+      "buyBox": {
+        "dobavitKorzinu": "Add to cart",
+        "kupit1Klik": "Buy in 1 click"
+      },
+      "characteristics": {
+        "harakteristiki": "Specifications",
+        "svernutHarakteristiki": "Collapse specifications"
+      },
+      "gallery": {
+        "fotoTovara": "Product photo",
+        "predyduscheeFoto": "Previous photo",
+        "sleduyuscheeFoto": "Next photo",
+        "smotretVideo": "Watch the video",
+        "videoTovare": "Video about the item",
+        "noPhoto": "No photo yet"
+      },
+      "paymentMethods": {
+        "vidyOplaty": "Payment options"
+      },
+      "productItem": {
+        "oplataDostavka": "Payment and delivery",
+        "vozvratGarantiya": "Returns and warranty",
+        "notFound": "Product not found",
+        "loadError": "Couldn't load the product. Please refresh the page"
+      },
+      "reviews": {
+        "sleduyuschieOtzyvy": "Next reviews",
+        "vse": "All ›",
+        "reviewsCount": "{count} {word}",
+        "allTitle": "Customer reviews",
+        "ratingOf5": "Rating {rating} out of 5",
+        "openPhoto": "Open the photo",
+        "openPhotoOf": "Photo by {author}",
+        "photoDialog": "Photo from a review",
+        "sellerReply": "Seller reply"
+      },
+      "sellerCard": {
+        "drugieProdukty": "Other products",
+        "ratingsCount": "{count} {word}"
+      }
+    },
+    "shared": {
+      "state": {
+        "proverteSoedineniePoprobuyteEsche": "Check your connection and try again",
+        "udalosZagruzit": "Could not load",
+        "loading": "Loading products"
+      },
+      "productCard": {
+        "reviewsCount": "({count} {word})",
+        "addedToCart": "Item in the cart",
+        "removedFromCart": "Item removed from the cart",
+        "addWithDelivery": "Add to cart, delivery {date}",
+        "photoNumber": "Photo {index}"
+      },
+      "favorite": {
+        "added": "Added to favorites",
+        "failed": "Could not save. Try again",
+        "removed": "Removed from favorites"
+      }
+    }
+  },
+  "seo": {
+    "categoryDescription": "{title}: {count} offers from verified sellers. Delivery across Uzbekistan, payment from company balance or with a corporate card, warranty.",
+    "categoryTitle": "{title} — buy in Uzbekistan",
+    "checkoutTitle": "Checkout",
+    "homeDescription": "Business purchasing: electronics, clothing, shoes, home, beauty and sports goods from verified sellers. Payment from company balance or with a corporate card, courier and pick-up delivery across Uzbekistan.",
+    "homeTitle": "Marketplace for electronics, clothing and home goods with delivery across Uzbekistan",
+    "productTitle": "{title} — buy for {price}",
+    "searchTitle": "{query} — search"
+  },
+  "pdp": {
+    "buyersThisWeek": "{count} person bought this week | {count} people bought this week",
+    "otherOptions": "Other options",
+    "stockCount": "In stock: {n} pcs",
+    "sku": "SKU",
+    "similarProducts": "Similar products",
+    "boughtTogether": "Frequently bought together"
+  }
+}

@@ -1,0 +1,1250 @@
+{
+  "common": {
+    "currency": "so'm"
+  },
+  "m": {
+    "brand": {
+      "business": "Biznes"
+    },
+    "nav": {
+      "groupMain": "Asosiy",
+      "groupCatalog": "Katalog",
+      "groupSales": "Sotuvlar",
+      "groupFinance": "Moliya",
+      "groupCompany": "Kompaniya",
+      "groupSystem": "Tizim",
+      "dashboard": "Boshqaruv paneli",
+      "products": "Mahsulotlar",
+      "categories": "Kategoriyalar",
+      "orders": "Buyurtmalar",
+      "customers": "Xaridorlar",
+      "finance": "Moliya",
+      "balance": "Balans",
+      "commissions": "Komissiyalar",
+      "payouts": "To'lovlar",
+      "transactions": "Tranzaksiyalar",
+      "documents": "Hujjatlar",
+      "company": "Kompaniya profili",
+      "employees": "Xodimlar va ruxsatlar",
+      "notifications": "Bildirishnomalar",
+      "support": "Qo'llab-quvvatlash",
+      "reviews": "Sharhlar"
+    },
+    "topbar": {
+      "switchLang": "Tilni o'zgartirish",
+      "storefront": "Vitrinaga o'tish",
+      "logout": "Chiqish"
+    },
+    "common": {
+      "save": "Saqlash",
+      "cancel": "Bekor qilish",
+      "add": "Qo'shish",
+      "edit": "Tahrirlash",
+      "delete": "O'chirish",
+      "search": "Qidirish",
+      "all": "Barchasi",
+      "loading": "Yuklanmoqda…",
+      "retry": "Qayta urinish",
+      "back": "Orqaga",
+      "apply": "Qo'llash",
+      "reset": "Tozalash",
+      "confirm": "Tasdiqlash",
+      "saved": "Saqlandi",
+      "nothingFound": "Hech narsa topilmadi",
+      "loadError": "Yuklab bo'lmadi",
+      "loadErrorText": "Aloqani tekshirib, qaytadan urinib ko'ring.",
+      "period": "Davr",
+      "actions": "Amallar",
+      "status": "Holat",
+      "total": "Jami",
+      "download": "Yuklab olish",
+      "view": "Ochish",
+      "more": "Yana",
+      "yes": "Ha",
+      "no": "Yo'q",
+      "close": "Yopish",
+      "pcs": "dona",
+      "notFoundTitle": "Sahifa topilmadi",
+      "notFoundText": "Yozuv o'chirilgan yoki havolada xato bo'lishi mumkin.",
+      "toDashboard": "Boshqaruv paneliga"
+    },
+    "role": {
+      "owner": "Egasi",
+      "manager": "Menejer",
+      "storekeeper": "Omborchi",
+      "accountant": "Buxgalter",
+      "viewer": "Kuzatuvchi"
+    },
+    "companyStatus": {
+      "active": "Faol",
+      "pending": "Tekshiruvda",
+      "rejected": "Rad etilgan",
+      "suspended": "To'xtatilgan"
+    },
+    "legalForm": {
+      "llc": "MChJ",
+      "ie": "YTT",
+      "jsc": "AJ",
+      "selfEmployed": "O'zini o'zi band qilgan",
+      "other": "Boshqa shakl"
+    },
+    "dashboard": {
+      "title": "Boshqaruv paneli",
+      "subtitle": "So'nggi 30 kundagi do'konning asosiy ko'rsatkichlari",
+      "vsPrev": "oldingi davrga nisbatan",
+      "kpiRevenue": "Tushum",
+      "kpiOrders": "Buyurtmalar",
+      "kpiAvgCheck": "O'rtacha chek",
+      "kpiConversion": "Konversiya",
+      "balanceAvailable": "Yechib olish mumkin",
+      "balancePending": "Kutilmoqda",
+      "requestPayout": "Mablag' yechish",
+      "salesTitle": "Kunlik sotuvlar",
+      "funnelTitle": "Sotuv voronkasi",
+      "funnelViews": "Ko'rishlar",
+      "funnelCart": "Savatda",
+      "funnelCheckout": "Rasmiylashtirish",
+      "funnelPaid": "To'langan",
+      "topProducts": "Eng ko'p sotilganlar",
+      "recentOrders": "So'nggi buyurtmalar",
+      "attentionTitle": "E'tibor talab qiladi",
+      "attentionModeration": "moderatsiyada",
+      "attentionOutOfStock": "omborda yo'q",
+      "attentionTickets": "ochiq murojaat",
+      "attentionUnread": "yangi bildirishnoma",
+      "viewAll": "Barchasi",
+      "soldUnits": "{count} dona sotilgan",
+      "attention": {
+        "newOrders": "Tasdiqlashni kutmoqda",
+        "moderation": "Moderatsiyadagi mahsulotlar",
+        "outOfStock": "Omborda tugagan",
+        "openTickets": "Ochiq murojaatlar",
+        "unansweredReviews": "Javobsiz sharhlar"
+      }
+    },
+    "products": {
+      "title": "Mahsulotlar",
+      "subtitle": "Do'kon assortimentini boshqarish",
+      "add": "Mahsulot qo'shish",
+      "searchPlaceholder": "Nomi yoki artikul bo'yicha qidirish",
+      "filterStatus": "Holat",
+      "filterCategory": "Kategoriya",
+      "colProduct": "Mahsulot",
+      "colSku": "Artikul",
+      "colCategory": "Kategoriya",
+      "colPrice": "Narx",
+      "colStock": "Qoldiq",
+      "colStatus": "Holat",
+      "colSold": "Sotilgan",
+      "inStock": "{count} dona",
+      "outOfStock": "Mavjud emas",
+      "empty": "Hozircha mahsulot yo'q",
+      "emptyText": "Vitrinaga chiqishi uchun birinchi mahsulotni qo'shing.",
+      "confirmDelete": "Mahsulot katalogdan o'chirilsinmi?",
+      "sort": "Saralash",
+      "sortDefault": "Standart",
+      "sortPriceAsc": "Narx: o'sish bo'yicha",
+      "sortPriceDesc": "Narx: kamayish bo'yicha",
+      "sortStock": "Qoldiq bo'yicha",
+      "sortSold": "Sotuvlar bo'yicha"
+    },
+    "productStatus": {
+      "active": "Faol",
+      "draft": "Qoralama",
+      "moderation": "Moderatsiyada",
+      "archived": "Arxivda",
+      "rejected": "Rad etilgan"
+    },
+    "productForm": {
+      "titleNew": "Yangi mahsulot",
+      "titleEdit": "Mahsulotni tahrirlash",
+      "backToList": "Mahsulotlar ro'yxatiga",
+      "name": "Mahsulot nomi",
+      "namePlaceholder": "Masalan, Samsung Galaxy A55 128 GB smartfoni",
+      "sku": "Artikul (SKU)",
+      "category": "Kategoriya",
+      "price": "Narx, so'm",
+      "oldPrice": "Chegirmagacha narx, so'm",
+      "stock": "Ombordagi qoldiq",
+      "status": "Holat",
+      "description": "Tavsif",
+      "descriptionHint": "Materiallar, to'plam, afzalliklar — qanchalik batafsil bo'lsa, kartochka qidiruvda shunchalik yaxshi.",
+      "sectionCategory": "Kategoriya",
+      "sectionBasic": "Asosiy ma'lumotlar",
+      "sectionChars": "Xususiyatlar",
+      "sectionVariants": "Variantlar va mavjudlik",
+      "sectionMedia": "Mahsulot rasmlari",
+      "categoryHint": "Katalogdan kategoriyani tanlang — mahsulot xususiyatlari unga bog'liq.",
+      "categoryRoot": "Barcha kategoriyalar",
+      "categoryChange": "O'zgartirish",
+      "categoryLeafBadge": "Yakuniy kategoriya",
+      "commissionLabel": "Kategoriya komissiyasi",
+      "charsEmpty": "Avval kategoriyani tanlang — bu yerda uning xususiyatlari paydo bo'ladi.",
+      "charsRequiredNote": "Yulduzchali maydonlar nashr uchun majburiy.",
+      "boolYes": "Ha",
+      "boolNo": "Yo'q",
+      "selectPlaceholder": "Tanlanmagan",
+      "hasVariants": "Mahsulotning variantlari bor",
+      "hasVariantsHint": "Rang, o'lcham, xotira — har bir variantning o'z narxi va qoldig'i.",
+      "axisPickHint": "O'qlar bo'yicha qiymatlarni belgilang — ulardan variantlar jadvali yig'iladi.",
+      "variantsEmpty": "Variantlarni yig'ish uchun kamida bitta qiymatni belgilang.",
+      "variantsCount": "Variantlar: {count}",
+      "colVariant": "Variant",
+      "colSku": "Artikul",
+      "colPrice": "Narx, so'm",
+      "colOldPrice": "Eski",
+      "colStock": "Qoldiq",
+      "colBarcode": "Shtrix-kod",
+      "mediaHint": "Ko'pi bilan 8 ta rasm, birinchisi asosiy. JPG, PNG yoki WebP, 5 MB gacha.",
+      "photoUrl": "Rasm havolasi (https://…)",
+      "photoAdd": "Rasm qo'shish",
+      "photoMain": "Asosiy",
+      "checklist": "Kartochka tayyorligi",
+      "checkCategory": "Kategoriya tanlangan",
+      "checkName": "Nomi to'ldirilgan",
+      "checkChars": "Majburiy xususiyatlar",
+      "checkPrice": "Narx va qoldiq",
+      "checkPhoto": "Kamida bitta rasm",
+      "attributes": "Xususiyatlar",
+      "addAttribute": "Xususiyat qo'shish",
+      "attrName": "Nomi",
+      "attrValue": "Qiymati",
+      "saveDraft": "Qoralamani saqlash",
+      "publish": "Moderatsiyaga yuborish",
+      "errName": "Mahsulot nomini kiriting",
+      "errCategory": "Yakuniy kategoriyani tanlang",
+      "errChars": "Majburiy xususiyatlarni to'ldiring",
+      "errPrice": "Mahsulot narxini kiriting",
+      "sectionB2b": "Kompaniyalar uchun shartlar",
+      "minOrderQty": "Minimal partiya, dona",
+      "vatLabel": "QQS",
+      "vat": {
+        "included": "Narx QQS bilan",
+        "excluded": "Narx QQSsiz",
+        "none": "QQS to'lovchisi emas"
+      },
+      "weightKg": "Og'irligi, kg",
+      "lengthCm": "Uzunligi, sm",
+      "widthCm": "Eni, sm",
+      "heightCm": "Balandligi, sm",
+      "statusHint": "Mahsulotni faqat moderatsiya e'lon qila oladi. O'zgarishlar tekshiruvga yuboriladi.",
+      "photoDrop": "Bosing yoki fayllarni shu yerga torting",
+      "photoType": "Faqat rasm yuklash mumkin",
+      "photoSize": "Fayl 5 MB dan katta"
+    },
+    "categories": {
+      "title": "Kategoriyalar",
+      "subtitle": "Mahsulotlar tasnifi va marketpleys komissiya stavkalari",
+      "colName": "Kategoriya",
+      "colProducts": "Mahsulotlar",
+      "colCommission": "Komissiya",
+      "empty": "Kategoriyalar yo'q",
+      "note": "Komissiya stavkasi har bir kategoriya uchun marketpleys tomonidan belgilanadi va sotuvdan ushlab qolishga ta'sir qiladi."
+    },
+    "orders": {
+      "title": "Buyurtmalar",
+      "subtitle": "Xaridorlar buyurtmalarini qayta ishlash va kuzatish",
+      "searchPlaceholder": "Raqam yoki xaridor bo'yicha qidirish",
+      "filterStatus": "Holat",
+      "colNumber": "Buyurtma",
+      "colDate": "Sana",
+      "colCustomer": "Xaridor",
+      "colItems": "Pozitsiyalar",
+      "colTotal": "Summa",
+      "colPayment": "To'lov",
+      "empty": "Hozircha buyurtma yo'q",
+      "emptyText": "Yangi buyurtmalar rasmiylashtirilgach shu yerda paydo bo'ladi."
+    },
+    "orderStatus": {
+      "new": "Tasdiq kutilmoqda",
+      "confirmed": "Tasdiqlangan",
+      "packing": "Yig'ilmoqda",
+      "shipped": "Yetkazishga berilgan",
+      "delivered": "Yetkazilgan",
+      "completed": "Yakunlangan",
+      "cancelled": "Bekor qilingan",
+      "returned": "Qaytarilgan"
+    },
+    "payment": {
+      "wallet": "Kompaniya balansi",
+      "corp_card": "Korporativ karta"
+    },
+    "order": {
+      "detailTitle": "{number} buyurtma",
+      "customer": "Xaridor",
+      "items": "Buyurtma tarkibi",
+      "subtotal": "Mahsulotlar",
+      "delivery": "Yetkazib berish",
+      "commission": "Marketpleys komissiyasi",
+      "payout": "Hisobga o'tkaziladi",
+      "deliveryAddress": "Yetkazish manzili",
+      "deliveryCourier": "Kuryer orqali",
+      "deliveryPickup": "Topshirish punkti",
+      "timeline": "Buyurtma tarixi",
+      "comment": "Izoh",
+      "qty": "{count} × {price}",
+      "free": "Bepul",
+      "changeStatus": "Holatni o'zgartirish",
+      "confirm": "Buyurtmani tasdiqlash",
+      "pack": "Yig'ishga",
+      "ship": "Yetkazishga berish",
+      "complete": "Yakunlash",
+      "cancel": "Buyurtmani bekor qilish",
+      "backToList": "Buyurtmalar ro'yxatiga",
+      "awaitsDelivery": "Buyurtma yetkazib berish xizmatida. Holat avtomatik yangilanadi.",
+      "cancelTitle": "Buyurtmani bekor qilasizmi?",
+      "cancelText": "Xaridor sababni ko'radi, band qilingan summa unga qaytadi. Bu amalni qaytarib bo'lmaydi.",
+      "cancelSubmit": "Buyurtmani bekor qilish",
+      "reasonLabel": "Sabab",
+      "reasonComment": "Izoh",
+      "reasonRequired": "Sababni yozing",
+      "reason": {
+        "noStock": "Omborda yo'q",
+        "wrongPrice": "Narxda xato",
+        "cannotShip": "Muddatida jo'nata olmaymiz",
+        "buyerRequest": "Xaridor iltimosi",
+        "other": "Boshqa"
+      }
+    },
+    "customers": {
+      "title": "Xaridorlar",
+      "subtitle": "Do'kon xaridorlari bazasi",
+      "searchPlaceholder": "Ism, kompaniya yoki telefon bo'yicha",
+      "colName": "Xaridor",
+      "colPhone": "Telefon",
+      "colOrders": "Buyurtmalar",
+      "colSpent": "Xaridlar summasi",
+      "colLast": "So'nggi buyurtma",
+      "empty": "Hozircha xaridor yo'q",
+      "person": "Kompaniya ko'rsatilmagan",
+      "detailTitle": "Xaridor",
+      "avgCheck": "O'rtacha chek",
+      "firstOrder": "Birinchi buyurtma",
+      "lastOrder": "So'nggi buyurtma",
+      "recentOrders": "So'nggi buyurtmalar",
+      "backToList": "Xaridorlar ro'yxatiga"
+    },
+    "finance": {
+      "title": "Moliya",
+      "subtitle": "Do'kon balansi, komissiyalari va to'lovlari",
+      "available": "Yechib olish mumkin",
+      "pending": "Kutilmoqda",
+      "hold": "Ushlab turilgan",
+      "lifetime": "Umumiy daromad",
+      "periodRevenue": "Davr tushumi",
+      "periodCommission": "Davr komissiyasi",
+      "periodPayouts": "Davr to'lovlari",
+      "nextPayout": "Yaqin to'lov",
+      "recent": "So'nggi harakatlar",
+      "viewTransactions": "Barcha tranzaksiyalar",
+      "requestPayout": "Mablag' yechish"
+    },
+    "balance": {
+      "title": "Balans",
+      "subtitle": "Mablag'lar holati va hisob raqamiga yechish",
+      "requestPayout": "Mablag' yechish",
+      "howItWorks": "Qanday ishlaydi",
+      "step1": "Sotuvdan tushgan mablag' buyurtma tasdiqlangach balansga tushadi.",
+      "step2": "Marketpleys komissiyasi har bir sotuvdan avtomatik ushlab qolinadi.",
+      "step3": "Mavjud summani kompaniyaning hisob raqamiga yechib olish mumkin."
+    },
+    "payout": {
+      "dialogTitle": "Mablag' yechish",
+      "amount": "Yechish summasi, so'm",
+      "amountHint": "Mavjud: {max}",
+      "destination": "Hisob raqami",
+      "max": "Maks",
+      "submit": "Ariza yuborish",
+      "requested": "Yechish arizasi yuborildi",
+      "errAmount": "Noldan katta summa kiriting",
+      "errTooMuch": "Summa mavjud balansdan oshib ketdi",
+      "errInteger": "Summani butun so'mda kiriting"
+    },
+    "commissions": {
+      "title": "Komissiyalar",
+      "subtitle": "Sotuvlar bo'yicha marketpleys ushlovlari",
+      "baseRate": "Asosiy stavka",
+      "periodTotal": "Davr davomida ushlangan",
+      "byCategory": "Kategoriyalar bo'yicha stavkalar",
+      "colCategory": "Kategoriya",
+      "colRate": "Stavka",
+      "colAmount": "Summa",
+      "colOrder": "Buyurtma",
+      "colDate": "Sana",
+      "colBase": "Baza",
+      "empty": "Hozircha komissiya yo'q"
+    },
+    "transactions": {
+      "title": "Tranzaksiyalar",
+      "subtitle": "Balans harakatlari tarixi",
+      "filterType": "Turi",
+      "colDate": "Sana",
+      "colType": "Turi",
+      "colDescription": "Tavsif",
+      "colAmount": "Summa",
+      "colBalance": "Keyingi balans",
+      "empty": "Hozircha tranzaksiya yo'q"
+    },
+    "txType": {
+      "sale": "Sotuv",
+      "commission": "Komissiya",
+      "payout": "To'lov",
+      "refund": "Qaytarish",
+      "adjustment": "Tuzatish"
+    },
+    "payoutStatus": {
+      "requested": "Ariza yaratildi",
+      "processing": "Qayta ishlanmoqda",
+      "paid": "To'langan",
+      "rejected": "Rad etilgan"
+    },
+    "payouts": {
+      "title": "To'lovlar",
+      "subtitle": "Mablag' yechish arizalari va ularning holati",
+      "request": "Mablag' yechish",
+      "colRequested": "Yaratilgan",
+      "colAmount": "Summa",
+      "colDestination": "Hisob",
+      "colStatus": "Holat",
+      "colPaid": "To'langan",
+      "empty": "Hozircha to'lov yo'q"
+    },
+    "documents": {
+      "title": "Hujjatlar",
+      "subtitle": "Do'kon bo'yicha hisob-fakturalar, dalolatnomalar va hisobotlar",
+      "filterType": "Turi",
+      "colTitle": "Hujjat",
+      "colPeriod": "Davr",
+      "colDate": "Sana",
+      "colAmount": "Summa",
+      "sign": "Imzolash",
+      "empty": "Hozircha hujjat yo'q",
+      "notReady": "Hujjat hali tayyor emas. Hujjat almashinuvi ulangandan keyin shu yerda paydo bo'ladi."
+    },
+    "docType": {
+      "invoice": "Hisob-faktura",
+      "act": "Dalolatnoma",
+      "report": "Hisobot",
+      "contract": "Shartnoma",
+      "reconciliation": "Solishtirish dalolatnomasi"
+    },
+    "documentStatus": {
+      "ready": "Tayyor",
+      "generating": "Shakllanmoqda",
+      "signRequired": "Imzo kerak"
+    },
+    "company": {
+      "title": "Kompaniya profili",
+      "subtitle": "Do'konning rekvizitlari va aloqa ma'lumotlari",
+      "sectionGeneral": "Umumiy ma'lumotlar",
+      "sectionRequisites": "Bank rekvizitlari",
+      "sectionContacts": "Aloqa",
+      "shopName": "Do'kon nomi",
+      "legalName": "Yuridik nomi",
+      "legalForm": "Shakli",
+      "inn": "STIR (INN)",
+      "oked": "OKED",
+      "vatCode": "QQS to'lovchi kodi",
+      "bankAccount": "Hisob raqami",
+      "mfo": "MFO",
+      "bankName": "Bank",
+      "director": "Rahbar",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "legalAddress": "Yuridik manzil",
+      "joinedAt": "Marketpleysda",
+      "commissionRate": "Komissiya stavkasi",
+      "requisitesNote": "Bank rekvizitlari va STIR marketpleys tomonidan tekshirilgan. O'zgartirish uchun qo'llab-quvvatlashga murojaat qiling.",
+      "errName": "Do'kon nomini kiriting",
+      "errPhone": "To'g'ri telefon raqamini kiriting",
+      "errEmail": "Pochta manzilini tekshiring",
+      "logoUpload": "Logotip yuklash",
+      "logoReplace": "Almashtirish",
+      "logoRemove": "O'chirish",
+      "logoType": "Faqat rasm yuklash mumkin",
+      "logoSize": "Fayl 2 MB dan katta"
+    },
+    "employees": {
+      "title": "Xodimlar va ruxsatlar",
+      "subtitle": "Do'kon jamoasi va bo'limlarga kirish huquqlari",
+      "invite": "Xodim taklif qilish",
+      "colName": "Xodim",
+      "colContacts": "Aloqa",
+      "colRole": "Rol",
+      "colLast": "Faol bo'lgan",
+      "remove": "Olib tashlash",
+      "confirmRemove": "Xodim jamoadan olib tashlansinmi?",
+      "empty": "Xodimlar yo'q",
+      "inviteTitle": "Xodimni taklif qilish",
+      "name": "Ism",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "role": "Rol",
+      "send": "Taklif yuborish",
+      "invited": "Taklif yuborildi",
+      "neverActive": "Hali kirmagan",
+      "errName": "Xodim ismini kiriting",
+      "errPhone": "Telefon raqamini tekshiring",
+      "rolesTitle": "Rollar va huquqlar",
+      "roleDescOwner": "Barcha bo'limlar va moliyaga to'liq kirish.",
+      "roleDescManager": "Mahsulot, buyurtma va xaridorlar; to'lovlarga kirishsiz.",
+      "roleDescStorekeeper": "Qoldiqlar va buyurtmalarni yig'ish.",
+      "roleDescAccountant": "Moliya, hujjatlar va to'lovlar.",
+      "roleDescViewer": "Faqat hisobot va tahlilni ko'rish."
+    },
+    "employeeStatus": {
+      "active": "Faol",
+      "invited": "Taklif qilingan",
+      "blocked": "Bloklangan"
+    },
+    "notifications": {
+      "title": "Bildirishnomalar",
+      "subtitle": "Do'kon hodisalari va tizim xabarlari",
+      "markAllRead": "Hammasini o'qilgan deb belgilash",
+      "empty": "Bildirishnomalar yo'q",
+      "emptyText": "Bu yerda buyurtma, moliya va mahsulot hodisalari paydo bo'ladi.",
+      "allRead": "Barcha bildirishnomalar o'qilgan"
+    },
+    "notifKind": {
+      "order": "Buyurtmalar",
+      "finance": "Moliya",
+      "product": "Mahsulotlar",
+      "system": "Tizim",
+      "support": "Qo'llab-quvvatlash"
+    },
+    "ticketStatus": {
+      "open": "Ochiq",
+      "answered": "Javob berilgan",
+      "closed": "Yopilgan"
+    },
+    "support": {
+      "title": "Qo'llab-quvvatlash",
+      "subtitle": "Marketpleys qo'llab-quvvatlash xizmatiga murojaatlar",
+      "newTicket": "Yangi murojaat",
+      "colNumber": "Murojaat",
+      "colSubject": "Mavzu",
+      "colUpdated": "Yangilangan",
+      "empty": "Hozircha murojaat yo'q",
+      "emptyText": "Savol bering — qo'llab-quvvatlash ish vaqtida javob beradi.",
+      "ticketTitle": "{number} murojaat",
+      "subject": "Mavzu",
+      "message": "Xabar",
+      "priority": "Muhimlik",
+      "send": "Yuborish",
+      "created": "Murojaat yaratildi",
+      "reply": "Javob berish",
+      "replyPlaceholder": "Xabaringiz…",
+      "priorityLow": "Past",
+      "priorityNormal": "Oddiy",
+      "priorityHigh": "Yuqori",
+      "backToList": "Murojaatlar ro'yxatiga",
+      "contactsTitle": "To'g'ridan-to'g'ri bog'lanish",
+      "workHours": "Dush–Shan, 9:00–18:00",
+      "replySent": "Javob qo'shildi"
+    },
+    "pagination": {
+      "range": "{total} tadan {from}–{to}",
+      "prev": "Oldingi sahifa",
+      "next": "Keyingi sahifa"
+    },
+    "reviews": {
+      "title": "Sharhlar",
+      "subtitle": "Xaridorlar mahsulotlaringiz haqida nima yozadi",
+      "tabAll": "Hammasi",
+      "tabUnanswered": "Javob kutmoqda",
+      "tabAnswered": "Javob berilgan",
+      "ratingAll": "Istalgan baho",
+      "ratingOption": "Baho: {n} / 5",
+      "summary": "o'rtacha baho, sharhlar: {count}",
+      "searchPlaceholder": "Mahsulot, kompaniya yoki matn bo'yicha qidirish",
+      "statusAnswered": "Javob berilgan",
+      "statusUnanswered": "Javob kutmoqda",
+      "yourReply": "Javobingiz",
+      "edit": "Javobni o'zgartirish",
+      "reply": "Javob berish",
+      "replyLabel": "Xaridorga javob",
+      "replyPlaceholder": "Sharh uchun minnatdorchilik bildiring yoki yechim taklif qiling",
+      "send": "Javobni yuborish",
+      "sent": "Javob saqlandi",
+      "errEmpty": "Javob yozing",
+      "empty": "Sharhlar yo'q",
+      "emptyText": "Mahsulotlaringiz haqidagi xaridorlar sharhlari shu yerda paydo bo'ladi.",
+      "note": "Javobingizni xaridorlar ko'radi. Agar sharh qoidalarni buzsa, {email} manziliga yozing."
+    }
+  },
+  "auth": {
+    "title": "Sotuvchi kabinetiga kirish",
+    "subtitle": "Do'kon, buyurtma va moliyani bir joyda boshqaring",
+    "phone": "Telefon",
+    "password": "Parol",
+    "submit": "Kirish",
+    "noAccount": "1martda hali sotmaysizmi?",
+    "registerLink": "Sotuvchi bo'lish",
+    "demoHint": "Demo rejim: istalgan raqam va 4 belgidan uzun parol mos keladi.",
+    "signingIn": "Kirmoqda…",
+    "aside": {
+      "title": "Biznesga bitta kabinetdan soting",
+      "b1": "Buyurtmalar, xaridorlar va hujjatlar bir joyda",
+      "b2": "Balans, komissiyalar va kompaniya hisobiga to'lovlar",
+      "b3": "Xodimlar bilan ishlash va qo'llab-quvvatlashga murojaatlar",
+      "mockTitle": "Buyurtmalar",
+      "mockTag": "Namuna",
+      "orderTitle": "Kompaniyadan buyurtma",
+      "paidWallet": "Kompaniya balansidan to'langan",
+      "paidCard": "Korporativ karta bilan to'langan"
+    },
+    "errPhone": "To'g'ri telefon raqamini kiriting",
+    "errPassword": "Parol kamida 4 belgidan iborat bo'lishi kerak",
+    "errFailed": "Kirib bo'lmadi. Raqam va parolni tekshiring.",
+    "sessionExpired": "Seans tugadi. Qayta kiring, sizni shu sahifaga qaytaramiz.",
+    "forgot": "Parolni unutdingizmi?",
+    "forgotLink": "Qo'llab-quvvatlashga yozish"
+  },
+  "landing": {
+    "nav": {
+      "benefits": "Afzalliklar",
+      "tariffs": "Tariflar",
+      "steps": "Qanday boshlash",
+      "faq": "Savollar",
+      "login": "Kirish",
+      "apply": "Sotuvchi bo'lish"
+    },
+    "hero": {
+      "badge": "Biznes uchun B2B marketpleys",
+      "title": "1martda biznesga soting",
+      "subtitle": "Kompaniyalardan ulgurji buyurtmalar oling, sotuvni yuriting va tushumni hisob raqamiga yeching — hammasi bitta kabinetda.",
+      "cta": "Sotuvchi bo'lish",
+      "secondary": "Menda kabinet bor",
+      "stat1": "Korporativ xaridorlar",
+      "stat2": "Hisob raqamiga to'lovlar",
+      "stat3": "Komissiya",
+      "mediaTag": "1mart vitrinasi",
+      "eyebrow": "Har bir buyurtma ortida — xuddi siz kabi tadbirkorlar",
+      "sellers": {
+        "s1": {
+          "name": "Aziz Rahimov",
+          "shop": "TechnoPro",
+          "cat": "Elektronika"
+        },
+        "s2": {
+          "name": "Dilnoza Karimova",
+          "shop": "OfficeLine",
+          "cat": "Kanstovarlar"
+        },
+        "s3": {
+          "name": "Sherzod Usmonov",
+          "shop": "BuildMarket",
+          "cat": "Qurilish mollari"
+        },
+        "s4": {
+          "name": "Nigora Yo'ldosheva",
+          "shop": "HomeComfort",
+          "cat": "Maishiy texnika"
+        }
+      },
+      "m1": {
+        "val": "500+",
+        "label": "Faol sotuvchilar",
+        "sub": "Butun O'zbekiston bo'ylab biznesga sotadi"
+      },
+      "m2": {
+        "val": "10 000+",
+        "label": "Oyiga B2B-buyurtma",
+        "sub": "Kompaniya va tadbirkorlardan"
+      },
+      "m3": {
+        "val": "14",
+        "label": "mamlakat hududi",
+        "sub": "Xaridorlar omboringizga yaqin"
+      },
+      "lead": "Kompaniyalardan ulgurji buyurtmalar — bitta kabinetda",
+      "how": "Bu qanday ishlaydi",
+      "fact1": "Bepul ulanish",
+      "fact2": "Komissiya 6% dan",
+      "fact3": "To'lovlar kompaniya hisobiga",
+      "floatTitle": "Kompaniyadan buyurtma",
+      "floatStatus": "Kompaniya balansidan to'langan"
+    },
+    "showcase": {
+      "title": "Xaridorlar ko'radigan vitrina",
+      "subtitle": "Mahsulot kartochkalari 1mart vitrinasiga tushadi, u yerda ularni kompaniya va tadbirkorlar topadi.",
+      "f1Title": "Professional kartochkalar",
+      "f1Text": "Foto, xususiyatlar va narx — vitrinaning yagona uslubida.",
+      "f2Title": "Xaridorlar sizni topadi",
+      "f2Text": "Kategoriya, brend va filtrlar bo'yicha qidiruv mahsulotlaringizga olib keladi.",
+      "f3Title": "Buyurtmalar — darhol kabinetga",
+      "f3Text": "Rasmiylashtirilgan buyurtma kabinetga tushadi va ishga ketadi."
+    },
+    "proof": {
+      "eyebrow": "Bizga butun O'zbekiston bo'ylab sotuvchilar ishonadi",
+      "s1": "faol sotuvchilar",
+      "s2": "oylik buyurtmalar",
+      "s3val": "Bepul",
+      "s3": "platformaga ulanish",
+      "s4": "sotuvchilar bahosi"
+    },
+    "cta2": {
+      "title": "Bugundan biznesga sotishni boshlang",
+      "text": "Bepul ulanish, kompaniya hisobiga to'lovlar va har bosqichda qo'llab-quvvatlash."
+    },
+    "benefits": {
+      "title": "Nega sotuvchilar 1martni tanlaydi",
+      "item1Title": "B2B buyurtmalar oqimi",
+      "item1Text": "Ulgurji va muntazam xarid qiladigan kompaniya va tadbirkorlarga kirish.",
+      "item2Title": "Shaffof moliya",
+      "item2Text": "Balans, komissiya va to'lovlar real vaqtda ko'rinadi — yashirin ushlovlarsiz.",
+      "item3Title": "Qulay kabinet",
+      "item3Text": "Mahsulot, buyurtma, xaridor va tahlil bitta ish muhitida.",
+      "item4Title": "Kompaniya hisobiga to'lovlar",
+      "item4Text": "Mablag'ni to'liq hujjatlar bilan hisob raqamiga yechish.",
+      "item5Title": "Hujjatlar bilan ishlash",
+      "item5Text": "Hisob-faktura, dalolatnoma va hisobotlar avtomatik shakllanadi.",
+      "item6Title": "Sotuvchilarni qo'llab-quvvatlash",
+      "item6Text": "Rus va o'zbek tillarida shaxsiy qo'llab-quvvatlash."
+    },
+    "tariffs": {
+      "title": "Komissiya va tariflar",
+      "subtitle": "Faqat natija uchun to'laysiz — komissiya amalga oshgan sotuvdan ushlanadi.",
+      "colCategory": "Kategoriya",
+      "colCommission": "Komissiya",
+      "catElectronics": "Elektronika",
+      "catSmartphones": "Smartfon va gadjetlar",
+      "catAccessories": "Aksessuarlar",
+      "catOffice": "Ofis texnikasi",
+      "catComponents": "Butlovchi qismlar",
+      "catNetwork": "Tarmoq uskunalari",
+      "note": "Aniq stavka mahsulot kategoriyasiga bog'liq va sotuvchi shartnomasida qayd etiladi."
+    },
+    "steps": {
+      "title": "Sotuvni qanday boshlash",
+      "step1Title": "Ariza qoldiring",
+      "step1Text": "Qisqa shaklni to'ldiring — ulanish uchun bog'lanamiz.",
+      "step2Title": "Kompaniyani ulang",
+      "step2Text": "Rekvizitlarni kiriting va tasdiqlovchi hujjatlarni yuklang.",
+      "step3Title": "Mahsulot qo'shing",
+      "step3Text": "Mahsulot kartochkalarini yarating va moderatsiyaga yuboring.",
+      "step4Title": "Sotuvni boshlang",
+      "step4Text": "Buyurtmalarni qabul qiling va tushumni kompaniya hisobiga yeching.",
+      "subtitle": "Kompaniya ham, tadbirkor ham ulanishi mumkin — butun jarayon bir necha kun oladi.",
+      "ctaTitle": "Hammasi oddiy",
+      "ctaText": "1mart sotuvchisi bo'ling va barcha vositalarga ega bo'ling.",
+      "ctaBtn": "Ariza topshirish",
+      "step1Time": "≈ 2 daqiqa",
+      "step2Time": "≈ 1 kun",
+      "step3Time": "≈ 15 daqiqa",
+      "step4Time": "darhol",
+      "chooseTime": "o'z sur'atingizda",
+      "row1Title": "Nima sotishni hal qiling",
+      "row1Text": "Ulgurji xaridorlar, ya'ni kompaniya va tadbirkorlar uchun kategoriya va assortimentni belgilang. 1mart vitrinasida qaysi mahsulotlar allaqachon borligini ko'rish mumkin.",
+      "row1Action": "Vitrinani ochish",
+      "row2Title": "Iqtisodiyotni hisoblang",
+      "row2Text": "Xarid narxi, ustama va partiya hajmini jamlang, so'ng komissiyani hisobga oling. U kategoriyaga bog'liq va 6% dan boshlanadi, ulanish esa bepul.",
+      "row2Action": "Tariflarni ko'rish",
+      "row5Title": "Mahsulot qo'shing va buyurtma qabul qiling",
+      "row5Text": "Kategoriya xususiyatlari va variantlari bilan kartochkalar yarating va moderatsiyaga yuboring. Xaridorlar kompaniya balansidan yoki korporativ karta orqali to'laydi, to'lovlar esa kompaniya hisobiga tushadi.",
+      "row5Link": "Kabinetga kirish"
+    },
+    "reviews": {
+      "title": "1mart sotuvchilari tarixi",
+      "subtitle": "Platformada biznesga allaqachon sotayotgan kompaniyalar.",
+      "r1Name": "Aziz Rahimov",
+      "r1Company": "TechnoPro, elektronika",
+      "r1Text": "Birinchi chorakda ulgurji buyurtmalarning barqaror oqimiga chiqdik. To'lovlar hisob raqamga aniq muddatda keladi.",
+      "r2Name": "Dilnoza Karimova",
+      "r2Company": "OfficeLine, kanstovarlar",
+      "r2Text": "Kabinet hammasini qamrab oladi: mahsulotlar, buyurtmalar, hujjatlar. Hisob-fakturalar o'zi shakllanadi.",
+      "r3Name": "Sherzod Usmonov",
+      "r3Company": "BuildMarket, qurilish mollari",
+      "r3Text": "Shaffof komissiyalar va tushunarli tahlil. Nima va qancha sotilayotgani yashirin ushlab qolishlarsiz ko'rinadi.",
+      "read": "O'qish",
+      "r1Metric": "Ulgurji buyurtmalarning barqaror oqimiga chiqdik",
+      "r2Metric": "Mahsulotlar, buyurtmalar va hujjatlar endi bitta kabinetda",
+      "r3Metric": "Shaffof komissiyalar va tushunarli analitika",
+      "prev": "Oldingi tarix",
+      "next": "Keyingi tarix",
+      "r4Name": "Malika Yusupova",
+      "r4Company": "CleanLine, maishiy kimyo",
+      "r4Metric": "Boshqa viloyatlardagi kompaniyalarga sota boshladik"
+    },
+    "contact": {
+      "title": "Savollaringiz bormi?",
+      "text": "Mutaxassislarimiz ulanishda yordam beradi va har qanday savolga javob beradi.",
+      "chat": "Onlayn chat",
+      "addressLabel": "Ofis",
+      "address": "Toshkent sh., Mirzo Ulug'bek tumani",
+      "phoneLabel": "Telefon",
+      "emailLabel": "Elektron pochta"
+    },
+    "participants": {
+      "title": "Kim ulanishi mumkin",
+      "text": "Platforma yuridik shaxslar va tadbirkorlar bilan ishlaydi: MChJ, YTT, AJ, shuningdek boshqa ro'yxatdan o'tish shakllari va huquqiy imkoniyat bo'lsa o'zini o'zi band qilganlar."
+    },
+    "faq": {
+      "title": "Ko'p so'raladigan savollar",
+      "q1": "Ulanish qancha turadi?",
+      "a1": "Ulanish bepul. Marketpleys amalga oshgan sotuvlardan komissiya hisobiga daromad oladi.",
+      "q2": "To'lovlar qachon keladi?",
+      "a2": "Mavjud mablag'ni istalgan vaqtda kompaniya hisobiga yechish mumkin; qayta ishlash — 2 ish kunigacha.",
+      "q3": "Qanday hujjatlar kerak?",
+      "a3": "Ro'yxatdan o'tganlik guvohnomasi, bank rekvizitlari va sotuvchi shartnomasi. To'liq ro'yxatni menejer aytadi.",
+      "q4": "Kabinet qaysi tilda ishlaydi?",
+      "a4": "Kabinet va qo'llab-quvvatlash rus va o'zbek tillarida mavjud.",
+      "subtitle": "Ulanish, komissiyalar va to'lovlar haqida qisqacha.",
+      "askText": "Javob topmadingizmi?",
+      "askLink": "Qo'llab-quvvatlashga yozing",
+      "q5": "Xaridorlar buyurtmalarni qanday to'laydi?",
+      "a5": "Xaridor kompaniya balansni bank o'tkazmasi orqali to'ldiradi va undan yoki korporativ karta bilan to'laydi. Platformada shaxsiy karta, naqd pul va bo'lib to'lash yo'q.",
+      "q6": "Platforma komissiyasi qancha?",
+      "a6": "6% dan boshlanadi, stavka mahsulot kategoriyasiga bog'liq va shartnomada belgilanadi. Komissiya faqat amalga oshgan savdolardan ushlab qolinadi.",
+      "q7": "Kimlar ulanishi mumkin?",
+      "a7": "Yuridik shaxslar va tadbirkorlar: MChJ, YTT, AJ va boshqa ro'yxatdan o'tish shakllari, shuningdek huquqiy imkoniyat bo'lsa, o'zini o'zi band qilganlar.",
+      "q8": "Ulanish qancha vaqt oladi?",
+      "a8": "Arizadan birinchi mahsulotlargacha bo'lgan butun jarayon bir necha kun oladi. Menejer oldindan nimalarni tayyorlash kerakligini aytadi."
+    },
+    "apply": {
+      "title": "Ulanish uchun ariza qoldiring",
+      "subtitle": "Shaklni to'ldiring — menejer kompaniyani ulash uchun bog'lanadi.",
+      "name": "Ismingiz",
+      "phone": "Telefon",
+      "shopName": "Do'kon nomi",
+      "legalForm": "Biznes shakli",
+      "category": "Mahsulot kategoriyasi",
+      "comment": "Izoh",
+      "submit": "Ariza yuborish",
+      "sending": "Yuborilmoqda…",
+      "successTitle": "Ariza yuborildi",
+      "successText": "Eng yaqin ish vaqtida siz bilan bog'lanamiz.",
+      "errName": "Ismni kiriting",
+      "errPhone": "Telefon raqamini tekshiring",
+      "errShop": "Do'kon nomini kiriting",
+      "errSubmit": "Ariza yuborilmadi. Aloqani tekshirib, qayta urinib ko'ring."
+    },
+    "footer": {
+      "tagline": "Sotuvchilar uchun 1mart B2B marketpleysi",
+      "rights": "«Octagram» AJ. Barcha huquqlar himoyalangan.",
+      "learnTitle": "O'rganish",
+      "partnersTitle": "Sotuvchilarga",
+      "projectsTitle": "Loyihalarimiz",
+      "socialsTitle": "Ijtimoiy tarmoqlarda",
+      "login": "Kabinetga kirish",
+      "storefront": "1mart vitrinasi",
+      "telegram": "Telegram",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "closing": "Biznesga sotish uchun bitta kabinet"
+    },
+    "tools": {
+      "eyebrow": "Kabinet vositalari",
+      "title": "Biznesga sotish uchun hamma narsa — bitta kabinetda",
+      "subtitle": "Analitika, vitrina, logistika va moliya 1mart Business yagona ish muhitida.",
+      "t1Title": "Savdo analitikasi",
+      "t1Text": "Talab, dinamika va qoldiqlar — raqamlarga asoslangan qarorlar.",
+      "t2Title": "Vitrina va buyurtmalar",
+      "t2Text": "Mahsulot kartochkalari 1mart vitrinasida, buyurtmalar darhol kabinetda.",
+      "t3Title": "Logistika va ombor",
+      "t3Text": "Jo'natmalar, qoldiqlar va yetkazib berish holati nazoratda.",
+      "t4Title": "Moliya va hujjatlar",
+      "t4Text": "Balans, hisobga to'lovlar va hisob-fakturalar — avtomatik.",
+      "more": "Batafsil",
+      "prev": "Oldingi slayd",
+      "next": "Keyingi slayd",
+      "goTo": "{n}-slayd",
+      "c1": {
+        "title": "Mahsulotlar va katalog",
+        "text": "Mahsulotlarni kategoriyalar daraxtiga joylashtiring va aynan shu kategoriyaga kerakli xususiyatlarni to'ldiring. Har bir variantning o'z artikuli, narxi va qoldig'i bor.",
+        "s1": {
+          "title": "Kategoriyalar daraxti",
+          "text": "Katalogning kerakli bo'limini tanlang, xaridorlar mahsulotni izlagan joyidan topadi.",
+          "head": "Kategoriyalar",
+          "r1": {
+            "a": "Kanstovarlar"
+          },
+          "r2": {
+            "a": "Qog'oz va bloknotlar"
+          },
+          "r3": {
+            "a": "Ofis qog'ozi"
+          },
+          "r4": {
+            "a": "Yozuv buyumlari"
+          },
+          "r5": {
+            "a": "Elektronika"
+          }
+        },
+        "s2": {
+          "title": "Kategoriya bo'yicha xususiyatlar",
+          "text": "Maydonlar to'plami kategoriyaga bog'liq, shuning uchun mahsulot kartochkasi ortiqcha ishsiz to'ldiriladi.",
+          "head": "Ofis qog'ozi: xususiyatlar",
+          "r1": {
+            "a": "Format",
+            "b": "A4"
+          },
+          "r2": {
+            "a": "Zichlik",
+            "b": "80 g/m²"
+          },
+          "r3": {
+            "a": "Pachkadagi varaqlar",
+            "b": "500"
+          },
+          "r4": {
+            "a": "Rang",
+            "b": "Oq"
+          },
+          "r5": {
+            "a": "Ishlab chiqarilgan mamlakat",
+            "b": "O'zbekiston"
+          }
+        },
+        "s3": {
+          "title": "Variantlar va SKU",
+          "text": "Narx va qoldiq mahsulotning har bir varianti uchun alohida belgilanadi.",
+          "head": "Mahsulot variantlari",
+          "h": {
+            "a": "SKU",
+            "b": "Narx",
+            "c": "Qoldiq"
+          },
+          "float": {
+            "label": "Mahsulot holati",
+            "value": "Faol"
+          },
+          "r1": {
+            "a": "A4-80-500",
+            "b": "42 000 so'm",
+            "c": "1 200 dona"
+          },
+          "r2": {
+            "a": "A4-90-500",
+            "b": "48 500 so'm",
+            "c": "640 dona"
+          },
+          "r3": {
+            "a": "A3-80-500",
+            "b": "84 000 so'm",
+            "c": "310 dona"
+          },
+          "r4": {
+            "a": "A5-80-500",
+            "b": "23 000 so'm",
+            "c": "950 dona"
+          }
+        }
+      },
+      "c2": {
+        "title": "Moliya va hujjatlar",
+        "text": "Balans, komissiyalar va kompaniya hisobiga to'lovlar bitta bo'limda jamlangan. Hisob-fakturalar va aktlar ham shu yerda, ularni qidirish shart emas.",
+        "s1": {
+          "title": "Balans",
+          "text": "To'lovga qancha mavjudligi va nima qayta ishlanayotgani darhol ko'rinadi.",
+          "head": "Balans",
+          "t1": {
+            "label": "To'lovga mavjud",
+            "value": "18 450 000 so'm"
+          },
+          "t2": {
+            "label": "Qayta ishlanmoqda",
+            "value": "3 200 000 so'm"
+          },
+          "r1": {
+            "a": "№10428 buyurtma tushumi",
+            "b": "+1 165 600 so'm"
+          },
+          "r2": {
+            "a": "№10427 buyurtma tushumi",
+            "b": "+808 400 so'm"
+          }
+        },
+        "s2": {
+          "title": "Komissiyalar",
+          "text": "Komissiya kategoriyaga qarab 6% dan boshlanadi. Har bir buyurtma bo'yicha qancha ushlangani ko'rinadi.",
+          "head": "Komissiyalar",
+          "h": {
+            "a": "Buyurtma",
+            "b": "Summa",
+            "c": "Komissiya"
+          },
+          "float": {
+            "label": "Komissiya",
+            "value": "6% dan"
+          },
+          "r1": {
+            "a": "№10428",
+            "b": "1 240 000 so'm",
+            "c": "74 400 so'm"
+          },
+          "r2": {
+            "a": "№10427",
+            "b": "860 000 so'm",
+            "c": "51 600 so'm"
+          },
+          "r3": {
+            "a": "№10425",
+            "b": "2 150 000 so'm",
+            "c": "129 000 so'm"
+          },
+          "r4": {
+            "a": "№10424",
+            "b": "500 000 so'm",
+            "c": "30 000 so'm"
+          }
+        },
+        "s3": {
+          "title": "To'lovlar",
+          "text": "Pul kompaniyaning hisob raqamiga tushadi, har bir to'lovning holati esa kabinetda ko'rinadi.",
+          "head": "Kompaniya hisobiga to'lovlar",
+          "h": {
+            "a": "Sana",
+            "b": "Summa",
+            "c": "Holat"
+          },
+          "r1": {
+            "a": "02.11.2026",
+            "b": "5 750 000 so'm",
+            "c": "Ariza yaratildi"
+          },
+          "r2": {
+            "a": "30.10.2026",
+            "b": "3 200 000 so'm",
+            "c": "Qayta ishlanmoqda"
+          },
+          "r3": {
+            "a": "28.10.2026",
+            "b": "12 400 000 so'm",
+            "c": "To'langan"
+          },
+          "r4": {
+            "a": "21.10.2026",
+            "b": "9 100 000 so'm",
+            "c": "To'langan"
+          }
+        },
+        "s4": {
+          "title": "Hisob-fakturalar va aktlar",
+          "text": "Barcha yopuvchi hujjatlar holatlari bilan birga bitta bo'limda jamlangan.",
+          "head": "Hujjatlar",
+          "h": {
+            "a": "Hujjat",
+            "b": "Sana",
+            "c": "Holat"
+          },
+          "r1": {
+            "a": "Hisob-faktura №215",
+            "b": "02.11.2026",
+            "c": "Shakllanmoqda"
+          },
+          "r2": {
+            "a": "Hisob-faktura №214",
+            "b": "31.10.2026",
+            "c": "Tayyor"
+          },
+          "r3": {
+            "a": "Akt №87",
+            "b": "31.10.2026",
+            "c": "Imzo kerak"
+          },
+          "r4": {
+            "a": "Akt №86",
+            "b": "30.09.2026",
+            "c": "Tayyor"
+          }
+        }
+      },
+      "c3": {
+        "title": "Analitika va buyurtmalar",
+        "text": "Asosiy raqamlar bilan dashboard, holatlar bo'yicha buyurtmalar, mijozlar va rollari bilan xodimlar. Butun jamoa bitta kabinetda ishlaydi.",
+        "s1": {
+          "title": "Dashboard",
+          "text": "Buyurtmalar, tushum va savdo dinamikasi bitta ekranda.",
+          "head": "Dashboard",
+          "t1": {
+            "label": "Buyurtmalar",
+            "value": "128"
+          },
+          "t2": {
+            "label": "Tushum",
+            "value": "48 600 000 so'm"
+          }
+        },
+        "s2": {
+          "title": "Buyurtmalar",
+          "text": "Har bir buyurtmaning holati tasdiqlashdan yetkazib berishgacha ko'rinadi.",
+          "head": "Buyurtmalar",
+          "h": {
+            "a": "Buyurtma",
+            "b": "Mijoz",
+            "c": "Holat"
+          },
+          "r1": {
+            "a": "№10428",
+            "b": "\"Ofis Plyus\" MChJ",
+            "c": "Tasdiqlangan"
+          },
+          "r2": {
+            "a": "№10427",
+            "b": "\"StroyDom\" MChJ",
+            "c": "Yig'ilmoqda"
+          },
+          "r3": {
+            "a": "№10425",
+            "b": "\"TexSnab\" MChJ",
+            "c": "Yetkazishga berilgan"
+          },
+          "r4": {
+            "a": "№10424",
+            "b": "YaTT Karimov",
+            "c": "Yetkazilgan"
+          }
+        },
+        "s3": {
+          "title": "Mijozlar",
+          "text": "Sizdan xarid qilayotgan kompaniyalar va tadbirkorlar buyurtmalar tarixi bilan birga.",
+          "head": "Mijozlar",
+          "h": {
+            "a": "Kompaniya",
+            "b": "Buyurtmalar",
+            "c": "Summa"
+          },
+          "r1": {
+            "a": "\"Ofis Plyus\" MChJ",
+            "b": "14",
+            "c": "18 200 000 so'm"
+          },
+          "r2": {
+            "a": "\"StroyDom\" MChJ",
+            "b": "9",
+            "c": "26 750 000 so'm"
+          },
+          "r3": {
+            "a": "\"TexSnab\" MChJ",
+            "b": "6",
+            "c": "11 300 000 so'm"
+          },
+          "r4": {
+            "a": "YaTT Karimov",
+            "b": "4",
+            "c": "3 900 000 so'm"
+          }
+        },
+        "s4": {
+          "title": "Xodimlar",
+          "text": "Xodimlarni qo'shing va rollar belgilang, har kim o'z ish qismini ko'rib turadi.",
+          "head": "Xodimlar",
+          "h": {
+            "a": "Xodim",
+            "b": "Rol"
+          },
+          "r1": {
+            "a": "Nodira S.",
+            "b": "Egasi"
+          },
+          "r2": {
+            "a": "Bobur T.",
+            "b": "Menejer"
+          },
+          "r3": {
+            "a": "Jasur X.",
+            "b": "Omborchi"
+          },
+          "r4": {
+            "a": "Sevara A.",
+            "b": "Buxgalter"
+          }
+        }
+      }
+    },
+    "mobile": {
+      "eyebrow": "Mobil ilova",
+      "title": "Biznesni smartfondan boshqaring",
+      "subtitle": "Buyurtmalar, balans va ko'rsatkichlar — qayerda bo'lsangiz ham qo'l ostida.",
+      "f1": "Buyurtma va sotib olishlarni kuzating",
+      "f2": "Balansni kompaniya hisobiga chiqaring",
+      "f3": "Asosiy ko'rsatkichlarni kuzating",
+      "f4": "Xaridorlarga chatda javob bering",
+      "download": "Ilovani yuklab olish",
+      "note": "Ilovani o'rnatish uchun telefon kamerasini yo'naltiring",
+      "soonTitle": "Sotuvchilar uchun mobil ilova tez orada",
+      "soonText": "Buyurtmalar, balans va to'lovlar qo'l ostida bo'ladigan ilovani tayyorlayapmiz. Telefonda ekran qanday ko'rinishi namuna sifatida ko'rsatilgan.",
+      "soonStatus": "Ilova ishlab chiqilmoqda. Hozircha kabinet kompyuterdagi brauzerda ishlaydi.",
+      "phoneTime": "9:41",
+      "phoneSample": "Ekran namunasi",
+      "phoneBalance": "Balans",
+      "phoneBalanceValue": "12 480 000 so'm",
+      "phoneBalanceNote": "To'lovlar kompaniya hisobiga",
+      "phoneOrders": "Bugungi buyurtmalar",
+      "phoneOrdersValue": "18"
+    },
+    "edu": {
+      "eyebrow": "O'qitish",
+      "title": "Yangi boshlovchilar uchun bepul o'qitish",
+      "subtitle": "Qisqa kurslar va vebinarlar: iqtisodni hisoblash, tovarni rasmiylashtirish va savdo modelini tanlash.",
+      "link1": "Vebinarlar kalendari",
+      "link2": "Barcha materiallar",
+      "more": "Batafsil",
+      "c1Title": "Yunit-iqtisod",
+      "c1Text": "Daromad, marja va komissiyani hisoblab, foyda bilan sotish.",
+      "c2Title": "Tovar hujjatlari",
+      "c2Text": "Turli toifalar uchun qanday sertifikat va hujjatlar kerak.",
+      "c3Title": "Logistika va savdo modellari",
+      "c3Text": "Platforma ombori yoki o'z omboringiz — qaysi biri foydali.",
+      "heading": "Kompaniyalarga sotishni boshlash va kabinetda ishlashni o'rganing",
+      "label": "Yangi sotuvchilar uchun qo'llanmalar",
+      "guideTitle": "1mart sotuvchi qo'llanmasi",
+      "text": "Qisqa qo'llanmalar: foydani hisoblash, tovar hujjatlarini tayyorlash, kabinetda buyurtmalar bilan ishlash va hisob raqamiga to'lovlarni olish.",
+      "guide3": "Kabinet va buyurtmalar",
+      "guide4": "Hisob raqamiga to'lovlar"
+    },
+    "logistics": {
+      "eyebrow": "1mart logistikasi",
+      "title": "Ombor va yetkazishni o'z zimmamizga olamiz",
+      "subtitle": "Tovarlarni platforma omborida saqlang, xaridorlarga yetkazish va qaytarishlarni esa biz hal qilamiz — butun O'zbekiston bo'ylab.",
+      "t1Title": "Omborda saqlash",
+      "t1Text": "Tovarlarni 1mart omborlariga joylashtiring va logistikani unuting.",
+      "t2Title": "Mamlakat bo'ylab yetkazish",
+      "t2Text": "Buyurtmalarni barcha hududlardagi xaridorlarga yetkazamiz.",
+      "t3Title": "Topshirish punktlari",
+      "t3Text": "Xaridor uyi va ofisiga yaqin punktlar tarmog'i.",
+      "t4Title": "Qaytarishlar",
+      "t4Text": "Qaytarishlarni qabul qilish va qayta ishlashni o'z zimmamizga olamiz.",
+      "cta": "Sotishni boshlash",
+      "statVal": "14",
+      "statLabel": "yetkazish va topshirish punktlari bo'lgan hudud"
+    },
+    "stats": {
+      "aria": "Raqamlarda 1mart",
+      "sellersVal": "500+",
+      "sellersLabel": "Faol sotuvchilar",
+      "sellersSub": "Kompaniya va tadbirkorlarga sotmoqda",
+      "ordersVal": "12 000+",
+      "ordersLabel": "Oyiga buyurtma",
+      "ordersSub": "Kompaniya va tadbirkorlardan",
+      "regionsVal": "14",
+      "regionsLabel": "O'zbekiston hududi",
+      "regionsSub": "Kompaniya va tadbirkorlar 1martda butun mamlakat bo'ylab buyurtma beradi"
+    },
+    "support": {
+      "title": "Biz yoningizdamiz va yordamga tayyormiz",
+      "cardTitle": "1martda ishlash haqidagi savollarga javob beramiz",
+      "cardText": "Sotuvchilar tiketlarni to'g'ridan-to'g'ri kabinetda yaratadi. Hali ulanmagan bo'lsangiz, bizga qo'ng'iroq qiling yoki yozing.",
+      "links": {
+        "ticket": "Kabinetda tiket yaratish",
+        "phone": "Telefon:",
+        "email": "Pochta:",
+        "start": "Sotishni qanday boshlash kerak"
+      },
+      "cta": "Ariza qoldirish",
+      "contactTitle": "Qo'llab-quvvatlashga murojaat qiling",
+      "contactText": "Kabinetdagi tiket, telefon yoki pochta: qulay usulni tanlang. Rus va o'zbek tillarida javob beramiz.",
+      "feedbackTitle": "Fikringizni bildiring",
+      "feedbackText": "Kabinetda nima yetishmayapti? Taklifingizni tiket orqali yoki qo'llab-quvvatlash pochtasiga yuboring."
+    },
+    "polishB": {
+      "tickFree": "Bepul ulanish",
+      "tickCommission": "Komissiya 6% dan, faqat amalga oshgan savdolardan",
+      "tickPayouts": "To'lovlar kompaniya hisobiga",
+      "privacy": "Ma'lumotlar faqat ulanish bo'yicha bog'lanish uchun ishlatiladi.",
+      "contactTitle": "Aloqa"
+    }
+  }
+}

@@ -1,0 +1,237 @@
+/*
+ * ─────────────────────────────────────────────────────────────────────────
+ *  1mart Business — визуальный язык кабинета продавца («confident fintech»)
+ * ─────────────────────────────────────────────────────────────────────────
+ *
+ *  Это НАДСТРОЙКА над @zoo/shared/tokens.css (он грузится первым, этот — после,
+ *  поэтому значения отсюда выигрывают). Витрина остаётся как есть; свой характер
+ *  B2B-части задаётся здесь одним файлом: глубина (тени), насыщенная семантика
+ *  цвета, табличные цифры, фирменный градиент и единая моторика.
+ *
+ *  Референс языка: Stripe Dashboard, Uzum Seller, Mercury. Светлые поверхности,
+ *  чернильный текст, один фирменный акцент (бирюза 1mart), выверенная глубина и
+ *  крупная уверенная типографика чисел.
+ *
+ *  Все переменные с префиксом --m-* принадлежат кабинету. Компоненты M-кита
+ *  (MCard, MStatTile, MStatus, MTable, MBarChart, MSidebar, MTopbar) и лендинг
+ *  берут глубину/цвет/моторику только отсюда — ничего «на глаз» в компонентах.
+ */
+:root {
+  /* ── Бренд PlanIQ: свежий зелёный ──────────────────────────────────────────
+   * Полный стиль PlanIQ: прохладный светлый фон, белые карточки, чёрные
+   * «фичевые» карточки, зелёный бренд. Этот файл грузится только в apps/business,
+   * поэтому витрина (apps/host) остаётся на своей палитре. */
+  --m-brand: #2CDD41;                  /* зелёный официального логотипа 1mart */
+  --m-brand-strong: #0E7A1D;           /* зелёный текст на белом и светлом: контраст от 4.5:1 */
+  --m-brand-bright: #6BF57C;           /* светлая пилюля */
+  --m-brand-ink: #0A5214;              /* тёмно-зелёный текст на светло-зелёной подложке */
+  --m-brand-tint: #E7FBEA;             /* мягкая подложка бренда */
+  --m-brand-tint-2: #CDF6D4;
+  --m-brand-gradient: linear-gradient(135deg, #6BF57C 0%, #2CDD41 55%, #22C636 100%);
+  --m-brand-ring: 0 0 0 4px rgb(44 221 65 / 22%);
+
+  /* Чёрная «фичевая» карточка PlanIQ (баланс, герой лендинга, баннеры) с зелёным
+     свечением в углу — вместо прежнего бирюзового градиента. */
+  --m-hero-gradient:
+    radial-gradient(120% 140% at 88% 8%, rgb(44 221 65 / 24%) 0%, transparent 46%),
+    linear-gradient(152deg, #1C1C1C 0%, #121212 58%, #0B0B0B 100%);
+
+  /* ── Прохладная нейтральная основа PlanIQ ──────────────────────────────── */
+  --m-ink: #111111;                    /* заголовки, крупные числа (Neutral/900) */
+  --m-ink-soft: #2B2B2B;               /* основной текст */
+  --m-slate: #6D6D6D;                  /* вторичный текст (Neutral/600) */
+  --m-slate-soft: #696969;            /* плейсхолдеры, мелкие подписи: контраст от 4.5:1 */
+
+  /* ── Поверхности и линии (светлые, прохладные) ─────────────────────────── */
+  --m-surface: #FFFFFF;
+  --m-surface-sunken: #F0F1F3;         /* шапки таблиц, трек-бары */
+  --m-page: #F6F6F6;                   /* фон страниц (PlanIQ Neutral/20) */
+  --m-line: #EAEAEA;                   /* обычный разделитель */
+  --m-line-soft: #F1F1F1;              /* едва заметная внутренняя линия */
+  --m-line-strong: #DCDCDC;            /* рамка полей (Neutral/200) */
+
+  /* ── Глубина. Мягкие нейтральные тени PlanIQ. */
+  --m-shadow-xs: 0 1px 2px rgb(17 17 17 / 4%);
+  --m-shadow-sm: 0 1px 3px rgb(17 17 17 / 5%), 0 1px 2px rgb(17 17 17 / 4%);
+  --m-shadow-md: 0 4px 10px -2px rgb(17 17 17 / 6%), 0 10px 24px -8px rgb(17 17 17 / 9%);
+  --m-shadow-lg: 0 6px 16px -4px rgb(17 17 17 / 8%), 0 24px 48px -12px rgb(17 17 17 / 13%);
+  --m-shadow-brand: 0 10px 28px -10px rgb(44 221 65 / 42%);
+  --m-shadow-warm: 0 10px 28px -10px rgb(17 17 17 / 12%);
+
+  /* ── Семантические семейства (подложка · сплошной · текст) ───────────────── */
+  --m-success: #16A94B;
+  --m-success-bg: #E7F7EC;
+  --m-success-fg: #0C7A38;
+
+  --m-warning: #EAB308;
+  --m-warning-bg: #FEF6D9;
+  --m-warning-fg: #8A6A00;
+
+  --m-danger: #E53434;
+  --m-danger-bg: #FDEBEB;
+  --m-danger-fg: #C32A2A;
+
+  --m-info: #3B6FE0;
+  --m-info-bg: #EAF1FE;
+  --m-info-fg: #2350B8;
+
+  --m-violet: #7A5CF0;                 /* акцент для разнообразия: комиссии, теги */
+  --m-violet-bg: #F0ECFE;
+  --m-violet-fg: #5636C9;
+
+  /* «Акцент» в PlanIQ — нейтрально-чёрный чип (оранжевый убран). */
+  --m-accent: #111111;
+  --m-accent-strong: #000000;
+  --m-accent-bg: #ECEDEF;
+  --m-accent-fg: #111111;
+  --m-accent-gradient: linear-gradient(135deg, #2A2A2A 0%, #111111 100%);
+  --m-warm-gradient:
+    radial-gradient(120% 140% at 88% 10%, rgb(44 221 65 / 20%) 0%, transparent 48%),
+    linear-gradient(150deg, #1C1C1C 0%, #111111 100%);
+
+  /* ── Переопределения общих токенов (--color-*) — только для бизнес-приложения.
+   * Так общие компоненты (UiButton, модалки, поля) тоже переходят в стиль
+   * PlanIQ; витрина (без этого файла) остаётся на своей палитре. */
+  --color-brand: #2CDD41;
+  --color-brand-dark: #22C636;
+  --color-brand-darker: #0E7A1D;
+  --color-brand-tint: #E7FBEA;
+  --color-text: #111111;
+  --color-text-muted: #6D6D6D;
+  --color-page: #F6F6F6;
+  --color-surface: #FFFFFF;
+  --color-field: #F0F1F3;
+  --color-line: #EAEAEA;
+  --color-topbar: #F0F1F3;
+  --color-navy: #141414;               /* тёмные элементы (подвал лендинга) — PlanIQ-чёрный */
+  --color-navy-2: #262626;
+  --color-gray: #9A9A9A;               /* вторичный текст на тёмном */
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 5px rgb(44 221 65 / 55%);
+
+  /* ── Цвета «на поверхности»: единый источник, чтобы не хардкодить #111/#fff ──
+   * on-brand — текст/иконка на зелёной бренд-плашке (в PlanIQ — чёрный);
+   * on-dark  — на чёрных «фичевых» карточках и тёмном герое (белый, с тирами). */
+  --m-on-brand: #111111;
+  --m-on-dark: #FFFFFF;
+  --m-on-dark-2: rgb(255 255 255 / 82%);   /* подзаголовки на тёмном */
+  --m-on-dark-3: rgb(255 255 255 / 70%);   /* подписи на тёмном */
+
+  /* Полупрозрачные поверхности поверх тёмного (стеклянные плашки/чипы/линии). */
+  --m-glass: rgb(255 255 255 / 8%);
+  --m-glass-2: rgb(255 255 255 / 14%);
+  --m-glass-strong: rgb(255 255 255 / 22%);
+  --m-glass-grid: rgb(255 255 255 / 5%);   /* декоративная сетка на тёмном */
+
+  --m-scrim: rgb(17 17 17 / 55%);          /* затемнение поверх фото (кнопка удаления) */
+  --m-brand-glow: rgb(44 221 65 / 24%);    /* зелёное свечение в углу тёмных карточек */
+  --m-brand-glow-soft: rgb(44 221 65 / 16%);
+
+  /* Сочный «меш»-градиент больших блоков лендинга; текст поверх — --m-on-brand. */
+  --m-mesh-gradient:
+    radial-gradient(70% 90% at 12% 12%, #B8FBC2 0%, transparent 62%),
+    radial-gradient(70% 90% at 92% 88%, #0FB52B 0%, transparent 60%),
+    linear-gradient(135deg, #6BF57C 0%, #2CDD41 55%, #22C636 100%);
+
+  /* ── Радиусы (своя сетка, плотнее витринной) ────────────────────────────── */
+  --m-radius-sm: 10px;
+  --m-radius: 14px;
+  --m-radius-lg: 18px;
+  --m-radius-xl: 24px;
+  --m-radius-pill: 999px;
+
+  /* ── Ритм отступов 4/8 ──────────────────────────────────────────────────── */
+  --m-space-1: 4px;
+  --m-space-2: 8px;
+  --m-space-3: 12px;
+  --m-space-4: 16px;
+  --m-space-5: 20px;
+  --m-space-6: 24px;
+  --m-space-8: 32px;
+  --m-space-10: 40px;
+  --m-space-12: 48px;
+
+  /* ── Моторика. Один ритм на весь кабинет ────────────────────────────────── */
+  --m-ease: cubic-bezier(0.22, 0.61, 0.36, 1);        /* вход — плавное торможение */
+  --m-ease-spring: cubic-bezier(0.34, 1.3, 0.5, 1);    /* отклик нажатия — лёгкая пружина */
+  --m-dur-fast: 130ms;
+  --m-dur: 200ms;
+  --m-dur-slow: 320ms;
+}
+
+/*
+ * Табличные цифры. Деньги, KPI, суммы в таблицах должны стоять колонкой и не
+ * «прыгать» при смене цифр — для этого моноширинные знаки Inter.
+ */
+.m-tnum {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+}
+
+/*
+ * Крупное число (KPI, баланс). Rubik, плотный трекинг, табличные знаки —
+ * именно это читается как «спроектировано», а не «выведено размером шрифта».
+ */
+.m-metric {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum' 1, 'lnum' 1;
+  color: var(--m-ink);
+  /* Число не ломаем посреди разрядов (body задаёт break-word на весь проект):
+     целое остаётся цельным, перенос — только по пробелу перед «сум». */
+  overflow-wrap: normal;
+  word-break: keep-all;
+}
+
+/* ── Моторика входа. Применяется классом; уважает prefers-reduced-motion ──── */
+@keyframes m-fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes m-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes m-scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes m-sheen {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+.m-enter {
+  animation: m-fade-up var(--m-dur-slow) var(--m-ease) both;
+}
+/* Каскад: детям задаём задержку шагом ~60мс — ряд «проявляется» волной. */
+.m-stagger > * { animation: m-fade-up var(--m-dur-slow) var(--m-ease) both; }
+.m-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.m-stagger > *:nth-child(2) { animation-delay: 60ms; }
+.m-stagger > *:nth-child(3) { animation-delay: 120ms; }
+.m-stagger > *:nth-child(4) { animation-delay: 180ms; }
+.m-stagger > *:nth-child(5) { animation-delay: 240ms; }
+.m-stagger > *:nth-child(6) { animation-delay: 300ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .m-enter,
+  .m-stagger > * {
+    animation: none;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+ *  PlanIQ: точечные переопределения общей кнопки (@zoo/shared Button.vue)
+ *  Фирменный приём PlanIQ — зелёная заливка с ЧЁРНЫМ текстом. У общей кнопки
+ *  hover/active зашиты бирюзовыми, а текст белый; перебиваем их здесь (только в
+ *  бизнес-приложении). !important нужен, т.к. у общей кнопки scoped-стили.
+ * ────────────────────────────────────────────────────────────────────────── */
+/* Поверхности браузера тоже в палитре: выделение текста и каретка. */
+::selection { background: var(--m-brand-tint-2); color: var(--m-ink); }
+input, textarea { caret-color: var(--m-brand-strong); }
+
+.btn--primary { color: #111111 !important; }
+.btn--primary:hover { background: #22C636 !important; }
+.btn--primary:active { background: #119A24 !important; }
+.btn--ghost { color: var(--m-brand-strong) !important; }

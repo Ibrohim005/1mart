@@ -1,0 +1,305 @@
+{
+  "pay": {
+    "common": {
+      "cancel": "Bekor qilish",
+      "close": "Yopish",
+      "continue": "Davom etish"
+    },
+    "checkout": {
+      "title": "Buyurtmani rasmiylashtirish",
+      "steps": "Yetkazish → To'lov → Tasdiqlash",
+      "seoTitle": "Buyurtmani rasmiylashtirish — 1mart",
+      "empty": "Buyurtmada tanlangan mahsulotlar yo'q"
+    },
+    "delivery": {
+      "title": "Yetkazib berish",
+      "method": "Yetkazib berish usuli",
+      "courier": "Kuryer orqali",
+      "pickup": "Topshirish punkti",
+      "changeAddress": "O'zgartirish",
+      "chooseService": "Yetkazib berish xizmati",
+      "choosePoint": "Topshirish punktini tanlang",
+      "eta": "{date} yetkazadi",
+      "pickupFrom": "{date} dan olib ketish mumkin",
+      "paylovLogistics": "1mart",
+      "providers": {
+        "express24": "Express 24",
+        "maxsus": "Maxsus Courier",
+        "yandex": "Yandex Yetkazib berish"
+      }
+    },
+    "payment": {
+      "card": "Korporativ karta",
+      "addCard": "Korporativ karta qo'shish",
+      "expires": "{date} gacha",
+      "holdHint": "Summa band qilinadi. Buyurtma tasdiqlangach, pul sotuvchining hisob raqamiga o'tkaziladi. Komissiya - 0 so'm.",
+      "balance": "Kompaniya balansi",
+      "available": "Mavjud: {sum}",
+      "short": "Yetishmaydi: {sum}",
+      "topUp": "To'ldirish",
+      "cardNote": "UzCard, Humo, Visa, Mastercard"
+    },
+    "summary": {
+      "delivery": "Yetkazib berish",
+      "commission": "Komissiya",
+      "free": "Bepul",
+      "total": "To'lovga",
+      "pay": "{sum} to'lash",
+      "processing": "Ishlanmoqda…",
+      "holdNote": "Summa band qilinadi. Buyurtma tasdiqlangach, pul sotuvchining hisob raqamiga o'tkaziladi, rad etilsa, xuddi shu usulda qaytariladi.",
+      "legal": "Buyurtma berib, siz 1mart ofertasi shartlarini qabul qilasiz va shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz"
+    },
+    "antifraud": {
+      "title": "Operatsiyani tasdiqlang",
+      "lead": "Operatsiyani firibgarlar ishtirokisiz va ko'rsatmasisiz shaxsan o'zingiz bajarayotganingizni tasdiqlang.",
+      "point1": "1mart va bank xodimlari hech qachon SMS-kod va karta ma'lumotlarini so'ramaydi.",
+      "point2": "Agar sizni shoshiltirishsa, qo'rqitishsa yoki «pulni xavfsiz hisobga o'tkazishni» so'rashsa, davom etmang.",
+      "point3": "Tasdiqlashdan oldin summa va oluvchini tekshiring.",
+      "purchaseAmount": "Xarid summasi",
+      "checkbox": "Men bu operatsiyani uchinchi shaxslar ko'rsatmasisiz o'zim bajaryapman"
+    },
+    "otp": {
+      "title": "SMS-kod",
+      "text": "{phone} raqamiga 6 belgili kod yubordik. Kod 59 soniya amal qiladi.",
+      "cell": "{n}-belgi",
+      "attempts": "Qolgan urinishlar: {n}",
+      "demoCode": "Test kodi (faqat demo):",
+      "confirm": "To'lovni tasdiqlash",
+      "resendIn": "Kodni {s} soniyadan keyin qayta yuborish",
+      "resend": "Kodni qayta yuborish",
+      "wrong": "Kod noto'g'ri. Qolgan urinishlar: {n}",
+      "expired": "Kodning amal qilish muddati tugadi. Yangi kod so'rang.",
+      "failed": "Kodni tekshirib bo'lmadi. Qayta urinib ko'ring.",
+      "lockedTitle": "Amallar 15 daqiqaga cheklandi",
+      "lockedText": "Kod uch marta noto'g'ri kiritildi. Xavfsizlik maqsadida moliyaviy operatsiyalar vaqtincha mavjud emas.",
+      "lockedLeft": "{time} dan keyin qayta urinish mumkin"
+    },
+    "funds": {
+      "title": "Mablag' yetarli emas",
+      "cardText": "Bank amaliyotni rad etdi: kartada mablag' yetarli emas. Boshqa to'lov usulini tanlang.",
+      "required": "To'lovga",
+      "otherCard": "Boshqa kartani tanlash",
+      "balanceText": "Kompaniya balansida mablag' yetarli emas. Uni hisob raqamidan o'tkazma orqali to'ldiring yoki korporativ karta bilan to'lang.",
+      "available": "Balansda mavjud",
+      "short": "Yetishmaydi",
+      "topUp": "Balansni to'ldirish",
+      "payByCard": "Korporativ karta bilan to'lash",
+      "payByBalance": "Balansdan to'lash"
+    },
+    "stock": {
+      "title": "Mahsulot mavjud emas",
+      "text": "Siz buyurtma berayotganingizda bu mahsulotlar sotuvchida tugab qoldi. Qolganini to'lash uchun ularni olib tashlang.",
+      "itemNote": "{n} dona kerak — mavjud emas",
+      "remove": "Buyurtmadan olib tashlash",
+      "removeAll": "Hammasini olib tashlab davom etish",
+      "summaryNote": "Mavjud bo'lmagan mahsulotlarni olib tashlang"
+    },
+    "addCard": {
+      "title": "Yangi korporativ karta",
+      "number": "Karta raqami",
+      "expires": "Amal qilish muddati",
+      "note": "Faqat kompaniya nomiga chiqarilgan kartalar: UzCard, Humo, Visa, Mastercard. Biz raqamning faqat birinchi 6 va oxirgi 4 raqamini saqlaymiz.",
+      "save": "Kartani bog'lash",
+      "done": "Karta bog'landi",
+      "errorNumber": "Karta raqamini tekshiring",
+      "errorExpires": "Karta amal qilish muddatini tekshiring",
+      "errorCorporate": "Bu shaxsiy karta. 1martda faqat korporativ karta bilan to'lash mumkin"
+    },
+    "error": {
+      "title": "To'lovni amalga oshirib bo'lmadi",
+      "text": "Pul yechilmadi. Ulanishni tekshirib, qayta urinib ko'ring."
+    },
+    "success": {
+      "title": "Buyurtma rasmiylashtirildi",
+      "text": "Mablag' band qilindi, buyurtma sotuvchiga yuborildi. U tasdiqlagach, pul uning hisob raqamiga o'tkaziladi.",
+      "order": "Buyurtma raqami",
+      "orders": "Buyurtma raqamlari",
+      "reserved": "Band qilindi",
+      "status": "To'lov holati",
+      "receipt": "Chek",
+      "toOrder": "Buyurtmaga",
+      "toCatalog": "Katalogga"
+    },
+    "receipt": {
+      "title": "To'lov cheki",
+      "operator": "Operator",
+      "inn": "STIR",
+      "transaction": "Tranzaksiya ID",
+      "date": "Sana va vaqt",
+      "method": "To'lov usuli",
+      "orders": "Buyurtmalar",
+      "print": "Chop etish"
+    },
+    "paymentStatus": {
+      "held": "Mablag' band qilingan",
+      "charged": "To'langan, mablag' yechilgan",
+      "refunded": "Mablag' qaytarilgan"
+    },
+    "steps": {
+      "awaiting": "Sotuvchini kutmoqda",
+      "confirmed": "Tasdiqlandi",
+      "handedToDelivery": "Yetkazishga topshirildi",
+      "readyForPickup": "Olib ketishga tayyor",
+      "delivered": "Yetkazildi",
+      "received": "Olindi"
+    },
+    "orderState": {
+      "created": {
+        "title": "Buyurtma qabul qilindi",
+        "text": "Sotuvchi buyurtmani tasdiqlaydi"
+      },
+      "paid": {
+        "title": "Buyurtma to'langan",
+        "text": "Sotuvchi buyurtmani tasdiqlaydi"
+      },
+      "processing": {
+        "title": "Buyurtmaga ishlov berilmoqda",
+        "text": "Sotuvchi buyurtmani jo'natishga tayyorlamoqda"
+      },
+      "onTheWay": {
+        "title": "Buyurtma yo'lda",
+        "text": "Kutilayotgan yetkazish — {date}"
+      },
+      "awaitingSeller": {
+        "title": "Sotuvchi tasdig'ini kutmoqda",
+        "text": "Mablag' band qilingan. Sotuvchi buyurtmani tasdiqlashi bilan ular yechiladi."
+      },
+      "confirmed": {
+        "title": "Buyurtma tasdiqlandi",
+        "text": "To'lov yechildi, buyurtmaga ishlov berilmoqda. Kutilayotgan yetkazish — {date}"
+      },
+      "handedToDelivery": {
+        "title": "Yetkazib berishga topshirildi",
+        "text": "Kuryerlik xizmati buyurtmani olib kelmoqda. Kutilayotgan yetkazish — {date}",
+        "textNoDate": "Yetkazib berish xizmati sanani xabar qiladi"
+      },
+      "readyForPickup": {
+        "title": "Olib ketishga tayyor",
+        "text": "Buyurtma 1mart topshirish punktida sizni kutmoqda"
+      },
+      "delivered": {
+        "title": "Buyurtma yetkazildi",
+        "text": "{at} yetkazildi. Xaridni baholang yoki qaytarishni rasmiylashtiring"
+      },
+      "canceled": {
+        "title": "Buyurtma bekor qilindi",
+        "text": "Buyurtma {at} bekor qilindi. Mablag' qaytarildi"
+      },
+      "rejectedBySeller": {
+        "title": "Sotuvchi bekor qildi",
+        "text": "Sotuvchi buyurtmani bajara olmadi. Band qilingan mablag' qaytarildi"
+      },
+      "returnRequested": {
+        "title": "Qaytarish rasmiylashtirildi",
+        "text": "Qaytarish arizasi {at} qabul qilindi. Sotuvchi uni ko'rib chiqadi, pul o'sha to'lov usuliga qaytariladi"
+      }
+    },
+    "orders": {
+      "tracking": "Trek-raqam",
+      "cancel": "Bekor qilish",
+      "cancelConfirmText": "Sotuvchi tasdiqlamaguncha bekor qilish mumkin. Band qilish bekor qilinadi, pul o'sha to'lov usuliga qaytadi.",
+      "cancelReason": "Xaridor bekor qildi",
+      "cancelDone": "Buyurtma bekor qilindi, mablag' qaytarildi",
+      "return": "Qaytarishni rasmiylashtirish",
+      "review": "Sharh qoldirish",
+      "reviewDone": "Rahmat! Sharh yuborildi",
+      "refunded": "Mablag' qaytarildi: {method}",
+      "rejectedToast": "Sotuvchi buyurtmani rad etdi. Mablag' qaytarildi",
+      "statusChanged": "Buyurtma holati: {status}"
+    },
+    "return": {
+      "title": "Qaytarishni rasmiylashtirish",
+      "reason": "Qaytarish sababi",
+      "reasons": {
+        "defect": "Nuqson yoki shikastlanish",
+        "notAsDescribed": "Tavsifga mos emas",
+        "wrongItem": "Boshqa mahsulot keltirildi",
+        "changedMind": "Fikrimdan qaytdim"
+      },
+      "details": "Izoh",
+      "detailsPlaceholder": "Nima noto'g'riligini yozing (ixtiyoriy)",
+      "photos": "Rasm (ixtiyoriy, 5 tagacha)",
+      "addPhotos": "Rasm qo'shish (5 tadan {n})",
+      "note": "Sotuvchi arizani ko'rib chiqadi. Pul siz to'lagan usulga qaytariladi.",
+      "submit": "Arizani yuborish",
+      "done": "Qaytarish rasmiylashtirildi"
+    },
+    "cart": {
+      "paymentTitle": "Kompaniya balansidan yoki korporativ karta bilan to'lov",
+      "deliveryNote": "Express 24, Maxsus Courier, Yandex Yetkazib berish yoki topshirish punkti"
+    },
+    "pdp": {
+      "title": "To'lov usullari",
+      "hint": "Summa band qilinadi va buyurtma tasdiqlangach, sotuvchining hisob raqamiga o'tkaziladi",
+      "buyBoxHint": "Kompaniya balansidan yoki korporativ karta bilan to'lov",
+      "balanceNote": "Kompaniyaning hisob raqamidan o'tkazma orqali to'ldiriladi"
+    },
+    "confirm": {
+      "title": "Balansdan to'lov",
+      "amount": "Buyurtma summasi",
+      "left": "Balansda qoladi",
+      "submit": "To'lovni tasdiqlash"
+    },
+    "balance": {
+      "title": "Kompaniya balansi",
+      "seoTitle": "Kompaniya balansi - 1mart",
+      "available": "Xaridlar uchun mavjud",
+      "reserved": "Buyurtmalar uchun band qilingan: {sum}",
+      "company": "Kompaniya",
+      "editCompany": "Rekvizitlarni o'zgartirish",
+      "backToCheckout": "Buyurtmani rasmiylashtirishga qaytish",
+      "topUpTitle": "Balansni to'ldirish",
+      "amount": "Summa, so'm",
+      "createInvoice": "Hisob yaratish",
+      "amountError": "To'ldirish summasini kiriting",
+      "createError": "Saqlab bo'lmadi. Qayta urinib ko'ring.",
+      "topUpHint": "Biz 1mart rekvizitlari bilan hisob yaratamiz. Pulni kompaniya hisob raqamidan o'tkazing, u kelib tushgach balansda paydo bo'ladi.",
+      "invoicesTitle": "To'ldirish hisoblari",
+      "invoicesEmpty": "Hisoblar hozircha yo'q",
+      "invoiceNumber": "Hisob № {number}",
+      "view": "Rekvizitlar",
+      "operationsTitle": "Pul harakati",
+      "operationsEmpty": "Amaliyotlar hozircha yo'q",
+      "status": {
+        "awaiting": "O'tkazma kutilmoqda",
+        "credited": "Hisobga olindi"
+      },
+      "op": {
+        "topup": "{reference} hisobi bo'yicha to'ldirish",
+        "payment": "{reference} buyurtmasi uchun to'lov",
+        "refund": "{reference} buyurtmasi bo'yicha qaytarish"
+      }
+    },
+    "invoice": {
+      "demoNotice": "Bu test rekvizitlari. Ular bo'yicha haqiqiy pul o'tkazmang.",
+      "amount": "O'tkazish uchun",
+      "recipient": "Qabul qiluvchi",
+      "purpose": "To'lov maqsadi",
+      "purposeText": "{number} raqamli hisob bo'yicha 1mart balansini to'ldirish, to'lovchi INN {inn}",
+      "note": "O'tkazma {company} kompaniyasining hisob raqamidan kelishi kerak.",
+      "copied": "Nusxalandi",
+      "copyError": "Nusxalab bo'lmadi",
+      "copyField": "Nusxalash: {field}",
+      "copyAll": "Barcha rekvizitlarni nusxalash",
+      "demoCredit": "Pul tushishini sinash",
+      "credited": "Pul balansga tushdi"
+    },
+    "company": {
+      "title": "Kompaniya rekvizitlari",
+      "name": "Kompaniya nomi",
+      "inn": "INN",
+      "bank": "Bank",
+      "mfo": "MFO",
+      "account": "Hisob raqami",
+      "save": "Saqlash",
+      "saved": "Rekvizitlar saqlandi",
+      "error": {
+        "name": "Kompaniya nomini kiriting",
+        "inn": "INN 9 ta raqamdan iborat",
+        "bank": "Bankni kiriting",
+        "mfo": "MFO 5 ta raqamdan iborat",
+        "account": "Hisob raqami 20 ta raqamdan iborat"
+      }
+    }
+  }
+}

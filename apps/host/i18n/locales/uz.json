@@ -1,0 +1,834 @@
+{
+  "account": {
+    "orders": "Mening buyurtmalarim",
+    "promo": "Chegirma va promokodlar",
+    "reviews": "Mening sharhlarim",
+    "reviewsDone": "Baholangan",
+    "reviewsWaiting": "Baho kutmoqda",
+    "seller": "Sotuvchi bo'lish",
+    "settings": "Sozlamalar",
+    "step": {
+      "accepted": "Buyurtma qabul qilindi",
+      "packing": "Yig‘ilmoqda",
+      "onTheWay": "Yo‘lda",
+      "readyForPickup": "Olib ketishga tayyor",
+      "delivered": "Yetkazildi",
+      "received": "Olindi"
+    },
+    "orderState": {
+      "created": {
+        "title": "Buyurtma qabul qilindi",
+        "text": "Sotuvchi buyurtmani tasdiqlaydi va yig‘ishni boshlaydi"
+      },
+      "paid": {
+        "title": "Buyurtma to‘landi",
+        "text": "Sotuvchi buyurtmani tasdiqlaydi va yig‘ishni boshlaydi"
+      },
+      "processing": {
+        "title": "Buyurtma yig‘ilmoqda",
+        "text": "Sotuvchi buyurtmani jo‘natishga tayyorlamoqda"
+      },
+      "onTheWay": {
+        "title": "Buyurtma yo‘lda",
+        "text": "Taxminiy yetkazib berish — {date}",
+        "textNoDate": "Sotuvchi bog‘lanib, yetkazib berish sanasini aniqlaydi"
+      },
+      "readyForPickup": {
+        "title": "Olib ketishga tayyor",
+        "text": "Buyurtma topshirish punktida sizni kutmoqda"
+      },
+      "delivered": {
+        "title": "Buyurtma yetkazildi",
+        "text": "{at} kuni yetkazildi. Xaridni baholang"
+      },
+      "canceled": {
+        "title": "Buyurtma bekor qilindi",
+        "text": "Buyurtma {at} kuni bekor qilindi"
+      }
+    },
+    "action": {
+      "cancel": "Buyurtmani bekor qilish",
+      "repeat": "Buyurtmani takrorlash",
+      "review": "Xaridni baholash",
+      "cancelConfirm": "{number} buyurtmani bekor qilasizmi?",
+      "cancelConfirmText": "Buyurtma jo'natilmaguncha bekor qilish mumkin. Pul xuddi shu to'lov usulida qaytariladi.",
+      "cancelDone": "Buyurtma bekor qilindi",
+      "repeatDone": "Mahsulotlar savatga qo‘shildi",
+      "actionError": "Bajarilmadi. Qayta urinib ko‘ring"
+    }
+  },
+  "auth": {
+    "continue": "Davom etish",
+    "errorPassword": "Parolni kiriting — kamida 4 belgi",
+    "errorPasswordMatch": "Parollar mos kelmadi",
+    "errorPhone": "Telefon raqamini to'liq kiriting",
+    "forgotPassword": "Parolni unutdingizmi?",
+    "haveAccount": "Akkauntingiz bormi?",
+    "needAccount": "Akkaunt kerak",
+    "newPasswordLabel": "Yangi parol",
+    "newPasswordTitle": "Yangi parol",
+    "noAccount": "Akkauntingiz yo'qmi?",
+    "passwordChanged": "Parol almashtirildi",
+    "passwordChangedText": "Yangi parol bilan kiring — sizga kirish ochildi",
+    "passwordLabel": "Sizning parolingiz",
+    "phoneLabel": "Sizning raqamingiz",
+    "recoverHint": "Raqamingizni kiriting — parolni almashtirish uchun kod yuboramiz",
+    "recoverSubmit": "Kodni olish",
+    "recoverTitle": "Parolni tiklash",
+    "register": "Ro'yxatdan o'tish",
+    "registerTitle": "Ro'yxatdan o'tish",
+    "repeatPasswordLabel": "Parolni takrorlang",
+    "resend": "Qayta yuborish",
+    "savePassword": "Parolni saqlash",
+    "signIn": "Tizimga kirish",
+    "smsHint": "Raqamingizga yuborilgan kodni kiriting",
+    "errorPasswordShort": "Parolni kiriting — kamida 8 belgi",
+    "nameLabel": "Ismingiz",
+    "namePlaceholder": "Ixtiyoriy"
+  },
+  "badge": {
+    "cheaper": "Arzonlashdi",
+    "freeShipping": "Bepul yetkazib berish",
+    "new": "Yangi"
+  },
+  "breadcrumbs": {
+    "cart": "Savat",
+    "checkout": "Buyurtma rasmiylashtirish",
+    "favorites": "Saralangan",
+    "home": "Bosh sahifa",
+    "orders": "Mening buyurtmalarim",
+    "search": "Qidiruv"
+  },
+  "cart": {
+    "checkout": "Rasmiylashtirish",
+    "fromFavorites": "Saralanganlardan olib tashlash",
+    "remove": "O'chirish",
+    "removedFromFavorites": "Mahsulot saralanganlardan olib tashlandi",
+    "selectAll": "Barchasini tanlash",
+    "toFavorites": "Saralanganga",
+    "total": "Jami",
+    "useful": "Foydali bo'lishi mumkin",
+    "usefulNote": "Siz uchun mahsulotlar",
+    "notSelected": "Tanlanmagan"
+  },
+  "catalog": {
+    "all": "Hammasi",
+    "animals": "Kategoriyalar",
+    "category": "Kategoriya",
+    "chooseCategory": "Toifani tanlash",
+    "correctedNotice": "«{query}» so‘rovi bo‘yicha natijalar",
+    "correctedOriginal": "«{query}» bo‘yicha qidirish",
+    "didYouMean": "Balki siz izlagansiz",
+    "emptyCategoryText": "Sotuvchilar joylashi bilan mahsulotlar paydo bo‘ladi. Qo‘shni toifalarni ko‘ring.",
+    "emptyCategoryTitle": "Bu toifada hozircha bo‘sh",
+    "emptyFiltersText": "Ko'proq variant ko'rish uchun filtrlarni o'zgartiring yoki tozalang",
+    "emptyFiltersTitle": "Filtrlar bo'yicha hech narsa topilmadi",
+    "emptyText": "Yozilishini tekshiring yoki boshqa so'rov kiriting",
+    "emptyTitle": "So'rov bo'yicha hech narsa topilmadi",
+    "goods": "Mahsulotlar",
+    "outOfStock": "Sotuvda yo‘q",
+    "pickCategory": "Kategoriya tanlash",
+    "productsCount": "{count} ta mahsulot",
+    "reset": "Tozalash",
+    "resetFilters": "Filtrlarni tozalash",
+    "services": "Xizmatlar",
+    "show": "Ko'rsatish"
+  },
+  "common": {
+    "addAddress": "Yangi manzil qo‘shish",
+    "addCard": "Karta qo‘shish",
+    "apply": "Qo'llash",
+    "back": "Orqaga",
+    "becomeSeller": "Sotuvchi bo'lish",
+    "cart": "Savat",
+    "catalog": "Kategoriyalar",
+    "chooseLanguage": "Tilni tanlash",
+    "clear": "Tozalash",
+    "close": "Yopish",
+    "collapse": "Yig'ish",
+    "currency": "so'm",
+    "deliveryAddress": "Yetkazib berish manzili",
+    "favorites": "Saralangan",
+    "glavnuyu": "Bosh sahifaga",
+    "hlebnyeKroshki": "Navigatsiya zanjiri",
+    "itemsCount": "{count} {word}",
+    "kodovoeSlovo": "Kod so'zi",
+    "login": "Kirish",
+    "logout": "Akkauntdan chiqish",
+    "more": "Batafsil",
+    "nomerTelefona": "Telefon raqami",
+    "notFound": "Hech narsa topilmadi",
+    "ocenka": "ta baho",
+    "otzyv": "ta sharh",
+    "pageNotFound": "Sahifa topilmadi",
+    "perMonth": "{sum} so'm/oy",
+    "pokazatEsche": "Yana ko'rsatish",
+    "poluchatel": "Qabul qiluvchi",
+    "profileMenu": "Profil menyusi",
+    "promokody": "Promokodlar",
+    "retry": "Qayta urinish",
+    "save": "Saqlash",
+    "searchLabel": "Katalog bo'yicha qidiruv",
+    "searchPlaceholder": "Mahsulot va kategoriyalarni qidirish",
+    "showAll": "Barchasini ko'rish",
+    "skidka": "Chegirma",
+    "skipToContent": "Asosiy mazmunga o‘tish",
+    "sposobOplaty": "To'lov usuli",
+    "summa": "Summa",
+    "tovar": "ta mahsulot",
+    "undo": "Qaytarish",
+    "uvelichitKolichestvo": "Sonini oshirish",
+    "vashZakaz": "Sizning buyurtmangiz",
+    "vvediteKodovoeSlovo": "Kod so'zini kiriting",
+    "vyberiteAdresDostavki": "Yetkazib berish manzilini tanlang",
+    "zdesPokaPusto": "Bu yerda hozircha bo'sh",
+    "removeFromCart": "Savatdan olib tashlash",
+    "decreaseQuantity": "Sonini kamaytirish"
+  },
+  "footer": {
+    "categories": "Kategoriyalar",
+    "platform": "Platforma",
+    "rights": "© 1mart, «Octagram» AJ. Barcha huquqlar himoyalangan.",
+    "rules": "Qoidalar",
+    "support": "Yordam",
+    "socialMedia": "Ijtimoiy tarmoqlar:",
+    "buyers": "Xaridorlarga",
+    "sellers": "Sotuvchilarga",
+    "company": "Kompaniya",
+    "sellerCabinet": "Sotuvchi kabineti",
+    "delivery": "Yetkazib berish"
+  },
+  "home": {
+    "daysLeft": "{count} kun qoldi",
+    "downloadApp": "Mobil ilovani yuklab oling",
+    "recommended": "Tavsiya etamiz",
+    "viewed": "Siz ko'rgan",
+    "weeklyDiscounts": "Hafta chegirmalari",
+    "wow": "Wow foyda"
+  },
+  "ui": {
+    "account": {
+      "favorites": {
+        "nazhmiteTovarahKotoryeOsobenno": "Ayniqsa yoqqan mahsulotlarda ♡ ni bosing — ular shu yerda paydo bo'ladi",
+        "zdesSohranimVashiLyubimye": "Sevimli mahsulotlaringizni shu yerda saqlaymiz",
+        "seoTitle": "Saralangan | 1mart"
+      },
+      "menu": {
+        "lichnyyKabinet": "Shaxsiy kabinet"
+      },
+      "orderCard": {
+        "dataZakaza": "Buyurtma sanasi:",
+        "nomerZakaza": "Buyurtma raqami:",
+        "podrobneeZakaze": "Buyurtma haqida batafsil"
+      },
+      "ordersItem": {
+        "detaliDostavki": "Yetkazib berish tafsilotlari",
+        "kurerIliProdavec": "Kuryer yoki sotuvchi",
+        "kureromAdresu": "Manzilga kuryer orqali",
+        "obschayaStoimost": "Umumiy summa",
+        "pomosch": "Yordam",
+        "zakazNayden": "Buyurtma topilmadi",
+        "seoTitle": "Buyurtma | 1mart",
+        "itemsCount": "{count} {word}",
+        "qty": "{count} dona",
+        "samovyvoz": "Topshirish punktidan olib ketish"
+      },
+      "reviews": {
+        "dannyyMomentNetVybrannyh": "Hozircha siz tanlagan mahsulotlar yo'q",
+        "zdesPoyavyatsyaTovaryKotorye": "Bu yerda yetkazib berilgandan keyin baholash mumkin bo'lgan mahsulotlar paydo bo'ladi",
+        "seoTitle": "Mening sharhlarim | 1mart",
+        "rateStars": "5 balldan {rating} ball qo'yish"
+      },
+      "seller": {
+        "ostavitZayavku": "Ariza qoldirish",
+        "prodavayteZhivotnyhTovaryNih": "Mahsulotlaringizni 1martda soting: joylashtirish bepul, komissiya faqat yakunlangan buyurtmalardan olinadi, to'lovlar esa hisob raqamingizga tushadi.",
+        "seoTitle": "Sotuvchi bo'lish | 1mart",
+        "zapolniteAnketu": "Anketani to'ldiring",
+        "nazvanieHozyaystva": "Do'kon nomi, STIR, hudud va bog'lanish uchun kontaktlar",
+        "prishliteDokumenty": "Hujjatlarni yuboring",
+        "veterinarnyeSpravki": "YaTT yoki kompaniya ro'yxatdan o'tganlik guvohnomasi va mahsulot sertifikatlari",
+        "nachniteProdavat": "Sotishni boshlang",
+        "razmestiteObyavleniya": "Mahsulotlarni qo'shing va buyurtmalar qabul qiling"
+      },
+      "settings": {
+        "dataRozhdeniya": "Tug'ilgan sana",
+        "pol": "Jinsi",
+        "polnoeImya": "To'liq ism",
+        "zagruzitFoto": "Rasm yuklash",
+        "seoTitle": "Sozlamalar | 1mart",
+        "male": "Erkak",
+        "female": "Ayol",
+        "vvediteTekst": "Matn kiriting",
+        "saving": "Saqlanmoqda…",
+        "savedDone": "Saqlandi",
+        "logout": "Akkauntdan chiqish"
+      },
+      "transactionCard": {
+        "nomerZakaz": "Buyurtma raqami:",
+        "refund": "Buyurtma bo‘yicha qaytarish"
+      },
+      "promo": {
+        "ispolzovan": "Ishlatilgan",
+        "prosrochen": "Muddati o'tgan",
+        "kodSostoit": "Kod 6–20 ta lotin harfi va raqamdan iborat",
+        "takoyPromokodUzheDobavlen": "Bunday promokod allaqachon qo'shilgan",
+        "seoTitle": "Chegirma va promokodlar | 1mart"
+      },
+      "orders": {
+        "aktivnye": "Faol",
+        "istoriyaTranzakciy": "Tranzaksiyalar tarixi",
+        "seoTitle": "Mening buyurtmalarim | 1mart",
+        "vashiZakazyPoyavyatsyaEtom": "Buyurtmalaringiz shu bo'limda paydo bo'ladi",
+        "loadError": "Buyurtmalarni yuklab bo‘lmadi",
+        "loadErrorText": "Aloqani tekshirib, qayta urinib ko‘ring",
+        "expectedAt": "Taxminiy yetkazib berish",
+        "deliveryPrice": "Yetkazib berish narxi",
+        "comment": "Buyurtmaga izoh",
+        "stepOf": "{total} dan {current}-qadam",
+        "showMore": "Yana ko‘rsatish"
+      },
+      "placed": {
+        "help": "Yordam",
+        "stepsLabel": "Buyurtma bosqichlari"
+      }
+    },
+    "appshell": {
+      "addPromoModal": {
+        "dobavitPromokod": "Promokod qo'shish"
+      },
+      "addressDetailsModal": {
+        "etazh": "Qavat",
+        "kudaDostavitZakaz": "Buyurtma qayerga yetkazilsin?",
+        "kvartira": "Kvartira *",
+        "naprimerKakDobratsyaIli": "Masalan, qanday yetib borish yoki sizga qo'ng'iroq qilish",
+        "nomerKv": "Kv. raqami",
+        "opredelitMoeMestopolozhenie": "Joylashuvimni aniqlash",
+        "otdalit": "Uzoqlashtirish",
+        "parolPodezda": "Domofon kodi",
+        "podezd": "Podyezd",
+        "priblizit": "Yaqinlashtirish",
+        "prodolzhit": "Davom etish",
+        "tekstKommentariya": "Izoh matni",
+        "ukazhiteDopolnitelnoInformaciyuZakazu": "Buyurtmaga qo'shimcha ma'lumot kiriting.",
+        "vvediteTekstKommentariya": "Izoh matnini kiriting",
+        "geoUnsupported": "Brauzer joylashuvni aniqlay olmaydi",
+        "geoDenied": "Joylashuvga ruxsat berilmagan",
+        "geoFailed": "Joylashuvni aniqlab bo'lmadi",
+        "region": "Viloyat",
+        "regionPlaceholder": "Viloyatni tanlang"
+      },
+      "appFooter": {
+        "zooelonMarketpleysDomashnihZhivotnyh": "1mart — kompaniyalar uchun B2B marketpleys. Elektronika, kiyim-kechak, uy uchun mahsulotlar va minglab boshqa tovarlar butun O'zbekiston bo'ylab yetkazib beriladi.",
+        "oProekte": "Loyiha haqida",
+        "blog": "Blog",
+        "dlyaPartnerov": "Hamkorlar uchun",
+        "razmestitObyavlenie": "Qanday qilib sotuvchi bo'lish mumkin",
+        "tovary": "Mahsulotlar",
+        "veterinary": "Topshirish punktlari",
+        "termsConditions": "Foydalanish shartlari",
+        "polzovatelskoeSoglashenie": "Foydalanuvchi shartnomasi",
+        "politikaKonfidencialnosti": "Maxfiylik siyosati",
+        "pravilaPublikacii": "Nashr qoidalari",
+        "cookie": "Cookie",
+        "arhivDokumentov": "Hujjatlar arxivi",
+        "centrPomoschi": "Yordam markazi",
+        "faq": "FAQ",
+        "napisatNam": "Bizga yozish",
+        "podatZhalobu": "Shikoyat yuborish",
+        "liveChat": "Onlayn chat"
+      },
+      "authModal": {
+        "parol": "Parol"
+      },
+      "locationModal": {
+        "dobavitAdres": "Manzil qo'shish",
+        "vybratAdres": "Manzilni tanlash",
+        "empty": "Saqlangan manzil yo‘q — birinchisini qo‘shing"
+      },
+      "registerModal": {
+        "prodolzhayaYaSoglashayusPolitikoy": "Davom etish orqali men shaxsiy ma'lumotlarni qayta ishlash siyosati va ofertaga roziman"
+      },
+      "reviewModal": {
+        "anonimnyyOtzyv": "Anonim sharh",
+        "drugimPokupatelyamOchenNuzhen": "Boshqa xaridorlarga batafsil sharh juda kerak — nima yoqqanini aytib bering",
+        "nedostatki": "Kamchiliklar",
+        "obyazatelnoUchtemOcenkuDostavki": "Yetkazib berish va xizmat bahosini albatta hisobga olamiz — u sotuvchi reytingiga ta'sir qiladi",
+        "ostavitOtzyv": "Sharh qoldirish",
+        "otpravitOtzyv": "Sharhni yuborish",
+        "preimuschestva": "Afzalliklar",
+        "quality": "Mahsulot sifati",
+        "service": "Buyurtmani topshirishdagi xizmat",
+        "speed": "Yetkazib berish tezligi",
+        "ratingOf5": "{rating} / 5"
+      },
+      "promoModal": {
+        "until": "{date} gacha"
+      },
+      "appHeader": {
+        "cartWithCount": "Savat, {count} {word}"
+      }
+    },
+    "cart": {
+      "cart": {
+        "vseKarty": "Barcha kartalar",
+        "tovarIzbrannom": "Mahsulot saralanganga qo'shildi",
+        "tovarUdalenKorziny": "Mahsulot savatdan o'chirildi",
+        "seoTitle": "Savat | 1mart",
+        "vyberiteKartuOplaty": "To'lov uchun kartani tanlang:"
+      },
+      "empty": {
+        "nachniteGlavnoyStranicyNuzhnyy": "Bosh sahifadan boshlang — kerakli mahsulotni qidiruv orqali topasiz yoki to'plamlarni ko'rib chiqing",
+        "pustayaKorzinaEtoKak": "Bo'sh savat — bu xuddi toza oq qog'oz."
+      },
+      "item": {
+        "umenshit": "Kamaytirish",
+        "uvelichit": "Ko'paytirish",
+        "vyborPokupateley": "XARIDORLAR TANLOVI",
+        "sellerLabel": "Sotuvchi: «{title}»",
+        "selectProduct": "{title} — tanlash"
+      },
+      "summary": {
+        "vasBesplatnayaDostavka": "Sizda bepul yetkazib berish"
+      }
+    },
+    "catalog": {
+      "appPromo": {
+        "dostupnoGooglePlay": "Google Play'da mavjud",
+        "mobilnoePrilozhenieZooelon": "1mart mobil ilovasi",
+        "qrKodZagruzkiPrilozheniya": "Ilovani yuklab olish uchun QR-kod",
+        "zagruzitAppStore": "App Store'dan yuklab olish"
+      },
+      "categoryPickerModal": {
+        "poiskKategorii": "Kategoriya qidirish"
+      },
+      "filterPanel": {
+        "unitK": "{n} ming",
+        "unitM": "{n} mln",
+        "unitB": "{n} mlrd",
+        "text": "Gacha",
+        "text2": "Dan",
+        "priceFrom": "Eng past narx",
+        "priceTo": "Eng yuqori narx",
+        "showMore": "Yana {count}"
+      },
+      "heroCarousel": {
+        "bannery": "Bannerlar",
+        "predyduschiyBanner": "Oldingi banner",
+        "sleduyuschiyBanner": "Keyingi banner",
+        "bannerNumber": "{index}-banner"
+      },
+      "pages": {
+        "zooelonMarketpleysZhivotnyhZootovarov": "1mart — kompaniyalar uchun B2B marketpleys"
+      },
+      "infoItem": {
+        "blogBody": "Katalog yangiliklari, xarid bo'yicha maslahatlar va platforma yangiliklari.",
+        "partnersBody": "Sotuvchilar, brendlar va yetkazib berish xizmatlari uchun hamkorlik shartlari.",
+        "postAdBody": "1martda do'kon oching — sotuvchini tekshirish bir ish kunigacha davom etadi.",
+        "termsBody": "1mart marketpleysidan foydalanish shartlari.",
+        "privacyBody": "Foydalanuvchilarning shaxsiy ma'lumotlarini qanday qayta ishlaymiz va himoya qilamiz.",
+        "rulesBody": "Mahsulot kartochkalari, suratlar va tavsiflarga qo'yiladigan talablar.",
+        "cookieBody": "Qanday cookie fayllaridan va nima uchun foydalanamiz.",
+        "documentsBody": "Ommaviy hujjatlar va ofertalar.",
+        "helpBody": "Buyurtmalar, to'lov, yetkazib berish va qaytarish haqidagi ko'p beriladigan savollarga javoblar.",
+        "servicesBody": "Yetkazib berish, topshirish punktlari, kompaniya balansi va korporativ karta bilan to'lov.",
+        "faqBody": "Xaridorlar va sotuvchilarning ko'p beriladigan savollari.",
+        "contactBody": "Qo'llab-quvvatlash xizmatiga murojaat qiling — ish kuni davomida javob beramiz.",
+        "complaintBody": "Buyurtma yoki sotuvchi bilan bog'liq muammoni yozing — murojaatingizni ko'rib chiqamiz.",
+        "chatBody": "Qo'llab-quvvatlash chati 9:00 dan 21:00 gacha ishlaydi.",
+        "deliveryBody": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali yoki 1mart topshirish punktiga yetkazamiz.",
+        "termsConditionsBody": "1mart marketpleysidan foydalanish shartlari.",
+        "aboutH1": "1mart nima",
+        "aboutP1_1": "1mart — kompaniyalar uchun B2B marketpleys. Platforma operatori — «Octagram» AJ, Toshkent.",
+        "aboutP1_2": "Bu yerda butun O'zbekistondan tekshirilgan sotuvchilarning elektronika, maishiy texnika, kiyim, poyabzal, uy, go'zallik, sport va bolalar uchun mahsulotlari bor.",
+        "aboutH2": "Bu qanday ishlaydi",
+        "aboutP2_1": "Mahsulotni tanlang, savatga qo'shing va buyurtma bering. Express 24, Maxsus Courier yoki Yandex Delivery kuryeri yetkazib beradi — yoki buyurtmani topshirish punktidan oling.",
+        "aboutP2_2": "Kompaniyalar buyurtmalarni saytdagi balansdan, u hisob raqamidan o'tkazma orqali to'ldiriladi, yoki korporativ karta bilan to'laydi. Summa band qilinadi va buyurtma tasdiqlangach, sotuvchining hisob raqamiga o'tkaziladi.",
+        "aboutH3": "Xarid xavfsizligi",
+        "aboutP3_1": "Har bir sotuvchi hujjatlar tekshiruvidan o'tadi, xaridorlarning baholari va sharhlari mahsulot sahifasida ko'rinadi.",
+        "aboutP3_2": "Agar mahsulot to'g'ri kelmasa yoki tavsifga mos bo'lmasa, 10 kun ichida «Mening buyurtmalarim» bo'limida qaytarishni rasmiylashtiring.",
+        "blogH1": "Nima haqida yozamiz",
+        "blogP1_1": "Yangi kategoriyalar sharhi, kompaniyalar uchun xarid maslahatlari, platformadagi o'zgarishlar va sotuvchilar uchun shartlar.",
+        "blogH2": "Hozircha birinchi materiallarni tayyorlayapmiz",
+        "blogP2_1": "Bo'lim to'ldirilmoqda. Telegram va Instagramdagi 1mart kanallariga obuna bo'ling — aksiyalar va yangi maqolalar e'lonlari o'sha yerda chiqadi.",
+        "partnersH1": "Kimga mos keladi",
+        "partnersP1_1": "Butun O'zbekiston bo'ylab sotishni istagan do'konlar va brendlar, ishlab chiqaruvchilar, distribyutorlar va yetkazib berish xizmatlari.",
+        "partnersH2": "Nimaga ega bo'lasiz",
+        "partnersP2_1": "Rasm va xususiyatlar bilan vitrina, katalog va qidiruvdan kompaniyalar buyurtmalari, statistika va sharhlar bilan ishlash.",
+        "partnersP2_2": "Komissiya mahsulot kategoriyasiga bog'liq, to'lovlar hisob raqamingizga tushadi. Ariza qoldiring — tariflarni yuboramiz.",
+        "partnersH3": "Qanday boshlash kerak",
+        "partnersP3_1": "Anketani to'ldiring, ro'yxatdan o'tganlik hujjatlarini yuboring va tekshiruvni kuting — odatda bu bir ish kuni.",
+        "postAdH1": "Sotishni boshlash uchun nima kerak",
+        "postAdP1_1": "Ro'yxatdan o'tgan YaTT yoki kompaniya, to'lovlar uchun hisob raqami hamda surati, narxi va tavsifi bor mahsulotlar.",
+        "postAdP1_2": "Texnika va bolalar mahsulotlari uchun muvofiqlik sertifikatlari, brend mahsulotlar uchun esa originalligini tasdiqlovchi hujjat kerak bo'ladi.",
+        "postAdH2": "Tekshirish muddatlari",
+        "postAdP2_1": "Sotuvchini tekshirish bir ish kunigacha, mahsulot kartochkalarini — 24 soatgacha davom etadi. Biror narsa yetishmasa, nimani to'ldirish kerakligini yozamiz.",
+        "postAdH3": "Nimani sotish mumkin emas",
+        "postAdP3_1": "Original sifatida ko'rsatilgan qalbaki mahsulotlar va nusxalar, majburiy bo'lgan joyda sertifikatsiz mahsulotlar, dori-darmonlar, qurollar va O'zbekiston qonunchiligida taqiqlangan barcha narsalar.",
+        "servicesH1": "Nimalarni taklif qilamiz",
+        "servicesP1_1": "Butun O'zbekiston bo'ylab kuryer orqali yetkazib berish va topshirish punktlari, hisob orqali to'ldiriladigan kompaniya balansi va korporativ karta bilan to'lov.",
+        "servicesH2": "Bu qanday tashkil etilgan",
+        "servicesP2_1": "Yetkazib berish usuli va narxi buyurtmani rasmiylashtirishda ko'rinadi. Pul band qilinadi va buyurtma tasdiqlangach sotuvchiga o'tkaziladi.",
+        "servicesP2_2": "Rasmiylashtirgandan keyin buyurtma tayyor bo'lganda kuryer yoki topshirish punkti xabar yuboradi.",
+        "helpH1": "Buyurtmalar",
+        "helpP1_1": "Buyurtma holati «Mening buyurtmalarim» bo'limida ko'rinadi. Raqam, sana, tarkib va summa ham o'sha yerda.",
+        "helpP1_2": "Buyurtmani yetkazib berishga topshirilgunicha bekor qilish mumkin — tugma buyurtma kartochkasida chiqadi.",
+        "helpH2": "Yetkazib berish",
+        "helpP2_1": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali, shuningdek 1mart topshirish punktlariga yetkazamiz. Muddat mahsulot kartochkasida ko'rsatilgan.",
+        "helpP2_2": "Kuryer vaqtni aniqlashtirish uchun yo'lga chiqishdan oldin bog'lanadi.",
+        "helpH3": "To'lov va qaytarish",
+        "helpP3_1": "Kompaniya balansidan yoki korporativ karta bilan to'lov.",
+        "helpP3_2": "Mahsulotni 10 kun ichida «Mening buyurtmalarim» bo'limida qaytarish mumkin. Pul to'lov qilingan usulning o'zida qaytariladi.",
+        "helpH4": "Javob topmadingizmi",
+        "helpP4_1": "«Bizga yozing» sahifasidagi shakl orqali murojaat qiling — ish kuni davomida javob beramiz.",
+        "deliveryH1": "Kuryer orqali yetkazib berish",
+        "deliveryP1_1": "Buyurtmalarni Express 24, Maxsus Courier va Yandex Delivery kuryerlari yetkazib beradi. Toshkent bo'ylab — bir kundan, viloyatlarga — 2–5 kun. Kuryer kelishdan oldin qo'ng'iroq qiladi.",
+        "deliveryH2": "Topshirish punktlari",
+        "deliveryP2_1": "1mart topshirish punktiga yetkazib berish bepul. Buyurtma 7 kun saqlanadi; qabul qilishda mahsulot va uning to'liqligini tekshiring.",
+        "deliveryH3": "Agar yetkazib berish kechiksa",
+        "deliveryP3_1": "Buyurtma raqami bilan «Bizga yozing» orqali murojaat qiling — yetkazib berish xizmati bilan bog'lanib, javob beramiz.",
+        "chatH1": "Ish vaqti",
+        "chatP1_1": "Qo'llab-quvvatlash chati Toshkent vaqti bilan 9:00 dan 21:00 gacha ishlaydi.",
+        "chatH2": "Nimani tayyorlash kerak",
+        "chatP2_1": "Buyurtma raqami va savolning qisqacha tavsifi — shunda tezroq javob beramiz.",
+        "chatH3": "Ish vaqtidan tashqari",
+        "chatP3_1": "«Bizga yozing» shakli orqali xabar qoldiring: keyingi ish kuni boshida javob beramiz.",
+        "cookieH1": "Cookie nima uchun kerak",
+        "cookieP1_1": "Cookie fayllari tanlangan tilni, savat tarkibini va akkauntga kirishni saqlaydi — ularsiz bu ma'lumotlar sahifalar orasida o'tishda yo'qolardi.",
+        "cookieH2": "Qaysilaridan foydalanamiz",
+        "cookieP2_1": "Texnik — kirish, savat, til. Analitik — shaxsga bog'lanmagan tashriflar statistikasi.",
+        "cookieH3": "Qanday rad etish mumkin",
+        "cookieP3_1": "Cookie'ni brauzer sozlamalarida o'chirish mumkin. Shundan so'ng savat va kirish ishlamaydi.",
+        "documentsH1": "Bu yerda nima bor",
+        "documentsP1_1": "Platformaning ommaviy hujjatlari va ofertalari.",
+        "documentsH2": "Bo'lim tayyorlanmoqda",
+        "documentsP2_1": "Hujjatlar yurist bilan kelishilgandan so'ng shu yerda paydo bo'ladi. Hozircha nusxa uchun «Bizga yozing» shakli orqali murojaat qilish mumkin.",
+        "termsH1": "Kelishuv predmeti",
+        "termsP1_1": "Kelishuv 1mart marketpleysidan (operator — «Octagram» AJ) xaridorlar va sotuvchilar foydalanish shartlarini belgilaydi.",
+        "termsH2": "Matn tayyorlanmoqda",
+        "termsP2_1": "To'liq matn yurist bilan kelishilmoqda va shu yerda e'lon qilinadi. E'lon qilingunicha mahsulot kartochkalarida va buyurtma rasmiylashtirishda ko'rsatilgan shartlar amal qiladi.",
+        "privacyH1": "Qanday ma'lumotlarni to'playmiz",
+        "privacyP1_1": "Xodimning ismi va telefoni, kompaniya rekvizitlari, yetkazib berish manzili va buyurtmalar tarixi - ular buyurtmani rasmiylashtirish va yetkazish uchun kerak.",
+        "privacyH2": "Matn tayyorlanmoqda",
+        "privacyP2_1": "Siyosatning to'liq matni yurist bilan kelishilmoqda va shu yerda e'lon qilinadi.",
+        "rulesH1": "Mahsulot kartochkasiga talablar",
+        "rulesP1_1": "Och fondagi o'z suratlaringiz, brend va model ko'rsatilgan aniq nom, halol tavsif, dolzarb narx va qoldiq.",
+        "rulesH2": "Nimalar taqiqlangan",
+        "rulesP2_1": "Boshqalarning suratlari, original sifatida ko'rsatilgan qalbaki mahsulotlar, chegirma uchun oshirilgan «eski» narx, yashirin nuqsonlar.",
+        "rulesH3": "Qoidabuzarliklar",
+        "rulesP3_1": "Kartochka sotuvdan olinadi, sotuvchiga sababi yuboriladi. Takroriy qoidabuzarliklar do'konning bloklanishiga olib keladi.",
+        "termsConditionsH1": "Foydalanish shartlari",
+        "termsConditionsP1_1": "1mart marketpleysidan foydalanish shartlari.",
+        "termsConditionsH2": "Matn tayyorlanmoqda",
+        "termsConditionsP2_1": "To'liq matn yurist bilan kelishilmoqda va shu yerda e'lon qilinadi.",
+        "contactH1": "Biz bilan qanday bog'lanish mumkin",
+        "contactP1_1": "Qo'llab-quvvatlash xizmatiga murojaat qiling — ish kuni davomida javob beramiz.",
+        "contactP1_2": "Agar savol buyurtma bo'yicha bo'lsa, uning raqamini ko'rsating: shunda tezroq javob beramiz.",
+        "complaintH1": "Nimani yozish kerak",
+        "complaintP1_1": "Buyurtma yoki sotuvchi bilan bog'liq muammoni yozing — murojaatingizni ko'rib chiqamiz.",
+        "complaintP1_2": "Buyurtma raqami, sanasi va aynan nima noto'g'ri ketganini ko'rsating.",
+        "rulesP2_2": "Dori-darmonlar, qurollar, tamaki va onlayn sotilishi O'zbekiston qonunchiligida taqiqlangan boshqa mahsulotlar.",
+        "rulesH4": "Qarorni qanday shikoyat qilish mumkin",
+        "rulesP4_1": "Agar kartochka olib tashlangan bo'lsa va siz rozi bo'lmasangiz, «Shikoyat yuborish» orqali yozing: mahsulot artikulini ko'rsating va hujjatlarni ilova qiling."
+      },
+      "sortBar": {
+        "rekomenduemye": "Tavsiya etilgan",
+        "snachalaDeshevye": "Avval arzonlari",
+        "snachalaDorogie": "Avval qimmatlari",
+        "reytingu": "Reyting bo'yicha",
+        "novinki": "Yangilari"
+      },
+      "search": {
+        "allProducts": "Barcha mahsulotlar"
+      },
+      "categoryItem": {
+        "notFound": "Kategoriya topilmadi"
+      },
+      "sellerItem": {
+        "emptyTitle": "Bu sotuvchida hozircha mahsulotlar yo'q",
+        "emptyText": "Keyinroq qayting yoki katalogdan boshqa sotuvchilarning mahsulotlarini ko'ring.",
+        "notFound": "Sotuvchi topilmadi",
+        "allProducts": "Sotuvchining barcha mahsulotlari",
+        "seoDescription": "1martda {title} sotuvchisining mahsulotlari: O'zbekiston bo'ylab yetkazib berish, kompaniya balansidan yoki korporativ karta bilan to'lov."
+      },
+      "contactForm": {
+        "titleContact": "Bizga yozing",
+        "titleComplaint": "Shikoyatingizni yozing",
+        "name": "Sizga qanday murojaat qilaylik",
+        "order": "Buyurtma raqami (agar bo'lsa)",
+        "message": "Xabar",
+        "submit": "Yuborish",
+        "sending": "Yuborilmoqda…",
+        "done": "Murojaat qabul qilindi. Ish kuni davomida javob beramiz.",
+        "errorName": "Ismni kiriting — kamida ikkita belgi",
+        "errorPhone": "Telefon raqamini tekshiring",
+        "errorMessage": "Savolni batafsilroq yozing — kamida o'nta belgi"
+      },
+      "infoPage": {
+        "nav": {
+          "label": "Yordam bo'limlari",
+          "buyers": "Xaridorlarga",
+          "sellers": "Sotuvchilarga",
+          "company": "Kompaniya haqida",
+          "legal": "Hujjatlar"
+        },
+        "cta": {
+          "title": "Javob topmadingizmi?",
+          "text": "Bizga yozing - ish kuni davomida javob beramiz.",
+          "contact": "Bizga yozing",
+          "help": "Yordam markazi"
+        },
+        "faq": {
+          "title": "Savol-javob",
+          "intro": "Xaridor kompaniyalar va sotuvchilarning tez-tez beradigan savollariga javoblar.",
+          "search": "Savollar bo'yicha qidirish",
+          "topicsLabel": "Savol mavzulari",
+          "empty": "Bu so'rov bo'yicha hech narsa topilmadi. Boshqa so'zni sinab ko'ring yoki bizga yozing.",
+          "topics": {
+            "all": "Hammasi",
+            "payment": "To'lov",
+            "orders": "Buyurtmalar",
+            "delivery": "Yetkazib berish",
+            "returns": "Qaytarish",
+            "sellers": "Sotuvchilarga"
+          },
+          "items": {
+            "payHow": {
+              "q": "Kompaniya buyurtmani qanday to'laydi",
+              "a": "Saytdagi kompaniya balansidan yoki korporativ karta bilan. Usul buyurtmani rasmiylashtirishda tanlanadi."
+            },
+            "payTopUp": {
+              "q": "Balansni qanday to'ldirish mumkin",
+              "a": "«Kompaniya balansi» bo'limida summani kiriting va hisob yarating. Pulni kompaniya hisob raqamidan hisobdagi rekvizitlar bo'yicha o'tkazing - tushgandan keyin balansda paydo bo'ladi."
+            },
+            "payPersonal": {
+              "q": "Shaxsiy karta yoki bo'lib to'lash mumkinmi",
+              "a": "Yo'q. 1mart faqat kompaniyalar bilan ishlaydi: kompaniya balansi va korporativ kartalar qabul qilinadi."
+            },
+            "payMoney": {
+              "q": "Sotuvchi pulni qachon oladi",
+              "a": "Rasmiylashtirishda summa band qilinadi. Buyurtma tasdiqlangach sotuvchining hisob raqamiga o'tadi, rad etilsa yoki bekor qilinsa, o'sha usul bilan qaytariladi."
+            },
+            "ordStatus": {
+              "q": "Buyurtma holatini qayerda ko'rish mumkin",
+              "a": "«Buyurtmalarim» bo'limida. U yerda buyurtma raqami, sanasi, tarkibi va summasi ham bor."
+            },
+            "ordCancel": {
+              "q": "Buyurtmani bekor qilish mumkinmi",
+              "a": "Ha, yetkazib berishga topshirilguncha. Bekor qilish tugmasi buyurtma kartasida paydo bo'ladi."
+            },
+            "ordOriginal": {
+              "q": "Mahsulot asl ekanini qanday bilish mumkin",
+              "a": "Brend mahsulotlari sotuvchilari asl ekanini hujjatlar bilan tasdiqlaydi. Shubhangiz bo'lsa, qo'llab-quvvatlash xizmatiga yozing."
+            },
+            "delWho": {
+              "q": "Buyurtmani kim yetkazib beradi",
+              "a": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari. 1mart topshirish punktini ham tanlash mumkin - bu bepul."
+            },
+            "delTime": {
+              "q": "Yetkazib berish qancha davom etadi",
+              "a": "Toshkent bo'ylab - bir kundan, viloyatlarga - 2-5 kun. Muddat va narx rasmiylashtirishda ko'rinadi."
+            },
+            "delPickup": {
+              "q": "Buyurtma topshirish punktida qancha saqlanadi",
+              "a": "7 kun. Olayotganda mahsulot va uning to'liqligini tekshiring."
+            },
+            "retHow": {
+              "q": "Mahsulotni qanday qaytarish mumkin",
+              "a": "«Buyurtmalarim» bo'limida 10 kun ichida qaytarishni rasmiylashtiring. Mahsulot tashqi ko'rinishi va qadog'ini saqlagan bo'lishi kerak."
+            },
+            "retMoney": {
+              "q": "Pul qayerga qaytadi",
+              "a": "Buyurtma to'langan usul bilan: kompaniya balansiga yoki korporativ kartaga."
+            },
+            "selStart": {
+              "q": "Sotishni qanday boshlash mumkin",
+              "a": "Ro'yxatdan o'tgan YaTT yoki kompaniya, to'lovlar uchun hisob raqami va rasm, narx, tavsifli mahsulotlar kerak. Anketani to'ldiring va hujjatlarni yuboring."
+            },
+            "selCheck": {
+              "q": "Tekshiruv qancha davom etadi",
+              "a": "Sotuvchini tekshirish - bir ish kunigacha, mahsulot kartasi - 24 soatgacha."
+            },
+            "selFee": {
+              "q": "Komissiya qancha",
+              "a": "Komissiya mahsulot kategoriyasiga bog'liq. Ariza qoldiring - tariflarni yuboramiz."
+            }
+          }
+        },
+        "delivery": {
+          "intro": "O'zbekiston bo'ylab kuryer orqali yoki 1mart topshirish punktiga yetkazib beramiz.",
+          "courier": {
+            "title": "Kuryer orqali",
+            "fact1": "Express 24, Maxsus Courier yoki Yandex Delivery",
+            "fact2": "Toshkent bo'ylab - bir kundan, viloyatlarga - 2-5 kun",
+            "fact3": "Kuryer kelishdan oldin qo'ng'iroq qiladi"
+          },
+          "pickup": {
+            "title": "Topshirish punkti",
+            "fact1": "Yetkazib berish bepul",
+            "fact2": "Buyurtma 7 kun saqlanadi",
+            "fact3": "Olayotganda mahsulot va uning to'liqligini tekshiring"
+          },
+          "stepsTitle": "Yetkazib berish qanday kechadi",
+          "step1": {
+            "title": "Rasmiylashtirish",
+            "text": "Usul va manzilni tanlang. Muddat va narx darhol ko'rinadi."
+          },
+          "step2": {
+            "title": "Tasdiqlash",
+            "text": "Summa band qilingan, sotuvchi buyurtmani tasdiqlaydi."
+          },
+          "step3": {
+            "title": "Yetkazib berishga topshirish",
+            "text": "Holat «Buyurtmalarim» bo'limida ko'rinadi."
+          },
+          "step4": {
+            "title": "Qabul qilish",
+            "text": "Kuryer buyurtmani olib keladi yoki u topshirish punktida kutadi."
+          }
+        },
+        "returns": {
+          "intro": "Mahsulotni olgandan keyin 10 kun ichida qaytarish mumkin.",
+          "step1": {
+            "title": "Qaytarishni rasmiylashtiring",
+            "text": "10 kun ichida «Buyurtmalarim» bo'limida buyurtmani oching."
+          },
+          "step2": {
+            "title": "Mahsulotni tayyorlang",
+            "text": "Mahsulot tashqi ko'rinishi va qadog'ini saqlagan bo'lishi kerak."
+          },
+          "step3": {
+            "title": "Pulni oling",
+            "text": "Pul buyurtma to'langan usul bilan qaytadi: kompaniya balansiga yoki korporativ kartaga."
+          },
+          "toOrders": "«Buyurtmalarim»ga o'tish"
+        }
+      }
+    },
+    "checkout": {
+      "checkout": {
+        "dostavkaProdavca": "Sotuvchi yetkazib beradi",
+        "oplataProshla": "To'lov amalga oshdi",
+        "oshibkaPriOplate": "To'lovda xatolik",
+        "zakazOzhidanii": "Buyurtma kutilmoqda",
+        "vypolnenieProshedsheeProsmotretSvoy": "Buyurtmangizni «Mening buyurtmalarim» bo'limida ko'rishingiz mumkin",
+        "ozhidaemOplatuKakTolko": "To'lovni kutmoqdamiz. To'lov o'tishi bilan buyurtma sotuvchiga yuboriladi",
+        "priObrabotkePlatezhaProizoshla": "To'lovni amalga oshirishda xatolik yuz berdi. Qaytadan urinib ko'ring",
+        "addressEmpty": "Manzil qo'shing",
+        "addressPartEntrance": "{value}-podyezd",
+        "addressPartFloor": "{value}-qavat",
+        "addressPartFlat": "{value}-kvartira",
+        "addressMapPoint": "Xaritadagi nuqta {lat}, {lng}",
+        "addressNoDetails": "Qo'shimcha ma'lumotsiz",
+        "addressSaveError": "Manzilni saqlab bo'lmadi. Qaytadan urinib ko'ring"
+      },
+      "deliveryCard": {
+        "kakRabotaetDostavkaProdavca": "Yetkazib berish qanday ishlaydi",
+        "prodavecSvyazhetsyaChtobyUtochnit": "Sotuvchi yetkazib berish sanasi va vaqtini aniqlashtirish uchun bog'lanadi",
+        "vybratDrugoy": "Boshqasini tanlash"
+      },
+      "orderSummary": {
+        "besplatno": "bepul",
+        "dostavka": "Yetkazib berish",
+        "oplate": "To'lovga",
+        "promokod": "Promokod",
+        "razmeschayaZakazVySoglashaetes": "Buyurtma berish orqali siz shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz va foydalanuvchi shartnomasi shartlarini qabul qilasiz",
+        "uchtenyVseAkciiSkidki": "Barcha aksiyalar, chegirmalar va sodiqlik dasturlari hisobga olingan",
+        "promokoda": "promokod",
+        "promokodov": "promokod",
+        "promoLabel": "Promokod {code}",
+        "youHavePromos": "Sizda {count} ta {word}",
+        "deliveryUnavailable": "imkonsiz",
+        "deliveryBlockedNote": "{sellers} bu manzilga yetkazib bermaydi. Boshqa manzil tanlang yoki uning mahsulotlarini buyurtmadan olib tashlang."
+      }
+    },
+    "host": {
+      "error": {
+        "notFoundTitle": "Bunday sahifa yo'q",
+        "genericTitle": "Nimadir noto'g'ri ketdi",
+        "notFoundText": "Sahifa o'chirilgan yoki havolada xatolik bo'lishi mumkin. Bosh sahifadan boshlang — kerakli mahsulot tez topiladi",
+        "genericText": "Biz allaqachon tuzatyapmiz. Sahifani yangilang yoki bosh sahifaga qayting"
+      }
+    },
+    "pdp": {
+      "about": {
+        "tovareIliZhivotnom": "Mahsulot haqida"
+      },
+      "buyBox": {
+        "dobavitKorzinu": "Savatga qo'shish",
+        "kupit1Klik": "1 bosishda sotib olish"
+      },
+      "characteristics": {
+        "harakteristiki": "Xususiyatlari",
+        "svernutHarakteristiki": "Xususiyatlarni yig'ish"
+      },
+      "gallery": {
+        "fotoTovara": "Mahsulot surati",
+        "predyduscheeFoto": "Oldingi surat",
+        "sleduyuscheeFoto": "Keyingi surat",
+        "smotretVideo": "Videoni ko'rish",
+        "videoTovare": "Mahsulot haqida video",
+        "noPhoto": "Surat hali yo'q"
+      },
+      "paymentMethods": {
+        "vidyOplaty": "To'lov turlari"
+      },
+      "productItem": {
+        "oplataDostavka": "To'lov va yetkazib berish",
+        "vozvratGarantiya": "Qaytarish va kafolat",
+        "notFound": "Mahsulot topilmadi",
+        "loadError": "Mahsulotni yuklab bo'lmadi. Sahifani yangilab ko'ring"
+      },
+      "reviews": {
+        "sleduyuschieOtzyvy": "Keyingi sharhlar",
+        "vse": "Hammasi ›",
+        "reviewsCount": "{count} {word}",
+        "allTitle": "Xaridorlar sharhlari",
+        "ratingOf5": "Baho: {rating} / 5",
+        "openPhoto": "Suratni ochish",
+        "openPhotoOf": "{author} yuklagan surat",
+        "photoDialog": "Sharhdagi surat",
+        "sellerReply": "Sotuvchi javobi"
+      },
+      "sellerCard": {
+        "drugieProdukty": "Boshqa mahsulotlar",
+        "ratingsCount": "{count} {word}"
+      }
+    },
+    "shared": {
+      "state": {
+        "proverteSoedineniePoprobuyteEsche": "Ulanishni tekshiring va qayta urinib ko'ring",
+        "udalosZagruzit": "Yuklab bo'lmadi",
+        "loading": "Mahsulotlar yuklanmoqda"
+      },
+      "productCard": {
+        "reviewsCount": "({count} {word})",
+        "addedToCart": "Mahsulot savatda",
+        "removedFromCart": "Mahsulot savatdan olib tashlandi",
+        "addWithDelivery": "Savatga, yetkazish {date}",
+        "photoNumber": "{index}-surat"
+      },
+      "favorite": {
+        "added": "Saralanganga qo'shildi",
+        "removed": "Saralangandan olib tashlandi",
+        "failed": "Saqlab bo'lmadi. Qaytadan urinib ko'ring"
+      }
+    }
+  },
+  "seo": {
+    "categoryDescription": "{title}: tekshirilgan sotuvchilardan {count} ta taklif. O'zbekiston bo'ylab yetkazib berish, kompaniya balansidan yoki korporativ karta bilan to'lov, kafolat.",
+    "categoryTitle": "{title} — O'zbekistonda sotib olish",
+    "checkoutTitle": "Buyurtmani rasmiylashtirish",
+    "homeDescription": "Biznes uchun xaridlar: tekshirilgan sotuvchilardan elektronika, kiyim, poyabzal, uy, go'zallik va sport mahsulotlari. Kompaniya balansidan yoki korporativ karta bilan to'lov, butun O'zbekiston bo'ylab kuryer va topshirish punktlariga yetkazib berish.",
+    "homeTitle": "O'zbekiston bo'ylab yetkazib beriladigan elektronika, kiyim va uy mahsulotlari marketpleysi",
+    "productTitle": "{title} — {price} ga sotib olish",
+    "searchTitle": "{query} — qidiruv"
+  },
+  "pdp": {
+    "buyersThisWeek": "Shu hafta {count} kishi sotib oldi",
+    "otherOptions": "Boshqa variantlar",
+    "stockCount": "Qoldi: {n} dona",
+    "sku": "Artikul",
+    "similarProducts": "O'xshash mahsulotlar",
+    "boughtTogether": "Bular bilan ham sotib olishadi"
+  }
+}
