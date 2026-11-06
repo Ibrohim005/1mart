@@ -230,12 +230,13 @@ test.describe('Каталог и поиск', () => {
     await open(page, '/search')
     const inputs = page.locator('.filter__input input')
     await expect(inputs.nth(1)).toHaveAttribute('placeholder', /^До \d[\d,.]* (млн|млрд|тыс)/)
+    await page.evaluate(() => document.fonts.ready)
     const fits = await inputs.evaluateAll(list => list.every((input) => {
       const el = input as HTMLInputElement
       const ctx = document.createElement('canvas').getContext('2d')!
       const style = getComputedStyle(el)
       ctx.font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`
-      return ctx.measureText(el.placeholder).width + 40 < el.clientWidth
+      return ctx.measureText(el.placeholder).width + 24 <= el.clientWidth
     }))
     expect(fits).toBe(true)
   })

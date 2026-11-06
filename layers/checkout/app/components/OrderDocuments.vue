@@ -26,7 +26,7 @@ const DOCUMENTS = [
           <span class="documents__name">{{ $t(`pay.documents.${item.kind}`) }}</span>
           <span class="documents__note">{{ $t('pay.documents.note') }}</span>
         </span>
-        <UiIcon name="download" :size="20" class="documents__icon" />
+        <UiIcon name="export-fill" :size="20" class="documents__icon" />
       </a>
     </div>
   </section>

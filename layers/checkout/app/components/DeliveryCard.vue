@@ -125,7 +125,7 @@ const PROVIDER_MARKS: Record<DeliveryProvider, string> = { express24: 'E24', max
       </div>
     </div>
     <p v-if="free" class="delivery__free">
-      <UiIcon name="check" :size="18" />
+      <UiIcon name="tick-circle" :size="18" />
       {{ $t('badge.freeShipping') }}
     </p>
   </section>
