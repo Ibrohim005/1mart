@@ -1,4 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { createRequire } from 'node:module'
+
+/*
+ * @nuxt/eslint is a root devDependency. A production install (NODE_ENV=production,
+ * as on Vercel) skips devDependencies, and an unresolvable module makes the
+ * postinstall `nuxt prepare` fail the whole `npm install`. The module only
+ * generates the lint config, so load it only when it is installed.
+ */
+const hasNuxtEslint = (() => {
+  try {
+    createRequire(import.meta.url).resolve('@nuxt/eslint')
+    return true
+  }
+  catch {
+    return false
+  }
+})()
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-09-18',
@@ -29,7 +46,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxtjs/i18n',
     // Линтер: модуль генерирует конфиг под структуру проекта
-    '@nuxt/eslint',
+    ...(hasNuxtEslint ? ['@nuxt/eslint'] : []),
     // Бандл: sitemap + robots + schema.org + og-image + canonical/meta
     '@nuxtjs/seo',
   ],
