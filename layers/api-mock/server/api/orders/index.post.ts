@@ -60,6 +60,7 @@ export default defineEventHandler(async (event) => {
     delivery: quote.delivery,
     etaDays: (quote.deliveryType === 'courier' ? courier?.days : pickup?.days) ?? 2,
     transactionId,
+    comment: request.comment,
   })
 
   const reserved = orders.reduce((acc, order) => acc + order.amount, 0)

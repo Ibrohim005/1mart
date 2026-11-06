@@ -128,7 +128,7 @@ GET /products/{slug}/price  →  { price: Money, fullPrice: Money | null, availa
 Фронт уже отправляет заказ и разводит ответ по трём экранам:
 
 ```
-POST /orders  { paymentMethod, cardId, deliveryType, provider, pickupPointId, addressId, promoCode, otpToken }
+POST /orders  { paymentMethod, cardId, deliveryType, provider, pickupPointId, addressId, promoCode, comment, otpToken }
   → 200 { status: 'placed', orders: [{ id, number, amount }], transactionId, reserved, paymentStatus: 'held', receipt }
         → «Заказ оформлен, средства зарезервированы», корзина очищена
   → 200 { status: 'outOfStock', items } → А1: подсветить позиции, предложить убрать

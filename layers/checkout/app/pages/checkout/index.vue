@@ -117,6 +117,7 @@ const { data: balance, refresh: refreshBalance } = await useApiData<BalanceOverv
 const available = computed(() => balance.value?.available.amount ?? 0)
 
 const paymentMethod = ref<PaymentMethod>('balance')
+const comment = ref('')
 
 // С пополнения возвращаются на эту же страницу: сумма могла измениться
 onMounted(refreshBalance)
@@ -130,6 +131,7 @@ const checkoutBody = () => ({
   pickupPointId: deliveryType.value === 'pickupPoint' ? pickupPointId.value : null,
   addressId: selectedAddressId.value,
   promoCode: appliedPromo.value?.code ?? null,
+  comment: comment.value.trim() || null,
 })
 
 type Quote = {
@@ -154,6 +156,10 @@ const { data: quote, status: quoteStatus, refresh: refreshQuote } = await useApi
 
 const payable = computed(() => quote.value?.payable ?? cart.detail?.total.amount ?? 0)
 const stockIssues = computed(() => quote.value?.stockIssues ?? [])
+
+/** Доставка бесплатна, только если сервер её уже посчитал и ничто не мешает доставить */
+const isDeliveryFree = computed(() => Boolean(quote.value) && quote.value!.delivery === 0 && !quote.value!.deliveryBlocked?.length)
+
 const deliveryLabel = computed(() => (deliveryType.value === 'courier'
   ? providerName(provider.value)
   : t('pay.delivery.pickup')))
@@ -416,8 +422,11 @@ useSeoMeta({ title: () => t('pay.checkout.seoTitle'), robots: 'noindex, nofollow
             :recipient-phone="profile?.phone ?? ''"
             :couriers="quote?.couriers ?? []"
             :pickup-points="quote?.pickupPoints ?? []"
+            :free="isDeliveryFree"
             @change="openModal = 'address'"
           />
+
+          <CheckoutOrderDocuments />
 
           <CheckoutPaymentCard
             v-model:method="paymentMethod"
@@ -428,6 +437,8 @@ useSeoMeta({ title: () => t('pay.checkout.seoTitle'), robots: 'noindex, nofollow
             :top-up-link="topUpLink"
             @add-card="openModal = 'add-card'"
           />
+
+          <CheckoutOrderComment v-model="comment" />
         </div>
 
         <CheckoutOrderSummary

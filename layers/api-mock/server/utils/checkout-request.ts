@@ -18,6 +18,8 @@ export interface CheckoutRequest {
   pickupPointId: string | null
   addressId: string | null
   promoCode: string | null
+  /** Комментарий покупателя к заказу */
+  comment: string | null
 }
 
 const PROVIDERS: DeliveryProvider[] = ['express24', 'maxsus', 'yandex']
@@ -34,6 +36,7 @@ export function parseCheckoutRequest(body: Record<string, unknown> | null | unde
     pickupPointId: typeof value.pickupPointId === 'string' ? value.pickupPointId : null,
     addressId: typeof value.addressId === 'string' ? value.addressId : null,
     promoCode: typeof value.promoCode === 'string' ? value.promoCode : null,
+    comment: typeof value.comment === 'string' && value.comment.trim() ? value.comment.trim().slice(0, 500) : null,
   }
 }
 

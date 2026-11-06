@@ -51,6 +51,7 @@ export interface OrderSeed {
   /** Сколько заблокировано/списано по заказу: товары − промокод + доставка */
   amount: number
   transactionId?: string
+  comment?: string | null
   /** Оформлен в этой сессии — стадии идут по таймеру */
   live?: boolean
   /** А2: продавец отклонит заказ */
@@ -269,6 +270,7 @@ export function createOrderSeeds(event: MockEvent, options: {
   delivery: number
   etaDays: number
   transactionId: string
+  comment?: string | null
 }) {
   const orders = store.get(event)
   const groups = new Map<number | string, PlacementLine[]>()
@@ -309,6 +311,7 @@ export function createOrderSeeds(event: MockEvent, options: {
       promoAmount,
       amount: goods - promoAmount + deliveryPrice,
       transactionId: options.transactionId,
+      comment: options.comment ?? null,
       live: true,
       willReject: lines.some(line => line.quantity === SELLER_REJECT_QTY),
     }

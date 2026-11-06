@@ -40,6 +40,7 @@ export default defineEventHandler((event) => {
     recipient: profileState(event).fullName,
     recipientPhone: '+998 90 123-45-67',
     paymentLabel: paymentMethodLabel(event, seed.cardId),
+    comment: seed.comment ?? undefined,
     deliveryPrice: { amount: seed.deliveryPrice, currency: 'UZS' as const },
     commission: { amount: 0, currency: 'UZS' as const },
     receipt: receiptFor(event, sameTransaction.length ? sameTransaction : [seed]),

@@ -1,5 +1,15 @@
 {
   "pay": {
+    "documents": {
+      "title": "Hujjatlar",
+      "note": "Joriy buyurtma bo'yicha loyiha",
+      "specification": "Spetsifikatsiya",
+      "invoice": "To'lov hisobi"
+    },
+    "comment": {
+      "title": "Buyurtmaga izoh",
+      "placeholder": "Masalan, qulay yetkazish vaqti yoki sotuvchiga istaklar"
+    },
     "common": {
       "cancel": "Bekor qilish",
       "close": "Yopish",

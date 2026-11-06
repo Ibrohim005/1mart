@@ -17,6 +17,8 @@ defineProps<{
   recipientPhone: string
   couriers: CourierOption[]
   pickupPoints: PickupOption[]
+  /** Сервер посчитал доставку бесплатной: самовывоз, промокод или условие магазина */
+  free?: boolean
 }>()
 
 const deliveryType = defineModel<DeliveryType>('deliveryType', { required: true })
@@ -122,6 +124,10 @@ const PROVIDER_MARKS: Record<DeliveryProvider, string> = { express24: 'E24', max
         <p class="delivery__note">{{ recipientPhone }}</p>
       </div>
     </div>
+    <p v-if="free" class="delivery__free">
+      <UiIcon name="check" :size="18" />
+      {{ $t('badge.freeShipping') }}
+    </p>
   </section>
 </template>
 
@@ -130,6 +136,18 @@ const PROVIDER_MARKS: Record<DeliveryProvider, string> = { express24: 'E24', max
   padding: 24px;
   border-radius: 24px;
   background: var(--color-surface);
+}
+
+.delivery__free {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--badge-cheaper-bg);
+  font: var(--type-button-sm);
+  color: var(--color-brand-text);
 }
 
 .delivery__title {

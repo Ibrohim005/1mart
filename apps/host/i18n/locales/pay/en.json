@@ -1,5 +1,15 @@
 {
   "pay": {
+    "documents": {
+      "title": "Documents",
+      "note": "Draft for the current order",
+      "specification": "Specification",
+      "invoice": "Invoice"
+    },
+    "comment": {
+      "title": "Order comment",
+      "placeholder": "For example, a convenient delivery time or a note for the seller"
+    },
     "common": {
       "cancel": "Cancel",
       "close": "Close",

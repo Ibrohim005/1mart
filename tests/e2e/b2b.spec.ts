@@ -830,3 +830,51 @@ test.describe('Ответ продавца на отзыв', () => {
     await expect(page.locator('.reviews__reply').first()).toContainText('Ответ продавца')
   })
 })
+
+test.describe('Оформление: документы, комментарий, бесплатная доставка', () => {
+  test.beforeEach(async ({ page }) => {
+    await asUser(page)
+  })
+
+  for (const [kind, title] of [['specification', 'Спецификация'], ['invoice', 'Счёт на оплату']] as const) {
+    test(`${title} скачивается в PDF`, async ({ page }) => {
+      await open(page, '/checkout')
+      const [file] = await Promise.all([
+        page.waitForEvent('download'),
+        page.locator('.documents__item', { hasText: title }).click(),
+      ])
+      expect(file.suggestedFilename()).toBe(`1mart-${kind}.pdf`)
+      const stream = await file.createReadStream()
+      const chunks: Buffer[] = []
+      for await (const chunk of stream) chunks.push(chunk as Buffer)
+      const pdf = Buffer.concat(chunks)
+      expect(pdf.subarray(0, 5).toString()).toBe('%PDF-')
+      expect(pdf.length).toBeGreaterThan(5000)
+    })
+  }
+
+  test('комментарий уходит в заказ и виден в кабинете', async ({ page }) => {
+    await open(page, '/checkout')
+    await page.locator('#order-comment').fill('Доставить после 14:00')
+    await expect(page.locator('.comment__counter')).toContainText('21 / 500')
+
+    await page.locator('.summary__pay').click()
+    await page.locator('.confirm').getByRole('button').click()
+    await expect(page.locator('.success__title')).toBeVisible({ timeout: 15_000 })
+
+    await page.locator('.success a[href*="/account/orders/"]').first().click()
+    // Комментарий лежит в блоке «Подробнее»
+    await page.locator('.detail__action[aria-expanded]').click()
+    await expect(page.locator('.detail__row-note', { hasText: 'Доставить после 14:00' })).toBeVisible()
+  })
+
+  test('бесплатная доставка показана, платная нет', async ({ page }) => {
+    await open(page, '/checkout')
+    await expect(page.locator('.delivery__free')).toHaveCount(0)
+
+    // Самовывоз бесплатный: показывается и в карточке, и в итогах
+    await page.locator('.delivery__tab').nth(1).click()
+    await expect(page.locator('.delivery__free')).toContainText('Бесплатная доставка')
+    await expect(page.locator('.summary__value', { hasText: 'Бесплатно' })).toBeVisible()
+  })
+})
