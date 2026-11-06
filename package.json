@@ -18,7 +18,6 @@
     "typecheck:business": "npm run typecheck -w @zoo/business",
     "i18n:todo": "node scripts/i18n-check.mjs",
     "lint": "eslint .",
-    "postinstall": "npm run postinstall -w @zoo/host",
     "preview": "npm run preview -w @zoo/host",
     "qr": "node scripts/make-qr.mjs",
     "test:e2e": "playwright test",

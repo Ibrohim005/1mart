@@ -34,6 +34,15 @@ npm run build
 `npm run typecheck` prints `ERR_PACKAGE_PATH_NOT_EXPORTED` / `vue-router/volar/*` resolver noise.
 Pre-existing, not an error — **check the exit code, not the output**.
 
+## Deploying to Vercel
+
+Two Vercel projects from this one repo: Root Directory `apps/host` and `apps/business`. Each app's
+`vercel.json` sets the Nuxt preset and installs from the repo root (`cd ../.. && npm install`).
+Do not drop that: an install run inside one app only fetches that app's dependencies, while the
+layers' `.vue` files resolve types through the root `tsconfig.json`, which points at
+`apps/host/.nuxt`. So the business build needs the host prepared too. Vercel also skips
+devDependencies, which is why `@nuxt/eslint` loads only when installed (`apps/host/nuxt.config.ts`).
+
 ## The adapter layer is the whole design
 
 Pages never call the backend. `layers/api-backend/` owns every upstream call and hides three
