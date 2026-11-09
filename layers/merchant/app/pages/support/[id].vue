@@ -34,7 +34,7 @@ function send() {
 }
 
 useSeoMeta({
-  title: () => `${data.value ? data.value.number : t('m.support.title')} — 1mart Business`,
+  title: () => `${data.value ? data.value.number : t('m.support.title')} — spotshop Business`,
   robots: 'noindex, nofollow',
 })
 </script>

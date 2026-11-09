@@ -13,12 +13,12 @@ function goHome() {
   clearError({ redirect: localePath('/dashboard') })
 }
 
-useSeoMeta({ title: () => `${t(isMissing.value ? 'm.common.notFoundTitle' : 'm.common.loadError')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t(isMissing.value ? 'm.common.notFoundTitle' : 'm.common.loadError')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>
   <main class="berror">
-    <img src="/1mart-logo.svg" alt="1mart" width="120" height="36" class="berror__logo">
+    <img src="/1mart-logo.svg" alt="spotshop" width="171" height="36" class="berror__logo">
     <p class="berror__code">{{ error.statusCode }}</p>
     <h1 class="berror__title">{{ $t(isMissing ? 'm.common.notFoundTitle' : 'm.common.loadError') }}</h1>
     <p class="berror__text">{{ $t(isMissing ? 'm.common.notFoundText' : 'm.common.loadErrorText') }}</p>

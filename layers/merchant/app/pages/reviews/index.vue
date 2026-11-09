@@ -85,7 +85,7 @@ async function sendReply(review: ReviewRow) {
   }
 }
 
-useSeoMeta({ title: () => `${t('m.reviews.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.reviews.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

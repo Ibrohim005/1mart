@@ -32,7 +32,7 @@ useSeoMeta({
 // Разметка для Google: организация + поиск по сайту прямо в выдаче
 useSchemaOrg([
   defineWebSite({
-    name: '1mart',
+    name: 'spotshop',
     potentialAction: {
       '@type': 'SearchAction',
       'target': 'https://market.paylov.uz/search?q={search_term_string}',

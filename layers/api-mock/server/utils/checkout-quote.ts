@@ -69,9 +69,9 @@ export interface PickupPointOption {
 }
 
 const PICKUP_POINTS = [
-  { id: 'pp1', title: '1mart — Чиланзар', address: 'Ташкент, Чиланзарский район, ул. Бунёдкор, 12', workingHours: '09:00–21:00', days: 2 },
-  { id: 'pp2', title: '1mart — Юнусабад', address: 'Ташкент, Юнусабадский район, ул. Амира Темура, 108', workingHours: '09:00–20:00', days: 2 },
-  { id: 'pp3', title: '1mart — Мирзо-Улугбек', address: 'Ташкент, ул. Мустакиллик, 12', workingHours: '10:00–22:00', days: 3 },
+  { id: 'pp1', title: 'spotshop — Чиланзар', address: 'Ташкент, Чиланзарский район, ул. Бунёдкор, 12', workingHours: '09:00–21:00', days: 2 },
+  { id: 'pp2', title: 'spotshop — Юнусабад', address: 'Ташкент, Юнусабадский район, ул. Амира Темура, 108', workingHours: '09:00–20:00', days: 2 },
+  { id: 'pp3', title: 'spotshop — Мирзо-Улугбек', address: 'Ташкент, ул. Мустакиллик, 12', workingHours: '10:00–22:00', days: 3 },
 ]
 
 /** Демо-правило А1: столько штук и больше «нет в наличии» при оформлении */

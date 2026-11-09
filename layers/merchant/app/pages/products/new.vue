@@ -6,7 +6,7 @@ definePageMeta({ layout: 'merchant', middleware: 'merchant-auth' })
 const { t } = useI18n()
 const localePath = useLocalePath()
 
-useSeoMeta({ title: () => `${t('m.productForm.titleNew')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.productForm.titleNew')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

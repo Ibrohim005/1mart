@@ -35,7 +35,7 @@ const columns = [
 
 const sign = (m: Money) => (m.amount >= 0 ? 'tx__pos' : 'tx__neg')
 
-useSeoMeta({ title: () => `${t('m.transactions.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.transactions.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

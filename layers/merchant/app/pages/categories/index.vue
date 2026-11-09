@@ -14,7 +14,7 @@ const columns = [
   { key: 'commissionRate', label: t('m.categories.colCommission'), align: 'right' as const, width: '160px' },
 ]
 
-useSeoMeta({ title: () => `${t('m.categories.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.categories.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

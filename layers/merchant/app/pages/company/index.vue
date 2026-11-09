@@ -75,7 +75,7 @@ async function save() {
   }
 }
 
-useSeoMeta({ title: () => `${t('m.company.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.company.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

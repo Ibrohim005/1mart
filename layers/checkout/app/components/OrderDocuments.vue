@@ -18,7 +18,7 @@ const DOCUMENTS = [
         v-for="item in DOCUMENTS"
         :key="item.kind"
         :href="item.href"
-        :download="`1mart-${item.kind}.pdf`"
+        :download="`spotshop-${item.kind}.pdf`"
         class="documents__item"
       >
         <span class="documents__badge" aria-hidden="true">PDF</span>

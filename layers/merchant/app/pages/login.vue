@@ -39,7 +39,7 @@ async function submit() {
   await navigateTo(nextPath())
 }
 
-useSeoMeta({ title: () => `${t('auth.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('auth.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

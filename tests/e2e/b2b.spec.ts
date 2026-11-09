@@ -642,7 +642,7 @@ test.describe('Главная: баннер и плитки', () => {
   test('плитка продавца ведёт в кабинет', async ({ page }) => {
     await open(page, '/')
     const tile = page.locator('.tile--sell')
-    await expect(tile).toContainText('Продавайте на 1mart')
+    await expect(tile).toContainText('Продавайте на spotshop')
     await expect(tile).toHaveAttribute('target', '_blank')
     await expect(tile.locator('.tile__mark')).toBeVisible()
   })
@@ -670,13 +670,13 @@ test.describe('Плитки и иконки: языки и бренд', () => {
     })
   }
 
-  test('иконка сайта - знак 1mart, а не старый значок', async ({ request }) => {
+  test('иконка сайта - знак spotshop, а не старый значок', async ({ request }) => {
     const svg = await (await request.get('/favicon.svg')).text()
-    expect(svg).toContain('#2CDD41')
+    expect(svg).toContain('#0AE728')
     expect(svg).not.toContain('#1B9684')
 
     const manifest = await (await request.get('/site.webmanifest')).json()
-    expect(manifest.theme_color).toBe('#2CDD41')
+    expect(manifest.theme_color).toBe('#0AE728')
   })
 })
 
@@ -774,7 +774,7 @@ test.describe('Единый текст', () => {
       await open(page, url)
       const dark = await page.locator('button, a').evaluateAll(nodes => nodes.filter((node) => {
         const style = getComputedStyle(node)
-        return style.backgroundColor === 'rgb(44, 221, 65)' && style.color !== 'rgb(255, 255, 255)'
+        return style.backgroundColor === 'rgb(10, 231, 40)' && style.color !== 'rgb(255, 255, 255)'
       }).map(node => node.className))
       expect(dark, url).toEqual([])
     }
@@ -844,7 +844,7 @@ test.describe('Оформление: документы, комментарий,
         page.waitForEvent('download'),
         page.locator('.documents__item', { hasText: title }).click(),
       ])
-      expect(file.suggestedFilename()).toBe(`1mart-${kind}.pdf`)
+      expect(file.suggestedFilename()).toBe(`spotshop-${kind}.pdf`)
       const stream = await file.createReadStream()
       const chunks: Buffer[] = []
       for await (const chunk of stream) chunks.push(chunk as Buffer)

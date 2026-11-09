@@ -39,7 +39,7 @@ function act() {
   toast.show(t('m.documents.notReady'), 'error')
 }
 
-useSeoMeta({ title: () => `${t('m.documents.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.documents.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

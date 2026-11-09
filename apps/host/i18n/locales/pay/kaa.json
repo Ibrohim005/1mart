@@ -18,7 +18,7 @@
     "checkout": {
       "title": "Buyurtmani rasmiylashtirish",
       "steps": "Yetkazish → To'lov → Tasdiqlash",
-      "seoTitle": "Buyurtmani rasmiylashtirish — 1mart",
+      "seoTitle": "Buyurtmani rasmiylashtirish — spotshop",
       "empty": "Buyurtmada tanlangan mahsulotlar yo'q"
     },
     "delivery": {
@@ -31,7 +31,7 @@
       "choosePoint": "Topshirish punktini tanlang",
       "eta": "{date} yetkazadi",
       "pickupFrom": "{date} dan olib ketish mumkin",
-      "paylovLogistics": "1mart",
+      "paylovLogistics": "spotshop",
       "providers": {
         "express24": "Express 24",
         "maxsus": "Maxsus Courier",
@@ -57,12 +57,12 @@
       "pay": "{sum} to'lash",
       "processing": "Ishlanmoqda…",
       "holdNote": "Summa band qilinadi. Buyurtma tasdiqlangach, pul sotuvchining hisob raqamiga o'tkaziladi, rad etilsa, xuddi shu usulda qaytariladi.",
-      "legal": "Buyurtma berib, siz 1mart ofertasi shartlarini qabul qilasiz va shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz"
+      "legal": "Buyurtma berib, siz spotshop ofertasi shartlarini qabul qilasiz va shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz"
     },
     "antifraud": {
       "title": "Operatsiyani tasdiqlang",
       "lead": "Operatsiyani firibgarlar ishtirokisiz va ko'rsatmasisiz shaxsan o'zingiz bajarayotganingizni tasdiqlang.",
-      "point1": "1mart va bank xodimlari hech qachon SMS-kod va karta ma'lumotlarini so'ramaydi.",
+      "point1": "spotshop va bank xodimlari hech qachon SMS-kod va karta ma'lumotlarini so'ramaydi.",
       "point2": "Agar sizni shoshiltirishsa, qo'rqitishsa yoki «pulni xavfsiz hisobga o'tkazishni» so'rashsa, davom etmang.",
       "point3": "Tasdiqlashdan oldin summa va oluvchini tekshiring.",
       "purchaseAmount": "Xarid summasi",
@@ -113,7 +113,7 @@
       "done": "Karta bog'landi",
       "errorNumber": "Karta raqamini tekshiring",
       "errorExpires": "Karta amal qilish muddatini tekshiring",
-      "errorCorporate": "Bu shaxsiy karta. 1martda faqat korporativ karta bilan to'lash mumkin"
+      "errorCorporate": "Bu shaxsiy karta. spotshopda faqat korporativ karta bilan to'lash mumkin"
     },
     "error": {
       "title": "To'lovni amalga oshirib bo'lmadi",
@@ -185,7 +185,7 @@
       },
       "readyForPickup": {
         "title": "Olib ketishga tayyor",
-        "text": "Buyurtma 1mart topshirish punktida sizni kutmoqda"
+        "text": "Buyurtma spotshop topshirish punktida sizni kutmoqda"
       },
       "delivered": {
         "title": "Buyurtma yetkazildi",
@@ -252,7 +252,7 @@
     },
     "balance": {
       "title": "Kompaniya balansi",
-      "seoTitle": "Kompaniya balansi - 1mart",
+      "seoTitle": "Kompaniya balansi - spotshop",
       "available": "Xaridlar uchun mavjud",
       "reserved": "Buyurtmalar uchun band qilingan: {sum}",
       "company": "Kompaniya",
@@ -263,7 +263,7 @@
       "createInvoice": "Hisob yaratish",
       "amountError": "To'ldirish summasini kiriting",
       "createError": "Saqlab bo'lmadi. Qayta urinib ko'ring.",
-      "topUpHint": "Biz 1mart rekvizitlari bilan hisob yaratamiz. Pulni kompaniya hisob raqamidan o'tkazing, u kelib tushgach balansda paydo bo'ladi.",
+      "topUpHint": "Biz spotshop rekvizitlari bilan hisob yaratamiz. Pulni kompaniya hisob raqamidan o'tkazing, u kelib tushgach balansda paydo bo'ladi.",
       "invoicesTitle": "To'ldirish hisoblari",
       "invoicesEmpty": "Hisoblar hozircha yo'q",
       "invoiceNumber": "Hisob № {number}",
@@ -285,7 +285,7 @@
       "amount": "O'tkazish uchun",
       "recipient": "Qabul qiluvchi",
       "purpose": "To'lov maqsadi",
-      "purposeText": "{number} raqamli hisob bo'yicha 1mart balansini to'ldirish, to'lovchi INN {inn}",
+      "purposeText": "{number} raqamli hisob bo'yicha spotshop balansini to'ldirish, to'lovchi INN {inn}",
       "note": "O'tkazma {company} kompaniyasining hisob raqamidan kelishi kerak.",
       "copied": "Nusxalandi",
       "copyError": "Nusxalab bo'lmadi",

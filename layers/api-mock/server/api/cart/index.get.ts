@@ -45,7 +45,7 @@ export default defineEventHandler((event) => {
   const groups = [
     {
       id: 'paylov-market',
-      kicker: 'Доставка 1mart',
+      kicker: 'Доставка spotshop',
       title: 'Доставим завтра',
       items: selectedOnly(items.slice(0, 1)),
     },

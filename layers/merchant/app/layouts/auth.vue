@@ -8,7 +8,7 @@ const benefits = ['b1', 'b2', 'b3']
   <div class="auth">
     <div class="auth__side">
       <NuxtLink :to="useLocalePath()('/')" class="auth__brand">
-        <img src="/1mart-logo.svg" alt="1mart" width="104" height="32" class="auth__logo">
+        <img src="/1mart-logo.svg" alt="spotshop" width="152" height="32" class="auth__logo">
         <span class="auth__brand-sub">{{ $t('m.brand.business') }}</span>
       </NuxtLink>
 
@@ -59,7 +59,7 @@ const benefits = ['b1', 'b2', 'b3']
   text-decoration: none;
 }
 .auth__brand:focus-visible { outline: none; box-shadow: var(--focus-ring); }
-.auth__logo { display: block; width: 104px; height: 32px; }
+.auth__logo { display: block; width: 152px; height: 32px; }
 .auth__brand-sub {
   padding: 5px 10px;
   border-radius: var(--m-radius-pill);

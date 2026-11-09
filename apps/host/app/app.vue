@@ -30,8 +30,8 @@ useHead({
     { rel: 'manifest', href: '/site.webmanifest' },
   ],
   meta: [
-    { name: 'theme-color', content: '#2CDD41' },
-    { name: 'apple-mobile-web-app-title', content: '1mart' },
+    { name: 'theme-color', content: '#0AE728' },
+    { name: 'apple-mobile-web-app-title', content: 'spotshop' },
   ],
 })
 
@@ -49,7 +49,7 @@ useHead(() => ({
     страницами нужен отдельный отклик, иначе клик выглядит как «ничего не
     произошло».
   -->
-  <NuxtLoadingIndicator color="#2CDD41" :height="3" :throttle="0" />
+  <NuxtLoadingIndicator color="#0AE728" :height="3" :throttle="0" />
 
   <NuxtLayout>
     <NuxtPage />

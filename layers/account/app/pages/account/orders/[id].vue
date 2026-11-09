@@ -418,7 +418,7 @@ useSeoMeta({ title: () => t('ui.account.ordersItem.seoTitle'), robots: 'noindex,
 /* Пройденный шаг — зелёный с подсветкой, как в макете */
 .detail__step--done .detail__step-mark {
   background: var(--color-brand);
-  box-shadow: 0 0 22px rgb(44 221 65 / 45%);
+  box-shadow: 0 0 22px rgb(10 231 40 / 45%);
 }
 
 .detail__step-line {
@@ -463,7 +463,7 @@ useSeoMeta({ title: () => t('ui.account.ordersItem.seoTitle'), robots: 'noindex,
   color: var(--color-on-brand);
 }
 
-.detail__action--primary:not(:disabled):hover { background: #22C636; }
+.detail__action--primary:not(:disabled):hover { background: #0BC525; }
 
 /* Отмена уходит вправо и звучит тише: рамка вместо заливки */
 .detail__action--danger {

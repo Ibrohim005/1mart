@@ -77,7 +77,7 @@ const itemColumns = [
 ]
 
 useSeoMeta({
-  title: () => `${data.value ? t('m.order.detailTitle', { number: data.value.number }) : t('m.nav.orders')} — 1mart Business`,
+  title: () => `${data.value ? t('m.order.detailTitle', { number: data.value.number }) : t('m.nav.orders')} — spotshop Business`,
   robots: 'noindex, nofollow',
 })
 </script>

@@ -41,7 +41,7 @@ const columns = [
   { key: 'statusCode', label: t('m.orders.filterStatus') },
 ]
 
-useSeoMeta({ title: () => `${t('m.orders.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.orders.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

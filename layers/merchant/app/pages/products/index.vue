@@ -95,7 +95,7 @@ async function confirmRemove() {
   }
 }
 
-useSeoMeta({ title: () => `${t('m.products.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.products.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

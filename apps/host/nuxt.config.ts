@@ -71,7 +71,7 @@ export default defineNuxtConfig({
    * ------------------------------------------------------------- */
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL || 'https://market.paylov.uz',
-    name: '1mart',
+    name: 'spotshop',
     defaultLocale: 'ru',
   },
 
@@ -101,7 +101,7 @@ export default defineNuxtConfig({
   schemaOrg: {
     identity: {
       type: 'OnlineStore',
-      name: '1mart',
+      name: 'spotshop',
       url: 'https://market.paylov.uz',
     },
   },

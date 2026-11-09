@@ -578,7 +578,7 @@
     "phone": "Telefon",
     "password": "Parol",
     "submit": "Kirish",
-    "noAccount": "1martda hali sotmaysizmi?",
+    "noAccount": "spotshopda hali sotmaysizmi?",
     "registerLink": "Sotuvchi bo'lish",
     "demoHint": "Demo rejim: istalgan raqam va 4 belgidan uzun parol mos keladi.",
     "signingIn": "Kirmoqda…",
@@ -611,14 +611,14 @@
     },
     "hero": {
       "badge": "Biznes uchun B2B marketpleys",
-      "title": "1martda biznesga soting",
+      "title": "spotshopda biznesga soting",
       "subtitle": "Kompaniyalardan ulgurji buyurtmalar oling, sotuvni yuriting va tushumni hisob raqamiga yeching — hammasi bitta kabinetda.",
       "cta": "Sotuvchi bo'lish",
       "secondary": "Menda kabinet bor",
       "stat1": "Korporativ xaridorlar",
       "stat2": "Hisob raqamiga to'lovlar",
       "stat3": "Komissiya",
-      "mediaTag": "1mart vitrinasi",
+      "mediaTag": "spotshop vitrinasi",
       "eyebrow": "Har bir buyurtma ortida — xuddi siz kabi tadbirkorlar",
       "sellers": {
         "s1": {
@@ -667,7 +667,7 @@
     },
     "showcase": {
       "title": "Xaridorlar ko'radigan vitrina",
-      "subtitle": "Mahsulot kartochkalari 1mart vitrinasiga tushadi, u yerda ularni kompaniya va tadbirkorlar topadi.",
+      "subtitle": "Mahsulot kartochkalari spotshop vitrinasiga tushadi, u yerda ularni kompaniya va tadbirkorlar topadi.",
       "f1Title": "Professional kartochkalar",
       "f1Text": "Foto, xususiyatlar va narx — vitrinaning yagona uslubida.",
       "f2Title": "Xaridorlar sizni topadi",
@@ -688,7 +688,7 @@
       "text": "Bepul ulanish, kompaniya hisobiga to'lovlar va har bosqichda qo'llab-quvvatlash."
     },
     "benefits": {
-      "title": "Nega sotuvchilar 1martni tanlaydi",
+      "title": "Nega sotuvchilar spotshopni tanlaydi",
       "item1Title": "B2B buyurtmalar oqimi",
       "item1Text": "Ulgurji va muntazam xarid qiladigan kompaniya va tadbirkorlarga kirish.",
       "item2Title": "Shaffof moliya",
@@ -727,7 +727,7 @@
       "step4Text": "Buyurtmalarni qabul qiling va tushumni kompaniya hisobiga yeching.",
       "subtitle": "Kompaniya ham, tadbirkor ham ulanishi mumkin — butun jarayon bir necha kun oladi.",
       "ctaTitle": "Hammasi oddiy",
-      "ctaText": "1mart sotuvchisi bo'ling va barcha vositalarga ega bo'ling.",
+      "ctaText": "spotshop sotuvchisi bo'ling va barcha vositalarga ega bo'ling.",
       "ctaBtn": "Ariza topshirish",
       "step1Time": "≈ 2 daqiqa",
       "step2Time": "≈ 1 kun",
@@ -735,7 +735,7 @@
       "step4Time": "darhol",
       "chooseTime": "o'z sur'atingizda",
       "row1Title": "Nima sotishni hal qiling",
-      "row1Text": "Ulgurji xaridorlar, ya'ni kompaniya va tadbirkorlar uchun kategoriya va assortimentni belgilang. 1mart vitrinasida qaysi mahsulotlar allaqachon borligini ko'rish mumkin.",
+      "row1Text": "Ulgurji xaridorlar, ya'ni kompaniya va tadbirkorlar uchun kategoriya va assortimentni belgilang. spotshop vitrinasida qaysi mahsulotlar allaqachon borligini ko'rish mumkin.",
       "row1Action": "Vitrinani ochish",
       "row2Title": "Iqtisodiyotni hisoblang",
       "row2Text": "Xarid narxi, ustama va partiya hajmini jamlang, so'ng komissiyani hisobga oling. U kategoriyaga bog'liq va 6% dan boshlanadi, ulanish esa bepul.",
@@ -745,7 +745,7 @@
       "row5Link": "Kabinetga kirish"
     },
     "reviews": {
-      "title": "1mart sotuvchilari tarixi",
+      "title": "spotshop sotuvchilari tarixi",
       "subtitle": "Platformada biznesga allaqachon sotayotgan kompaniyalar.",
       "r1Name": "Aziz Rahimov",
       "r1Company": "TechnoPro, elektronika",
@@ -820,14 +820,14 @@
       "errSubmit": "Ariza yuborilmadi. Aloqani tekshirib, qayta urinib ko'ring."
     },
     "footer": {
-      "tagline": "Sotuvchilar uchun 1mart B2B marketpleysi",
+      "tagline": "Sotuvchilar uchun spotshop B2B marketpleysi",
       "rights": "«Octagram» AJ. Barcha huquqlar himoyalangan.",
       "learnTitle": "O'rganish",
       "partnersTitle": "Sotuvchilarga",
       "projectsTitle": "Loyihalarimiz",
       "socialsTitle": "Ijtimoiy tarmoqlarda",
       "login": "Kabinetga kirish",
-      "storefront": "1mart vitrinasi",
+      "storefront": "spotshop vitrinasi",
       "telegram": "Telegram",
       "instagram": "Instagram",
       "facebook": "Facebook",
@@ -836,11 +836,11 @@
     "tools": {
       "eyebrow": "Kabinet vositalari",
       "title": "Biznesga sotish uchun hamma narsa — bitta kabinetda",
-      "subtitle": "Analitika, vitrina, logistika va moliya 1mart Business yagona ish muhitida.",
+      "subtitle": "Analitika, vitrina, logistika va moliya spotshop Business yagona ish muhitida.",
       "t1Title": "Savdo analitikasi",
       "t1Text": "Talab, dinamika va qoldiqlar — raqamlarga asoslangan qarorlar.",
       "t2Title": "Vitrina va buyurtmalar",
-      "t2Text": "Mahsulot kartochkalari 1mart vitrinasida, buyurtmalar darhol kabinetda.",
+      "t2Text": "Mahsulot kartochkalari spotshop vitrinasida, buyurtmalar darhol kabinetda.",
       "t3Title": "Logistika va ombor",
       "t3Text": "Jo'natmalar, qoldiqlar va yetkazib berish holati nazoratda.",
       "t4Title": "Moliya va hujjatlar",
@@ -1190,17 +1190,17 @@
       "c3Text": "Platforma ombori yoki o'z omboringiz — qaysi biri foydali.",
       "heading": "Kompaniyalarga sotishni boshlash va kabinetda ishlashni o'rganing",
       "label": "Yangi sotuvchilar uchun qo'llanmalar",
-      "guideTitle": "1mart sotuvchi qo'llanmasi",
+      "guideTitle": "spotshop sotuvchi qo'llanmasi",
       "text": "Qisqa qo'llanmalar: foydani hisoblash, tovar hujjatlarini tayyorlash, kabinetda buyurtmalar bilan ishlash va hisob raqamiga to'lovlarni olish.",
       "guide3": "Kabinet va buyurtmalar",
       "guide4": "Hisob raqamiga to'lovlar"
     },
     "logistics": {
-      "eyebrow": "1mart logistikasi",
+      "eyebrow": "spotshop logistikasi",
       "title": "Ombor va yetkazishni o'z zimmamizga olamiz",
       "subtitle": "Tovarlarni platforma omborida saqlang, xaridorlarga yetkazish va qaytarishlarni esa biz hal qilamiz — butun O'zbekiston bo'ylab.",
       "t1Title": "Omborda saqlash",
-      "t1Text": "Tovarlarni 1mart omborlariga joylashtiring va logistikani unuting.",
+      "t1Text": "Tovarlarni spotshop omborlariga joylashtiring va logistikani unuting.",
       "t2Title": "Mamlakat bo'ylab yetkazish",
       "t2Text": "Buyurtmalarni barcha hududlardagi xaridorlarga yetkazamiz.",
       "t3Title": "Topshirish punktlari",
@@ -1212,7 +1212,7 @@
       "statLabel": "yetkazish va topshirish punktlari bo'lgan hudud"
     },
     "stats": {
-      "aria": "Raqamlarda 1mart",
+      "aria": "Raqamlarda spotshop",
       "sellersVal": "500+",
       "sellersLabel": "Faol sotuvchilar",
       "sellersSub": "Kompaniya va tadbirkorlarga sotmoqda",
@@ -1221,11 +1221,11 @@
       "ordersSub": "Kompaniya va tadbirkorlardan",
       "regionsVal": "14",
       "regionsLabel": "O'zbekiston hududi",
-      "regionsSub": "Kompaniya va tadbirkorlar 1martda butun mamlakat bo'ylab buyurtma beradi"
+      "regionsSub": "Kompaniya va tadbirkorlar spotshopda butun mamlakat bo'ylab buyurtma beradi"
     },
     "support": {
       "title": "Biz yoningizdamiz va yordamga tayyormiz",
-      "cardTitle": "1martda ishlash haqidagi savollarga javob beramiz",
+      "cardTitle": "spotshopda ishlash haqidagi savollarga javob beramiz",
       "cardText": "Sotuvchilar tiketlarni to'g'ridan-to'g'ri kabinetda yaratadi. Hali ulanmagan bo'lsangiz, bizga qo'ng'iroq qiling yoki yozing.",
       "links": {
         "ticket": "Kabinetda tiket yaratish",

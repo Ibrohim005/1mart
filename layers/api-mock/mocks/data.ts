@@ -537,7 +537,7 @@ export function findProduct(slug: string): Product | null {
     ],
     delivery: [
       { title: 'Оплата при оформлении', description: 'С баланса компании или корпоративной картой', icon: 'card' },
-      { title: `Доставка ${card.deliveryDate}`, description: 'Курьером Express 24, Maxsus Courier или Yandex Delivery', note: 'Бесплатно в пункт выдачи 1mart', icon: 'truck' },
+      { title: `Доставка ${card.deliveryDate}`, description: 'Курьером Express 24, Maxsus Courier или Yandex Delivery', note: 'Бесплатно в пункт выдачи spotshop', icon: 'truck' },
     ],
     reviewPhotos: reviews.flatMap(review => review.photos ?? []),
     reviewsPreview: reviews,

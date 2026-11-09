@@ -188,7 +188,7 @@
   "footer": {
     "categories": "Categories",
     "platform": "Platform",
-    "rights": "© 1mart, Octagram JSC. All rights reserved.",
+    "rights": "© spotshop, Octagram JSC. All rights reserved.",
     "rules": "Rules",
     "support": "Support",
     "socialMedia": "Social media:",
@@ -211,7 +211,7 @@
       "favorites": {
         "nazhmiteTovarahKotoryeOsobenno": "Tap ♡ on the items you like most — they will appear here",
         "zdesSohranimVashiLyubimye": "We will keep your favorite items here",
-        "seoTitle": "Favorites | 1mart"
+        "seoTitle": "Favorites | spotshop"
       },
       "menu": {
         "lichnyyKabinet": "My account"
@@ -228,7 +228,7 @@
         "obschayaStoimost": "Total",
         "pomosch": "Help",
         "zakazNayden": "Order not found",
-        "seoTitle": "Order | 1mart",
+        "seoTitle": "Order | spotshop",
         "itemsCount": "{count} {word}",
         "qty": "{count} pcs",
         "samovyvoz": "Pickup from the pickup point"
@@ -236,13 +236,13 @@
       "reviews": {
         "dannyyMomentNetVybrannyh": "You have no selected products at the moment",
         "zdesPoyavyatsyaTovaryKotorye": "Items you can rate after delivery will appear here",
-        "seoTitle": "My reviews | 1mart",
+        "seoTitle": "My reviews | spotshop",
         "rateStars": "Rate {rating} out of 5"
       },
       "seller": {
         "ostavitZayavku": "Submit an application",
-        "prodavayteZhivotnyhTovaryNih": "Sell your products on 1mart: listing is free, commission is charged only on completed orders, and payouts go to your bank account.",
-        "seoTitle": "Become a seller | 1mart",
+        "prodavayteZhivotnyhTovaryNih": "Sell your products on spotshop: listing is free, commission is charged only on completed orders, and payouts go to your bank account.",
+        "seoTitle": "Become a seller | spotshop",
         "zapolniteAnketu": "Fill in the form",
         "nazvanieHozyaystva": "Store name, taxpayer ID, region and contact details",
         "prishliteDokumenty": "Send the documents",
@@ -255,7 +255,7 @@
         "pol": "Gender",
         "polnoeImya": "Full name",
         "zagruzitFoto": "Upload a photo",
-        "seoTitle": "Settings | 1mart",
+        "seoTitle": "Settings | spotshop",
         "male": "Male",
         "female": "Female",
         "vvediteTekst": "Enter text",
@@ -272,12 +272,12 @@
         "prosrochen": "Expired",
         "kodSostoit": "The code is 6–20 Latin letters and digits",
         "takoyPromokodUzheDobavlen": "This promo code has already been added",
-        "seoTitle": "Discounts and promo codes | 1mart"
+        "seoTitle": "Discounts and promo codes | spotshop"
       },
       "orders": {
         "aktivnye": "Active",
         "istoriyaTranzakciy": "Transaction history",
-        "seoTitle": "My orders | 1mart",
+        "seoTitle": "My orders | spotshop",
         "vashiZakazyPoyavyatsyaEtom": "Your orders will appear here",
         "loadError": "Could not load orders",
         "loadErrorText": "Check your connection and try again",
@@ -318,7 +318,7 @@
         "regionPlaceholder": "Choose a region"
       },
       "appFooter": {
-        "zooelonMarketpleysDomashnihZhivotnyh": "1mart is a B2B marketplace for companies. Electronics, clothing, home goods and thousands of other products delivered across Uzbekistan.",
+        "zooelonMarketpleysDomashnihZhivotnyh": "spotshop is a B2B marketplace for companies. Electronics, clothing, home goods and thousands of other products delivered across Uzbekistan.",
         "oProekte": "About the project",
         "blog": "Blog",
         "dlyaPartnerov": "For partners",
@@ -373,7 +373,7 @@
         "vseKarty": "All cards",
         "tovarIzbrannom": "Item added to favorites",
         "tovarUdalenKorziny": "Item removed from the cart",
-        "seoTitle": "Cart | 1mart",
+        "seoTitle": "Cart | spotshop",
         "vyberiteKartuOplaty": "Choose a card to pay with:"
       },
       "empty": {
@@ -394,7 +394,7 @@
     "catalog": {
       "appPromo": {
         "dostupnoGooglePlay": "Available on Google Play",
-        "mobilnoePrilozhenieZooelon": "1mart mobile app",
+        "mobilnoePrilozhenieZooelon": "spotshop mobile app",
         "qrKodZagruzkiPrilozheniya": "QR code to download the app",
         "zagruzitAppStore": "Download on the App Store"
       },
@@ -418,13 +418,13 @@
         "bannerNumber": "Banner {index}"
       },
       "pages": {
-        "zooelonMarketpleysZhivotnyhZootovarov": "1mart — a B2B marketplace for companies"
+        "zooelonMarketpleysZhivotnyhZootovarov": "spotshop — a B2B marketplace for companies"
       },
       "infoItem": {
         "blogBody": "New in the catalog, purchasing tips and platform news.",
         "partnersBody": "Partnership terms for sellers, brands and delivery services.",
-        "postAdBody": "Open a store on 1mart — seller verification takes up to one business day.",
-        "termsBody": "Terms of use for the 1mart marketplace.",
+        "postAdBody": "Open a store on spotshop — seller verification takes up to one business day.",
+        "termsBody": "Terms of use for the spotshop marketplace.",
         "privacyBody": "How we process and protect users’ personal data.",
         "rulesBody": "Requirements for product cards, photos and descriptions.",
         "cookieBody": "Which cookies we use and why.",
@@ -435,10 +435,10 @@
         "contactBody": "Contact support — we reply within one business day.",
         "complaintBody": "Describe the problem with the order or seller — we will review your request.",
         "chatBody": "Support chat is available from 9:00 to 21:00.",
-        "deliveryBody": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers or to a 1mart pick-up point.",
-        "termsConditionsBody": "Terms of use for the 1mart marketplace.",
-        "aboutH1": "What 1mart is",
-        "aboutP1_1": "1mart is a B2B marketplace for companies, operated by Octagram JSC, Tashkent.",
+        "deliveryBody": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers or to a spotshop pick-up point.",
+        "termsConditionsBody": "Terms of use for the spotshop marketplace.",
+        "aboutH1": "What spotshop is",
+        "aboutP1_1": "spotshop is a B2B marketplace for companies, operated by Octagram JSC, Tashkent.",
         "aboutP1_2": "You will find electronics, home appliances, clothing, shoes, home, beauty, sports and kids products from verified sellers all over Uzbekistan.",
         "aboutH2": "How it works",
         "aboutP2_1": "Choose a product, add it to the cart and place an order. An Express 24, Maxsus Courier or Yandex Delivery courier will bring it — or collect it at a pick-up point.",
@@ -449,7 +449,7 @@
         "blogH1": "What we write about",
         "blogP1_1": "Reviews of new categories, purchasing tips for companies, platform changes and terms for sellers.",
         "blogH2": "Our first articles are on the way",
-        "blogP2_1": "This section is being filled. Follow 1mart on Telegram and Instagram for announcements of deals and new articles.",
+        "blogP2_1": "This section is being filled. Follow spotshop on Telegram and Instagram for announcements of deals and new articles.",
         "partnersH1": "Who it is for",
         "partnersP1_1": "Stores and brands, manufacturers, distributors and delivery services that want to sell across Uzbekistan.",
         "partnersH2": "What you get",
@@ -473,7 +473,7 @@
         "helpP1_1": "The order status is shown in the “My orders” section, along with the number, date, contents and total.",
         "helpP1_2": "You can cancel an order until it is handed over for delivery — the button appears on the order card.",
         "helpH2": "Delivery",
-        "helpP2_1": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers and to 1mart pick-up points. The delivery date is shown on the product card.",
+        "helpP2_1": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers and to spotshop pick-up points. The delivery date is shown on the product card.",
         "helpP2_2": "The courier contacts you before setting off to confirm the time.",
         "helpH3": "Payment and returns",
         "helpP3_1": "Pay from company balance or with a corporate card.",
@@ -483,7 +483,7 @@
         "deliveryH1": "Courier delivery",
         "deliveryP1_1": "Orders are delivered by Express 24, Maxsus Courier and Yandex Delivery couriers: from one day in Tashkent, 2–5 days to the regions. The courier will call before arriving.",
         "deliveryH2": "Pick-up points",
-        "deliveryP2_1": "Delivery to a 1mart pick-up point is free. Orders are kept for 7 days; check the product and its contents when you collect it.",
+        "deliveryP2_1": "Delivery to a spotshop pick-up point is free. Orders are kept for 7 days; check the product and its contents when you collect it.",
         "deliveryH3": "If delivery is delayed",
         "deliveryP3_1": "Write to us via “Contact us” with your order number — we will contact the delivery service and get back to you.",
         "chatH1": "Working hours",
@@ -503,7 +503,7 @@
         "documentsH2": "The section is in preparation",
         "documentsP2_1": "The documents will appear here once reviewed by a lawyer. For now you can request a copy via the “Contact us” form.",
         "termsH1": "Subject of the agreement",
-        "termsP1_1": "The agreement sets out the terms under which buyers and sellers use the 1mart marketplace (operated by Octagram JSC).",
+        "termsP1_1": "The agreement sets out the terms under which buyers and sellers use the spotshop marketplace (operated by Octagram JSC).",
         "termsH2": "The text is in preparation",
         "termsP2_1": "The full text is being reviewed by a lawyer and will be published here. Until then the terms shown on product cards and at checkout apply.",
         "privacyH1": "What data we collect",
@@ -517,7 +517,7 @@
         "rulesH3": "Violations",
         "rulesP3_1": "The card is removed from sale and the seller is told why. Repeated violations lead to the store being blocked.",
         "termsConditionsH1": "Terms of use",
-        "termsConditionsP1_1": "Terms of use for the 1mart marketplace.",
+        "termsConditionsP1_1": "Terms of use for the spotshop marketplace.",
         "termsConditionsH2": "In preparation",
         "termsConditionsP2_1": "The full text is being reviewed by a lawyer and will be published here.",
         "contactH1": "How to reach us",
@@ -548,7 +548,7 @@
         "emptyText": "Check back later or browse other sellers' products in the catalog.",
         "notFound": "Seller not found",
         "allProducts": "All seller’s products",
-        "seoDescription": "Products from {title} on 1mart: delivery across Uzbekistan, payment from company balance or with a corporate card."
+        "seoDescription": "Products from {title} on spotshop: delivery across Uzbekistan, payment from company balance or with a corporate card."
       },
       "contactForm": {
         "titleContact": "Write to us",
@@ -602,7 +602,7 @@
             },
             "payPersonal": {
               "q": "Can I pay with a personal card or in installments",
-              "a": "No. 1mart works with companies only: we accept the company balance and corporate cards."
+              "a": "No. spotshop works with companies only: we accept the company balance and corporate cards."
             },
             "payMoney": {
               "q": "When does the seller get the money",
@@ -622,7 +622,7 @@
             },
             "delWho": {
               "q": "Who delivers the order",
-              "a": "Express 24, Maxsus Courier and Yandex Delivery couriers. You can also choose a 1mart pickup point, which is free."
+              "a": "Express 24, Maxsus Courier and Yandex Delivery couriers. You can also choose a spotshop pickup point, which is free."
             },
             "delTime": {
               "q": "How long does delivery take",
@@ -655,7 +655,7 @@
           }
         },
         "delivery": {
-          "intro": "We deliver by courier across Uzbekistan or to a 1mart pickup point.",
+          "intro": "We deliver by courier across Uzbekistan or to a spotshop pickup point.",
           "courier": {
             "title": "By courier",
             "fact1": "Express 24, Maxsus Courier or Yandex Delivery",

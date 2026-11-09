@@ -11,7 +11,7 @@ const anchors = [
 ]
 
 useSeoMeta({
-  title: () => `${t('landing.hero.title')} — 1mart Business`,
+  title: () => `${t('landing.hero.title')} — spotshop Business`,
   description: () => t('landing.hero.subtitle'),
 })
 </script>
@@ -21,7 +21,7 @@ useSeoMeta({
     <header class="lnav">
       <div class="lnav__inner">
         <a href="#" class="lnav__brand">
-          <img src="/1mart-logo.svg" alt="1mart" class="lnav__logo-img" width="114" height="35">
+          <img src="/1mart-logo.svg" alt="spotshop" class="lnav__logo-img" width="167" height="35">
           <span class="lnav__brand-tag">{{ $t('m.brand.business') }}</span>
         </a>
         <nav class="lnav__links">

@@ -42,7 +42,7 @@ async function open(item: NotificationItem) {
   if (item.link) await navigateTo(localePath(item.link))
 }
 
-useSeoMeta({ title: () => `${t('m.notifications.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.notifications.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

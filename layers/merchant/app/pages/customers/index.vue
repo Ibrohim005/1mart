@@ -28,7 +28,7 @@ const columns = [
   { key: 'lastOrderAt', label: t('m.customers.colLast') },
 ]
 
-useSeoMeta({ title: () => `${t('m.customers.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.customers.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

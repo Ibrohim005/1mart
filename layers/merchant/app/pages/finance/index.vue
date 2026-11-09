@@ -31,7 +31,7 @@ const recentColumns = [
 
 const sign = (m: Money) => (m.amount >= 0 ? 'fin__pos' : 'fin__neg')
 
-useSeoMeta({ title: () => `${t('m.finance.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.finance.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

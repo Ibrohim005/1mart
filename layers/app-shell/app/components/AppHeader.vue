@@ -508,7 +508,7 @@ watch(() => router.currentRoute.value.fullPath, () => {
     <div class="mainbar">
       <div class="mainbar__inner">
         <NuxtLink :to="localePath('/')" class="logo" :aria-label="t('shell.header.home')">
-          <img src="/1mart-logo.svg" alt="1mart" class="logo__img" width="130" height="40">
+          <img src="/1mart-logo.svg" alt="spotshop" class="logo__img" width="190" height="40">
         </NuxtLink>
 
         <button

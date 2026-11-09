@@ -10,10 +10,10 @@
       "myOrders": "My orders"
     },
     "header": {
-      "home": "1mart — home",
+      "home": "spotshop — home",
       "catalog": "Catalog",
       "searchPlaceholder": "Search for products and categories",
-      "searchLabel": "Search 1mart",
+      "searchLabel": "Search spotshop",
       "search": "Search",
       "suggestions": "Search suggestions",
       "login": "Sign in",
@@ -38,7 +38,7 @@
     "home": {
       "companyTitle": "Purchases for your company",
       "companyText": "From the company balance or by corporate card",
-      "title": "1mart — online store with delivery across Uzbekistan",
+      "title": "spotshop — online store with delivery across Uzbekistan",
       "weeklyDiscounts": "Deals of the week",
       "endsIn": "Ends in",
       "days": "{count} d",
@@ -55,7 +55,7 @@
     "footer": {
       "tagline": "A B2B marketplace for companies: thousands of products delivered across Uzbekistan.",
       "about": "About us",
-      "aboutMarket": "About 1mart",
+      "aboutMarket": "About spotshop",
       "pickupPoints": "Pickup points",
       "vacancies": "Careers",
       "users": "For customers",
@@ -64,9 +64,9 @@
       "delivery": "Delivery",
       "returns": "Returns",
       "business": "For business",
-      "sellOn1mart": "Sell on 1mart",
+      "sellOn1mart": "Sell on spotshop",
       "sellerLogin": "Seller sign-in",
-      "socials": "1mart on social media",
+      "socials": "spotshop on social media",
       "terms": "Terms of use",
       "privacy": "Privacy policy",
       "copyright": "© {year} Octagram JSC. All rights reserved"

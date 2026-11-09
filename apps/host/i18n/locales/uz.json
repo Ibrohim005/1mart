@@ -188,7 +188,7 @@
   "footer": {
     "categories": "Kategoriyalar",
     "platform": "Platforma",
-    "rights": "© 1mart, «Octagram» AJ. Barcha huquqlar himoyalangan.",
+    "rights": "© spotshop, «Octagram» AJ. Barcha huquqlar himoyalangan.",
     "rules": "Qoidalar",
     "support": "Yordam",
     "socialMedia": "Ijtimoiy tarmoqlar:",
@@ -211,7 +211,7 @@
       "favorites": {
         "nazhmiteTovarahKotoryeOsobenno": "Ayniqsa yoqqan mahsulotlarda ♡ ni bosing — ular shu yerda paydo bo'ladi",
         "zdesSohranimVashiLyubimye": "Sevimli mahsulotlaringizni shu yerda saqlaymiz",
-        "seoTitle": "Saralangan | 1mart"
+        "seoTitle": "Saralangan | spotshop"
       },
       "menu": {
         "lichnyyKabinet": "Shaxsiy kabinet"
@@ -228,7 +228,7 @@
         "obschayaStoimost": "Umumiy summa",
         "pomosch": "Yordam",
         "zakazNayden": "Buyurtma topilmadi",
-        "seoTitle": "Buyurtma | 1mart",
+        "seoTitle": "Buyurtma | spotshop",
         "itemsCount": "{count} {word}",
         "qty": "{count} dona",
         "samovyvoz": "Topshirish punktidan olib ketish"
@@ -236,13 +236,13 @@
       "reviews": {
         "dannyyMomentNetVybrannyh": "Hozircha siz tanlagan mahsulotlar yo'q",
         "zdesPoyavyatsyaTovaryKotorye": "Bu yerda yetkazib berilgandan keyin baholash mumkin bo'lgan mahsulotlar paydo bo'ladi",
-        "seoTitle": "Mening sharhlarim | 1mart",
+        "seoTitle": "Mening sharhlarim | spotshop",
         "rateStars": "5 balldan {rating} ball qo'yish"
       },
       "seller": {
         "ostavitZayavku": "Ariza qoldirish",
-        "prodavayteZhivotnyhTovaryNih": "Mahsulotlaringizni 1martda soting: joylashtirish bepul, komissiya faqat yakunlangan buyurtmalardan olinadi, to'lovlar esa hisob raqamingizga tushadi.",
-        "seoTitle": "Sotuvchi bo'lish | 1mart",
+        "prodavayteZhivotnyhTovaryNih": "Mahsulotlaringizni spotshopda soting: joylashtirish bepul, komissiya faqat yakunlangan buyurtmalardan olinadi, to'lovlar esa hisob raqamingizga tushadi.",
+        "seoTitle": "Sotuvchi bo'lish | spotshop",
         "zapolniteAnketu": "Anketani to'ldiring",
         "nazvanieHozyaystva": "Do'kon nomi, STIR, hudud va bog'lanish uchun kontaktlar",
         "prishliteDokumenty": "Hujjatlarni yuboring",
@@ -255,7 +255,7 @@
         "pol": "Jinsi",
         "polnoeImya": "To'liq ism",
         "zagruzitFoto": "Rasm yuklash",
-        "seoTitle": "Sozlamalar | 1mart",
+        "seoTitle": "Sozlamalar | spotshop",
         "male": "Erkak",
         "female": "Ayol",
         "vvediteTekst": "Matn kiriting",
@@ -272,12 +272,12 @@
         "prosrochen": "Muddati o'tgan",
         "kodSostoit": "Kod 6–20 ta lotin harfi va raqamdan iborat",
         "takoyPromokodUzheDobavlen": "Bunday promokod allaqachon qo'shilgan",
-        "seoTitle": "Chegirma va promokodlar | 1mart"
+        "seoTitle": "Chegirma va promokodlar | spotshop"
       },
       "orders": {
         "aktivnye": "Faol",
         "istoriyaTranzakciy": "Tranzaksiyalar tarixi",
-        "seoTitle": "Mening buyurtmalarim | 1mart",
+        "seoTitle": "Mening buyurtmalarim | spotshop",
         "vashiZakazyPoyavyatsyaEtom": "Buyurtmalaringiz shu bo'limda paydo bo'ladi",
         "loadError": "Buyurtmalarni yuklab bo‘lmadi",
         "loadErrorText": "Aloqani tekshirib, qayta urinib ko‘ring",
@@ -318,7 +318,7 @@
         "regionPlaceholder": "Viloyatni tanlang"
       },
       "appFooter": {
-        "zooelonMarketpleysDomashnihZhivotnyh": "1mart — kompaniyalar uchun B2B marketpleys. Elektronika, kiyim-kechak, uy uchun mahsulotlar va minglab boshqa tovarlar butun O'zbekiston bo'ylab yetkazib beriladi.",
+        "zooelonMarketpleysDomashnihZhivotnyh": "spotshop — kompaniyalar uchun B2B marketpleys. Elektronika, kiyim-kechak, uy uchun mahsulotlar va minglab boshqa tovarlar butun O'zbekiston bo'ylab yetkazib beriladi.",
         "oProekte": "Loyiha haqida",
         "blog": "Blog",
         "dlyaPartnerov": "Hamkorlar uchun",
@@ -373,7 +373,7 @@
         "vseKarty": "Barcha kartalar",
         "tovarIzbrannom": "Mahsulot saralanganga qo'shildi",
         "tovarUdalenKorziny": "Mahsulot savatdan o'chirildi",
-        "seoTitle": "Savat | 1mart",
+        "seoTitle": "Savat | spotshop",
         "vyberiteKartuOplaty": "To'lov uchun kartani tanlang:"
       },
       "empty": {
@@ -394,7 +394,7 @@
     "catalog": {
       "appPromo": {
         "dostupnoGooglePlay": "Google Play'da mavjud",
-        "mobilnoePrilozhenieZooelon": "1mart mobil ilovasi",
+        "mobilnoePrilozhenieZooelon": "spotshop mobil ilovasi",
         "qrKodZagruzkiPrilozheniya": "Ilovani yuklab olish uchun QR-kod",
         "zagruzitAppStore": "App Store'dan yuklab olish"
       },
@@ -418,13 +418,13 @@
         "bannerNumber": "{index}-banner"
       },
       "pages": {
-        "zooelonMarketpleysZhivotnyhZootovarov": "1mart — kompaniyalar uchun B2B marketpleys"
+        "zooelonMarketpleysZhivotnyhZootovarov": "spotshop — kompaniyalar uchun B2B marketpleys"
       },
       "infoItem": {
         "blogBody": "Katalog yangiliklari, xarid bo'yicha maslahatlar va platforma yangiliklari.",
         "partnersBody": "Sotuvchilar, brendlar va yetkazib berish xizmatlari uchun hamkorlik shartlari.",
-        "postAdBody": "1martda do'kon oching — sotuvchini tekshirish bir ish kunigacha davom etadi.",
-        "termsBody": "1mart marketpleysidan foydalanish shartlari.",
+        "postAdBody": "spotshopda do'kon oching — sotuvchini tekshirish bir ish kunigacha davom etadi.",
+        "termsBody": "spotshop marketpleysidan foydalanish shartlari.",
         "privacyBody": "Foydalanuvchilarning shaxsiy ma'lumotlarini qanday qayta ishlaymiz va himoya qilamiz.",
         "rulesBody": "Mahsulot kartochkalari, suratlar va tavsiflarga qo'yiladigan talablar.",
         "cookieBody": "Qanday cookie fayllaridan va nima uchun foydalanamiz.",
@@ -435,10 +435,10 @@
         "contactBody": "Qo'llab-quvvatlash xizmatiga murojaat qiling — ish kuni davomida javob beramiz.",
         "complaintBody": "Buyurtma yoki sotuvchi bilan bog'liq muammoni yozing — murojaatingizni ko'rib chiqamiz.",
         "chatBody": "Qo'llab-quvvatlash chati 9:00 dan 21:00 gacha ishlaydi.",
-        "deliveryBody": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali yoki 1mart topshirish punktiga yetkazamiz.",
-        "termsConditionsBody": "1mart marketpleysidan foydalanish shartlari.",
-        "aboutH1": "1mart nima",
-        "aboutP1_1": "1mart — kompaniyalar uchun B2B marketpleys. Platforma operatori — «Octagram» AJ, Toshkent.",
+        "deliveryBody": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali yoki spotshop topshirish punktiga yetkazamiz.",
+        "termsConditionsBody": "spotshop marketpleysidan foydalanish shartlari.",
+        "aboutH1": "spotshop nima",
+        "aboutP1_1": "spotshop — kompaniyalar uchun B2B marketpleys. Platforma operatori — «Octagram» AJ, Toshkent.",
         "aboutP1_2": "Bu yerda butun O'zbekistondan tekshirilgan sotuvchilarning elektronika, maishiy texnika, kiyim, poyabzal, uy, go'zallik, sport va bolalar uchun mahsulotlari bor.",
         "aboutH2": "Bu qanday ishlaydi",
         "aboutP2_1": "Mahsulotni tanlang, savatga qo'shing va buyurtma bering. Express 24, Maxsus Courier yoki Yandex Delivery kuryeri yetkazib beradi — yoki buyurtmani topshirish punktidan oling.",
@@ -449,7 +449,7 @@
         "blogH1": "Nima haqida yozamiz",
         "blogP1_1": "Yangi kategoriyalar sharhi, kompaniyalar uchun xarid maslahatlari, platformadagi o'zgarishlar va sotuvchilar uchun shartlar.",
         "blogH2": "Hozircha birinchi materiallarni tayyorlayapmiz",
-        "blogP2_1": "Bo'lim to'ldirilmoqda. Telegram va Instagramdagi 1mart kanallariga obuna bo'ling — aksiyalar va yangi maqolalar e'lonlari o'sha yerda chiqadi.",
+        "blogP2_1": "Bo'lim to'ldirilmoqda. Telegram va Instagramdagi spotshop kanallariga obuna bo'ling — aksiyalar va yangi maqolalar e'lonlari o'sha yerda chiqadi.",
         "partnersH1": "Kimga mos keladi",
         "partnersP1_1": "Butun O'zbekiston bo'ylab sotishni istagan do'konlar va brendlar, ishlab chiqaruvchilar, distribyutorlar va yetkazib berish xizmatlari.",
         "partnersH2": "Nimaga ega bo'lasiz",
@@ -473,7 +473,7 @@
         "helpP1_1": "Buyurtma holati «Mening buyurtmalarim» bo'limida ko'rinadi. Raqam, sana, tarkib va summa ham o'sha yerda.",
         "helpP1_2": "Buyurtmani yetkazib berishga topshirilgunicha bekor qilish mumkin — tugma buyurtma kartochkasida chiqadi.",
         "helpH2": "Yetkazib berish",
-        "helpP2_1": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali, shuningdek 1mart topshirish punktlariga yetkazamiz. Muddat mahsulot kartochkasida ko'rsatilgan.",
+        "helpP2_1": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali, shuningdek spotshop topshirish punktlariga yetkazamiz. Muddat mahsulot kartochkasida ko'rsatilgan.",
         "helpP2_2": "Kuryer vaqtni aniqlashtirish uchun yo'lga chiqishdan oldin bog'lanadi.",
         "helpH3": "To'lov va qaytarish",
         "helpP3_1": "Kompaniya balansidan yoki korporativ karta bilan to'lov.",
@@ -483,7 +483,7 @@
         "deliveryH1": "Kuryer orqali yetkazib berish",
         "deliveryP1_1": "Buyurtmalarni Express 24, Maxsus Courier va Yandex Delivery kuryerlari yetkazib beradi. Toshkent bo'ylab — bir kundan, viloyatlarga — 2–5 kun. Kuryer kelishdan oldin qo'ng'iroq qiladi.",
         "deliveryH2": "Topshirish punktlari",
-        "deliveryP2_1": "1mart topshirish punktiga yetkazib berish bepul. Buyurtma 7 kun saqlanadi; qabul qilishda mahsulot va uning to'liqligini tekshiring.",
+        "deliveryP2_1": "spotshop topshirish punktiga yetkazib berish bepul. Buyurtma 7 kun saqlanadi; qabul qilishda mahsulot va uning to'liqligini tekshiring.",
         "deliveryH3": "Agar yetkazib berish kechiksa",
         "deliveryP3_1": "Buyurtma raqami bilan «Bizga yozing» orqali murojaat qiling — yetkazib berish xizmati bilan bog'lanib, javob beramiz.",
         "chatH1": "Ish vaqti",
@@ -503,7 +503,7 @@
         "documentsH2": "Bo'lim tayyorlanmoqda",
         "documentsP2_1": "Hujjatlar yurist bilan kelishilgandan so'ng shu yerda paydo bo'ladi. Hozircha nusxa uchun «Bizga yozing» shakli orqali murojaat qilish mumkin.",
         "termsH1": "Kelishuv predmeti",
-        "termsP1_1": "Kelishuv 1mart marketpleysidan (operator — «Octagram» AJ) xaridorlar va sotuvchilar foydalanish shartlarini belgilaydi.",
+        "termsP1_1": "Kelishuv spotshop marketpleysidan (operator — «Octagram» AJ) xaridorlar va sotuvchilar foydalanish shartlarini belgilaydi.",
         "termsH2": "Matn tayyorlanmoqda",
         "termsP2_1": "To'liq matn yurist bilan kelishilmoqda va shu yerda e'lon qilinadi. E'lon qilingunicha mahsulot kartochkalarida va buyurtma rasmiylashtirishda ko'rsatilgan shartlar amal qiladi.",
         "privacyH1": "Qanday ma'lumotlarni to'playmiz",
@@ -517,7 +517,7 @@
         "rulesH3": "Qoidabuzarliklar",
         "rulesP3_1": "Kartochka sotuvdan olinadi, sotuvchiga sababi yuboriladi. Takroriy qoidabuzarliklar do'konning bloklanishiga olib keladi.",
         "termsConditionsH1": "Foydalanish shartlari",
-        "termsConditionsP1_1": "1mart marketpleysidan foydalanish shartlari.",
+        "termsConditionsP1_1": "spotshop marketpleysidan foydalanish shartlari.",
         "termsConditionsH2": "Matn tayyorlanmoqda",
         "termsConditionsP2_1": "To'liq matn yurist bilan kelishilmoqda va shu yerda e'lon qilinadi.",
         "contactH1": "Biz bilan qanday bog'lanish mumkin",
@@ -548,7 +548,7 @@
         "emptyText": "Keyinroq qayting yoki katalogdan boshqa sotuvchilarning mahsulotlarini ko'ring.",
         "notFound": "Sotuvchi topilmadi",
         "allProducts": "Sotuvchining barcha mahsulotlari",
-        "seoDescription": "1martda {title} sotuvchisining mahsulotlari: O'zbekiston bo'ylab yetkazib berish, kompaniya balansidan yoki korporativ karta bilan to'lov."
+        "seoDescription": "spotshopda {title} sotuvchisining mahsulotlari: O'zbekiston bo'ylab yetkazib berish, kompaniya balansidan yoki korporativ karta bilan to'lov."
       },
       "contactForm": {
         "titleContact": "Bizga yozing",
@@ -602,7 +602,7 @@
             },
             "payPersonal": {
               "q": "Shaxsiy karta yoki bo'lib to'lash mumkinmi",
-              "a": "Yo'q. 1mart faqat kompaniyalar bilan ishlaydi: kompaniya balansi va korporativ kartalar qabul qilinadi."
+              "a": "Yo'q. spotshop faqat kompaniyalar bilan ishlaydi: kompaniya balansi va korporativ kartalar qabul qilinadi."
             },
             "payMoney": {
               "q": "Sotuvchi pulni qachon oladi",
@@ -622,7 +622,7 @@
             },
             "delWho": {
               "q": "Buyurtmani kim yetkazib beradi",
-              "a": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari. 1mart topshirish punktini ham tanlash mumkin - bu bepul."
+              "a": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari. spotshop topshirish punktini ham tanlash mumkin - bu bepul."
             },
             "delTime": {
               "q": "Yetkazib berish qancha davom etadi",
@@ -655,7 +655,7 @@
           }
         },
         "delivery": {
-          "intro": "O'zbekiston bo'ylab kuryer orqali yoki 1mart topshirish punktiga yetkazib beramiz.",
+          "intro": "O'zbekiston bo'ylab kuryer orqali yoki spotshop topshirish punktiga yetkazib beramiz.",
           "courier": {
             "title": "Kuryer orqali",
             "fact1": "Express 24, Maxsus Courier yoki Yandex Delivery",

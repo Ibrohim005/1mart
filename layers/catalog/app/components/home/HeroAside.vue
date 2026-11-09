@@ -93,7 +93,7 @@ watch(() => auth.isLoggedIn, loadBalance)
         {{ $t('shell.topbar.becomeSeller') }}
         <UiIcon name="alt-arrow-right" color="currentColor" :size="16" />
       </span>
-      <img src="/1mart-mark.svg" alt="" width="150" height="140" class="tile__mark">
+      <img src="/1mart-mark.svg" alt="" width="150" height="150" class="tile__mark">
     </a>
   </div>
 </template>
@@ -188,6 +188,7 @@ watch(() => auth.isLoggedIn, loadBalance)
   bottom: -28px;
   width: 150px;
   height: 150px;
+  object-fit: contain;
   transform: rotate(-8deg);
   transition: transform 0.25s ease;
 }

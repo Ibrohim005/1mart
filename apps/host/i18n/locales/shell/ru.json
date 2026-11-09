@@ -10,10 +10,10 @@
       "myOrders": "Мои заказы"
     },
     "header": {
-      "home": "1mart — на главную",
+      "home": "spotshop — на главную",
       "catalog": "Каталог",
       "searchPlaceholder": "Искать товары и категории",
-      "searchLabel": "Поиск по 1mart",
+      "searchLabel": "Поиск по spotshop",
       "search": "Найти",
       "suggestions": "Подсказки поиска",
       "login": "Войти",
@@ -38,7 +38,7 @@
     "home": {
       "companyTitle": "Покупки для компании",
       "companyText": "С баланса компании или корпоративной картой",
-      "title": "1mart — интернет-магазин товаров с доставкой по Узбекистану",
+      "title": "spotshop — интернет-магазин товаров с доставкой по Узбекистану",
       "weeklyDiscounts": "Скидки недели",
       "endsIn": "До конца акции",
       "days": "{count} д",
@@ -55,7 +55,7 @@
     "footer": {
       "tagline": "B2B-маркетплейс для компаний: тысячи товаров с доставкой по всему Узбекистану.",
       "about": "О нас",
-      "aboutMarket": "О 1mart",
+      "aboutMarket": "О spotshop",
       "pickupPoints": "Пункты выдачи",
       "vacancies": "Вакансии",
       "users": "Пользователям",
@@ -64,9 +64,9 @@
       "delivery": "Доставка",
       "returns": "Возврат товара",
       "business": "Для предпринимателей",
-      "sellOn1mart": "Продавайте на 1mart",
+      "sellOn1mart": "Продавайте на spotshop",
       "sellerLogin": "Вход для продавцов",
-      "socials": "1mart в соцсетях",
+      "socials": "spotshop в соцсетях",
       "terms": "Пользовательское соглашение",
       "privacy": "Политика конфиденциальности",
       "copyright": "© {year} АО «Octagram». Все права защищены"

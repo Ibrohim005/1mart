@@ -1,12 +1,12 @@
 {
-  "name": "1mart",
-  "short_name": "1mart",
-  "description": "B2B-маркетплейс 1mart: товары от проверенных продавцов с доставкой по Узбекистану",
+  "name": "spotshop",
+  "short_name": "spotshop",
+  "description": "B2B-маркетплейс spotshop: товары от проверенных продавцов с доставкой по Узбекистану",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
-  "theme_color": "#2CDD41",
+  "theme_color": "#0AE728",
   "lang": "ru",
   "icons": [
     {

@@ -59,7 +59,7 @@ const recentColumns = [
   { key: 'statusCode', label: t('m.orders.filterStatus') },
 ]
 
-useSeoMeta({ title: () => `${t('m.dashboard.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.dashboard.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

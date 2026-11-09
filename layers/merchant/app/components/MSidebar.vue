@@ -23,9 +23,9 @@ const activeKey = computed(() => {
 <template>
   <aside class="msidebar">
     <NuxtLink :to="localePath('/dashboard')" class="msidebar__brand">
-      <img src="/1mart-mark.svg" alt="1mart" class="msidebar__logo" width="42" height="42">
+      <img src="/1mart-mark.svg" alt="spotshop" class="msidebar__logo" width="42" height="42">
       <span class="msidebar__brand-text">
-        <span class="msidebar__brand-name">1mart</span>
+        <span class="msidebar__brand-name">spotshop</span>
         <span class="msidebar__brand-sub">{{ $t('m.brand.business') }}</span>
       </span>
     </NuxtLink>

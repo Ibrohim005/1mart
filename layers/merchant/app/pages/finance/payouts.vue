@@ -26,7 +26,7 @@ const columns = [
   { key: 'status', label: t('m.payouts.colStatus') },
 ]
 
-useSeoMeta({ title: () => `${t('m.payouts.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.payouts.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

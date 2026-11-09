@@ -34,7 +34,7 @@ void availableLocales
 <template>
   <header class="mtopbar">
     <div class="mtopbar__shop">
-      <span class="mtopbar__shop-name">{{ user?.company.shopName ?? '1mart Business' }}</span>
+      <span class="mtopbar__shop-name">{{ user?.company.shopName ?? 'spotshop Business' }}</span>
       <span class="mtopbar__status" :class="`mtopbar__status--${statusCode}`">
         {{ $t(`m.companyStatus.${statusCode}`) }}
       </span>

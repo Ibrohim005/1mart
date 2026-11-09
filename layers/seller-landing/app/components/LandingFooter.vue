@@ -89,7 +89,7 @@ const socials = [
           <p class="lfooter__meta">{{ $t('landing.footer.tagline') }}</p>
         </div>
 
-        <div class="lfooter__mark" aria-hidden="true">1mart</div>
+        <div class="lfooter__mark" aria-hidden="true">spotshop</div>
       </div>
     </div>
   </footer>

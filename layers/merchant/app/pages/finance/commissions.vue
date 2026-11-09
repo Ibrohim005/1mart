@@ -25,7 +25,7 @@ const columns = [
   { key: 'amount', label: t('m.commissions.colAmount'), align: 'right' as const },
 ]
 
-useSeoMeta({ title: () => `${t('m.commissions.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.commissions.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

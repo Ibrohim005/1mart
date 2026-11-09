@@ -56,7 +56,7 @@ async function submit() {
   }
 }
 
-useSeoMeta({ title: () => `${t('m.support.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.support.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

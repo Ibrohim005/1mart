@@ -201,8 +201,8 @@ defineExpose({ fail })
   border-radius: var(--control-radius);
 }
 
-.auth__submit:hover { background: #22C636; }
-.auth__submit:active { background: #119A24; }
+.auth__submit:hover { background: #0BC525; }
+.auth__submit:active { background: #009317; }
 .auth__submit:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 
 .auth__register-line {

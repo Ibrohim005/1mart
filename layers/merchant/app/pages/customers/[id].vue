@@ -20,7 +20,7 @@ const recentColumns = [
   { key: 'statusCode', label: t('m.common.status') },
 ]
 
-useSeoMeta({ title: () => `${t('m.customers.detailTitle')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.customers.detailTitle')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

@@ -43,7 +43,7 @@ const bars = [38, 52, 44, 66, 48, 74, 58, 82, 62, 92, 70, 100]
       </div>
 
       <div class="mobile__card">
-        <img src="/1mart-logo.svg" alt="1mart" class="mobile__logo" width="130" height="40">
+        <img src="/1mart-logo.svg" alt="spotshop" class="mobile__logo" width="190" height="40">
         <h2 class="mobile__title">{{ $t('landing.mobile.soonTitle') }}</h2>
         <p class="mobile__text">{{ $t('landing.mobile.soonText') }}</p>
         <div class="mobile__status">
@@ -93,7 +93,7 @@ const bars = [38, 52, 44, 66, 48, 74, 58, 82, 62, 92, 70, 100]
   border-radius: var(--m-radius-lg);
   background: var(--m-surface);
 }
-.mobile__logo { display: block; flex: none; width: 130px; height: 40px; margin-bottom: 32px; }
+.mobile__logo { display: block; flex: none; width: 190px; height: 40px; margin-bottom: 32px; }
 .mobile__title {
   margin: 0;
   font-family: var(--font-display);

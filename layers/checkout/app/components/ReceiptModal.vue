@@ -25,7 +25,7 @@ function print() {
     @update:model-value="emit('update:modelValue', $event)"
   >
     <div v-if="receipt" class="receipt">
-      <p class="receipt__brand">1mart</p>
+      <p class="receipt__brand">spotshop</p>
       <p class="receipt__amount">{{ money(receipt.amount) }}</p>
       <p class="receipt__status">{{ paymentStatusLabel(receipt.paymentStatus) }}</p>
 

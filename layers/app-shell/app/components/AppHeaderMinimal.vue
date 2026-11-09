@@ -7,7 +7,7 @@ const localePath = useLocalePath()
   <header class="header">
     <div class="header__inner">
       <NuxtLink :to="localePath('/')" class="header__logo" :aria-label="$t('shell.header.home')">
-        <img src="/1mart-logo.svg" alt="1mart" class="header__logo-img" width="117" height="36">
+        <img src="/1mart-logo.svg" alt="spotshop" class="header__logo-img" width="171" height="36">
       </NuxtLink>
       <span class="header__divider" aria-hidden="true" />
       <span class="header__title">{{ $t('shell.checkout.title') }}</span>

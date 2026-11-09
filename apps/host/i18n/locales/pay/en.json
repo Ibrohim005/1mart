@@ -18,7 +18,7 @@
     "checkout": {
       "title": "Checkout",
       "steps": "Delivery → Payment → Confirmation",
-      "seoTitle": "Checkout — 1mart",
+      "seoTitle": "Checkout — spotshop",
       "empty": "No items selected for this order"
     },
     "delivery": {
@@ -31,7 +31,7 @@
       "choosePoint": "Choose a pickup point",
       "eta": "Arrives {date}",
       "pickupFrom": "Ready from {date}",
-      "paylovLogistics": "1mart",
+      "paylovLogistics": "spotshop",
       "providers": {
         "express24": "Express 24",
         "maxsus": "Maxsus Courier",
@@ -57,12 +57,12 @@
       "pay": "Pay {sum}",
       "processing": "Processing…",
       "holdNote": "The amount is reserved. Once the order is confirmed, the money goes to the seller's settlement account. If the seller declines, it is returned the same way.",
-      "legal": "By placing the order you accept the 1mart offer and consent to personal data processing"
+      "legal": "By placing the order you accept the spotshop offer and consent to personal data processing"
     },
     "antifraud": {
       "title": "Confirm the operation",
       "lead": "Confirm that you are carrying out this operation personally, without the involvement or instructions of fraudsters.",
-      "point1": "1mart and bank staff never ask for SMS codes or card details.",
+      "point1": "spotshop and bank staff never ask for SMS codes or card details.",
       "point2": "Do not continue if someone rushes, threatens you or asks to move money to a “safe account”.",
       "point3": "Check the amount and recipient before confirming.",
       "purchaseAmount": "Purchase amount",
@@ -113,7 +113,7 @@
       "done": "Card linked",
       "errorNumber": "Check the card number",
       "errorExpires": "Check the card expiry date",
-      "errorCorporate": "This is a personal card. 1mart accepts corporate cards only"
+      "errorCorporate": "This is a personal card. spotshop accepts corporate cards only"
     },
     "error": {
       "title": "Payment failed",
@@ -185,7 +185,7 @@
       },
       "readyForPickup": {
         "title": "Ready for pickup",
-        "text": "Your order is waiting at the 1mart pickup point"
+        "text": "Your order is waiting at the spotshop pickup point"
       },
       "delivered": {
         "title": "Order delivered",
@@ -252,7 +252,7 @@
     },
     "balance": {
       "title": "Company balance",
-      "seoTitle": "Company balance - 1mart",
+      "seoTitle": "Company balance - spotshop",
       "available": "Available for purchases",
       "reserved": "Reserved for orders: {sum}",
       "company": "Company",
@@ -263,7 +263,7 @@
       "createInvoice": "Create invoice",
       "amountError": "Enter the top-up amount",
       "createError": "Could not save. Please try again.",
-      "topUpHint": "We'll issue an invoice with 1mart's bank details. Transfer the money from your company account and it appears on the balance once received.",
+      "topUpHint": "We'll issue an invoice with spotshop's bank details. Transfer the money from your company account and it appears on the balance once received.",
       "invoicesTitle": "Top-up invoices",
       "invoicesEmpty": "No invoices yet",
       "invoiceNumber": "Invoice {number}",
@@ -285,7 +285,7 @@
       "amount": "Amount to transfer",
       "recipient": "Recipient",
       "purpose": "Payment purpose",
-      "purposeText": "1mart balance top-up, invoice {number}, payer INN {inn}",
+      "purposeText": "spotshop balance top-up, invoice {number}, payer INN {inn}",
       "note": "The transfer must come from the settlement account of {company}.",
       "copied": "Copied",
       "copyError": "Could not copy",

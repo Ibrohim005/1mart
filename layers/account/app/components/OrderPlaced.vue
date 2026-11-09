@@ -60,7 +60,7 @@ const { steps, currentStep, title, text, canceled } = useOrderProgress(() => pro
         </p>
 
         <span class="placed__badge" :class="{ 'placed__badge--canceled': canceled }">
-          <UiIcon :name="canceled ? 'close' : 'tick-circle-fill'" :size="25" :color="canceled ? '#C02A26' : '#119A24'" />
+          <UiIcon :name="canceled ? 'close' : 'tick-circle-fill'" :size="25" :color="canceled ? '#C02A26' : '#009317'" />
           {{ order.statusLabel }}
         </span>
 
@@ -288,5 +288,5 @@ const { steps, currentStep, title, text, canceled } = useOrderProgress(() => pro
   color: var(--color-on-brand);
 }
 
-.placed__button--primary:hover { background: #22C636; }
+.placed__button--primary:hover { background: #0BC525; }
 </style>

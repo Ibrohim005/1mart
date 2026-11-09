@@ -35,7 +35,7 @@ export default defineEventHandler((event) => {
   return ok({
     ...card,
     address: pickup
-      ? `${point?.title ?? '1mart'}: ${point?.address ?? ''}`
+      ? `${point?.title ?? 'spotshop'}: ${point?.address ?? ''}`
       : 'Узбекистан, Ташкент, улица Ширин Файзулаевой, 169, кв. 18',
     recipient: profileState(event).fullName,
     recipientPhone: '+998 90 123-45-67',

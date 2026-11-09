@@ -19,7 +19,7 @@ import type { BalanceInvoiceStatus, BankDetails } from '#shared/types/order'
  * Страница предупреждает, что по ним нельзя переводить деньги (`demo` в ответе).
  */
 export const PLATFORM_REQUISITES: BankDetails = {
-  name: '1mart',
+  name: 'spotshop',
   inn: '000000000',
   bank: 'Test Bank',
   mfo: '00000',

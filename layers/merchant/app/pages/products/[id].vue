@@ -12,7 +12,7 @@ const id = route.params.id as string
 
 const { data: product, status, error, refresh } = await useApiData<ProductDetail>(`m:product:${id}`, `/merchant/products/${id}`)
 
-useSeoMeta({ title: () => `${t('m.productForm.titleEdit')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.productForm.titleEdit')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

@@ -69,7 +69,7 @@ async function submitPayout() {
   }
 }
 
-useSeoMeta({ title: () => `${t('m.balance.title')} — 1mart Business`, robots: 'noindex, nofollow' })
+useSeoMeta({ title: () => `${t('m.balance.title')} — spotshop Business`, robots: 'noindex, nofollow' })
 </script>
 
 <template>

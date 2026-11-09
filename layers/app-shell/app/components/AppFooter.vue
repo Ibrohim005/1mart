@@ -121,7 +121,7 @@ const columns: Array<{ title: string, items: FooterLink[] }> = [
     <!-- Логотип целиком в разметке, обрезает его только рамка: подпись для скринридера есть у ссылки -->
     <div class="footer__wordmark-frame">
       <NuxtLink :to="localePath('/')" class="footer__wordmark" :aria-label="$t('shell.header.home')">
-        <img src="/1mart-logo-on-dark.svg" alt="" width="1240" height="380" loading="lazy" class="footer__wordmark-img">
+        <img src="/1mart-logo-on-dark.svg" alt="" width="999" height="210" loading="lazy" class="footer__wordmark-img">
       </NuxtLink>
     </div>
   </footer>
@@ -207,7 +207,7 @@ const columns: Array<{ title: string, items: FooterLink[] }> = [
 /* Рамка режет логотип чуть ниже букв: знак слева уходит за край страницы */
 .footer__wordmark-frame {
   width: var(--container-width);
-  height: 290px;
+  height: 236px;
   margin-inline: auto;
   overflow: hidden;
 }

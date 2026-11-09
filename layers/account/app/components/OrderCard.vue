@@ -152,7 +152,7 @@ const { paymentStatusLabel, providerName } = use1mart()
 }
 
 .order__status--done {
-  background: rgb(44 221 65 / 20%);
+  background: rgb(10 231 40 / 20%);
   color: var(--color-brand-text-hover);
 }
 
@@ -178,7 +178,7 @@ const { paymentStatusLabel, providerName } = use1mart()
 }
 
 .order__pay--held { background: #FFF4E5; color: #8A4B00; }
-.order__pay--charged { background: rgb(44 221 65 / 14%); color: var(--color-brand-text-hover); }
+.order__pay--charged { background: rgb(10 231 40 / 14%); color: var(--color-brand-text-hover); }
 .order__pay--refunded { background: #EEF0FF; color: #3B3FB6; }
 
 .order__status--canceled {

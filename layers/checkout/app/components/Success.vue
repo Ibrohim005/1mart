@@ -124,5 +124,5 @@ const orderLink = computed(() => (props.result.orders.length === 1
 }
 
 .success__link--primary { background: var(--color-brand); color: var(--color-on-brand); }
-.success__link--primary:hover { background: var(--color-brand-dark, #22C636); }
+.success__link--primary:hover { background: var(--color-brand-dark, #0BC525); }
 </style>
