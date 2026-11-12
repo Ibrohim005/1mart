@@ -1,9 +1,11 @@
 import { productCards, sellerFor } from '../../mocks/data'
 import type { MockEvent } from './visitor'
 import { perVisitor } from './visitor'
+import { can, membership, requesterOf, scopeId } from './org-state'
 import { releaseFunds } from './cards-state'
 import { SELLER_REJECT_QTY } from './checkout-quote'
 import type { DeliveryProvider, DeliveryType, OrderStatus, PaymentStatus } from '#shared/types/order'
+import type { Requester } from '#shared/types/company'
 
 /**
  * Состояние заказов посетителя — машинное: статусы, состав, деньги, даты.
@@ -57,6 +59,10 @@ export interface OrderSeed {
   /** А2: продавец отклонит заказ */
   willReject?: boolean
   returnReason?: string
+  /** Автор заявки по каждой позиции (в порядке productIds); у старых заказов нет */
+  requesters?: Array<Requester | null>
+  /** Кто оформил (одобрил) заказ в компании */
+  placedBy?: Requester | null
   returnPhotos?: number
   reviewed?: boolean
 }
@@ -74,6 +80,7 @@ export const STAGE_AT = {
 }
 
 const TRACK_PREFIX: Record<DeliveryProvider, string> = {
+  spotshop: 'SPS',
   express24: 'E24',
   maxsus: 'MXC',
   yandex: 'YND',
@@ -97,7 +104,7 @@ function staticSeed(input: {
   deliveryType: DeliveryType
   daysAgo: number
   expectedInDays: number | null
-  cardId: string
+  cardId: string | null
   paymentStatus: PaymentStatus
   provider?: DeliveryProvider
   pickupPointId?: string
@@ -134,16 +141,16 @@ function staticSeed(input: {
 /** Шесть заказов на все состояния дорожки 1mart, включая отказ продавца */
 function seed(): OrderSeed[] {
   return [
-    staticSeed({ id: 1, productIds: [0, 1], status: 'confirmed', path: ['awaitingSeller', 'confirmed'], deliveryType: 'courier', daysAgo: 0, expectedInDays: 2, cardId: 'c1', paymentStatus: 'charged', provider: 'express24' }),
-    staticSeed({ id: 2, productIds: [2, 3, 4], status: 'handedToDelivery', path: ['awaitingSeller', 'confirmed', 'handedToDelivery'], deliveryType: 'courier', daysAgo: 1, expectedInDays: 1, cardId: 'c2', paymentStatus: 'charged', provider: 'maxsus' }),
-    staticSeed({ id: 3, productIds: [5, 6, 7, 8, 9, 10], status: 'handedToDelivery', path: ['awaitingSeller', 'confirmed', 'handedToDelivery'], deliveryType: 'courier', daysAgo: 3, expectedInDays: 1, cardId: 'c2', paymentStatus: 'charged', provider: 'yandex' }),
-    staticSeed({ id: 4, productIds: [11, 12], status: 'readyForPickup', path: ['awaitingSeller', 'confirmed', 'handedToDelivery', 'readyForPickup'], deliveryType: 'pickupPoint', daysAgo: 4, expectedInDays: 0, cardId: 'c1', paymentStatus: 'charged', pickupPointId: 'pp1' }),
-    staticSeed({ id: 5, productIds: [13, 14, 15], status: 'delivered', path: ['awaitingSeller', 'confirmed', 'handedToDelivery', 'delivered'], deliveryType: 'courier', daysAgo: 12, expectedInDays: null, cardId: 'c1', paymentStatus: 'charged', provider: 'express24' }),
-    staticSeed({ id: 6, productIds: [16, 17], status: 'rejectedBySeller', path: ['awaitingSeller', 'rejectedBySeller'], deliveryType: 'courier', daysAgo: 20, expectedInDays: null, cardId: 'c1', paymentStatus: 'refunded', provider: 'yandex' }),
+    staticSeed({ id: 1, productIds: [0, 1], status: 'confirmed', path: ['awaitingSeller', 'confirmed'], deliveryType: 'courier', daysAgo: 0, expectedInDays: 2, cardId: null, paymentStatus: 'charged', provider: 'spotshop' }),
+    staticSeed({ id: 2, productIds: [2, 3, 4], status: 'handedToDelivery', path: ['awaitingSeller', 'confirmed', 'handedToDelivery'], deliveryType: 'courier', daysAgo: 1, expectedInDays: 1, cardId: 'c1', paymentStatus: 'charged', provider: 'spotshop' }),
+    staticSeed({ id: 3, productIds: [5, 6, 7, 8, 9, 10], status: 'handedToDelivery', path: ['awaitingSeller', 'confirmed', 'handedToDelivery'], deliveryType: 'courier', daysAgo: 3, expectedInDays: 1, cardId: null, paymentStatus: 'charged', provider: 'spotshop' }),
+    staticSeed({ id: 4, productIds: [11, 12], status: 'readyForPickup', path: ['awaitingSeller', 'confirmed', 'handedToDelivery', 'readyForPickup'], deliveryType: 'pickupPoint', daysAgo: 4, expectedInDays: 0, cardId: null, paymentStatus: 'charged', pickupPointId: 'pp1' }),
+    staticSeed({ id: 5, productIds: [13, 14, 15], status: 'delivered', path: ['awaitingSeller', 'confirmed', 'handedToDelivery', 'delivered'], deliveryType: 'courier', daysAgo: 12, expectedInDays: null, cardId: 'c1', paymentStatus: 'charged', provider: 'spotshop' }),
+    staticSeed({ id: 6, productIds: [16, 17], status: 'rejectedBySeller', path: ['awaitingSeller', 'rejectedBySeller'], deliveryType: 'courier', daysAgo: 20, expectedInDays: null, cardId: null, paymentStatus: 'refunded', provider: 'spotshop' }),
   ]
 }
 
-const store = perVisitor<OrderSeed[]>(seed)
+const store = perVisitor<OrderSeed[]>(seed, 500, scopeId) // общее у всей компании, см. org-state
 
 /** Досчитать стадию заказа по времени — вместо фоновой задачи продавца и курьера */
 function advance(event: MockEvent, order: OrderSeed, now: number) {
@@ -182,11 +189,40 @@ function advance(event: MockEvent, order: OrderSeed, now: number) {
   }
 }
 
+/**
+ * Стартовые заказы компании подписываем её людьми: кто оформил и чьи заявки.
+ * В демо-компании — закупщик и бухгалтер, заявки бухгалтера и айтишника;
+ * в «своей» компании всё оформил руководитель.
+ */
+function signSeeds(event: MockEvent, orders: OrderSeed[]) {
+  const member = membership(event)
+  if (!member) return
+  const people = member.state.employees
+  const byName = (name: string) => people.find(item => item.fullName === name)
+  const owner = people.find(item => item.isOwner)!
+  for (const order of orders) {
+    if (order.placedBy !== undefined || order.live) continue
+    if (member.state.shared) {
+      const placer = byName(order.id % 2 ? 'Саидова Дильноза' : 'Иванова Анна') ?? owner
+      const authors = [byName('Иванова Анна'), byName('Турсунов Жасур')].filter((item): item is NonNullable<typeof item> => Boolean(item))
+      order.placedBy = requesterOf(member.state, placer)
+      order.requesters = order.productIds.map((_, index) => requesterOf(member.state, authors[index % authors.length] ?? owner))
+    }
+    else {
+      order.placedBy = requesterOf(member.state, owner)
+    }
+  }
+}
+
 export function orderSeeds(event: MockEvent) {
   const orders = store.get(event)
   const now = Date.now()
+  signSeeds(event, orders)
   for (const order of orders) advance(event, order, now)
-  return orders
+  // Без orders.viewAll сотрудник видит только заказы, где есть его заявки
+  if (can(event, 'orders.viewAll')) return orders
+  const mine = membership(event)?.employee.id
+  return orders.filter(order => order.requesters?.some(requester => requester?.employeeId === mine))
 }
 
 export function findOrderSeed(event: MockEvent, id: number) {
@@ -251,6 +287,8 @@ export interface PlacementLine {
   productIndex: number
   quantity: number
   price: number
+  /** Чья заявка: имя остаётся у позиции и в заказе */
+  requester: Requester | null
 }
 
 /**
@@ -271,6 +309,8 @@ export function createOrderSeeds(event: MockEvent, options: {
   etaDays: number
   transactionId: string
   comment?: string | null
+  /** Кто оформил: закупщик, бухгалтер или руководитель */
+  placedBy?: Requester | null
 }) {
   const orders = store.get(event)
   const groups = new Map<number | string, PlacementLine[]>()
@@ -298,6 +338,8 @@ export function createOrderSeeds(event: MockEvent, options: {
       productIds: lines.map(line => line.productIndex),
       quantities: lines.map(line => line.quantity),
       prices: lines.map(line => line.price),
+      requesters: lines.map(line => line.requester),
+      placedBy: options.placedBy ?? null,
       status: 'awaitingSeller',
       deliveryType: options.deliveryType,
       placedAt: now,

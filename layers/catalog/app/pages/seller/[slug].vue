@@ -53,10 +53,27 @@ const productsStatus = computed(() => {
   return status.value === 'error' ? 'error' : 'pending'
 })
 
+/**
+ * Следующая порция. Нажатие во время загрузки раньше молча терялось: кнопка
+ * была disabled, и вторая порция не приходила. Теперь цель считается от уже
+ * показанного, а нажатие во время загрузки догружает её сразу после текущей.
+ */
+const queued = ref(false)
+
 function showMore() {
-  shown.value += PAGE_SIZE
+  if (status.value === 'pending') {
+    queued.value = true
+    return
+  }
+  shown.value = Math.min(total.value, products.value.length + PAGE_SIZE)
   refresh()
 }
+
+watch(status, (value) => {
+  if (value !== 'success' || !queued.value) return
+  queued.value = false
+  if (hasMore.value) showMore()
+})
 
 /*
  * Логотип: ссылка записана, а файла по ней нет — медиасервер отдаёт 404.
@@ -154,7 +171,7 @@ useSeoMeta({
             <UiProductCard v-for="product in products" :key="product.id" :product="product" />
           </div>
 
-          <button v-if="hasMore" type="button" class="seller-page__more" :disabled="status === 'pending'" @click="showMore">
+          <button v-if="hasMore" type="button" class="seller-page__more" :aria-busy="status === 'pending'" @click="showMore">
             {{ $t('common.pokazatEsche') }}
           </button>
         </UiState>

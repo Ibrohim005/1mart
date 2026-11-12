@@ -34,7 +34,6 @@ const statusOptions = computed(() => [
 const columns = [
   { key: 'number', label: t('m.orders.colNumber') },
   { key: 'createdAt', label: t('m.orders.colDate') },
-  { key: 'customerName', label: t('m.orders.colCustomer') },
   { key: 'itemsCount', label: t('m.orders.colItems'), align: 'right' as const },
   { key: 'total', label: t('m.orders.colTotal'), align: 'right' as const },
   { key: 'paymentMethod', label: t('m.orders.colPayment') },

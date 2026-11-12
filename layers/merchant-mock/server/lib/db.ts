@@ -15,8 +15,6 @@ import type {
   CategoryAttributeSchema,
   CommissionRow,
   CompanyProfile,
-  CustomerDetail,
-  CustomerListItem,
   DocumentRow,
   Employee,
   MerchantCategory,
@@ -292,46 +290,6 @@ export function getCategoryAttributes(categoryId: string): CategoryAttributeSche
   return CATEGORY_SCHEMAS[categoryId] ?? DEFAULT_SCHEMA(categoryId)
 }
 
-/* ------------------------------------------------------------ Покупатели */
-
-const COMPANY_BUYERS = [
-  'OOO «Oriental Trade»', 'OOO «Silk Road Logistics»', 'IP Karimov A.', 'OOO «Bank Service»',
-  'AO «Uztelecom»', 'OOO «MedLine»', 'IP Yusupova D.', 'OOO «BuildMarket»',
-  'OOO «EduTech»', 'OOO «AgroInvest»', 'IP Rahimov B.', 'OOO «HoReCa Supply»',
-]
-const PERSON_NAMES = [
-  'Azizov Sardor', 'Karimova Nilufar', 'Yusupov Jasur', 'Rahimova Malika',
-  'Tursunov Bekzod', 'Islomova Dilnoza', 'Qodirov Sanjar', 'Saidova Gulnora',
-]
-
-export const customers: CustomerListItem[] = []
-const customerDetails = new Map<string, CustomerDetail>()
-
-for (let i = 0; i < 18; i++) {
-  const id = `cus-${i + 1}`
-  const isCompany = rnd() > 0.35
-  const name = isCompany ? pick(COMPANY_BUYERS) : pick(PERSON_NAMES)
-  const ordersCount = int(1, 24)
-  const spentSum = ordersCount * int(3, 40) * 100000
-  const item: CustomerListItem = {
-    id,
-    name,
-    company: isCompany ? name : null,
-    phone: `+998 9${int(0, 9)} ${int(100, 999)} ${int(10, 99)} ${int(10, 99)}`,
-    ordersCount,
-    totalSpent: sum(spentSum),
-    firstOrderAt: daysAgo(int(60, 210)),
-    lastOrderAt: daysAgo(int(0, 30)),
-  }
-  customers.push(item)
-  customerDetails.set(id, {
-    ...item,
-    email: isCompany ? 'info@company.uz' : null,
-    avgCheck: sum(Math.round(spentSum / ordersCount)),
-    recentOrders: [],
-  })
-}
-
 /* ------------------------------------------------------------ Заказы */
 
 const ORDER_STATUS_FLOW: OrderStatusCode[] = ['new', 'confirmed', 'packing', 'shipped', 'delivered', 'completed']
@@ -345,7 +303,6 @@ const orderDetails = new Map<string, OrderDetail>()
 for (let i = 0; i < 64; i++) {
   const id = `ord-${i + 1}`
   const number = `PM-${24000 + i}`
-  const customer = pick(customers)
   const itemCount = int(1, 4)
   const rows: OrderItemRow[] = []
   let subtotalAmt = 0
@@ -379,7 +336,6 @@ for (let i = 0; i < 64; i++) {
     number,
     createdAt,
     statusCode,
-    customerName: customer.name,
     itemsCount: rows.reduce((s, r) => s + r.qty, 0),
     total,
     paymentMethod: pick(PAYMENTS),
@@ -390,22 +346,22 @@ for (let i = 0; i < 64; i++) {
   const timeline = (flowIdx >= 0 ? ORDER_STATUS_FLOW.slice(0, flowIdx + 1) : ['new', statusCode] as OrderStatusCode[])
     .map((code, k) => ({ code, at: daysAgo(int(0, 88) + (flowIdx - k)) }))
 
+  // Покупатель продавцу не виден: товар забирает курьер spotshop или продавец везёт на склад площадки
+  const pickup = rnd() > 0.4
   orderDetails.set(id, {
     ...list,
-    customer: { id: customer.id, name: customer.name, company: customer.company, phone: customer.phone },
     items: rows,
     subtotal,
     delivery: tiyin(deliveryAmt),
     commission,
     payout,
-    deliveryAddress: "Toshkent sh., Yunusobod tumani, 19-mavze, 4-uy",
-    deliveryType: rnd() > 0.5 ? 'courier' : 'pickup',
+    handover: {
+      method: pickup ? 'courierPickup' : 'dropOff',
+      point: pickup ? company.legalAddress : 'Склад spotshop: Ташкент, Сергелийский район, ул. Янги Сергели, 25',
+      until: daysAgo(-1),
+    },
     timeline,
-    comment: rnd() > 0.8 ? 'Просьба согласовать время доставки заранее.' : null,
   })
-
-  const cd = customerDetails.get(customer.id)
-  if (cd && cd.recentOrders.length < 5) cd.recentOrders.push(list)
 }
 
 orders.sort((a, b) => b.createdAt.localeCompare(a.createdAt))
@@ -552,7 +508,6 @@ export const tickets: TicketDetail[] = [
 
 export const getProductDetail = (id: string) => productDetails.get(id) ?? null
 export const getOrderDetail = (id: string) => orderDetails.get(id) ?? null
-export const getCustomerDetail = (id: string) => customerDetails.get(id) ?? null
 export const allProductDetails = productDetails
 
 /** Денежный ноль для редких краёв. */

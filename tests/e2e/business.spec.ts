@@ -57,8 +57,8 @@ test.describe('Вход', () => {
 
   test('истёкший сеанс ведёт на вход и обратно', async ({ page }) => {
     await login(page)
-    await page.route('**/api/merchant/customers**', route => route.fulfill({ status: 401, json: {} }))
-    await goInside(page, '/customers')
+    await page.route('**/api/merchant/orders**', route => route.fulfill({ status: 401, json: {} }))
+    await goInside(page, '/orders')
     await page.waitForURL(/\/login\?.*expired=1/, { timeout: 30_000 })
     await expect(page.locator('.login__expired')).toBeVisible()
     expect(page.url()).toContain('next=')
@@ -83,7 +83,7 @@ test.describe('Состояния экранов', () => {
     await expect(page.locator('tbody tr').first()).toBeVisible()
   })
 
-  for (const path of ['/orders/nope', '/customers/nope', '/support/nope', '/products/nope']) {
+  for (const path of ['/orders/nope', '/support/nope', '/products/nope']) {
     test(`${path}: понятный экран вместо пустоты`, async ({ page }) => {
       await open(page, path)
       await expect(page.locator('.mnotfound')).toBeVisible()
@@ -301,5 +301,18 @@ test.describe('Отзывы', () => {
     await open(page, '/dashboard')
     await page.locator('.dash__attention-item', { hasText: 'Отзывы без ответа' }).click()
     await expect(page).toHaveURL(/reviews\?status=unanswered/)
+  })
+})
+
+test.describe('Бренд раздела продавца', () => {
+  // Решение заказчика: у раздела продавца иконка вкладки чёрная, у витрины — зелёная
+  test('иконка вкладки чёрная, зелёный интерфейса — #0B8F2A', async ({ page, request }) => {
+    const svg = await (await request.get('/favicon.svg')).text()
+    expect(svg).toContain('#111111')
+    expect(svg).not.toContain('#0AE728')
+
+    await open(page, '/login')
+    const brand = await page.evaluate(() => getComputedStyle(document.documentElement).getPropertyValue('--m-brand').trim())
+    expect(brand.toUpperCase()).toBe('#0B8F2A')
   })
 })

@@ -1,0 +1,305 @@
+{
+  "org": {
+    "auth": {
+      "orHead": "Head of the company",
+      "oneId": "With OneID",
+      "eimzo": "With a digital signature",
+      "noCompany": "Company not on spotshop yet?",
+      "registerCompany": "Register",
+      "ownPasswordTitle": "Create your own password",
+      "ownPasswordHint": "You signed in with a temporary password from your head. Set your own: at least 8 characters with letters and digits."
+    },
+    "cart": {
+      "categoryForbidden": "This section is not open to your department. Ask the head to open it.",
+      "limitExceeded": "Monthly request limit exceeded. Left: {left}",
+      "requestsForbidden": "Your role cannot request goods",
+      "approveAndOrder": "Approve and order",
+      "fromPeople": "Requests from employees: {count}",
+      "requesterTitle": "These are your requests",
+      "requesterText": "The purchaser sees them with your name, removes what is not needed and places the order. Track it in “My orders”.",
+      "limitLeft": "Monthly limit: {sum} left",
+      "requestRemoved": "{name}'s request was removed from the order",
+      "myRequests": "My requests"
+    },
+    "orders": {
+      "requestedBy": "Requested by {name}",
+      "requests": "Requests",
+      "placedBy": "Placed by {name}",
+      "placed": "Placed by",
+      "paidWith": "Paid with",
+      "placedHint": "Placed and approved the order in the company"
+    },
+    "home": {
+      "requestsTitle": "Purchasing for your department",
+      "requestsText": "Request what you need from your department's sections; the purchaser places the order"
+    },
+    "pdp": {
+      "returnsDocs": "Returns and documents",
+      "requestHint": "The item goes as a request to your company's purchaser"
+    },
+    "common": {
+      "cancel": "Cancel",
+      "save": "Save",
+      "errorGeneric": "Something went wrong. Please try again."
+    },
+    "roles": {
+      "preset": {
+        "owner": "Head",
+        "purchaser": "Purchaser",
+        "accountant": "Accountant",
+        "requester": "Employee"
+      },
+      "presetText": {
+        "owner": "Everything: staff, roles, departments, balance, approving orders",
+        "purchaser": "Sees everyone's requests, edits them and places the order",
+        "accountant": "Balance and documents, approves requests",
+        "requester": "Requests goods from their department's sections"
+      },
+      "customText": "Custom role · permissions: {count}"
+    },
+    "permissions": {
+      "catalog_all": {
+        "title": "Whole catalogue",
+        "text": "Sees every section, not only their department's"
+      },
+      "requests_create": {
+        "title": "Requests",
+        "text": "Adds goods to the company cart under their name"
+      },
+      "requests_approve": {
+        "title": "Approve and order",
+        "text": "Sees everyone's requests, removes what is not needed and places the order"
+      },
+      "orders_viewAll": {
+        "title": "All orders",
+        "text": "Sees all company orders, not only those with their requests"
+      },
+      "balance_manage": {
+        "title": "Balance",
+        "text": "Company balance, top-up invoices, bank details"
+      },
+      "staff_manage": {
+        "title": "Staff",
+        "text": "Adds staff, roles, departments and opens sections"
+      }
+    },
+    "categories": {
+      "selected": "Selected: {count}",
+      "applySuggested": "Tick the ones for our activity code",
+      "byOked": "activity code",
+      "showSub": "Subsections of “{title}”"
+    },
+    "credentials": {
+      "title": "Employee added",
+      "smsSent": "The login and temporary password were sent by SMS to {phone}",
+      "login": "Login",
+      "password": "Temporary password",
+      "note": "The password is shown only now. The employee sets their own on first sign-in. Lost it? Issue a new one with the lock button.",
+      "copy": "Copy",
+      "done": "Done",
+      "copied": "Login and password copied",
+      "copyFailed": "Could not copy. Select and copy it by hand.",
+      "message": "{name}, you now have access to company purchasing on spotshop.\nLogin: {login}\nTemporary password: {password}\nSign in: {url}"
+    },
+    "employee": {
+      "addTitle": "New employee",
+      "editTitle": "Employee",
+      "fullName": "Full name",
+      "fullNamePlaceholder": "Anna Ivanova",
+      "phone": "Phone, also the login",
+      "phoneHint": "An SMS with the password will go to it",
+      "phoneLocked": "The login cannot change. For another number, add the employee again.",
+      "role": "Role",
+      "ownerLocked": "The head's role cannot change",
+      "department": "Department",
+      "noDepartment": "No department",
+      "departmentHint": "The employee sees the catalogue sections open to the department",
+      "seesAll": "This role sees the whole catalogue; the department is just for order",
+      "limit": "Monthly request limit",
+      "limitPlaceholder": "3 000 000",
+      "limitHint": "Requests over the limit are not accepted",
+      "noLimit": "No limit",
+      "spent": "this month: {sum}",
+      "extraTitle": "Open sections beyond the department",
+      "extraHint": "Just for this person, in addition to the department's sections",
+      "create": "Add and send SMS",
+      "smsNote": "The employee gets the login and a temporary password by SMS. You will see them too.",
+      "errorName": "Enter the full name",
+      "errorPhone": "Enter the full number",
+      "errorPhoneTaken": "This number already belongs to another employee",
+      "errorRole": "Choose a role",
+      "errorLimit": "Enter the limit amount",
+      "sectionPerson": "Employee",
+      "sectionAccess": "Catalogue access",
+      "noDepartments": "No departments yet: open sections to this person below or create departments.",
+      "createDepartments": "Create departments",
+      "noLimitHint": "The employee requests without an amount cap"
+    },
+    "role": {
+      "addTitle": "New role",
+      "editTitle": "Role",
+      "title": "Title",
+      "titlePlaceholder": "For example, Office manager",
+      "permissions": "Permissions",
+      "presetNote": "A ready-made role; its permissions cannot change. Need a different set? Create your own role.",
+      "errorTitle": "Enter the role title",
+      "errorTitleTaken": "A role with this title already exists",
+      "errorPermissions": "Tick at least one permission"
+    },
+    "department": {
+      "addTitle": "New department",
+      "editTitle": "Department",
+      "title": "Title",
+      "titlePlaceholder": "For example, Accounting",
+      "categories": "Open catalogue sections",
+      "categoriesHint": "Department staff see and can request only these sections. The purchaser and head see the whole catalogue.",
+      "emptyWarning": "No section is open: department staff will see nothing in the catalogue",
+      "errorTitle": "Enter the department title",
+      "errorTitleTaken": "A department with this title already exists"
+    },
+    "company": {
+      "title": "Company",
+      "tabStaff": "Staff",
+      "tabRoles": "Roles",
+      "tabDepartments": "Departments and access",
+      "tabDetails": "Details",
+      "saved": "Saved",
+      "staffTitle": "Staff",
+      "staffText": "An employee's login is their phone. The password comes to them by SMS, and you see it too.",
+      "addEmployee": "Add employee",
+      "colEmployee": "Employee",
+      "colRole": "Role and department",
+      "colLimit": "Monthly limit",
+      "colStatus": "Status",
+      "colActions": "Actions",
+      "noDepartment": "No department",
+      "noLimit": "No limit",
+      "spent": "spent {sum}",
+      "statusOwner": "Head",
+      "status": {
+        "active": "Active",
+        "invited": "Awaiting first sign-in",
+        "blocked": "Blocked"
+      },
+      "edit": "Edit {name}",
+      "view": "View permissions of {name}",
+      "resetPassword": "Issue a new password to {name}",
+      "resetPasswordShort": "New password",
+      "block": "Block {name}",
+      "unblock": "Unblock {name}",
+      "blockShort": "Block",
+      "unblockShort": "Unblock",
+      "blocked": "{name}: access closed",
+      "unblocked": "{name}: access reopened",
+      "removeEmployee": "Remove employee {name}",
+      "removeRole": "Remove role {name}",
+      "removeDepartment": "Remove department {name}",
+      "rolesTitle": "Roles",
+      "rolesText": "A role is a set of permissions. There are ready-made roles, and you can build your own.",
+      "addRole": "Create role",
+      "preset": "Ready-made",
+      "people": "Employees: {count}",
+      "departmentsTitle": "Departments and catalogue access",
+      "departmentsText": "Each department gets its own sections: paper and stationery for accounting, equipment for IT.",
+      "addDepartment": "Create department",
+      "noDepartments": "No departments yet. Create the first one and open catalogue sections to it.",
+      "departmentsNote": "You can open extra sections to a single person in their card.",
+      "registeredVia": "Registered with",
+      "via": {
+        "oneid": "OneID",
+        "eimzo": "Digital signature",
+        "demo": "Demo company"
+      },
+      "detailsNote": "These details came from the tax registry at registration. Bank details for top-ups are in “Company balance”.",
+      "role": "Role",
+      "department": "Department",
+      "limitLeft": "Limit left",
+      "myCategories": "Sections open to you",
+      "allCatalog": "The whole catalogue",
+      "noCategories": "None yet: ask the head to open sections to your department",
+      "myPermissions": "What you can do",
+      "askHead": "The head of the company changes your role, department and limit.",
+      "removeTitle": "Remove?",
+      "removeAction": "Remove",
+      "remove": {
+        "employee": "{name} will no longer be able to sign in. Their requests stay in the cart for the purchaser.",
+        "role": "The role “{name}” will be removed. This is only possible if nobody has it.",
+        "department": "The department “{name}” will be removed; its staff lose access to its sections."
+      },
+      "removed": "Removed: {name}",
+      "roleInUse": "Some employees have this role: change their role first",
+      "verified": {
+        "oneid": "Verified with OneID",
+        "eimzo": "Verified with a digital signature"
+      },
+      "myAccess": "Your access",
+      "searchStaff": "Search by name or phone",
+      "you": "you",
+      "of": "of",
+      "editShort": "Edit",
+      "firstStaffHint": "Add employees: each gets their own login, and their requests reach your cart with name and role.",
+      "nothingFound": "Nobody found",
+      "allowed": "allowed",
+      "notAllowed": "not allowed",
+      "quickStart": "Quick start",
+      "quickStartText": "Pick typical departments; catalogue sections are already chosen. Those matching activity code {code} are ticked.",
+      "template": {
+        "accounting": "Accounting",
+        "office": "Office administration",
+        "it": "IT department"
+      },
+      "createPicked": "Create departments: {count}",
+      "ownDepartment": "Custom department",
+      "templatesCreated": "Departments created: {count}",
+      "legalName": "Legal name",
+      "notSet": "Not set"
+    },
+    "register": {
+      "seoTitle": "Company registration",
+      "title": "Register your company",
+      "lead": "Confirm the director with OneID or a digital signature key. We take company details from the tax registry; you only set a phone and a password.",
+      "stepIdentity": "Identity",
+      "stepCompany": "Company details",
+      "stepDone": "Done",
+      "privacy": "We never store your signature key or OneID password: we only receive the confirmation and company details.",
+      "chooseMethod": "How to confirm your identity",
+      "oneIdText": "The director's account on id.egov.uz",
+      "eimzoTitle": "Digital signature key",
+      "eimzoText": "The organisation key in the E-IMZO app",
+      "oneIdHint": "The OneID page will open. After you sign in we bring you back here with the company details.",
+      "oneIdButton": "Continue with OneID",
+      "chooseKey": "Signature key on this computer",
+      "noEimzo": "Could not reach E-IMZO. Make sure the app is installed and running, then reload the page.",
+      "inn": "TIN",
+      "validTo": "Valid until {date}",
+      "signButton": "Sign and continue",
+      "errorOneId": "Could not sign in with OneID. Please try again.",
+      "errorSignature": "The signature did not verify. Choose another key or try again.",
+      "companyTitle": "Company",
+      "confirmedAs": "Identity confirmed: {name}",
+      "oked": "Activity code",
+      "director": "Director",
+      "address": "Legal address",
+      "alreadyTitle": "This company is already registered",
+      "alreadyText": "You confirmed you are its director, so sign in as the head.",
+      "signInAsHead": "Sign in as the head",
+      "headPhone": "Head's phone",
+      "headPhoneHint": "You will get SMS on it and use it to sign in",
+      "passwordHint": "At least 8 characters with letters and digits",
+      "submit": "Register the company",
+      "otherMethod": "Another method",
+      "errorPhone": "Enter the full number",
+      "errorPhoneTaken": "This number already belongs to an employee of another company",
+      "errorPassword": "Password: at least 8 characters with letters and digits",
+      "errorRegistered": "This company is already registered",
+      "errorExpired": "The confirmation has expired. Please confirm your identity again.",
+      "errorGeneric": "Could not register the company. Please try again.",
+      "doneTitle": "The company is registered",
+      "doneText": "{name} is on spotshop. You are the head: add employees, give them roles and open catalogue sections to departments.",
+      "suggestedTitle": "Sections for your activity (code {code})",
+      "suggestedText": "They come first in the catalogue, and we will suggest them when you set up departments.",
+      "addStaff": "Add employees",
+      "toCatalog": "Go to the catalogue"
+    }
+  }
+}

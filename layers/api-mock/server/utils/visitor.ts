@@ -28,15 +28,16 @@ export function visitorId(event: MockEvent) {
 }
 
 /**
- * Хранилище «одно состояние на посетителя».
+ * Хранилище «одно состояние на посетителя». `keyOf` меняет, на кого:
+ * корзина, баланс и заказы общие у компании (scopeId из org-state).
  * Ограничиваем число ящиков: мок живёт в памяти, и бесконечно расти ему нельзя.
  */
-export function perVisitor<T>(create: () => T, limit = 500) {
+export function perVisitor<T>(create: () => T, limit = 500, keyOf: (event: MockEvent) => string = visitorId) {
   const store = new Map<string, T>()
 
   return {
     get(event: MockEvent): T {
-      const id = visitorId(event)
+      const id = keyOf(event)
       let state = store.get(id)
       if (!state) {
         // Самый старый ящик вытесняем: Map хранит порядок вставки
@@ -47,7 +48,7 @@ export function perVisitor<T>(create: () => T, limit = 500) {
       return state
     },
     drop(event: MockEvent) {
-      store.delete(visitorId(event))
+      store.delete(keyOf(event))
     },
   }
 }

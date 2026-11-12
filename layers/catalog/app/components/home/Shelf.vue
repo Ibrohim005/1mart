@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /**
  * Полка товаров главной: заголовок-ссылка, «Смотреть все» справа
- * и сетка из пяти карточек в ряд. Акцентная полка («Скидки недели»)
+ * и сетка из четырёх карточек в ряд. Акцентная полка («Скидки недели»)
  * выделена композицией: белый контейнер с рамкой, крупнее заголовок
  * и обратный отсчёт до конца недели.
  */
@@ -76,14 +76,13 @@ const link = computed(() => props.moreLink ?? localePath('/search'))
 
           <span v-if="timer" class="shelf__timer">{{ timer }}</span>
 
+          <!-- Спокойная строка срока вместо чёрных ячеек таймера: витрина B2B, не распродажа -->
           <span v-if="countdown && left" class="shelf__countdown" role="timer">
-            <span class="shelf__countdown-label">{{ t('shell.home.endsIn') }}</span>
-            <span v-if="left.days" class="shelf__countdown-cell">{{ t('shell.home.days', { count: left.days }) }}</span>
-            <span class="shelf__countdown-cell">{{ left.hours }}</span>
-            <span class="shelf__countdown-sep" aria-hidden="true">:</span>
-            <span class="shelf__countdown-cell">{{ left.minutes }}</span>
-            <span class="shelf__countdown-sep" aria-hidden="true">:</span>
-            <span class="shelf__countdown-cell">{{ left.seconds }}</span>
+            <UiIcon name="clock" :size="16" color="currentColor" />
+            {{ t('shell.home.endsIn') }}
+            <span class="shelf__countdown-time">
+              <template v-if="left.days">{{ t('shell.home.days', { count: left.days }) }} </template>{{ left.hours }}:{{ left.minutes }}:{{ left.seconds }}
+            </span>
           </span>
         </div>
 
@@ -95,7 +94,7 @@ const link = computed(() => props.moreLink ?? localePath('/search'))
       <!-- Скелетонов столько же, сколько карточек, — высота секции не прыгает -->
       <div v-if="loading" class="shelf__grid" aria-busy="true" aria-live="polite">
         <span class="visually-hidden">{{ t('ui.shared.state.loading') }}</span>
-        <UiProductCardSkeleton v-for="n in (skeletons ?? 5)" :key="n" />
+        <UiProductCardSkeleton v-for="n in (skeletons ?? 4)" :key="n" />
       </div>
 
       <div v-else class="shelf__grid">
@@ -119,7 +118,7 @@ const link = computed(() => props.moreLink ?? localePath('/search'))
   width: calc(var(--container-width) + 50px);
   padding: 24px 24px 28px;
   border: 1px solid var(--color-line);
-  border-radius: 24px;
+  border-radius: 12px;
 }
 
 .shelf--accent .shelf__title {
@@ -181,32 +180,19 @@ const link = computed(() => props.moreLink ?? localePath('/search'))
 .shelf__countdown {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-}
-
-.shelf__countdown-label {
-  margin-right: 6px;
-  font-size: var(--text-sm);
-  color: var(--color-navy);
-}
-
-.shelf__countdown-cell {
-  display: inline-grid;
-  place-items: center;
-  min-width: 32px;
+  gap: 6px;
   height: 30px;
-  padding-inline: 6px;
+  padding: 0 12px;
   border-radius: 8px;
-  background: var(--color-navy);
-  font-weight: 600;
+  background: var(--color-page);
   font-size: var(--text-sm);
-  font-variant-numeric: tabular-nums;
-  color: var(--color-surface);
+  color: var(--color-text-muted);
 }
 
-.shelf__countdown-sep {
+.shelf__countdown-time {
   font-weight: 600;
-  color: var(--color-navy);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
 }
 
 .shelf__more {
@@ -221,7 +207,7 @@ const link = computed(() => props.moreLink ?? localePath('/search'))
 
 .shelf__grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px 16px;
 }
 </style>

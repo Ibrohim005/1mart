@@ -305,7 +305,7 @@ grep -rn "TODO: Connect to backend" layers apps
 POST /checkout/quote  { paymentMethod, cardId, deliveryType, provider, pickupPointId, addressId, promoCode }
   → { goods, promoCode, promoPercent, promoAmount, deliveryType, provider, pickupPointId,
       delivery, commission, payable, eta,
-      couriers: [{ id: 'express24'|'maxsus'|'yandex', price, days, eta }],
+      couriers: [{ id: 'spotshop', price, days, eta }],   // сейчас только курьер площадки
       pickupPoints: [...], stockIssues: [...] }
 ```
 
@@ -324,8 +324,117 @@ POST /checkout/quote  { paymentMethod, cardId, deliveryType, provider, pickupPoi
 
 - `POST /balance/invoices/:id/credit` есть только в моке. В бою счёт закрывает банковская выписка: сверка по номеру счёта в назначении платежа и по счёту плательщика.
 - В `/checkout/*` и `POST /orders` приходит `paymentMethod: 'balance' | 'card'`. При `balance` `cardId` равен `null`, SMS-код не нужен. Если денег мало, ответ `{ status: 'insufficientBalance', required, available }`.
-- При оформлении сумма резервируется. После подтверждения продавцом она уходит на его расчётный счёт, при отказе или отмене возвращается тем же способом.
+- При оформлении сумма резервируется. После подтверждения заказа она уходит на расчётный счёт продавца, при отказе или отмене возвращается тем же способом. Покупателю продавца не называем (см. ниже).
 - Реквизиты в моке (`PLATFORM_REQUISITES`) — заглушка. Настоящие должны приходить с бэкенда.
+
+## Продавец скрыт от покупателя, доставляет площадка
+
+Решение заказчика (2026-11-12). Покупатель не видит, у какого продавца куплен товар: продаёт
+и доставляет spotshop. Площадка забирает товар у продавца и везёт своими курьерами. Цену
+для покупателя задаёт площадка в админке (может отличаться от цены продавца). Продавец
+тоже не видит, какая компания купила: для него покупатель — площадка.
+
+Что нужно от бэкенда:
+
+- **Флаг показа продавца** в админке, по умолчанию выключен. Пока выключен, во всех ответах
+  покупателю продавца нет: `Product.seller` и `CartItem.seller` равны `null`,
+  `OrderCardItem.seller` — пустая строка, ответы на отзывы идут от имени spotshop.
+- `GET /sellers/{slug}` для скрытого продавца отвечает **404**, как для несуществующего.
+  В карту сайта скрытые продавцы не попадают.
+- **Доставка.** В `couriers` расчёта приходит только `spotshop` (собственная служба).
+  Значения `express24 | maxsus | yandex` в типе `DeliveryProvider` оставлены на случай,
+  если площадка подключит сторонних перевозчиков, но покупателю их сейчас не показываем.
+  Корзина приходит одной группой «Доставка spotshop».
+- **Цена для покупателя** — отдельное поле цены площадки, продавец видит свою цену и выплату.
+  Фронт показывает покупателю то, что пришло в `price`, поэтому подменять её должен сервер.
+- Статусы `awaitingSeller` и `rejectedBySeller` остаются, но подписи для покупателя
+  нейтральные: «Ожидает подтверждения», «Отменён: товара нет в наличии».
+
+В моке открыты два продавца (TechnoPoint и Kids World, `SHOWN_TO_BUYER` в `layers/api-mock/mocks/data.ts`),
+чтобы было видно, как выглядит включённый показ. Остальные скрыты.
+
+## Компания, сотрудники и заявки (B2B)
+
+Решение заказчика 2026-11-12. Фронт и моки готовы: `apps/host/shared/types/company.ts`,
+моки в `layers/api-mock/server/api/company/`, `auth/oneid/`, `auth/eimzo/`,
+логика мока — `layers/api-mock/server/utils/org-state.ts`.
+
+**Регистрация.** Компания регистрируется только через OneID или ключ ЭЦП (E-IMZO).
+Кто зарегистрировал — руководитель (preset `owner`).
+
+| Метод | Путь | Что делает |
+|---|---|---|
+| GET | `/auth/oneid/start` | `{ url }` — адрес авторизации sso.egov.uz; OneID возвращает на `/register?oneid=<code>` |
+| POST | `/auth/oneid/callback` | `{ code }` → `{ token, fullName, companies: CompanyCandidate[] & { registered } }` — компании, где человек директор |
+| GET | `/auth/eimzo/challenge` | `{ challenge }` для подписи |
+| POST | `/auth/eimzo/verify` | `{ pkcs7 }` → то же, что callback. Подпись проверяет сервер; ИНН и ФИО — из сертификата |
+| POST | `/company/register` | `{ token, inn, phone, password }` → `{ phone, name, company }` и сеанс. Данные компании — только из `token`, не из формы |
+| POST | `/auth/identity-login` | `{ token, inn }` — вход руководителя уже зарегистрированной компании |
+
+- `GET /auth/eimzo/keys` есть только в моке. В бою ключи перечисляет клиент E-IMZO в браузере
+  (`layers/account/app/composables/useEimzo.ts`, там же что заменить).
+- `CompanyCandidate.oked` — ОКЭД из налогового реестра, `suggestedCategories` — разделы каталога
+  под этот вид деятельности (таблица соответствий на бэкенде, пример — `OKED` в org-state).
+
+**Права и роли.** Права — `Permission` (`catalog.all`, `requests.create`, `requests.approve`,
+`orders.viewAll`, `balance.manage`, `staff.manage`). Готовые роли: `owner`, `purchaser`,
+`accountant`, `requester`; руководитель собирает свои роли из тех же прав. Проверяет права **сервер**,
+фронт по `GET /company/access` только прячет недоступное.
+
+| Метод | Путь | Что делает |
+|---|---|---|
+| GET | `/company/access` | `Access`: компания, сотрудник, роль, отдел, права, открытые категории (`null` — весь каталог), остаток лимита |
+| GET | `/company` | компания, сотрудники, роли, отделы (только `staff.manage`) |
+| POST | `/company/employees` | `{ fullName, phone, roleId, departmentId, monthlyLimit, extraCategories }` → `{ employee, credentials }` |
+| PATCH / DELETE | `/company/employees/{id}` | правка, `status: 'blocked' \| 'active'`, удаление. Руководителя нельзя заблокировать и удалить |
+| POST | `/company/employees/{id}/password` | новый временный пароль → `IssuedCredentials` |
+| POST / PATCH / DELETE | `/company/roles`, `/company/roles/{id}` | свои роли; готовые не меняются, роль с людьми не удаляется |
+| POST / PATCH / DELETE | `/company/departments`, `/company/departments/{id}` | отделы и их `categories` (слаги разделов или подразделов) |
+| POST | `/auth/password/change` | `{ password }` — свой пароль вместо временного |
+
+- **Логин сотрудника — телефон.** Пароль временный: сервер шлёт логин и пароль по SMS на этот номер
+  и возвращает их руководителю (`credentials`), он может скопировать и передать сам. `POST /auth/login`
+  отвечает `mustChangePassword: true`, пока сотрудник не задал свой пароль — фронт сразу просит его.
+  Заблокированный — `403 employee_blocked`.
+- **Доступ к каталогу.** Без `catalog.all` сотрудник видит категории своего отдела плюс `extraCategories`.
+  Сервер фильтрует `/categories/root`, `/search`, `/search/suggestions`, `/products/shelf`, `/banners`;
+  карточка товара из закрытой категории — `403 category_forbidden`.
+
+**Заявки и корзина.** Корзина, баланс и заказы общие у компании. Положить товар — это заявка
+сотрудника: `CartItem.requestedBy` (имя, роль, отдел). Строка корзины — пара «сотрудник + SKU»,
+поэтому `CartItem.id` у разных людей разный, и `PUT/DELETE/PATCH /cart/items` принимают `lineId`
+(закупщик правит чужую заявку). Без `lineId` — своя строка этого SKU, как раньше.
+
+- `POST /cart/items`: `403 requests_forbidden`, `403 category_forbidden`, `422 limit_exceeded`
+  с `details.left` (тийины) — остаток месячного лимита. Ошибки приходят в `errors[]` с `code`
+  и необязательным `details` (новое поле `ApiError.details`).
+- Лимит — `Employee.monthlyLimit` (по желанию руководителя, `null` — без лимита): оформлено в этом
+  месяце + уже в корзине + новое. `PUT /cart/items` при увеличении своей строки проверяет то же.
+- `GET /cart`: у кого `requests.approve`, тот видит все заявки, `groups` — по людям; остальные видят
+  только свои строки. `Cart.canCheckout` — может ли пользователь оформить заказ.
+- `POST /orders` — это и есть одобрение: только `requests.approve` (`403 approve_forbidden`).
+  У каждой позиции заказа остаётся автор (`OrderCardItem.requestedBy`), сумма засчитывается
+  в его месячный лимит. Без `orders.viewAll` сотрудник видит только заказы со своими заявками.
+- `GET /balance` — `balance.manage` или `requests.approve` (закупщику платить); `POST /balance/invoices` —
+  только `balance.manage`.
+
+**Демо-компания мока** — ООО «AUDIT CONSULT SERVICE», пароль у всех `demo1234`:
+
+| Телефон | Кто |
+|---|---|
+| +998 90 100-00-01 | Каримов Бахтиёр — руководитель |
+| +998 90 100-00-02 | Саидова Дильноза — закупщик, все заявки |
+| +998 90 100-00-03 | Иванова Анна — бухгалтер, отдел «Бухгалтерия» |
+| +998 90 100-00-04 | Турсунов Жасур — сотрудник IT-отдела, лимит 3 000 000 сум |
+| +998 90 100-00-05 | Мирзаева Камола — сотрудник, ещё не сменила временный пароль |
+
+Любой другой номер, как и раньше, входит любым паролем от 4 символов и получает свою отдельную
+компанию-руководителя (на посетителя), поэтому старые сценарии и тесты не мешают друг другу.
+
+**Продавец не видит покупателя.** В кабинете продавца нет раздела «Покупатели» и полей покупателя в
+заказе: `OrderListItem.customerName` и `OrderDetail.customer/deliveryAddress/comment` убраны. Вместо них
+`OrderDetail.handover` — как передать товар площадке: курьер spotshop заберёт (`courierPickup`) или
+продавец привезёт на склад (`dropOff`), адрес и срок.
 
 ## Оплата и статусы заказа Paylov
 

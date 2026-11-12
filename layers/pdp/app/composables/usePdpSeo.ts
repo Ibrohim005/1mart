@@ -48,6 +48,10 @@ export function usePdpSeo(product: Ref<Product | null | undefined>) {
 
     /** Артикул: у товара может быть несколько SKU, в разметку идёт выбранный по умолчанию */
     const sku = item.skus[0]?.id ?? item.id
+    // Скрытого продавца не раскрываем и поисковику: продаёт сама площадка
+    const seller = item.seller
+      ? { '@type': 'Organization', 'name': item.seller.title, 'url': absolute(`/seller/${item.seller.slug}`) }
+      : { '@type': 'Organization', 'name': 'spotshop', 'url': siteUrl }
 
     return [
       defineProduct({
@@ -55,11 +59,7 @@ export function usePdpSeo(product: Ref<Product | null | undefined>) {
         description: item.description,
         image: item.images.map(i => absolute(i.url)),
         sku: String(sku),
-        brand: {
-          '@type': 'Organization',
-          'name': item.seller.title,
-          'url': absolute(`/seller/${item.seller.slug}`),
-        },
+        brand: seller,
         aggregateRating: {
           ratingValue: item.rating,
           reviewCount: item.reviewsCount,
@@ -69,11 +69,7 @@ export function usePdpSeo(product: Ref<Product | null | undefined>) {
           priceCurrency: 'UZS',
           availability: item.available ? 'InStock' : 'OutOfStock',
           url: absolute(`/product/${item.slug}`),
-          seller: {
-            '@type': 'Organization',
-            'name': item.seller.title,
-            'url': absolute(`/seller/${item.seller.slug}`),
-          },
+          seller,
         },
       }),
       defineBreadcrumb({

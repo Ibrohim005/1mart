@@ -1,5 +1,6 @@
 import type { MockEvent } from './visitor'
 import { perVisitor } from './visitor'
+import { scopeId } from './org-state'
 import type { BalanceInvoiceStatus, BankDetails } from '#shared/types/order'
 
 /**
@@ -48,7 +49,7 @@ function seed(): BalanceRecord {
   const createdAt = Date.now() - 6 * 24 * 60 * 60 * 1000
   return {
     available: OPENING_TOPUP,
-    company: { name: 'Test Company LLC', inn: '111111111', bank: 'Test Bank', mfo: '11111', account: '11111111111111111111' },
+    company: { name: 'ООО «TEST COMPANY»', inn: '111111111', bank: 'Test Bank', mfo: '11111', account: '11111111111111111111' },
     invoices: [{
       id: 'inv1',
       number: '1M-000101',
@@ -60,7 +61,7 @@ function seed(): BalanceRecord {
   }
 }
 
-const store = perVisitor<BalanceRecord>(seed)
+const store = perVisitor<BalanceRecord>(seed, 500, scopeId) // общее у всей компании, см. org-state
 
 export function balanceState(event: MockEvent) {
   return store.get(event)

@@ -18,20 +18,20 @@
     "orderState": {
       "created": {
         "title": "Order accepted",
-        "text": "The seller will confirm your order and start packing"
+        "text": "We will confirm the order and start packing it"
       },
       "paid": {
         "title": "Order paid",
-        "text": "The seller will confirm your order and start packing"
+        "text": "We will confirm the order and start packing it"
       },
       "processing": {
         "title": "Packing your order",
-        "text": "The seller is preparing your order for shipping"
+        "text": "We are preparing the order for dispatch"
       },
       "onTheWay": {
         "title": "Order on the way",
         "text": "Expected delivery — {date}",
-        "textNoDate": "The seller will contact you to confirm the delivery date"
+        "textNoDate": "A spotshop courier will call to agree the delivery date"
       },
       "readyForPickup": {
         "title": "Ready for pickup",
@@ -223,7 +223,7 @@
       },
       "ordersItem": {
         "detaliDostavki": "Delivery details",
-        "kurerIliProdavec": "Courier or seller",
+        "kurerIliProdavec": "spotshop courier",
         "kureromAdresu": "Courier to your address",
         "obschayaStoimost": "Total",
         "pomosch": "Help",
@@ -352,7 +352,7 @@
         "anonimnyyOtzyv": "Anonymous review",
         "drugimPokupatelyamOchenNuzhen": "Other buyers really need a detailed review — tell them what you liked",
         "nedostatki": "Cons",
-        "obyazatelnoUchtemOcenkuDostavki": "We always count delivery and service ratings — they affect the seller’s rating",
+        "obyazatelnoUchtemOcenkuDostavki": "We will take your delivery and service rating into account — it helps us improve",
         "ostavitOtzyv": "Leave a review",
         "otpravitOtzyv": "Send the review",
         "preimuschestva": "Pros",
@@ -435,13 +435,13 @@
         "contactBody": "Contact support — we reply within one business day.",
         "complaintBody": "Describe the problem with the order or seller — we will review your request.",
         "chatBody": "Support chat is available from 9:00 to 21:00.",
-        "deliveryBody": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers or to a spotshop pick-up point.",
+        "deliveryBody": "We deliver with our own spotshop couriers or to a spotshop pick-up point.",
         "termsConditionsBody": "Terms of use for the spotshop marketplace.",
         "aboutH1": "What spotshop is",
         "aboutP1_1": "spotshop is a B2B marketplace for companies, operated by Octagram JSC, Tashkent.",
         "aboutP1_2": "You will find electronics, home appliances, clothing, shoes, home, beauty, sports and kids products from verified sellers all over Uzbekistan.",
         "aboutH2": "How it works",
-        "aboutP2_1": "Choose a product, add it to the cart and place an order. An Express 24, Maxsus Courier or Yandex Delivery courier will bring it — or collect it at a pick-up point.",
+        "aboutP2_1": "Choose a product, add it to the cart and place an order. A spotshop courier will bring it — or collect it at a pick-up point.",
         "aboutP2_2": "Companies pay for orders from an on-site balance, topped up by transfer from their settlement account, or with a corporate card. The amount is reserved and goes to the seller's settlement account once the order is confirmed.",
         "aboutH3": "Safe shopping",
         "aboutP3_1": "Every seller passes a document check, and buyer ratings and reviews are shown on the product page.",
@@ -473,7 +473,7 @@
         "helpP1_1": "The order status is shown in the “My orders” section, along with the number, date, contents and total.",
         "helpP1_2": "You can cancel an order until it is handed over for delivery — the button appears on the order card.",
         "helpH2": "Delivery",
-        "helpP2_1": "We deliver with Express 24, Maxsus Courier and Yandex Delivery couriers and to spotshop pick-up points. The delivery date is shown on the product card.",
+        "helpP2_1": "We deliver with our own spotshop couriers and to spotshop pick-up points. The delivery date is shown on the product card.",
         "helpP2_2": "The courier contacts you before setting off to confirm the time.",
         "helpH3": "Payment and returns",
         "helpP3_1": "Pay from company balance or with a corporate card.",
@@ -481,7 +481,7 @@
         "helpH4": "Did not find an answer",
         "helpP4_1": "Write to us through the form on the “Contact us” page — we reply within one business day.",
         "deliveryH1": "Courier delivery",
-        "deliveryP1_1": "Orders are delivered by Express 24, Maxsus Courier and Yandex Delivery couriers: from one day in Tashkent, 2–5 days to the regions. The courier will call before arriving.",
+        "deliveryP1_1": "Orders are delivered by spotshop's own couriers: from one day in Tashkent, 2–5 days to the regions. The courier will call before arriving.",
         "deliveryH2": "Pick-up points",
         "deliveryP2_1": "Delivery to a spotshop pick-up point is free. Orders are kept for 7 days; check the product and its contents when you collect it.",
         "deliveryH3": "If delivery is delayed",
@@ -622,7 +622,7 @@
             },
             "delWho": {
               "q": "Who delivers the order",
-              "a": "Express 24, Maxsus Courier and Yandex Delivery couriers. You can also choose a spotshop pickup point, which is free."
+              "a": "spotshop's own couriers. You can also choose a spotshop pickup point, which is free."
             },
             "delTime": {
               "q": "How long does delivery take",
@@ -658,7 +658,7 @@
           "intro": "We deliver by courier across Uzbekistan or to a spotshop pickup point.",
           "courier": {
             "title": "By courier",
-            "fact1": "Express 24, Maxsus Courier or Yandex Delivery",
+            "fact1": "spotshop's own couriers",
             "fact2": "From one day in Tashkent, 2-5 days to the regions",
             "fact3": "The courier calls before arriving"
           },
@@ -675,7 +675,7 @@
           },
           "step2": {
             "title": "Confirmation",
-            "text": "The amount is reserved while the seller confirms the order."
+            "text": "The amount is reserved and we confirm the order."
           },
           "step3": {
             "title": "Handed to delivery",
@@ -706,12 +706,12 @@
     },
     "checkout": {
       "checkout": {
-        "dostavkaProdavca": "Seller delivery",
+        "dostavkaProdavca": "spotshop delivery",
         "oplataProshla": "Payment completed",
         "oshibkaPriOplate": "Payment error",
         "zakazOzhidanii": "Order pending",
         "vypolnenieProshedsheeProsmotretSvoy": "You can view your order in the “My orders” section",
-        "ozhidaemOplatuKakTolko": "We are waiting for the payment. As soon as it goes through, the order will be sent to the seller",
+        "ozhidaemOplatuKakTolko": "Waiting for payment. As soon as it goes through, we will start packing the order",
         "priObrabotkePlatezhaProizoshla": "An error occurred while processing the payment. Please try again",
         "addressEmpty": "Add an address",
         "addressMapPoint": "Map point {lat}, {lng}",
@@ -723,7 +723,7 @@
       },
       "deliveryCard": {
         "kakRabotaetDostavkaProdavca": "How delivery works",
-        "prodavecSvyazhetsyaChtobyUtochnit": "The seller will contact you to confirm the delivery date and time",
+        "prodavecSvyazhetsyaChtobyUtochnit": "A spotshop courier will call to agree the delivery date and time",
         "vybratDrugoy": "Choose another"
       },
       "orderSummary": {
@@ -738,7 +738,7 @@
         "promoLabel": "Promo code {code}",
         "youHavePromos": "You have {count} {word}",
         "deliveryUnavailable": "not possible",
-        "deliveryBlockedNote": "{sellers} does not deliver to this address. Choose another address or remove their items from the order."
+        "deliveryBlockedNote": "We cannot deliver some items to this address. Choose another address or remove those items from the order."
       }
     },
     "host": {
@@ -787,7 +787,7 @@
         "openPhoto": "Open the photo",
         "openPhotoOf": "Photo by {author}",
         "photoDialog": "Photo from a review",
-        "sellerReply": "Seller reply"
+        "sellerReply": "spotshop reply"
       },
       "sellerCard": {
         "drugieProdukty": "Other products",
@@ -824,7 +824,7 @@
     "searchTitle": "{query} — search"
   },
   "pdp": {
-    "buyersThisWeek": "{count} person bought this week | {count} people bought this week",
+    "buyersThisWeek": "Orders this week: {count}",
     "otherOptions": "Other options",
     "stockCount": "In stock: {n} pcs",
     "sku": "SKU",

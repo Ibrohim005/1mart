@@ -3,6 +3,10 @@
  * Вход. Макет: SIng → Tab Bar 586×469, r30.
  * Два поля — телефон с префиксом +998 и пароль, зелёная кнопка 536×68.8
  * r21.9 с иконкой замка и ссылка на регистрацию.
+ *
+ * B2B: по телефону и паролю входят сотрудники, которых завёл руководитель.
+ * Руководитель входит и регистрирует компанию через OneID или ЭЦП — эти
+ * кнопки ведут на страницу /register.
  */
 defineProps<{ modelValue: boolean }>()
 
@@ -11,6 +15,8 @@ const emit = defineEmits<{
   'update:modelValue': [boolean]
   register: []
   recover: []
+  /** Вход руководителя через OneID или ЭЦП */
+  identity: ['oneid' | 'eimzo']
   submit: [{ phone: string, password: string }]
 }>()
 
@@ -109,9 +115,21 @@ defineExpose({ fail })
          и на отрисовке макета не видна — кнопка текстовая. -->
     <button type="button" class="auth__submit" @click="submit">{{ $t('common.login') }}</button>
 
+    <div class="auth__divider" role="separator">{{ $t('org.auth.orHead') }}</div>
+    <div class="auth__identity">
+      <button type="button" class="auth__identity-button" @click="emit('identity', 'oneid')">
+        <UiIcon name="verify" :size="20" color="currentColor" />
+        {{ $t('org.auth.oneId') }}
+      </button>
+      <button type="button" class="auth__identity-button" @click="emit('identity', 'eimzo')">
+        <UiIcon name="shield-tick-fill" :size="20" color="currentColor" />
+        {{ $t('org.auth.eimzo') }}
+      </button>
+    </div>
+
     <p class="auth__register-line">
-      {{ $t('auth.noAccount') }}
-      <button type="button" class="auth__register" @click="emit('register')">{{ $t('auth.register') }}</button>
+      {{ $t('org.auth.noCompany') }}
+      <button type="button" class="auth__register" @click="emit('register')">{{ $t('org.auth.registerCompany') }}</button>
     </p>
   </UiModal>
 </template>
@@ -201,8 +219,8 @@ defineExpose({ fail })
   border-radius: var(--control-radius);
 }
 
-.auth__submit:hover { background: #0BC525; }
-.auth__submit:active { background: #009317; }
+.auth__submit:hover { background: #097A24; }
+.auth__submit:active { background: #06621D; }
 .auth__submit:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 
 .auth__register-line {
@@ -225,4 +243,34 @@ defineExpose({ fail })
 
 .auth__register:hover { text-decoration: underline; }
 .auth__register:focus-visible { outline: none; box-shadow: var(--focus-ring); }
+
+/* Вход руководителя через OneID и ЭЦП: вторичные кнопки под основной */
+.auth__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0 14px;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+.auth__divider::before,
+.auth__divider::after { content: ''; flex: 1; height: 1px; background: var(--color-line); }
+
+.auth__identity { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.auth__identity-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--control-radius);
+  background: var(--color-surface);
+  font: var(--type-button-sm);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.auth__identity-button:hover { border-color: var(--color-brand); background: var(--color-field); }
+.auth__identity-button:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 </style>

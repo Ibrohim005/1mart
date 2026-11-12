@@ -6,6 +6,9 @@
  */
 const head = useLocaleHead()
 
+// Права в компании нужны шапке, меню кабинета, корзине и каталогу — грузим один раз
+await useAccess()
+
 /**
  * Картинка для шаринга по умолчанию. Своя есть только у карточки товара,
  * остальные страницы уходили в мессенджеры и соцсети без превью.
@@ -30,7 +33,7 @@ useHead({
     { rel: 'manifest', href: '/site.webmanifest' },
   ],
   meta: [
-    { name: 'theme-color', content: '#0AE728' },
+    { name: 'theme-color', content: '#0B8F2A' },
     { name: 'apple-mobile-web-app-title', content: 'spotshop' },
   ],
 })
@@ -49,7 +52,7 @@ useHead(() => ({
     страницами нужен отдельный отклик, иначе клик выглядит как «ничего не
     произошло».
   -->
-  <NuxtLoadingIndicator color="#0AE728" :height="3" :throttle="0" />
+  <NuxtLoadingIndicator color="#0B8F2A" :height="3" :throttle="0" />
 
   <NuxtLayout>
     <NuxtPage />

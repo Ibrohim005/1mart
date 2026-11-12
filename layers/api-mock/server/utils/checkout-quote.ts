@@ -6,8 +6,8 @@ import type { DeliveryProvider, DeliveryType } from '#shared/types/order'
  * Расчёт заказа на сервере (ТЗ UC-FL-10, шаг «итоги: товары + доставка + комиссия»).
  *
  * Сумма к оплате не может приходить из браузера — здесь собран расчёт, который
- * обязан делать бэкенд: товары, промокод, доставка выбранной службой
- * (Express 24 / Maxsus Courier / Yandex Доставка) или пункт выдачи, комиссия.
+ * обязан делать бэкенд: товары, промокод, доставка курьером spotshop
+ * или пункт выдачи, комиссия.
  *
  * Детерминированные демо-правила (их же проверяет оформление заказа):
  * - А1: позиция в количестве 3 шт. и больше «закончилась» у продавца при
@@ -51,11 +51,13 @@ function inDays(days: number) {
   return date.toISOString().slice(0, 10)
 }
 
-/** Тарифы служб доставки по Ташкенту, тийины, и срок в днях */
+/**
+ * Доставку делает сама площадка: забирает товар у продавца и везёт своими
+ * курьерами. Сторонние службы (express24, maxsus, yandex) в типе остались для
+ * бэкенда, но покупателю мок их не предлагает. Тариф по Ташкенту, тийины.
+ */
 const COURIERS: Array<{ id: DeliveryProvider, price: number, days: number }> = [
-  { id: 'express24', price: 2_500_000, days: 1 },
-  { id: 'maxsus', price: 1_800_000, days: 2 },
-  { id: 'yandex', price: 2_200_000, days: 1 },
+  { id: 'spotshop', price: 2_000_000, days: 1 },
 ]
 
 export interface PickupPointOption {
@@ -99,7 +101,7 @@ export interface StockIssue {
 /** Позиции, которых при повторной проверке остатка не оказалось (А1) */
 export function stockIssues(event: MockEvent): StockIssue[] {
   return cartEntries(event)
-    .filter(entry => isSelected(event, entry.skuId) && entry.quantity >= OUT_OF_STOCK_QTY)
+    .filter(entry => isSelected(event, entry.lineId) && entry.quantity >= OUT_OF_STOCK_QTY)
     .map(entry => ({
       skuId: entry.skuId,
       title: entry.product.title,

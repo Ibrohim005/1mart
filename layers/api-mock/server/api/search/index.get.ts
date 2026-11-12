@@ -1,5 +1,6 @@
 import { localizeCategories } from '../../../mocks/category-i18n'
-import { brandTitleOf, categories, productCards, rootOfCategory, searchTextOf, subcategoryTextOf } from '../../../mocks/data'
+import { brandTitleOf, categories, rootOfCategory, searchTextOf, subcategoryTextOf } from '../../../mocks/data'
+import { visibleCards } from '../../utils/org-input'
 import { CATEGORY_FACETS, COLORS, COUNTRIES, FILTER_TITLES, MATERIALS, compareSizes, memoryLabel, mockLocale } from '../../../mocks/facets'
 import type { FacetCode, MockLocale } from '../../../mocks/facets'
 import { fromLatinLayout, hasWordPrefix, matches, normalize, suggest } from '../../utils/fuzzy'
@@ -12,6 +13,8 @@ const SINGLE_FACETS = ['brand', 'color', 'country', 'material'] as const
 const LIST_FACETS = ['memory', 'size'] as const
 
 export default defineEventHandler((event) => {
+  // Сотрудник ищет только в открытых ему категориях
+  const cards = visibleCards(event)
   const query = getQuery(event) as Record<string, string>
   const { q = '', page = '1', perPage = '6', sort = 'popular' } = query
   const locale = mockLocale(getHeader(event, 'accept-language'))
@@ -31,13 +34,13 @@ export default defineEventHandler((event) => {
   /** Запрос, по которому реально собрана выдача, если он отличается от введённого */
   let correctedTo: string | null = null
 
-  const strict = (value: string) => productCards.filter(p =>
+  const strict = (value: string) => cards.filter(p =>
     hasWordPrefix(searchTextOf(p), value) || p.slug.toLowerCase().includes(value),
   )
-  const fuzzy = (value: string) => productCards.filter(p => matches(value, searchTextOf(p)) || matches(value, p.slug))
+  const fuzzy = (value: string) => cards.filter(p => matches(value, searchTextOf(p)) || matches(value, p.slug))
 
   if (!needle) {
-    filtered = [...productCards]
+    filtered = [...cards]
   }
   else {
     filtered = strict(needle)
@@ -45,7 +48,7 @@ export default defineEventHandler((event) => {
     // Несколько слов («iphone 256») строгим вхождением фразы не находятся —
     // пословное сравнение без опечаток идёт раньше исправления раскладки
     if (!filtered.length && needle.includes(' '))
-      filtered = productCards.filter(p => needle.split(' ').every(part => hasWordPrefix(searchTextOf(p), part)))
+      filtered = cards.filter(p => needle.split(' ').every(part => hasWordPrefix(searchTextOf(p), part)))
 
     if (!filtered.length && !exact) {
       const relayout = normalize(fromLatinLayout(needle))
@@ -131,6 +134,13 @@ export default defineEventHandler((event) => {
   if (sort !== 'popular' || needle || categorySlug)
     filtered = filtered.sort(sorters[sort] ?? sorters.popular!)
 
+  // B2B: в общей ленте без запроса и раздела («Рекомендации» на главной) офисные
+  // товары идут первыми. Настоящий бэкенд подберёт порядок по ОКЭД покупателя.
+  if (sort === 'popular' && !needle && !categorySlug) {
+    const office = (p: Card) => p.facets?.categorySlug === 'ofis-i-kancelyariya'
+    filtered = [...filtered.filter(office), ...filtered.filter(p => !office(p))]
+  }
+
   // По запросу «Популярные» сначала идут товары, где запрос есть в самом
   // названии, потом — в названии их подкатегории: на «телефон» — смартфоны,
   // а не чехлы «для телефона»
@@ -151,7 +161,7 @@ export default defineEventHandler((event) => {
    * платьев, по которым в этой выдаче ноль.
    */
   const forFilters = (() => {
-    let base = productCards
+    let base = cards
     if (needle) {
       base = base.filter(p => hasWordPrefix(searchTextOf(p), needle)
         || p.slug.toLowerCase().includes(needle)
@@ -162,7 +172,7 @@ export default defineEventHandler((event) => {
       base = base.filter(p =>
         picked.includes(p.facets?.subcategorySlug ?? '') || picked.includes(p.facets?.categorySlug ?? ''))
     }
-    return base.length ? base : productCards
+    return base.length ? base : cards
   })()
 
   const result: SearchResult = {
@@ -174,7 +184,7 @@ export default defineEventHandler((event) => {
     filters: filtersFor(forFilters, locale, facetsOfCategory(categorySlug, picked)),
     correctedTo,
     // Подсказку считаем только когда показать нечего — иначе она мешает
-    suggestion: needle && !filtered.length ? suggest(needle, productCards.map(p => searchTextOf(p))) : null,
+    suggestion: needle && !filtered.length ? suggest(needle, cards.map(p => searchTextOf(p))) : null,
   }
 
   return ok(result)

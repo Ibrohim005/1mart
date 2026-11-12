@@ -14,7 +14,7 @@ const props = defineProps<{
   promoAmount?: number
   /** Цена доставки выбранным способом, тийины */
   delivery?: number
-  /** «Express 24», «Пункт выдачи» — чем везём */
+  /** «Курьер spotshop», «Пункт выдачи» — чем везём */
   deliveryLabel?: string
   /** Комиссия платежа — у 1mart 0, но строку показываем всегда */
   commission?: number

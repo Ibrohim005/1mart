@@ -114,7 +114,7 @@ async function loadMore() {
 
 .feed__grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px 16px;
 }
 

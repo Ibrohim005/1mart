@@ -1,4 +1,4 @@
-import { productsOfSeller, sellers } from '../../../mocks/data'
+import { isSellerShown, productsOfSeller, sellers } from '../../../mocks/data'
 
 /**
  * Продавец и его товары. Макет «Все товары продавца» (5082:124919):
@@ -9,7 +9,8 @@ export default defineEventHandler((event) => {
   const slug = String(getRouterParam(event, 'slug') ?? '')
   const seller = sellers.find(item => item.slug === slug)
 
-  if (!seller) {
+  // Скрытый от покупателей продавец для витрины не существует: та же 404, что и для неизвестного
+  if (!seller || !isSellerShown(slug)) {
     throw createError({ statusCode: 404, statusMessage: 'Seller not found' })
   }
 

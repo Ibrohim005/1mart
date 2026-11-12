@@ -234,6 +234,10 @@ useSeoMeta({ title: () => t('ui.account.ordersItem.seoTitle'), robots: 'noindex,
               <p class="detail__item-price">{{ money(item.price) }}</p>
               <p class="detail__item-title">{{ item.title }}</p>
               <p v-if="item.seller" class="detail__item-seller">{{ item.seller }}</p>
+              <p v-if="item.requestedBy" class="detail__item-seller detail__item-requester">
+                <UiIcon name="user" :size="16" color="currentColor" />
+                {{ $t('org.orders.requestedBy', { name: item.requestedBy }) }}
+              </p>
             </div>
 
             <div class="detail__item-side">
@@ -302,8 +306,16 @@ useSeoMeta({ title: () => t('ui.account.ordersItem.seoTitle'), robots: 'noindex,
 
         <section class="detail__block">
           <h3 class="detail__block-title">{{ $t('common.sposobOplaty') }}</h3>
+          <!-- B2B: кто в компании оформил (одобрил) заказ -->
+          <div v-if="order.placedBy" class="detail__row">
+            <UiIcon name="user" :size="26" />
+            <span class="detail__row-text">
+              <span class="detail__row-title">{{ order.placedBy }}</span>
+              <span class="detail__row-note">{{ $t('org.orders.placedHint') }}</span>
+            </span>
+          </div>
           <div class="detail__row">
-            <UiIcon name="card" :size="26" />
+            <UiIcon :name="order.paymentLabel?.includes('•') ? 'card' : 'wallet-3-fill'" :size="26" />
             <span class="detail__row-text">
               <span class="detail__row-title">{{ order.paymentLabel }}</span>
               <span v-if="order.paymentStatus" class="detail__row-note">{{ paymentStatusLabel(order.paymentStatus) }}</span>
@@ -418,7 +430,7 @@ useSeoMeta({ title: () => t('ui.account.ordersItem.seoTitle'), robots: 'noindex,
 /* Пройденный шаг — зелёный с подсветкой, как в макете */
 .detail__step--done .detail__step-mark {
   background: var(--color-brand);
-  box-shadow: 0 0 22px rgb(10 231 40 / 45%);
+  box-shadow: 0 0 22px rgb(11 143 42 / 45%);
 }
 
 .detail__step-line {
@@ -463,7 +475,7 @@ useSeoMeta({ title: () => t('ui.account.ordersItem.seoTitle'), robots: 'noindex,
   color: var(--color-on-brand);
 }
 
-.detail__action--primary:not(:disabled):hover { background: #0BC525; }
+.detail__action--primary:not(:disabled):hover { background: #097A24; }
 
 /* Отмена уходит вправо и звучит тише: рамка вместо заливки */
 .detail__action--danger {
@@ -630,4 +642,6 @@ useSeoMeta({ title: () => t('ui.account.ordersItem.seoTitle'), robots: 'noindex,
   height: var(--control-height);
   border-radius: var(--control-radius);
 }
+
+.detail__item-requester { display: flex; align-items: center; gap: 6px; }
 </style>

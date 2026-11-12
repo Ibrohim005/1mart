@@ -20,6 +20,10 @@ import type { PlacementResult } from '../../components/Success.vue'
 
 definePageMeta({ middleware: 'auth' })
 
+// Оформляет тот, кто одобряет заявки; сотрудник только заявляет — ему место в корзине
+const { can: canDo } = await useAccess()
+if (!canDo('requests.approve')) await navigateTo(useLocalePath()('/cart'), { replace: true })
+
 const { t } = useI18n()
 const { providerName } = use1mart()
 const cart = useCartStore()
@@ -104,7 +108,7 @@ function applyPromo(code: string) {
 /* ---------- Доставка и оплата ---------- */
 
 const deliveryType = ref<DeliveryType>('courier')
-const provider = ref<DeliveryProvider | null>('express24')
+const provider = ref<DeliveryProvider | null>('spotshop')
 const pickupPointId = ref<string | null>('pp1')
 
 const { data: cardList, refresh: refreshCards } = await useApiData<PaymentCardInfo[]>('checkout:cards', '/user/cards')

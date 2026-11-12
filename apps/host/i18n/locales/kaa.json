@@ -18,20 +18,20 @@
     "orderState": {
       "created": {
         "title": "Buyırtpa qabıl etildi",
-        "text": "Satıwshı buyırtpanı tastıyıqlaydı hám jıynawdı baslaydı"
+        "text": "Buyurtmani tasdiqlaymiz va yig'ishni boshlaymiz"
       },
       "paid": {
         "title": "Buyırtpa tólendi",
-        "text": "Satıwshı buyırtpanı tastıyıqlaydı hám jıynawdı baslaydı"
+        "text": "Buyurtmani tasdiqlaymiz va yig'ishni boshlaymiz"
       },
       "processing": {
         "title": "Buyırtpa jıynalmaqta",
-        "text": "Satıwshı buyırtpanı jiberiwge tayarlamaqta"
+        "text": "Buyurtmani jo'natishga tayyorlayapmiz"
       },
       "onTheWay": {
         "title": "Buyırtpa jolda",
         "text": "Shama menen jetkiziw — {date}",
-        "textNoDate": "Satıwshı baylanısıp, jetkiziw kúnin anıqlaydı"
+        "textNoDate": "spotshop kuryeri bog'lanib, yetkazish sanasini aniqlaydi"
       },
       "readyForPickup": {
         "title": "Alıp ketiwge tayın",
@@ -223,7 +223,7 @@
       },
       "ordersItem": {
         "detaliDostavki": "Jetkiziw tolıq maǵlıwmatları",
-        "kurerIliProdavec": "Kuryer yamasa satıwshı",
+        "kurerIliProdavec": "spotshop kuryeri",
         "kureromAdresu": "Kuryer arqalı mánzilge",
         "obschayaStoimost": "Ulıwma qunı",
         "pomosch": "Járdem",
@@ -352,7 +352,7 @@
         "anonimnyyOtzyv": "Anonim pikir",
         "drugimPokupatelyamOchenNuzhen": "Basqa xarıdarlarǵa tolıq pikir kerek — ne unaǵanın jazıń",
         "nedostatki": "Kemshilikler",
-        "obyazatelnoUchtemOcenkuDostavki": "Jetkiziw hám xızmet bahasın álbette esapqa alamız — ol satıwshı reytingine tásir etedi",
+        "obyazatelnoUchtemOcenkuDostavki": "Yetkazish va xizmat bahosini albatta hisobga olamiz — u bilan xizmatni yaxshilaymiz",
         "ostavitOtzyv": "Pikir qaldırıw",
         "otpravitOtzyv": "Pikirdi jiberiw",
         "preimuschestva": "Artıqmashılıqlar",
@@ -435,13 +435,13 @@
         "contactBody": "Járdem xızmetine múrájat etiń — jumıs kúni dawamında juwap beremiz.",
         "complaintBody": "Buyırtpa yamasa satıwshı menen baylanıslı máseleni jazıń — múrájattı kórip shıǵamız.",
         "chatBody": "Járdem menen chat 9:00 den 21:00 ge shekem isleydi.",
-        "deliveryBody": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali yoki spotshop topshirish punktiga yetkazamiz.",
+        "deliveryBody": "O'z spotshop kuryerlarimiz orqali yoki spotshop topshirish punktiga yetkazamiz.",
         "termsConditionsBody": "spotshop marketpleysidan foydalanish shartlari.",
         "aboutH1": "spotshop nima",
         "aboutP1_1": "spotshop — kompaniyalar uchun B2B marketpleys. Platforma operatori — «Octagram» AJ, Toshkent.",
         "aboutP1_2": "Bu yerda butun O'zbekistondan tekshirilgan sotuvchilarning elektronika, maishiy texnika, kiyim, poyabzal, uy, go'zallik, sport va bolalar uchun mahsulotlari bor.",
         "aboutH2": "Bu qanday ishlaydi",
-        "aboutP2_1": "Mahsulotni tanlang, savatga qo'shing va buyurtma bering. Express 24, Maxsus Courier yoki Yandex Delivery kuryeri yetkazib beradi — yoki buyurtmani topshirish punktidan oling.",
+        "aboutP2_1": "Mahsulotni tanlang, savatga qo'shing va buyurtma bering. spotshop kuryeri yetkazib beradi — yoki buyurtmani topshirish punktidan oling.",
         "aboutP2_2": "Kompaniyalar buyurtmalarni saytdagi balansdan, u hisob raqamidan o'tkazma orqali to'ldiriladi, yoki korporativ karta bilan to'laydi. Summa band qilinadi va buyurtma tasdiqlangach, sotuvchining hisob raqamiga o'tkaziladi.",
         "aboutH3": "Xarid xavfsizligi",
         "aboutP3_1": "Har bir sotuvchi hujjatlar tekshiruvidan o'tadi, xaridorlarning baholari va sharhlari mahsulot sahifasida ko'rinadi.",
@@ -473,7 +473,7 @@
         "helpP1_1": "Buyırtpa halatı «Meniń buyırtpalarım» bóliminde kórinedi. Sol jerde nomer, sáne, quram hám summa da bar.",
         "helpP1_2": "Buyırtpanı jetkiziwge tapsırılmaǵansha biykar etiw múmkin — tuyme buyırtpa kartochkasında shıǵadı.",
         "helpH2": "Jetkiziw",
-        "helpP2_1": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali, shuningdek spotshop topshirish punktlariga yetkazamiz. Muddat mahsulot kartochkasida ko'rsatilgan.",
+        "helpP2_1": "O'z spotshop kuryerlarimiz orqali, shuningdek spotshop topshirish punktlariga yetkazamiz. Muddat mahsulot kartochkasida ko'rsatilgan.",
         "helpP2_2": "Kuryer waqıttı anıqlaw ushın jolǵa shıǵıwdan aldın baylanısadı.",
         "helpH3": "Tólem hám qaytarıw",
         "helpP3_1": "Kompaniya balansidan yoki korporativ karta bilan to'lov.",
@@ -481,7 +481,7 @@
         "helpH4": "Juwap tappadıńız ba",
         "helpP4_1": "«Bizge jazıw» betindegi forma arqalı múrájat etiń — jumıs kúni dawamında juwap beremiz.",
         "deliveryH1": "Kuryer orqali yetkazib berish",
-        "deliveryP1_1": "Buyurtmalarni Express 24, Maxsus Courier va Yandex Delivery kuryerlari yetkazib beradi. Toshkent bo'ylab — bir kundan, viloyatlarga — 2–5 kun. Kuryer kelishdan oldin qo'ng'iroq qiladi.",
+        "deliveryP1_1": "Buyurtmalarni spotshop'ning o'z kuryerlari yetkazib beradi. Toshkent bo'ylab — bir kundan, viloyatlarga — 2–5 kun. Kuryer kelishdan oldin qo'ng'iroq qiladi.",
         "deliveryH2": "Topshirish punktlari",
         "deliveryP2_1": "spotshop topshirish punktiga yetkazib berish bepul. Buyurtma 7 kun saqlanadi; qabul qilishda mahsulot va uning to'liqligini tekshiring.",
         "deliveryH3": "Agar yetkazib berish kechiksa",
@@ -622,7 +622,7 @@
             },
             "delWho": {
               "q": "Buyurtmani kim yetkazib beradi",
-              "a": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari. spotshop topshirish punktini ham tanlash mumkin - bu bepul."
+              "a": "spotshop'ning o'z kuryerlari. spotshop topshirish punktini ham tanlash mumkin - bu bepul."
             },
             "delTime": {
               "q": "Yetkazib berish qancha davom etadi",
@@ -658,7 +658,7 @@
           "intro": "O'zbekiston bo'ylab kuryer orqali yoki spotshop topshirish punktiga yetkazib beramiz.",
           "courier": {
             "title": "Kuryer orqali",
-            "fact1": "Express 24, Maxsus Courier yoki Yandex Delivery",
+            "fact1": "spotshop'ning o'z kuryerlari",
             "fact2": "Toshkent bo'ylab - bir kundan, viloyatlarga - 2-5 kun",
             "fact3": "Kuryer kelishdan oldin qo'ng'iroq qiladi"
           },
@@ -675,7 +675,7 @@
           },
           "step2": {
             "title": "Tasdiqlash",
-            "text": "Summa band qilingan, sotuvchi buyurtmani tasdiqlaydi."
+            "text": "Summa band qilindi, biz buyurtmani tasdiqlaymiz."
           },
           "step3": {
             "title": "Yetkazib berishga topshirish",
@@ -706,12 +706,12 @@
     },
     "checkout": {
       "checkout": {
-        "dostavkaProdavca": "Satıwshı jetkiziwi",
+        "dostavkaProdavca": "spotshop yetkazib berishi",
         "oplataProshla": "Tólem ótti",
         "oshibkaPriOplate": "Tólemde qátelik",
         "zakazOzhidanii": "Buyırtpa kútilmekte",
         "vypolnenieProshedsheeProsmotretSvoy": "Buyırtpańızdı «Meniń buyırtpalarım» bóliminde kóriwińiz múmkin",
-        "ozhidaemOplatuKakTolko": "Tólemdi kútpektemiz. Ol ótiwi menen buyırtpa satıwshıǵa jiberiledi",
+        "ozhidaemOplatuKakTolko": "To'lovni kutyapmiz. U o'tishi bilan buyurtmani yig'ishni boshlaymiz",
         "priObrabotkePlatezhaProizoshla": "Tólemdi qayta islewde qátelik júz berdi. Qayta urınıp kóriń",
         "addressEmpty": "Mánzil qosıń",
         "addressMapPoint": "Kartadaǵı noqat {lat}, {lng}",
@@ -723,7 +723,7 @@
       },
       "deliveryCard": {
         "kakRabotaetDostavkaProdavca": "Yetkazib berish qanday ishlaydi",
-        "prodavecSvyazhetsyaChtobyUtochnit": "Satıwshı jetkiziw sánesin hám waqtın anıqlaw ushın baylanısadı",
+        "prodavecSvyazhetsyaChtobyUtochnit": "spotshop kuryeri yetkazish sanasi va vaqtini aniqlash uchun bog'lanadi",
         "vybratDrugoy": "Basqasın saylaw"
       },
       "orderSummary": {
@@ -738,7 +738,7 @@
         "promoLabel": "{code} promokodı",
         "youHavePromos": "Sizde {count} {word}",
         "deliveryUnavailable": "múmkin emes",
-        "deliveryBlockedNote": "{sellers} bul mánzilge jetkizbeydi. Basqa mánzil saylań yamasa onıń tovarların buyırtpadan alıp taslań."
+        "deliveryBlockedNote": "Ba'zi mahsulotlarni bu manzilga yetkazmaymiz. Boshqa manzilni tanlang yoki bu mahsulotlarni buyurtmadan olib tashlang."
       }
     },
     "host": {
@@ -787,7 +787,7 @@
         "openPhoto": "Súwretti ashıw",
         "openPhotoOf": "{author} xarıdardıń súwreti",
         "photoDialog": "Pikirdegi súwret",
-        "sellerReply": "Sotuvchi javobi"
+        "sellerReply": "spotshop javobi"
       },
       "sellerCard": {
         "drugieProdukty": "Basqa tovarlar",
@@ -824,7 +824,7 @@
     "searchTitle": "{query} — izlew"
   },
   "pdp": {
-    "buyersThisWeek": "Bul hápte {count} adam satıp aldı",
+    "buyersThisWeek": "Haftalik buyurtmalar: {count}",
     "otherOptions": "Basqa variantlar",
     "boughtTogether": "Bular menen de satıp aladı",
     "similarProducts": "Uqsas tovarlar",

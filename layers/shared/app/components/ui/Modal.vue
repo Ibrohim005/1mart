@@ -14,6 +14,8 @@ const props = defineProps<{
    * поэтому значение задаётся окном, а не одним общим числом.
    */
   bodyPadding?: string
+  /** Ширина панели, если содержимому тесно в стандартных 586 (формы кабинета компании) */
+  width?: string
 }>()
 const emit = defineEmits<{ 'update:modelValue': [boolean] }>()
 
@@ -36,7 +38,7 @@ useDialog(toRef(props, 'modelValue'), { panel, onClose: close })
         aria-modal="true"
         :aria-label="title"
         tabindex="-1"
-        :style="bodyPadding ? { '--dialog-body-padding': bodyPadding } : undefined"
+        :style="{ ...(bodyPadding ? { '--dialog-body-padding': bodyPadding } : {}), ...(width ? { '--dialog-width': width } : {}) }"
       >
         <header v-if="!hideHeader" class="dialog__header">
           <h2 class="dialog__title">{{ title }}</h2>
@@ -67,10 +69,12 @@ useDialog(toRef(props, 'modelValue'), { panel, onClose: close })
 
 .dialog {
   width: var(--dialog-width);
+  /* Высокая форма не уходит за край экрана, а прокручивается внутри окна */
+  max-height: calc(100vh - 48px);
   outline: none;
   border-radius: var(--dialog-radius);
   background: var(--color-surface);
-  overflow: hidden;
+  overflow-y: auto;
 }
 
 .dialog__header {

@@ -1,3 +1,4 @@
+import { membership } from '../../utils/org-state'
 import { mockStatus } from '../../utils/mock-status'
 import { companyDetails } from '../../utils/balance-state'
 
@@ -26,5 +27,8 @@ export default defineEventHandler(async (event) => {
     return fail(errors)
   }
 
+  // Название и ИНН общие с разделом «Компания»
+  const org = membership(event)?.state.company
+  if (org) Object.assign(org, { name: next.name, inn: next.inn })
   return ok(Object.assign(companyDetails(event), next))
 })

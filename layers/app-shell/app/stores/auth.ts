@@ -3,6 +3,8 @@ import { defineStore } from 'pinia'
 export interface AuthUser {
   phone: string
   name: string
+  /** Сотрудник вошёл с временным паролем от руководителя — просим задать свой */
+  mustChangePassword?: boolean
 }
 
 /**
@@ -92,6 +94,11 @@ export const useAuthStore = defineStore('auth', () => {
   const pendingName = ref('')
   /** Восстановление: бэкенд меняет пароль по этому токену, а не по коду. */
   const resetToken = ref('')
+  /**
+   * Зачем открыт диалог нового пароля: последний шаг восстановления или первый
+   * вход сотрудника с временным паролем, который ему выдал руководитель.
+   */
+  const passwordPurpose = ref<'recover' | 'firstLogin'>('recover')
 
   function closeAll() {
     isAuthOpen.value = false
@@ -285,11 +292,41 @@ export const useAuthStore = defineStore('auth', () => {
       const user = await client().post<AuthUser>('/auth/login', { phone, password })
       cookie.value = { phone: user.phone || phone, name: user.name || '' }
       closeAll()
+      if (user.mustChangePassword) askOwnPassword()
       return null
     }
     catch (error) {
       return errorText(error, 'Kirishda xatolik')
     }
+  }
+
+  /** Первый вход по временному паролю: сразу просим придумать свой */
+  function askOwnPassword() {
+    passwordPurpose.value = 'firstLogin'
+    isNewPasswordOpen.value = true
+  }
+
+  /** Свой пароль вместо временного (сеанс уже открыт) */
+  async function changeOwnPassword(password: string): Promise<string | null> {
+    try {
+      await client().post('/auth/password/change', { password })
+      isNewPasswordOpen.value = false
+      passwordPurpose.value = 'recover'
+      isPasswordDoneOpen.value = true
+      return null
+    }
+    catch (error) {
+      return errorText(error, 'Parolni saqlashda xatolik')
+    }
+  }
+
+  /**
+   * Сеанс после OneID / ЭЦП: регистрация компании или вход руководителя
+   * уже зарегистрированной. Сервер отдаёт телефон и имя для шапки.
+   */
+  function openSession(user: AuthUser) {
+    cookie.value = { phone: user.phone, name: user.name }
+    closeAll()
   }
 
   async function logout() {
@@ -329,6 +366,10 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   return {
+    passwordPurpose,
+    askOwnPassword,
+    changeOwnPassword,
+    openSession,
     user,
     isLoggedIn,
     isAuthOpen,

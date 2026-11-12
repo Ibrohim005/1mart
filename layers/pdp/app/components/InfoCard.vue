@@ -19,8 +19,9 @@ const props = defineProps<{
  * Данные приходят с прежними именами (return, seal-check, card, truck),
  * поэтому сопоставляем их здесь, не трогая API.
  */
+// Все иконки строк — залитые (Bold), как в остальной витрине
 const ICONS: Record<string, string> = {
-  'return': 'rotate-left',
+  'return': 'box-fill',
   'seal-check': 'shield-tick-fill',
   'card': 'card-fill',
   'truck': 'truck-fill',

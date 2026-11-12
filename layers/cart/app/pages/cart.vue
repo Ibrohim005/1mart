@@ -4,6 +4,7 @@
  * Пустое состояние — отдельный фрейм того же экрана.
  */
 import type { Banner, Id, ProductCard } from '#shared/types/catalog'
+import type { CartGroup, CartItem } from '#shared/types/cart'
 const { t } = useI18n()
 
 const cart = useCartStore()
@@ -51,8 +52,8 @@ const allSelected = computed(() =>
 )
 
 function toggleAll() {
-  const skuIds = (cart.detail?.items ?? []).map(item => item.skuId)
-  return cart.setSelected(skuIds, !allSelected.value)
+  const lineIds = (cart.detail?.items ?? []).map(item => item.id)
+  return cart.setSelected(lineIds, !allSelected.value)
 }
 
 // «В избранное» из корзины: товар уезжает в раздел избранного и уходит из корзины
@@ -106,20 +107,48 @@ async function toFavorites(productId: Id, next: boolean) {
  * setQuantity(…, 0), а тост с отменой показывал только отдельный крестик:
  * два пути удаления, отмена у одного. Теперь путь один.
  */
-function changeQuantity(skuId: Id, quantity: number) {
-  if (quantity <= 0) return removeItem(skuId)
-  return cart.setQuantity(skuId, quantity)
+function changeQuantity(item: CartItem, quantity: number) {
+  if (quantity <= 0) return removeItem(item)
+  return cart.setQuantity(item.skuId, quantity, item.id)
 }
 
-async function removeItem(skuId: Id) {
-  // Запоминаем количество до удаления, чтобы вернуть строку в прежнем виде
-  const quantity = cart.quantityOf(skuId) || 1
-  await cart.removeItem(skuId)
+/** Чужая заявка — её убирает закупщик; вернуть её «от себя» нельзя, поэтому без отмены */
+const isMine = (item: CartItem) => !item.requestedBy || item.requestedBy.employeeId === access.value?.employee.id
+
+async function removeItem(item: CartItem) {
+  await cart.removeItem(item.skuId, item.id)
+  if (!isMine(item)) {
+    toast.show(t('org.cart.requestRemoved', { name: item.requestedBy!.fullName }))
+    return
+  }
+  // Количество до удаления — чтобы вернуть строку в прежнем виде
+  const quantity = item.quantity || 1
   toast.show(t('ui.cart.cart.tovarUdalenKorziny'), 'success', {
     label: t('common.undo'),
-    run: () => { cart.addItem(skuId, quantity) },
+    run: () => { cart.addItem(item.skuId, quantity) },
   })
 }
+
+/* ---------- Заявки сотрудников ---------- */
+
+const { access } = useAccessState()
+const { roleTitle } = useOrgLabels()
+const { money } = useMoney()
+
+/** Подпись группы: у закупщика группа — заявки одного человека (имя, роль, отдел, сумма) */
+function groupLabel(group: CartGroup) {
+  const author = group.items[0]?.requestedBy
+  if (!author) return { title: group.title, kicker: group.kicker, total: '' }
+  const total = group.items.reduce((acc, item) => acc + item.price.amount * item.quantity, 0)
+  return {
+    title: author.fullName,
+    kicker: [roleTitle(author), author.departmentTitle].filter(Boolean).join(' · '),
+    total: money({ amount: total, currency: 'UZS' }),
+  }
+}
+
+/** Сотрудник без права оформлять: его корзина — это его заявки */
+const isRequester = computed(() => (cart.detail ? !cart.detail.canCheckout : false))
 
 // Диалоги оформления из макета: адреса (Location), карты (Card), промокоды (Procode)
 const openModal = ref<'address' | 'address-details' | 'cards' | 'promo' | null>(null)
@@ -160,7 +189,7 @@ useSeoMeta({ title: () => t('ui.cart.cart.seoTitle'), robots: 'noindex, nofollow
 
       <!-- У пустой корзины заголовок свой -->
       <h1 v-if="loading || !isEmpty" class="cart__title">
-        {{ $t('breadcrumbs.cart') }}
+        {{ isRequester ? $t('org.cart.myRequests') : $t('breadcrumbs.cart') }}
         <span v-if="itemsTotal" class="cart__count">{{ $t('common.itemsCount', { count: itemsTotal, word: $t('common.tovar', itemsTotal) }) }}</span>
       </h1>
 
@@ -193,9 +222,10 @@ useSeoMeta({ title: () => t('ui.cart.cart.seoTitle'), robots: 'noindex, nofollow
           >
             <header class="cart__group-header">
               <div>
-                <p class="cart__group-name">{{ group.title }}</p>
-                <p class="cart__group-kicker">{{ group.kicker }}</p>
+                <p class="cart__group-name">{{ groupLabel(group).title }}</p>
+                <p class="cart__group-kicker">{{ groupLabel(group).kicker }}</p>
               </div>
+              <span v-if="groupLabel(group).total" class="cart__group-total">{{ groupLabel(group).total }}</span>
             </header>
 
             <CartItem
@@ -203,9 +233,9 @@ useSeoMeta({ title: () => t('ui.cart.cart.seoTitle'), robots: 'noindex, nofollow
               :key="item.id"
               :item="item"
               :favorite="favoriteIds.has(item.productId)"
-              @quantity="changeQuantity(item.skuId, $event)"
-              @select="cart.setSelected([item.skuId], $event)"
-              @remove="removeItem(item.skuId)"
+              @quantity="changeQuantity(item, $event)"
+              @select="cart.setSelected([item.id], $event)"
+              @remove="removeItem(item)"
               @favorite="toFavorites(item.productId, $event)"
             />
           </section>
@@ -224,9 +254,9 @@ useSeoMeta({ title: () => t('ui.cart.cart.seoTitle'), robots: 'noindex, nofollow
               :key="item.id"
               :item="item"
               :favorite="favoriteIds.has(item.productId)"
-              @quantity="changeQuantity(item.skuId, $event)"
-              @select="cart.setSelected([item.skuId], $event)"
-              @remove="removeItem(item.skuId)"
+              @quantity="changeQuantity(item, $event)"
+              @select="cart.setSelected([item.id], $event)"
+              @remove="removeItem(item)"
               @favorite="toFavorites(item.productId, $event)"
             />
           </section>
@@ -457,4 +487,6 @@ useSeoMeta({ title: () => t('ui.cart.cart.seoTitle'), robots: 'noindex, nofollow
 }
 
 .cart__recommendation-chevron { font-size: var(--text-4xl); color: var(--color-text); }
+
+.cart__group-total { flex: none; font-weight: 600; font-size: var(--text-base); color: var(--color-text); }
 </style>

@@ -159,7 +159,11 @@ export interface Product extends ProductCard {
   images: ProductImage[]
   attributes: Attribute[]
   skus: Sku[]
-  seller: Seller
+  /**
+   * Продавец товара или null — покупателю его не показывают. По умолчанию площадка
+   * скрывает продавца: продаёт и доставляет spotshop. Показ включают в админке.
+   */
+  seller: Seller | null
   categoryPath: Array<Pick<Category, 'id' | 'slug' | 'title'>>
   ratingBreakdown: Record<1 | 2 | 3 | 4 | 5, number>
   /** Группы выбора: цвет, память, размер */
@@ -249,7 +253,8 @@ export interface SearchResult extends Paged<ProductCard> {
 
 /* --- Баннеры главной --- */
 
-export type BannerTone = 'orange' | 'violet'
+/** Подложка слайда. brand и slate — строгие деловые фоны B2B-витрины */
+export type BannerTone = 'orange' | 'violet' | 'brand' | 'slate'
 
 export interface Banner {
   id: number
@@ -267,6 +272,11 @@ export interface Banner {
   image: string | null
   /** Она же для ряда промо-баннеров, 529×214 */
   imageSmall: string | null
+  /**
+   * cutout — вырезанный товар без фона, ставится прямо на градиент (по умолчанию);
+   * photo — снимок со своим фоном, показывается скруглённой фото-плиткой
+   */
+  imageKind?: 'cutout' | 'photo'
   /** Описание для поисковиков и скринридеров: текст в картинку впечатан */
   description: string
 }

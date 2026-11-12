@@ -64,12 +64,11 @@ async function change(delta: number) {
   pending.value = true
   try {
     const next = quantity.value + delta
+    // false — сервер отказал (категория отдела, лимит), причину корзина уже показала
     if (!quantity.value) {
-      await cart.addItem(skuId.value, 1)
-      toast.show(t('ui.shared.productCard.addedToCart'))
+      if (await cart.addItem(skuId.value, 1)) toast.show(t('ui.shared.productCard.addedToCart'))
     }
-    else {
-      await cart.setQuantity(skuId.value, Math.max(0, next))
+    else if (await cart.setQuantity(skuId.value, Math.max(0, next))) {
       if (next <= 0) toast.show(t('ui.shared.productCard.removedFromCart'))
     }
   }
@@ -228,7 +227,7 @@ const reviewsLabel = computed(() => t('ui.shared.productCard.reviewsCount', {
      в названии раздвигало колонку и ломало ряд. */
   min-width: 0;
   padding: calc(6 * var(--u)) calc(6 * var(--u)) calc(8 * var(--u));
-  border-radius: calc(16 * var(--u));
+  border-radius: calc(8 * var(--u));
   /* Белая подложка: карточка одинаково читается и на белой главной,
      и на сером фоне каталога */
   background: var(--color-surface);
@@ -243,7 +242,7 @@ const reviewsLabel = computed(() => t('ui.shared.productCard.reviewsCount', {
   position: relative;
   display: block;
   aspect-ratio: 1 / 1;
-  border-radius: calc(12 * var(--u));
+  border-radius: calc(6 * var(--u));
   overflow: hidden;
   background: #F4F5F7;
 }
@@ -439,7 +438,7 @@ const reviewsLabel = computed(() => t('ui.shared.productCard.reviewsCount', {
   margin-top: auto;
   padding-inline: calc(12 * var(--u));
   border: 0;
-  border-radius: calc(10 * var(--u));
+  border-radius: calc(6 * var(--u));
   /* Спокойная нейтральная кнопка: сплошной зелёный на каждой карточке спорил с фото
      и ценой. Заливка брендом появляется только у карточки под курсором. */
   background: var(--color-field);
@@ -470,7 +469,7 @@ const reviewsLabel = computed(() => t('ui.shared.productCard.reviewsCount', {
   height: calc(36 * var(--u));
   margin-top: auto;
   padding: calc(3 * var(--u));
-  border-radius: calc(10 * var(--u));
+  border-radius: calc(6 * var(--u));
   background: var(--color-field);
 }
 
@@ -480,7 +479,7 @@ const reviewsLabel = computed(() => t('ui.shared.productCard.reviewsCount', {
   width: calc(30 * var(--u));
   height: calc(30 * var(--u));
   border: 0;
-  border-radius: calc(8 * var(--u));
+  border-radius: calc(4 * var(--u));
   background: var(--color-surface);
   color: var(--color-navy);
   cursor: pointer;

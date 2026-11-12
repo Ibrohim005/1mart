@@ -244,7 +244,7 @@
     "orders": {
       "title": "Buyurtmalar",
       "subtitle": "Xaridorlar buyurtmalarini qayta ishlash va kuzatish",
-      "searchPlaceholder": "Raqam yoki xaridor bo'yicha qidirish",
+      "searchPlaceholder": "Buyurtma raqami bo'yicha qidirish",
       "filterStatus": "Holat",
       "colNumber": "Buyurtma",
       "colDate": "Sana",
@@ -304,7 +304,13 @@
         "cannotShip": "Muddatida jo'nata olmaymiz",
         "buyerRequest": "Xaridor iltimosi",
         "other": "Boshqa"
-      }
+      },
+      "platformBuyer": "spotshop",
+      "platformBuyerText": "Buyurtma platforma orqali berilgan. Xaridorni spotshop biladi: u buyurtmani o'z kuryerlari bilan yetkazadi, sizga tovarni topshirish kifoya.",
+      "handover": "Tovarni topshirish",
+      "handoverCourier": "spotshop kuryeri olib ketadi",
+      "handoverDropOff": "spotshop omboriga olib keling",
+      "handoverUntil": "{date} gacha topshiring"
     },
     "customers": {
       "title": "Xaridorlar",
@@ -487,7 +493,7 @@
       "errPhone": "Telefon raqamini tekshiring",
       "rolesTitle": "Rollar va huquqlar",
       "roleDescOwner": "Barcha bo'limlar va moliyaga to'liq kirish.",
-      "roleDescManager": "Mahsulot, buyurtma va xaridorlar; to'lovlarga kirishsiz.",
+      "roleDescManager": "Mahsulot, buyurtma va sharhlar; to'lovlarga kirishsiz.",
       "roleDescStorekeeper": "Qoldiqlar va buyurtmalarni yig'ish.",
       "roleDescAccountant": "Moliya, hujjatlar va to'lovlar.",
       "roleDescViewer": "Faqat hisobot va tahlilni ko'rish."
@@ -569,7 +575,7 @@
       "errEmpty": "Javob yozing",
       "empty": "Sharhlar yo'q",
       "emptyText": "Mahsulotlaringiz haqidagi xaridorlar sharhlari shu yerda paydo bo'ladi.",
-      "note": "Javobingizni xaridorlar ko'radi. Agar sharh qoidalarni buzsa, {email} manziliga yozing."
+      "note": "Xaridorlar javobni spotshop nomidan ko'radi. Agar sharh qoidalarni buzsa, {email} manziliga yozing."
     }
   },
   "auth": {
@@ -584,7 +590,7 @@
     "signingIn": "Kirmoqda…",
     "aside": {
       "title": "Biznesga bitta kabinetdan soting",
-      "b1": "Buyurtmalar, xaridorlar va hujjatlar bir joyda",
+      "b1": "Buyurtmalar, mahsulotlar va hujjatlar bir joyda",
       "b2": "Balans, komissiyalar va kompaniya hisobiga to'lovlar",
       "b3": "Xodimlar bilan ishlash va qo'llab-quvvatlashga murojaatlar",
       "mockTitle": "Buyurtmalar",
@@ -694,7 +700,7 @@
       "item2Title": "Shaffof moliya",
       "item2Text": "Balans, komissiya va to'lovlar real vaqtda ko'rinadi — yashirin ushlovlarsiz.",
       "item3Title": "Qulay kabinet",
-      "item3Text": "Mahsulot, buyurtma, xaridor va tahlil bitta ish muhitida.",
+      "item3Text": "Mahsulot, buyurtma, sharh va tahlil bitta ish muhitida.",
       "item4Title": "Kompaniya hisobiga to'lovlar",
       "item4Text": "Mablag'ni to'liq hujjatlar bilan hisob raqamiga yechish.",
       "item5Title": "Hujjatlar bilan ishlash",
@@ -1161,7 +1167,7 @@
       "f1": "Buyurtma va sotib olishlarni kuzating",
       "f2": "Balansni kompaniya hisobiga chiqaring",
       "f3": "Asosiy ko'rsatkichlarni kuzating",
-      "f4": "Xaridorlarga chatda javob bering",
+      "f4": "Sharh va murojaatlarga javob bering",
       "download": "Ilovani yuklab olish",
       "note": "Ilovani o'rnatish uchun telefon kamerasini yo'naltiring",
       "soonTitle": "Sotuvchilar uchun mobil ilova tez orada",

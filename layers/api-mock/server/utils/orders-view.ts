@@ -2,7 +2,8 @@ import type { MockEvent } from './visitor'
 import type { OrderSeed } from './orders-state'
 import { orderProducts } from './orders-state'
 import { paymentMethodLabel } from './cards-state'
-import { sellerFor } from '../../mocks/data'
+import { publicSellerFor } from '../../mocks/data'
+import type { RolePreset, Requester } from '#shared/types/company'
 import type { OrderCard, OrderStatus, OrderStatusEvent, PaymentReceipt } from '#shared/types/order'
 
 /**
@@ -156,17 +157,35 @@ function historyFor(seed: OrderSeed): OrderStatusEvent[] {
   return seed.history.map(item => ({ status: item.status, at: mockStampOf(item.at) }))
 }
 
+/** Названия готовых ролей; своя роль подписывается так, как её назвал руководитель */
+const ROLE_TITLES: Record<string, Record<RolePreset, string>> = {
+  ru: { owner: 'Руководитель', purchaser: 'Закупщик', accountant: 'Бухгалтер', requester: 'Сотрудник' },
+  uz: { owner: 'Rahbar', purchaser: 'Xarid mutaxassisi', accountant: 'Buxgalter', requester: 'Xodim' },
+  'uz-cyrl': { owner: 'Раҳбар', purchaser: 'Харид мутахассиси', accountant: 'Бухгалтер', requester: 'Ходим' },
+  en: { owner: 'Head', purchaser: 'Purchaser', accountant: 'Accountant', requester: 'Employee' },
+}
+
+/** «Иванова Анна · Бухгалтер» — кто заявил позицию */
+function requesterLabel(requester: Requester | null, lang: string) {
+  if (!requester) return undefined
+  const role = requester.rolePreset ? (ROLE_TITLES[lang] ?? ROLE_TITLES.ru!)[requester.rolePreset] : requester.roleTitle
+  return `${requester.fullName} · ${role}`
+}
+
 export function toOrderCard(event: MockEvent, seed: OrderSeed): OrderCard {
   const products = orderProducts(seed)
 
-  const items = products.map(product => ({
+  const lang = langOf(event)
+  const items = products.map((product, position) => ({
     id: product.id,
     title: product.title,
     image: product.image,
     quantity: product.quantity,
     price: product.price,
-    seller: sellerFor(product.id).title,
+    // Пусто, если площадка скрывает продавца от покупателя
+    seller: publicSellerFor(product.id)?.title ?? '',
     badge: statusLabel(event, seed.status),
+    requestedBy: requesterLabel(seed.requesters?.[position] ?? null, lang),
   }))
 
   return {
@@ -185,6 +204,8 @@ export function toOrderCard(event: MockEvent, seed: OrderSeed): OrderCard {
     canceledReason: seed.canceledReason,
     paymentStatus: seed.paymentStatus,
     tracking: seed.trackingNumber ? { provider: seed.provider, number: seed.trackingNumber } : undefined,
+    placedBy: requesterLabel(seed.placedBy ?? null, lang),
+    paymentMethod: paymentMethodLabel(event, seed.cardId),
   }
 }
 

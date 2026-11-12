@@ -1,0 +1,305 @@
+{
+  "org": {
+    "auth": {
+      "orHead": "Kompaniya rahbari",
+      "oneId": "OneID orqali",
+      "eimzo": "ERI kaliti bilan",
+      "noCompany": "Kompaniyangiz hali spotshop'da yo'qmi?",
+      "registerCompany": "Ro'yxatdan o'tkazish",
+      "ownPasswordTitle": "O'z parolingizni o'ylab toping",
+      "ownPasswordHint": "Siz rahbar bergan vaqtinchalik parol bilan kirdingiz. O'zingiznikini kiriting: kamida 8 belgi, harf va raqamlar."
+    },
+    "cart": {
+      "categoryForbidden": "Bu bo'lim sizning bo'limingizga ochilmagan. Rahbardan uni ochishni so'rang.",
+      "limitExceeded": "Oylik ariza limiti oshib ketdi. Qoldi: {left}",
+      "requestsForbidden": "Rolingiz tovar so'rashga ruxsat bermaydi",
+      "approveAndOrder": "Tasdiqlash va rasmiylashtirish",
+      "fromPeople": "Xodimlar arizalari: {count}",
+      "requesterTitle": "Bu sizning arizalaringiz",
+      "requesterText": "Kompaniya xarid mutaxassisi ularni ismingiz bilan ko'radi, ortiqchasini olib tashlaydi va buyurtma beradi. Holati — «Buyurtmalarim»da.",
+      "limitLeft": "Oylik limit: {sum} qoldi",
+      "requestRemoved": "{name} arizasi buyurtmadan olib tashlandi",
+      "myRequests": "Mening arizalarim"
+    },
+    "orders": {
+      "requestedBy": "Ariza: {name}",
+      "requests": "Arizalar",
+      "placedBy": "Rasmiylashtirdi: {name}",
+      "placed": "Rasmiylashtirdi",
+      "paidWith": "To'lov",
+      "placedHint": "Kompaniyada buyurtmani rasmiylashtirgan va tasdiqlagan"
+    },
+    "home": {
+      "requestsTitle": "Bo'lim uchun xaridlar",
+      "requestsText": "Bo'lim bo'limlaridan keraklisini so'rang — kompaniya xarid mutaxassisi buyurtma beradi"
+    },
+    "pdp": {
+      "returnsDocs": "Qaytarish va hujjatlar",
+      "requestHint": "Tovar kompaniyangiz xarid mutaxassisiga ariza bo'lib ketadi"
+    },
+    "common": {
+      "cancel": "Bekor qilish",
+      "save": "Saqlash",
+      "errorGeneric": "Bo'lmadi. Qayta urinib ko'ring."
+    },
+    "roles": {
+      "preset": {
+        "owner": "Rahbar",
+        "purchaser": "Xarid mutaxassisi",
+        "accountant": "Buxgalter",
+        "requester": "Xodim"
+      },
+      "presetText": {
+        "owner": "Hammasi: xodimlar, rollar, bo'limlar, balans, buyurtmalarni tasdiqlash",
+        "purchaser": "Barchaning arizalarini ko'radi, tahrirlaydi va buyurtma beradi",
+        "accountant": "Balans va hujjatlar, arizalarni tasdiqlaydi",
+        "requester": "O'z bo'limi bo'limlaridan tovarlarni so'raydi"
+      },
+      "customText": "Maxsus rol · huquqlar: {count}"
+    },
+    "permissions": {
+      "catalog_all": {
+        "title": "Butun katalog",
+        "text": "Faqat o'z bo'limi emas, barcha bo'limlarni ko'radi"
+      },
+      "requests_create": {
+        "title": "Arizalar",
+        "text": "Kompaniya savatiga o'z nomidan tovar qo'shadi"
+      },
+      "requests_approve": {
+        "title": "Tasdiqlash va buyurtma",
+        "text": "Barchaning arizalarini ko'radi, ortiqchasini olib tashlaydi va buyurtma beradi"
+      },
+      "orders_viewAll": {
+        "title": "Barcha buyurtmalar",
+        "text": "Faqat o'z arizalari bilan emas, kompaniyaning barcha buyurtmalarini ko'radi"
+      },
+      "balance_manage": {
+        "title": "Balans",
+        "text": "Kompaniya balansi, to'ldirish hisoblari, rekvizitlar"
+      },
+      "staff_manage": {
+        "title": "Xodimlar",
+        "text": "Xodimlar, rollar, bo'limlarni qo'shadi va bo'limlarni ochadi"
+      }
+    },
+    "categories": {
+      "selected": "Tanlangan: {count}",
+      "applySuggested": "IFUT bo'yicha mosini belgilash",
+      "byOked": "IFUT bo'yicha",
+      "showSub": "«{title}» kichik bo'limlari"
+    },
+    "credentials": {
+      "title": "Xodim qo'shildi",
+      "smsSent": "Login va vaqtinchalik parol {phone} raqamiga SMS orqali yuborildi",
+      "login": "Login",
+      "password": "Vaqtinchalik parol",
+      "note": "Parol faqat hozir ko'rinadi. Birinchi kirishda xodim o'zinikini kiritadi. Yo'qolsa, qulf tugmasi bilan yangisini bering.",
+      "copy": "Nusxa olish",
+      "done": "Tayyor",
+      "copied": "Login va parol nusxalandi",
+      "copyFailed": "Nusxa olib bo'lmadi. Belgilab, qo'lda nusxa oling.",
+      "message": "{name}, sizga spotshop'da kompaniya xaridlariga kirish ochildi.\nLogin: {login}\nVaqtinchalik parol: {password}\nKirish: {url}"
+    },
+    "employee": {
+      "addTitle": "Yangi xodim",
+      "editTitle": "Xodim",
+      "fullName": "F.I.Sh.",
+      "fullNamePlaceholder": "Karimova Malika",
+      "phone": "Telefon — u login ham",
+      "phoneHint": "Unga parol bilan SMS keladi",
+      "phoneLocked": "Login o'zgarmaydi. Boshqa raqam kerak bo'lsa, xodimni qaytadan qo'shing.",
+      "role": "Rol",
+      "ownerLocked": "Rahbar roli o'zgarmaydi",
+      "department": "Bo'lim",
+      "noDepartment": "Bo'limsiz",
+      "departmentHint": "Xodim bo'limga ochilgan katalog bo'limlarini ko'radi",
+      "seesAll": "Bu rolda butun katalog bor — bo'lim faqat tartib uchun",
+      "limit": "Oylik ariza limiti",
+      "limitPlaceholder": "3 000 000",
+      "limitHint": "Limitdan oshgan arizalar qabul qilinmaydi",
+      "noLimit": "Limitsiz",
+      "spent": "shu oy: {sum}",
+      "extraTitle": "Bo'limdan tashqari bo'limlarni ochish",
+      "extraHint": "Faqat shu odamga, bo'lim bo'limlariga qo'shimcha",
+      "create": "Qo'shish va SMS yuborish",
+      "smsNote": "Xodim login va vaqtinchalik parolni SMS orqali oladi. Siz ham ularni ko'rasiz.",
+      "errorName": "F.I.Sh. kiriting",
+      "errorPhone": "Raqamni to'liq kiriting",
+      "errorPhoneTaken": "Bu raqam boshqa xodimga tegishli",
+      "errorRole": "Rolni tanlang",
+      "errorLimit": "Limit summasini kiriting",
+      "sectionPerson": "Xodim",
+      "sectionAccess": "Katalogga kirish",
+      "noDepartments": "Hozircha bo'limlar yo'q — bo'limlarni quyida unga shaxsan oching yoki bo'limlar yarating.",
+      "createDepartments": "Bo'limlar yaratish",
+      "noLimitHint": "Xodim summa cheklovisiz ariza beradi"
+    },
+    "role": {
+      "addTitle": "Yangi rol",
+      "editTitle": "Rol",
+      "title": "Nomi",
+      "titlePlaceholder": "Masalan, Ofis menejeri",
+      "permissions": "Huquqlar",
+      "presetNote": "Tayyor rol, uning huquqlari o'zgarmaydi. Boshqa to'plam kerak bo'lsa, o'z rolingizni yarating.",
+      "errorTitle": "Rol nomini kiriting",
+      "errorTitleTaken": "Bunday nomli rol bor",
+      "errorPermissions": "Kamida bitta huquqni belgilang"
+    },
+    "department": {
+      "addTitle": "Yangi bo'lim",
+      "editTitle": "Bo'lim",
+      "title": "Nomi",
+      "titlePlaceholder": "Masalan, Buxgalteriya",
+      "categories": "Ochiq katalog bo'limlari",
+      "categoriesHint": "Bo'lim xodimlari faqat shu bo'limlarni ko'radi va so'ray oladi. Xarid mutaxassisi va rahbar butun katalogni ko'radi.",
+      "emptyWarning": "Birorta bo'lim ochilmagan — bo'lim xodimlari katalogda hech narsa ko'rmaydi",
+      "errorTitle": "Bo'lim nomini kiriting",
+      "errorTitleTaken": "Bunday nomli bo'lim bor"
+    },
+    "company": {
+      "title": "Kompaniya",
+      "tabStaff": "Xodimlar",
+      "tabRoles": "Rollar",
+      "tabDepartments": "Bo'limlar va kirish",
+      "tabDetails": "Rekvizitlar",
+      "saved": "Saqlandi",
+      "staffTitle": "Xodimlar",
+      "staffText": "Xodimning logini — uning telefoni. Parol unga SMS orqali keladi, siz ham uni ko'rasiz.",
+      "addEmployee": "Xodim qo'shish",
+      "colEmployee": "Xodim",
+      "colRole": "Rol va bo'lim",
+      "colLimit": "Oylik limit",
+      "colStatus": "Holat",
+      "colActions": "Amallar",
+      "noDepartment": "Bo'limsiz",
+      "noLimit": "Limitsiz",
+      "spent": "sarflangan {sum}",
+      "statusOwner": "Rahbar",
+      "status": {
+        "active": "Faol",
+        "invited": "Birinchi kirishni kutmoqda",
+        "blocked": "Bloklangan"
+      },
+      "edit": "O'zgartirish: {name}",
+      "view": "Huquqlarni ko'rish: {name}",
+      "resetPassword": "Yangi parol berish: {name}",
+      "resetPasswordShort": "Yangi parol",
+      "block": "Bloklash: {name}",
+      "unblock": "Blokdan chiqarish: {name}",
+      "blockShort": "Bloklash",
+      "unblockShort": "Blokdan chiqarish",
+      "blocked": "{name}: kirish yopildi",
+      "unblocked": "{name}: kirish qayta ochildi",
+      "removeEmployee": "Xodimni o'chirish: {name}",
+      "removeRole": "Rolni o'chirish: {name}",
+      "removeDepartment": "Bo'limni o'chirish: {name}",
+      "rolesTitle": "Rollar",
+      "rolesText": "Rol — huquqlar to'plami. Tayyor rollar bor, o'zingiznikini huquqlardan yig'ish mumkin.",
+      "addRole": "Rol yaratish",
+      "preset": "Tayyor",
+      "people": "Xodimlar: {count}",
+      "departmentsTitle": "Bo'limlar va katalogga kirish",
+      "departmentsText": "Har bir bo'limga o'z bo'limlari: buxgalteriyaga qog'oz va kanselyariya, IT ga texnika.",
+      "addDepartment": "Bo'lim yaratish",
+      "noDepartments": "Hozircha bo'limlar yo'q. Birinchisini yarating va unga katalog bo'limlarini oching.",
+      "departmentsNote": "Alohida odamga bo'limdan tashqari bo'limlarni uning kartochkasida ochish mumkin.",
+      "registeredVia": "Ro'yxatdan o'tish",
+      "via": {
+        "oneid": "OneID",
+        "eimzo": "ERI kaliti",
+        "demo": "Demo kompaniya"
+      },
+      "detailsNote": "Rekvizitlar ro'yxatdan o'tishda soliq reyestridan olindi. To'ldirish uchun bank rekvizitlari — «Kompaniya balansi» bo'limida.",
+      "role": "Rol",
+      "department": "Bo'lim",
+      "limitLeft": "Limit qoldig'i",
+      "myCategories": "Sizga ochiq bo'limlar",
+      "allCatalog": "Butun katalog",
+      "noCategories": "Hozircha birorta ham yo'q — rahbardan bo'limingizga bo'limlarni ochishni so'rang",
+      "myPermissions": "Sizga nima mumkin",
+      "askHead": "Rol, bo'lim va limitni kompaniya rahbari o'zgartiradi.",
+      "removeTitle": "O'chirilsinmi?",
+      "removeAction": "O'chirish",
+      "remove": {
+        "employee": "{name} endi kira olmaydi. Uning savatdagi arizalari qoladi, ularni xarid mutaxassisi ko'radi.",
+        "role": "«{name}» roli o'chiriladi. Bu faqat unda xodimlar bo'lmasa mumkin.",
+        "department": "«{name}» bo'limi o'chiriladi, uning xodimlari bo'limsiz qoladi va uning bo'limlariga kirishni yo'qotadi."
+      },
+      "removed": "O'chirildi: {name}",
+      "roleInUse": "Bu rolda xodimlar bor — avval ularning rolini almashtiring",
+      "verified": {
+        "oneid": "OneID orqali tasdiqlangan",
+        "eimzo": "ERI kaliti bilan tasdiqlangan"
+      },
+      "myAccess": "Sizning kirishingiz",
+      "searchStaff": "Ism yoki telefon bo'yicha qidirish",
+      "you": "siz",
+      "of": "dan",
+      "editShort": "O'zgartirish",
+      "firstStaffHint": "Xodimlarni qo'shing: har biri o'z loginini oladi, ularning arizalari savatingizga ism va rol bilan keladi.",
+      "nothingFound": "Hech kim topilmadi",
+      "allowed": "ruxsat etilgan",
+      "notAllowed": "ruxsat yo'q",
+      "quickStart": "Tez boshlash",
+      "quickStartText": "Odatiy bo'limlarni tanlang — ularga katalog bo'limlari tanlangan. IFUT {code} ga mos keladiganlari belgilangan.",
+      "template": {
+        "accounting": "Buxgalteriya",
+        "office": "Ofis ma'muriyati",
+        "it": "IT bo'limi"
+      },
+      "createPicked": "Bo'limlarni yaratish: {count}",
+      "ownDepartment": "O'z bo'limingiz",
+      "templatesCreated": "Bo'limlar yaratildi: {count}",
+      "legalName": "Nomi",
+      "notSet": "Ko'rsatilmagan"
+    },
+    "register": {
+      "seoTitle": "Kompaniyani ro'yxatdan o'tkazish",
+      "title": "Kompaniyani ro'yxatdan o'tkazish",
+      "lead": "Direktor shaxsini OneID yoki ERI kaliti orqali tasdiqlang. Kompaniya ma'lumotlarini soliq reyestridan olamiz, sizga faqat telefon va parolni kiritish qoladi.",
+      "stepIdentity": "Shaxsni tasdiqlash",
+      "stepCompany": "Kompaniya ma'lumotlari",
+      "stepDone": "Tayyor",
+      "privacy": "ERI kalitingiz va OneID parolingizni saqlamaymiz: faqat tasdiq va kompaniya ma'lumotlarini olamiz.",
+      "chooseMethod": "Shaxsni qanday tasdiqlash",
+      "oneIdText": "Direktorning id.egov.uz dagi hisobi",
+      "eimzoTitle": "ERI kaliti",
+      "eimzoText": "E-IMZO ilovasidagi tashkilot kaliti",
+      "oneIdHint": "OneID sahifasi ochiladi. Kirgandan so'ng sizni kompaniya ma'lumotlari bilan bu yerga qaytaramiz.",
+      "oneIdButton": "OneID orqali davom etish",
+      "chooseKey": "Ushbu kompyuterdagi ERI kaliti",
+      "noEimzo": "E-IMZO bilan bog'lanib bo'lmadi. Ilova o'rnatilgan va ishga tushirilganini tekshiring va sahifani yangilang.",
+      "inn": "STIR",
+      "validTo": "{date} gacha amal qiladi",
+      "signButton": "Imzolash va davom etish",
+      "errorOneId": "OneID orqali kirib bo'lmadi. Qayta urinib ko'ring.",
+      "errorSignature": "Imzo tekshiruvdan o'tmadi. Boshqa kalitni tanlang yoki qayta urinib ko'ring.",
+      "companyTitle": "Kompaniya",
+      "confirmedAs": "Shaxs tasdiqlandi: {name}",
+      "oked": "IFUT",
+      "director": "Direktor",
+      "address": "Yuridik manzil",
+      "alreadyTitle": "Kompaniya allaqachon ro'yxatdan o'tgan",
+      "alreadyText": "Siz uning direktori ekaningizni tasdiqladingiz — rahbar sifatida kiring.",
+      "signInAsHead": "Rahbar sifatida kirish",
+      "headPhone": "Rahbar telefoni",
+      "headPhoneHint": "Unga SMS keladi va u orqali kirasiz",
+      "passwordHint": "Kamida 8 belgi, harf va raqamlar",
+      "submit": "Kompaniyani ro'yxatdan o'tkazish",
+      "otherMethod": "Boshqa usul",
+      "errorPhone": "Raqamni to'liq kiriting",
+      "errorPhoneTaken": "Bu raqam boshqa kompaniya xodimiga tegishli",
+      "errorPassword": "Parol: kamida 8 belgi, harf va raqamlar",
+      "errorRegistered": "Bu kompaniya allaqachon ro'yxatdan o'tgan",
+      "errorExpired": "Tasdiqlash eskirdi. Shaxsingizni qayta tasdiqlang.",
+      "errorGeneric": "Kompaniyani ro'yxatdan o'tkazib bo'lmadi. Qayta urinib ko'ring.",
+      "doneTitle": "Kompaniya ro'yxatdan o'tdi",
+      "doneText": "{name} spotshop'da. Siz rahbarsiz: xodimlarni qo'shing, ularga rol bering va bo'limlarga kerakli katalog bo'limlarini oching.",
+      "suggestedTitle": "Faoliyat turi bo'yicha bo'limlar (IFUT {code})",
+      "suggestedText": "Ular katalogda birinchi turadi, bo'limlarni sozlashda aynan ularni ochishni taklif qilamiz.",
+      "addStaff": "Xodimlarni qo'shish",
+      "toCatalog": "Katalogga o'tish"
+    }
+  }
+}

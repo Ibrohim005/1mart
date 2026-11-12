@@ -22,6 +22,7 @@ export default defineEventHandler((event) => {
     positive: false,
     date: at(order.placedAt),
     method: paymentMethodLabel(event, order.cardId),
+    placedBy: order.placedBy?.fullName,
     sort: order.placedAt + index,
   }))
 

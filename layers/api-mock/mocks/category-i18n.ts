@@ -8,6 +8,15 @@ import type { MockLocale } from './facets'
  */
 type Tr = { uz: string, 'uz-cyrl': string, en: string }
 const T: Record<string, Tr> = {
+  'ofis-i-kancelyariya': { uz: 'Ofis va kanselyariya', 'uz-cyrl': 'Офис ва канцелярия', en: 'Office & stationery' },
+  'bumaga-i-bloknoty': { uz: "Qog'oz va bloknotlar", 'uz-cyrl': 'Қоғоз ва блокнотлар', en: 'Paper & notebooks' },
+  'pismennye-prinadlezhnosti': { uz: 'Yozuv anjomlari', 'uz-cyrl': 'Ёзув анжомлари', en: 'Writing supplies' },
+  'kancelyarskie-melochi': { uz: 'Kanselyariya mayda-chuydalari', 'uz-cyrl': 'Канцелярия майда-чуйдалари', en: 'Desk supplies' },
+  'papki-i-hranenie': { uz: 'Papkalar va hujjat saqlash', 'uz-cyrl': 'Папкалар ва ҳужжат сақлаш', en: 'Folders & filing' },
+  'orgtehnika': { uz: 'Ofis texnikasi', 'uz-cyrl': 'Офис техникаси', en: 'Office equipment' },
+  'kompyutery-i-periferiya': { uz: 'Kompyuterlar va periferiya', 'uz-cyrl': 'Компьютерлар ва периферия', en: 'Computers & peripherals' },
+  'ofisnaya-mebel': { uz: 'Ofis mebeli', 'uz-cyrl': 'Офис мебели', en: 'Office furniture' },
+  'ofisnaya-kuhnya-i-hoztovary': { uz: "Ofis oshxonasi va xo'jalik mollari", 'uz-cyrl': 'Офис ошхонаси ва хўжалик моллари', en: 'Office kitchen & supplies' },
   'elektronika': { uz: 'Elektronika', 'uz-cyrl': 'Электроника', en: 'Electronics' },
   'smartfony': { uz: 'Smartfonlar', 'uz-cyrl': 'Смартфонлар', en: 'Smartphones' },
   'planshety': { uz: 'Planshetlar', 'uz-cyrl': 'Планшетлар', en: 'Tablets' },

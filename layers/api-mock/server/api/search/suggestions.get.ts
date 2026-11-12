@@ -1,4 +1,5 @@
-import { productCards, searchTextOf } from '../../../mocks/data'
+import { searchTextOf } from '../../../mocks/data'
+import { visibleCards } from '../../utils/org-input'
 import { fromLatinLayout, hasWordPrefix, matches, normalize } from '../../utils/fuzzy'
 
 /**
@@ -9,18 +10,20 @@ import { fromLatinLayout, hasWordPrefix, matches, normalize } from '../../utils/
  * TODO: Connect to backend endpoint GET /search/suggestions
  */
 export default defineEventHandler((event) => {
+  // Сотрудник ищет только в открытых ему категориях
+  const cards = visibleCards(event)
   const { q = '' } = getQuery(event) as Record<string, string>
   const needle = normalize(String(q))
   if (!needle) return ok([])
 
-  const strict = (value: string) => productCards.filter(p => hasWordPrefix(searchTextOf(p), value))
+  const strict = (value: string) => cards.filter(p => hasWordPrefix(searchTextOf(p), value))
 
   let found = strict(needle)
   if (!found.length) {
     const relayout = normalize(fromLatinLayout(needle))
     if (relayout !== needle) found = strict(relayout)
   }
-  if (!found.length) found = productCards.filter(p => matches(needle, searchTextOf(p)))
+  if (!found.length) found = cards.filter(p => matches(needle, searchTextOf(p)))
 
   // Сначала товары, где запрос есть в самом названии, — они точнее
   found = [...found].sort((a, b) =>

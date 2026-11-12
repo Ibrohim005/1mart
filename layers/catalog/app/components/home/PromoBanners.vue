@@ -63,7 +63,16 @@ function amount(value: { amount: number, currency: 'UZS' }) {
         </p>
 
         <span class="promo__until">{{ banner.until }}</span>
-        <UiImage v-if="banner.image" :src="banner.image" alt="" width="220" height="220" loading="lazy" class="promo__photo" />
+        <UiImage
+          v-if="banner.image"
+          :src="banner.image"
+          alt=""
+          width="220"
+          height="220"
+          loading="lazy"
+          class="promo__photo"
+          :class="{ 'promo__photo--tile': banner.imageKind === 'photo' }"
+        />
       </NuxtLink>
     </article>
   </section>
@@ -110,7 +119,7 @@ function amount(value: { amount: number, currency: 'UZS' }) {
   position: relative;
   /* Пропорции макетов баннеров заказчика: 853×345 */
   height: 248px;
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
   background: var(--color-topbar);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -124,6 +133,16 @@ function amount(value: { amount: number, currency: 'UZS' }) {
 
 .promo--violet {
   background: var(--promo-dark-bg);
+}
+
+.promo--brand { background: var(--promo-brand-bg); }
+.promo--slate { background: var(--promo-slate-bg); }
+
+/* Снимок со своим фоном — скруглённая плитка, а не вырезанный товар на градиенте */
+.promo .promo__photo--tile {
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: 0 14px 32px rgb(0 0 0 / 28%);
 }
 
 .promo__title {

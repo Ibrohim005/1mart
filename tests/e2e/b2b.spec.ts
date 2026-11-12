@@ -290,19 +290,16 @@ test.describe('Вход и регистрация', () => {
     await expect(page.locator('.profile__menu')).toBeVisible()
   })
 
-  test('регистрация просит номер, имя и пароль и ведёт к коду из SMS', async ({ page }) => {
+  // B2B: компания регистрируется только через OneID или ключ ЭЦП (решение заказчика 2026-11-12)
+  test('регистрация ведёт на страницу компании с OneID и ЭЦП', async ({ page }) => {
     await open(page, '/')
     await page.locator('.profile .action').click()
+    await expect(page.locator('.auth__identity-button')).toHaveCount(2)
     await page.locator('.auth__register').click()
 
-    const inputs = page.locator('.register__input')
-    await expect(inputs).toHaveCount(3)
-    await inputs.nth(0).fill('901234567')
-    await inputs.nth(1).fill('Test User')
-    await inputs.nth(2).fill('secret12')
-    await page.locator('.register__submit').click()
-
-    await expect(page.locator('.sms__phone')).toContainText('90')
+    await expect(page).toHaveURL(/\/register/)
+    await expect(page.locator('.register__method')).toHaveCount(2)
+    await expect(page.locator('.register__method').first()).toContainText('OneID')
   })
 })
 
@@ -365,12 +362,14 @@ test.describe('Страница продавца', () => {
     await expect(page.locator('.seller-card__total')).toHaveText('42 товара')
     const first = await cards.first().locator('.card__title').textContent()
 
+    // Порции ждём дольше обычного: локальный сервер в это время сам скачивает и
+    // пережимает десятки фото карточек, и запрос стоит в очереди по 5–7 секунд
     await more.click()
-    await expect(cards).toHaveCount(40)
+    await expect(cards).toHaveCount(40, { timeout: 20_000 })
     await expect(cards.first().locator('.card__title')).toHaveText(first!)
 
     await more.click()
-    await expect(cards).toHaveCount(42)
+    await expect(cards).toHaveCount(42, { timeout: 20_000 })
     await expect(more).toHaveCount(0)
   })
 
@@ -675,8 +674,10 @@ test.describe('Плитки и иконки: языки и бренд', () => {
     expect(svg).toContain('#0AE728')
     expect(svg).not.toContain('#1B9684')
 
+    // Цвет темы браузера — фирменный тёмно-зелёный интерфейса (выбор заказчика 2026-11-12),
+    // сам знак на иконке остаётся цветом логотипа
     const manifest = await (await request.get('/site.webmanifest')).json()
-    expect(manifest.theme_color).toBe('#0AE728')
+    expect(manifest.theme_color).toBe('#0B8F2A')
   })
 })
 
@@ -825,10 +826,11 @@ test.describe('Страницы помощи', () => {
   })
 })
 
-test.describe('Ответ продавца на отзыв', () => {
-  test('виден покупателю на странице товара', async ({ page }) => {
+test.describe('Ответ на отзыв', () => {
+  // Продавец скрыт от покупателя, поэтому ответ подписан площадкой
+  test('виден покупателю на странице товара от имени spotshop', async ({ page }) => {
     await open(page, '/product/chasy-rolex-submariner-chernyy-bezel-1098')
-    await expect(page.locator('.reviews__reply').first()).toContainText('Ответ продавца')
+    await expect(page.locator('.reviews__reply').first()).toContainText('Ответ spotshop')
   })
 })
 
@@ -877,5 +879,157 @@ test.describe('Оформление: документы, комментарий,
     await page.locator('.delivery__tab').nth(1).click()
     await expect(page.locator('.delivery__free')).toContainText('Бесплатная доставка')
     await expect(page.locator('.summary__value', { hasText: 'Бесплатно' })).toBeVisible()
+  })
+})
+
+test.describe('B2B: продавец скрыт, доставляет spotshop', () => {
+  /** Первый товар выдачи по запросу: slug для страницы и skuId для корзины */
+  async function firstFound(page: Page, q: string) {
+    const found = await (await page.request.get(`/api/search?q=${encodeURIComponent(q)}&perPage=1`)).json()
+    const item = found.payload.items[0]
+    return { slug: item.slug as string, title: item.title as string, skuId: Number(item.id) * 10 + 1 }
+  }
+
+  test('у товара скрытого продавца его нет ни на странице, ни в корзине', async ({ page }) => {
+    await asUser(page)
+    await open(page, '/')
+    const paper = await firstFound(page, 'бумага А4')
+
+    await open(page, `/product/${paper.slug}`)
+    await expect(page.locator('.seller')).toHaveCount(0)
+    await expect(page.locator('body')).not.toContainText('Office Pro')
+
+    await page.request.post('/api/cart/items', { data: { skuId: paper.skuId, quantity: 1 } })
+    await open(page, '/cart')
+    const row = page.locator('.row').filter({ hasText: paper.title })
+    await expect(row).toBeVisible()
+    await expect(row.locator('.row__seller')).toHaveCount(0)
+    await expect(page.locator('body')).not.toContainText('Привезёт продавец')
+  })
+
+  test('продавца, открытого площадкой, покупатель видит', async ({ page }) => {
+    await open(page, '/')
+    const phone = await firstFound(page, 'vivo')
+    await open(page, `/product/${phone.slug}`)
+    await expect(page.locator('.seller')).toContainText('TechnoPoint')
+  })
+
+  test('страница скрытого продавца отвечает 404', async ({ page }) => {
+    expect((await page.request.get('/api/sellers/office-pro')).status()).toBe(404)
+    expect((await page.request.get('/seller/office-pro')).status()).toBe(404)
+  })
+
+  test('при оформлении курьер только spotshop', async ({ page }) => {
+    await asUser(page)
+    await open(page, '/checkout')
+    const options = page.locator('.delivery__option')
+    await expect(options).toHaveCount(1)
+    await expect(options.first()).toContainText('Курьер spotshop')
+    await expect(page.locator('body')).not.toContainText(/Express 24|Maxsus|Yandex/)
+  })
+})
+
+test.describe('B2B: компания, сотрудники и заявки', () => {
+  /** Вход под сотрудником демо-компании (пароль у всех demo1234, см. BACKEND.md) */
+  async function asEmployee(page: Page, phone: string, name: string) {
+    await page.context().addCookies([{
+      name: 'paylov_auth',
+      value: encodeURIComponent(JSON.stringify({ phone, name })),
+      domain: 'localhost',
+      path: '/',
+    }])
+  }
+
+  const HEAD = '+998 90 100-00-01'
+  const PURCHASER = '+998 90 100-00-02'
+  const IT = '+998 90 100-00-04'
+
+  test('регистрация через ЭЦП заводит компанию или пускает руководителя', async ({ page }) => {
+    await open(page, '/register?method=eimzo')
+    await page.locator('.register__key', { hasText: 'DIGITAL SOFT' }).click()
+    await page.getByRole('button', { name: /Подписать/ }).click()
+    await expect(page.locator('.register__company-name')).toContainText('DIGITAL SOFT')
+    await expect(page.locator('.register__facts')).toContainText('62010')
+
+    if (await page.locator('.register__registered').isVisible()) {
+      await page.getByRole('button', { name: /Войти как руководитель/ }).click()
+      await expect(page).toHaveURL(/\/account\/company/)
+      return
+    }
+    await page.locator('.register__input').first().fill('97 555 12 34')
+    await page.locator('input[type=password]').nth(0).fill('Secret2026')
+    await page.locator('input[type=password]').nth(1).fill('Secret2026')
+    await page.getByRole('button', { name: /Зарегистрировать компанию/ }).click()
+    await expect(page.locator('.register__done')).toContainText('Компания зарегистрирована')
+    await expect(page.locator('.register__chip').first()).toBeVisible()
+  })
+
+  test('сотрудник видит только разделы своего отдела и не оформляет заказ', async ({ page }) => {
+    await asEmployee(page, IT, 'Турсунов Жасур')
+    await open(page, '/')
+    const roots = await (await page.request.get('/api/categories/root')).json()
+    expect(roots.payload.map((root: { slug: string }) => root.slug)).toEqual(['ofis-i-kancelyariya'])
+    const search = await (await page.request.get(`/api/search?q=${encodeURIComponent('бумага')}`)).json()
+    expect(search.payload.total).toBe(0)
+
+    const paper = await page.request.post('/api/cart/items', { data: { skuId: 30011, quantity: 1 } })
+    expect(paper.status()).toBe(403)
+    expect((await paper.json()).errors[0].code).toBe('category_forbidden')
+
+    await open(page, '/cart')
+    await expect(page.locator('.cart__title')).toContainText('Мои заявки')
+    await expect(page.locator('.summary__submit')).toHaveCount(0)
+    await expect(page.locator('.summary__requester')).toContainText('Это ваши заявки')
+
+    await page.goto('/checkout')
+    await expect(page).toHaveURL(/\/cart$/)
+  })
+
+  test('лимит сотрудника не пускает дорогую заявку', async ({ page }) => {
+    await asEmployee(page, IT, 'Турсунов Жасур')
+    await open(page, '/')
+    const laptop = await page.request.post('/api/cart/items', { data: { skuId: 30221, quantity: 1 } })
+    expect(laptop.status()).toBe(422)
+    expect((await laptop.json()).errors[0].code).toBe('limit_exceeded')
+  })
+
+  test('закупщик видит заявки по людям и одобряет их одним заказом', async ({ page }) => {
+    await asEmployee(page, PURCHASER, 'Саидова Дильноза')
+    await open(page, '/cart')
+    const names = page.locator('.cart__group-name')
+    await expect(names).toContainText(['Иванова Анна', 'Турсунов Жасур'])
+    await expect(page.locator('.cart__group-kicker').first()).toContainText('Бухгалтер')
+    await expect(page.locator('.summary__submit')).toHaveText('Одобрить и оформить')
+  })
+
+  test('руководитель добавляет сотрудника, тот входит и задаёт свой пароль', async ({ page, browser }) => {
+    await asEmployee(page, HEAD, 'Каримов Бахтиёр')
+    await open(page, '/account/company')
+    await page.getByRole('button', { name: 'Добавить сотрудника' }).click()
+    const phone = `93 ${String(Date.now()).slice(-7, -4)}-${String(Date.now()).slice(-4, -2)}-${String(Date.now()).slice(-2)}`
+    await page.locator('.employee__input').first().fill('Рахимов Отабек')
+    await page.locator('.employee__bare').first().fill(phone)
+    await page.getByRole('button', { name: /Добавить и отправить SMS/ }).click()
+
+    const modal = page.locator('.credentials')
+    await expect(modal).toContainText('отправлены по SMS')
+    const password = (await modal.locator('.credentials__password').textContent())!.trim()
+    expect(password).toMatch(/^[a-z2-9]{8}$/)
+
+    const other = await (await browser.newContext()).newPage()
+    await open(other, '/')
+    const login = await other.request.post('/api/auth/login', { data: { phone: `+998${phone.replace(/\D/g, '')}`, password } })
+    expect((await login.json()).payload.mustChangePassword).toBe(true)
+  })
+
+  test('заказ закупщика хранит имена тех, кто заявил', async ({ page }) => {
+    await asEmployee(page, PURCHASER, 'Саидова Дильноза')
+    await open(page, '/checkout')
+    await page.locator('.summary__pay').click()
+    await page.locator('.confirm').getByRole('button').click()
+    await expect(page.locator('.success__title')).toBeVisible({ timeout: 15_000 })
+
+    await open(page, '/account/orders')
+    await expect(page.locator('.order').first()).toContainText('Иванова Анна')
   })
 })

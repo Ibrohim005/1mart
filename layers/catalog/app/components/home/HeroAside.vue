@@ -41,6 +41,9 @@ async function loadBalance() {
 
 onMounted(loadBalance)
 watch(() => auth.isLoggedIn, loadBalance)
+
+const { can } = useAccessState()
+const seesBalance = computed(() => can('balance.manage') || can('requests.approve'))
 </script>
 
 <template>
@@ -57,6 +60,16 @@ watch(() => auth.isLoggedIn, loadBalance)
         <span class="tile__company">{{ balance.company.name }}</span>
         <span class="tile__action">
           {{ $t('pay.payment.topUp') }}
+          <UiIcon name="alt-arrow-right" color="currentColor" :size="16" />
+        </span>
+      </NuxtLink>
+
+      <!-- Сотрудник без доступа к балансу: его путь — заявки, их оформит закупщик -->
+      <NuxtLink v-else-if="auth.isLoggedIn && !seesBalance" :to="localePath('/cart')" class="tile tile--funds tile--link">
+        <span class="tile__title">{{ $t('org.home.requestsTitle') }}</span>
+        <span class="tile__text">{{ $t('org.home.requestsText') }}</span>
+        <span class="tile__action">
+          {{ $t('org.cart.myRequests') }}
           <UiIcon name="alt-arrow-right" color="currentColor" :size="16" />
         </span>
       </NuxtLink>
@@ -117,7 +130,7 @@ watch(() => auth.isLoggedIn, loadBalance)
   padding: 20px 24px;
   overflow: hidden;
   border: 0;
-  border-radius: 20px;
+  border-radius: 12px;
   font-family: var(--font-ui);
   text-align: left;
 }

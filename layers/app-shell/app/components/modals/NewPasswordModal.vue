@@ -3,7 +3,12 @@
  * Последний шаг восстановления: новый пароль и его повтор.
  * Поля повторяют вход — те же подчёркнутые строки 49px.
  */
-const props = defineProps<{ modelValue: boolean }>()
+const props = defineProps<{
+  modelValue: boolean
+  /** Заголовок и подсказка для первого входа сотрудника; по умолчанию — восстановление */
+  title?: string
+  hint?: string
+}>()
 const emit = defineEmits<{ 'update:modelValue': [boolean], submit: [string] }>()
 
 const { t } = useI18n()
@@ -63,10 +68,11 @@ async function submit() {
 <template>
   <UiModal
     :model-value="modelValue"
-    :title="$t('auth.newPasswordTitle')"
+    :title="title ?? $t('auth.newPasswordTitle')"
     body-padding="30px 25px 25px"
     @update:model-value="emit('update:modelValue', $event)"
   >
+    <p v-if="hint" class="password__hint">{{ hint }}</p>
     <section class="password__section">
       <p class="password__label">{{ $t('auth.newPasswordLabel') }}</p>
       <div class="password__field">
@@ -162,4 +168,6 @@ async function submit() {
 }
 
 .password__submit:disabled { background: #F0F0F0; color: #9A9A9A; cursor: not-allowed; }
+
+.password__hint { margin: 0 0 20px; font-size: var(--text-base); line-height: 1.45; color: var(--color-text-muted); }
 </style>

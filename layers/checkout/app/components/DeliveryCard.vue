@@ -1,8 +1,8 @@
 <script setup lang="ts">
 /**
  * Блок доставки на оформлении (ТЗ UC-FL-10: адрес и способ доставки).
- * Курьером — через Express 24, Maxsus Courier или Yandex Доставка, у каждой
- * службы своя цена и дата; или самовывоз из пункта выдачи 1mart.
+ * Курьером spotshop — площадка сама забирает товар у продавца и везёт своими
+ * курьерами; или самовывоз из пункта выдачи spotshop.
  * Цены и сроки считает сервер (`/checkout/quote`), здесь только выбор.
  */
 import type { DeliveryProvider, DeliveryType } from '#shared/types/order'
@@ -30,7 +30,8 @@ const emit = defineEmits<{ change: [] }>()
 const { sum } = useMoney()
 const { dayLabel, providerName } = use1mart()
 
-const PROVIDER_MARKS: Record<DeliveryProvider, string> = { express24: 'E24', maxsus: 'MX', yandex: 'Я' }
+// У курьера spotshop вместо букв знак бренда (см. шаблон)
+const PROVIDER_MARKS: Record<DeliveryProvider, string> = { spotshop: '', express24: 'E24', maxsus: 'MX', yandex: 'Я' }
 </script>
 
 <template>
@@ -82,7 +83,10 @@ const PROVIDER_MARKS: Record<DeliveryProvider, string> = { express24: 'E24', max
           :class="{ 'delivery__option--active': provider === option.id }"
         >
           <input v-model="provider" class="visually-hidden" type="radio" name="courier" :value="option.id" :aria-label="providerName(option.id)">
-          <span class="delivery__mark" :class="`delivery__mark--${option.id}`" aria-hidden="true">{{ PROVIDER_MARKS[option.id] }}</span>
+          <span class="delivery__mark" :class="`delivery__mark--${option.id}`" aria-hidden="true">
+            <img v-if="option.id === 'spotshop'" src="/1mart-mark.svg" alt="" class="delivery__mark-logo">
+            <template v-else>{{ PROVIDER_MARKS[option.id] }}</template>
+          </span>
           <span class="delivery__option-text">
             <span class="delivery__option-title">{{ providerName(option.id) }}</span>
             <span class="delivery__option-note">{{ $t('pay.delivery.eta', { date: dayLabel(option.eta) }) }}</span>
@@ -266,6 +270,8 @@ const PROVIDER_MARKS: Record<DeliveryProvider, string> = { express24: 'E24', max
   color: #FFFFFF;
 }
 
+.delivery__mark--spotshop { border: 1px solid var(--color-line); background: var(--color-surface); }
+.delivery__mark-logo { width: 26px; height: auto; }
 .delivery__mark--express24 { background: #E8352E; }
 .delivery__mark--maxsus { background: #1E3A8A; }
 .delivery__mark--yandex { background: #FFCC00; color: #111111; }

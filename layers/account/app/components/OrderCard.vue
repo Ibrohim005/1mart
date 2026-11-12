@@ -24,7 +24,9 @@ const extra = computed(() => Math.max(0, props.order.images.length - 4))
  * и доставленный заказ красился как «в процессе».
  */
 const statusKind = computed(() => orderStatusKind(props.order.status))
-const statusIcon = computed(() => orderStatusIcon(props.order.status))
+
+/** Чьи заявки в заказе — имена без роли, по разу */
+const requesters = computed(() => [...new Set(props.order.items.map(item => item.requestedBy?.split(' · ')[0]).filter(Boolean))].join(', '))
 
 /** Где сейчас деньги: в резерве, списаны или возвращены (ТЗ UC-FL-10) */
 const { paymentStatusLabel, providerName } = use1mart()
@@ -51,7 +53,6 @@ const { paymentStatusLabel, providerName } = use1mart()
         </div>
 
         <span class="order__status" :class="`order__status--${statusKind}`">
-          <UiIcon :name="statusIcon" color="currentColor" :size="25" />
           {{ order.statusLabel }}
         </span>
 
@@ -65,6 +66,17 @@ const { paymentStatusLabel, providerName } = use1mart()
 
         <p v-if="order.tracking" class="order__eta">
           {{ $t('pay.orders.tracking') }}: <strong>{{ order.tracking.number }}</strong> · {{ providerName(order.tracking.provider) }}
+        </p>
+
+        <!-- B2B: кто оформил, чем заплатили и чьи заявки — видно сразу в списке -->
+        <p v-if="order.placedBy" class="order__eta">
+          {{ $t('org.orders.placed') }}: <strong>{{ order.placedBy }}</strong>
+        </p>
+        <p v-if="order.paymentMethod" class="order__eta">
+          {{ $t('org.orders.paidWith') }}: <strong>{{ order.paymentMethod }}</strong>
+        </p>
+        <p v-if="requesters" class="order__eta">
+          {{ $t('org.orders.requests') }}: <strong>{{ requesters }}</strong>
         </p>
 
         <div class="order__row order__row--divided">
@@ -134,57 +146,42 @@ const { paymentStatusLabel, providerName } = use1mart()
 
 /* Макет: Badge 175.1×34.4 r9.4 — заливка #1FABE7 с прозрачностью 20%,
    текст и галочка #0D85B8 */
-.order__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  height: 34.4px;
-  padding-inline: 9px;
-  border-radius: 9.4px;
-  font-weight: 600;
-  font-size: var(--text-base);
-  line-height: 24px;
-}
-
-.order__status--progress {
-  background: rgb(31 171 231 / 20%);
-  color: #0D85B8;
-}
-
-.order__status--done {
-  background: rgb(10 231 40 / 20%);
-  color: var(--color-brand-text-hover);
-}
-
-.order__status--waiting {
-  background: #FFF4E5;
-  color: #8A4B00;
-}
-
-.order__status--return {
-  background: #EEF0FF;
-  color: #3B3FB6;
-}
-
+/*
+ * Статус заказа и состояние денег — одна система плашек: одна высота и шрифт,
+ * цвет несёт только точка, фон спокойный. Раньше статус был крупнее, с иконкой
+ * и цветной заливкой, а оплата — другой плашкой рядом.
+ */
+.order__status,
 .order__pay {
   display: inline-flex;
   align-items: center;
+  gap: 7px;
   height: 28px;
-  margin-left: 8px;
-  padding-inline: 9px;
+  padding: 0 10px;
+  border: 1px solid var(--color-line);
   border-radius: 8px;
-  font-weight: 600;
+  background: var(--color-surface);
+  font-weight: 500;
   font-size: var(--text-sm);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--color-text);
 }
 
-.order__pay--held { background: #FFF4E5; color: #8A4B00; }
-.order__pay--charged { background: rgb(10 231 40 / 14%); color: var(--color-brand-text-hover); }
-.order__pay--refunded { background: #EEF0FF; color: #3B3FB6; }
+.order__status::before,
+.order__pay::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--dot); }
 
-.order__status--canceled {
-  background: rgb(229 50 45 / 15%);
-  color: #C02A26;
-}
+.order__pay { margin-left: 6px; }
+
+.order__status--progress { --dot: #2F80ED; }
+.order__status--done { --dot: var(--color-brand); }
+.order__status--waiting { --dot: #F59E0B; }
+.order__status--return { --dot: #6366F1; }
+.order__status--canceled { --dot: var(--color-danger); color: var(--color-danger); }
+
+.order__pay--held { --dot: #F59E0B; }
+.order__pay--charged { --dot: var(--color-brand); }
+.order__pay--refunded { --dot: #6366F1; }
 
 .order__eta {
   margin: 8px 0 0;
