@@ -1,5 +1,6 @@
 import type { Attribute, Category, Id, OptionGroup, Product, ProductCard, ReviewPreview, Seller, Sku } from '#shared/types/catalog'
 import { CATALOG_GOODS, type RawGoods } from './catalog-goods'
+import { OFFICE_GOODS } from './office-goods'
 import { COLORS, COUNTRIES, MATERIALS, brandCode, memoryCode } from './facets'
 
 /** 1 сум = 100 тийин */
@@ -32,7 +33,7 @@ function slugify(value: string): string {
 }
 
 /** Все товары мока */
-const ITEMS: RawGoods[] = CATALOG_GOODS
+const ITEMS: RawGoods[] = [...OFFICE_GOODS, ...CATALOG_GOODS]
 const itemById = new Map<number, RawGoods>(ITEMS.map(item => [item.id, item]))
 const thumbOf = (id: number) => itemById.get(id)?.thumbnail ?? ''
 
@@ -49,6 +50,20 @@ type TreeNode = { slug: string, title: string, keywords: string, children: Array
  * TODO: Connect to backend endpoint GET /categories/root?depth=2
  */
 const TREE: TreeNode[] = [
+  {
+    // B2B-витрина: офис первым разделом — в ленте категорий, в шапке и в выдаче
+    slug: 'ofis-i-kancelyariya', title: 'Офис и канцелярия', keywords: 'офис канцелярия канцтовары ofis kanselyariya office stationery', image: thumbOf(3001),
+    children: [
+      { slug: 'bumaga-i-bloknoty', title: 'Бумага и блокноты', keywords: 'бумага а4 блокнот стикеры конверты qog\'oz' },
+      { slug: 'pismennye-prinadlezhnosti', title: 'Письменные принадлежности', keywords: 'ручки карандаши маркеры ruchka' },
+      { slug: 'kancelyarskie-melochi', title: 'Канцелярские мелочи', keywords: 'степлер скрепки ножницы скотч калькулятор' },
+      { slug: 'papki-i-hranenie', title: 'Папки и хранение документов', keywords: 'папка регистратор лоток органайзер papka' },
+      { slug: 'orgtehnika', title: 'Оргтехника', keywords: 'принтер мфу картридж проектор роутер printer' },
+      { slug: 'kompyutery-i-periferiya', title: 'Компьютеры и периферия', keywords: 'ноутбук монитор клавиатура мышь гарнитура kompyuter' },
+      { slug: 'ofisnaya-mebel', title: 'Офисная мебель', keywords: 'кресло стол мебель для офиса mebel' },
+      { slug: 'ofisnaya-kuhnya-i-hoztovary', title: 'Кухня и хозтовары для офиса', keywords: 'кофемашина туалетная бумага хозтовары' },
+    ],
+  },
   {
     slug: 'elektronika', title: 'Электроника', keywords: 'электроника техника гаджеты elektronika electronics', image: thumbOf(1123),
     children: [
@@ -334,9 +349,11 @@ export const sellers: Seller[] = [
   { id: 7, slug: 'sport-zone', title: 'Sport Zone', rating: 4.7, reviewsCount: 290, logo: '/mock/sellers/sport-zone.svg' },
   { id: 8, slug: 'auto-plus', title: 'Auto Plus', rating: 4.5, reviewsCount: 140, logo: '/mock/sellers/auto-plus.svg' },
   { id: 9, slug: 'fresh-bozor', title: 'Fresh Bozor', rating: 4.8, reviewsCount: 2100, logo: '/mock/sellers/fresh-bozor.svg' },
+  { id: 10, slug: 'office-pro', title: 'Office Pro', rating: 4.9, reviewsCount: 980, logo: '/mock/sellers/office-pro.svg' },
 ]
 
 const SELLER_BY_CATEGORY: Record<string, number> = {
+  'ofis-i-kancelyariya': 10,
   'elektronika': 1,
   'bytovaya-tehnika': 1,
   'odezhda': 2,
@@ -354,6 +371,25 @@ export function sellerFor(id: Id): Seller {
   const category = itemById.get(numericId(id))?.category ?? ''
   const sellerId = SELLER_BY_CATEGORY[category]
   return sellers.find(seller => seller.id === sellerId) ?? sellers[numericId(id) % sellers.length]!
+}
+
+/**
+ * Продавцы, которых площадка показывает покупателю (в админке включён показ).
+ * Остальные скрыты: покупатель видит, что продаёт и доставляет spotshop.
+ * TechnoPoint и Kids World оставлены открытыми как пример включённого показа:
+ * на них держатся тесты страницы продавца (много товаров и мало товаров).
+ * TODO: Connect to backend — флаг показа продавца придёт с бэкенда.
+ */
+const SHOWN_TO_BUYER = new Set(['technopoint', 'kids-world'])
+
+export function isSellerShown(slug: string): boolean {
+  return SHOWN_TO_BUYER.has(slug)
+}
+
+/** Продавец товара для ответа покупателю: null, если площадка его скрывает */
+export function publicSellerFor(id: Id): Seller | null {
+  const seller = sellerFor(id)
+  return isSellerShown(seller.slug) ? seller : null
 }
 
 export function productsOfSeller(slug: string): ProductCard[] {
@@ -479,7 +515,7 @@ function skusFor(item: RawGoods, card: ProductCard, groups: OptionGroup[]): Sku[
       options,
       price: { ...card.price, amount: card.price.amount + extra },
       fullPrice: card.fullPrice ? { ...card.fullPrice, amount: card.fullPrice.amount + extra } : null,
-      available: !card.available || !sizeAvailable ? 0 : Math.max(1, Math.min(item.stock, 25) - index),
+      available: !card.available || !sizeAvailable ? 0 : Math.max(1, item.stock - index),
     }
   })
 }
@@ -504,7 +540,11 @@ function ratingBreakdownFor(rating: number, count: number): Record<1 | 2 | 3 | 4
   return { 5: five, 4: four, 3: three, 2: two, 1: Math.max(0, count - five - four - three - two) }
 }
 
-export function findProduct(slug: string): Product | null {
+/**
+ * Карточка товара. `canPay` — может ли смотрящий оформлять заказ (закупщик,
+ * бухгалтер, руководитель): сотруднику строка оплаты говорит про заявку.
+ */
+export function findProduct(slug: string, viewer: { canPay?: boolean } = {}): Product | null {
   const card = productCards.find(p => p.slug === slug)
   if (!card) return null
 
@@ -521,23 +561,29 @@ export function findProduct(slug: string): Product | null {
     images: item.images.map((url, index) => ({ id: `${card.id}-${index}`, url, alt: card.title })),
     attributes: attributesFor(item),
     skus: skusFor(item, card, groups),
-    seller: sellerFor(card.id),
+    seller: publicSellerFor(card.id),
     categoryPath: [root, child]
       .filter((category): category is Category => Boolean(category))
       .map(category => ({ id: category.id, slug: category.slug, title: category.title })),
     ratingBreakdown: ratingBreakdownFor(card.rating, card.reviewsCount),
     optionGroups: groups,
     buyersThisWeek: 2 + (numericId(card.id) % 37),
-    deliveryNote: `Доставка курьером — ${card.deliveryDate}`,
+    deliveryNote: `Доставка spotshop — ${card.deliveryDate}`,
     hasVideo: false,
     paymentOptions: paymentOptionsFor(item.price),
+    // B2B: возврат — это замена брака по акту; гарантия есть только у техники и мебели,
+    // у расходников вместо неё — закрывающие документы для бухгалтерии
     warranty: [
-      { title: 'Возврат в течение 10 дней', description: 'Если товар не подошёл или пришёл с дефектом, оформите возврат в разделе «Мои заказы»', icon: 'return' },
-      { title: warranty ? `Гарантия ${warranty.toLowerCase()}` : 'Гарантия продавца', description: 'Обратитесь к продавцу, если с товаром возникнет проблема', icon: 'seal-check' },
+      { title: 'Замена или возврат брака', description: 'В течение 10 дней по акту: курьер spotshop заберёт товар и привезёт замену', icon: 'return' },
+      warranty
+        ? { title: `Гарантия производителя: ${warranty.toLowerCase()}`, description: 'Гарантийный талон и сервисный центр производителя в Ташкенте', icon: 'seal-check' }
+        : { title: 'Документы для бухгалтерии', description: 'Счёт-фактура, накладная и акт выполненных работ к каждому заказу', icon: 'document-text-fill' },
     ],
     delivery: [
-      { title: 'Оплата при оформлении', description: 'С баланса компании или корпоративной картой', icon: 'card' },
-      { title: `Доставка ${card.deliveryDate}`, description: 'Курьером Express 24, Maxsus Courier или Yandex Delivery', note: 'Бесплатно в пункт выдачи spotshop', icon: 'truck' },
+      viewer.canPay === false
+        ? { title: 'Заказ оформляет закупщик', description: 'Товар уйдёт заявкой в корзину компании с вашим именем, оплату и заказ оформит закупщик', icon: 'receipt-item-fill' }
+        : { title: 'Оплата с баланса компании', description: 'Или корпоративной картой. Сумма резервируется и списывается после подтверждения заказа', icon: 'wallet-3-fill' },
+      { title: `Доставка ${card.deliveryDate}`, description: 'Курьер spotshop привезёт заказ в офис', note: 'Бесплатно в пункт выдачи spotshop', icon: 'truck' },
     ],
     reviewPhotos: reviews.flatMap(review => review.photos ?? []),
     reviewsPreview: reviews,
@@ -550,6 +596,10 @@ export function findProduct(slug: string): Product | null {
 
 /** Отзывы по разделу: у смартфона хвалят экран, у платья — посадку */
 const REVIEW_TEXTS: Record<string, string[]> = {
+  'ofis-i-kancelyariya': [
+    'Достоинства: привезли на следующий день, счёт-фактура и накладная в комплекте. Недостатки: нет. Комментарий: берём для всего офиса каждый месяц.',
+    'Достоинства: качество ровное от партии к партии, упаковка целая. Недостатки: хотелось бы оптовую скидку от 50 штук.',
+  ],
   'elektronika': [
     'Достоинства: оригинал, всё работает быстро, экран яркий. Недостатки: зарядного блока в коробке нет. Комментарий: пришёл запечатанным, IMEI проверил — всё чисто.',
     'Достоинства: батарея держит весь день. Недостатки: корпус маркий, сразу купил чехол.',

@@ -102,7 +102,7 @@ function amount(value: { amount: number, currency: 'UZS' }) {
               </span>
               <span v-if="banner.until" class="hero__until">{{ banner.until }}</span>
             </span>
-            <span v-if="banner.image" class="hero__media">
+            <span v-if="banner.image" class="hero__media" :class="{ 'hero__media--photo': banner.imageKind === 'photo' }">
               <UiImage
                 :src="banner.image"
                 :alt="banner.title"
@@ -152,7 +152,7 @@ function amount(value: { amount: number, currency: 'UZS' }) {
   position: relative;
   height: 345px;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 12px;
   background: var(--color-topbar);
 }
 
@@ -193,6 +193,20 @@ function amount(value: { amount: number, currency: 'UZS' }) {
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 18px 28px rgb(0 0 0 / 22%));
+}
+
+/* Снимок со своим фоном: на градиент его не поставить, поэтому это фото-плитка */
+.hero__media--photo {
+  overflow: hidden;
+  border-radius: 12px;
+  background: var(--color-surface);
+  box-shadow: 0 18px 40px rgb(0 0 0 / 28%);
+}
+
+/* contain, а не cover: портретное фото (кофемашина) иначе срезалось; фон у таких снимков светлый */
+.hero__media--photo .hero__image {
+  object-fit: contain;
+  filter: none;
 }
 
 /* Стрелки появляются при наведении на баннер */
@@ -256,13 +270,17 @@ function amount(value: { amount: number, currency: 'UZS' }) {
 
 .hero__slide--orange { background: linear-gradient(223deg, #FFD3B0 0%, #FA8231 55%, #D9601A 100%); }
 .hero__slide--violet { background: var(--promo-dark-bg); }
+/* Деловые фоны B2B: тёмно-зелёный бренда и графитовый */
+.hero__slide--brand { background: var(--promo-brand-bg); }
+.hero__slide--slate { background: var(--promo-slate-bg); }
 
 .hero__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 32px 64px 32px 48px;
+  /* Слева шире стрелки «назад» (16 + 44 px): при наведении она закрывала старую цену */
+  padding: 32px 88px 32px 80px;
   line-height: normal;
   text-decoration: none;
 }

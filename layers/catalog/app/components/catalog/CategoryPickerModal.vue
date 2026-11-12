@@ -384,6 +384,6 @@ function apply() {
   border-radius: var(--control-radius);
 }
 
-.picker__apply:hover { background: #0BC525; }
-.picker__apply:active { background: #009317; }
+.picker__apply:hover { background: #097A24; }
+.picker__apply:active { background: #06621D; }
 </style>

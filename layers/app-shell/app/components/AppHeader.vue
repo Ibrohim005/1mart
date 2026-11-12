@@ -106,7 +106,10 @@ async function resendCode() {
 }
 
 async function savePassword(password: string) {
-  const error = await auth.finishRecovery(password)
+  // Первый вход сотрудника меняет временный пароль, восстановление — по токену из SMS
+  const error = auth.passwordPurpose === 'firstLogin'
+    ? await auth.changeOwnPassword(password)
+    : await auth.finishRecovery(password)
   if (error) newPasswordModal.value?.fail(error)
 }
 
@@ -688,7 +691,8 @@ watch(() => router.currentRoute.value.fullPath, () => {
     <LazyAppAuthModal
       ref="authModal"
       v-model="auth.isAuthOpen"
-      @register="auth.isAuthOpen = false; auth.isRegisterOpen = true"
+      @register="auth.isAuthOpen = false; navigateTo(localePath('/register'))"
+      @identity="auth.isAuthOpen = false; navigateTo(localePath(`/register?method=${$event}`))"
       @recover="auth.startRecovery()"
       @submit="signIn($event)"
     />
@@ -719,6 +723,8 @@ watch(() => router.currentRoute.value.fullPath, () => {
     <LazyAppNewPasswordModal
       ref="newPasswordModal"
       v-model="auth.isNewPasswordOpen"
+      :title="auth.passwordPurpose === 'firstLogin' ? t('org.auth.ownPasswordTitle') : undefined"
+      :hint="auth.passwordPurpose === 'firstLogin' ? t('org.auth.ownPasswordHint') : undefined"
       @submit="savePassword($event)"
     />
 

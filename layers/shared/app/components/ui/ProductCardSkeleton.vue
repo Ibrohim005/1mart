@@ -34,7 +34,7 @@ defineProps<{ compact?: boolean }>()
   flex-direction: column;
   gap: calc(10 * var(--u));
   padding: calc(6 * var(--u)) calc(6 * var(--u)) calc(8 * var(--u));
-  border-radius: calc(16 * var(--u));
+  border-radius: calc(8 * var(--u));
   background: var(--color-surface);
 }
 

@@ -145,24 +145,22 @@ useSeoMeta({
         </div>
 
         <div class="odet__side">
+          <!-- Покупатель продавцу не виден: заказ оформлен через площадку, доставляет spotshop -->
           <MCard :title="$t('m.order.customer')">
-            <ul class="odet__kv">
-              <li><span>{{ data.customer.name }}</span></li>
-              <li v-if="data.customer.company && data.customer.company !== data.customer.name" class="odet__muted">{{ data.customer.company }}</li>
-              <li><a :href="`tel:${data.customer.phone}`" class="odet__link">{{ data.customer.phone }}</a></li>
-            </ul>
-          </MCard>
-
-          <MCard :title="$t('m.order.deliveryAddress')">
-            <p class="odet__delivery-type">
-              <UiIcon :name="data.deliveryType === 'courier' ? 'truck' : 'location'" :size="18" />
-              {{ data.deliveryType === 'courier' ? $t('m.order.deliveryCourier') : $t('m.order.deliveryPickup') }}
+            <p class="odet__platform">
+              <img src="/1mart-mark.svg" alt="" width="28" height="28" class="odet__platform-mark">
+              <span>{{ $t('m.order.platformBuyer') }}</span>
             </p>
-            <p class="odet__address">{{ data.deliveryAddress }}</p>
+            <p class="odet__muted odet__platform-text">{{ $t('m.order.platformBuyerText') }}</p>
           </MCard>
 
-          <MCard v-if="data.comment" :title="$t('m.order.comment')">
-            <p class="odet__comment">{{ data.comment }}</p>
+          <MCard :title="$t('m.order.handover')">
+            <p class="odet__delivery-type">
+              <UiIcon :name="data.handover.method === 'courierPickup' ? 'truck' : 'location'" :size="18" />
+              {{ data.handover.method === 'courierPickup' ? $t('m.order.handoverCourier') : $t('m.order.handoverDropOff') }}
+            </p>
+            <p class="odet__address">{{ data.handover.point }}</p>
+            <p class="odet__muted">{{ $t('m.order.handoverUntil', { date: formatDate(new Date(data.handover.until)) }) }}</p>
           </MCard>
 
           <MCard :title="$t('m.order.timeline')">
@@ -240,4 +238,8 @@ useSeoMeta({
 .odet__tl-row:last-child { padding-bottom: 0; }
 .odet__tl-dot { width: 10px; height: 10px; margin-top: 4px; flex: none; border-radius: 50%; background: var(--color-brand); }
 .odet__tl-text { display: flex; flex-direction: column; gap: 2px; font-size: var(--text-sm); }
+
+.odet__platform { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; font-weight: 600; }
+.odet__platform-mark { flex: none; }
+.odet__platform-text { margin: 0; line-height: 1.45; }
 </style>

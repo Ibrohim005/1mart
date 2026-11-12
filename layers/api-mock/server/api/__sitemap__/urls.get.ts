@@ -1,4 +1,4 @@
-import { categories, productCards, sellers } from '../../../mocks/data'
+import { categories, isSellerShown, productCards, sellers } from '../../../mocks/data'
 
 /** Статические страницы из подвала — в карте сайта их не было ни одной */
 const INFO_PAGES = [
@@ -22,7 +22,8 @@ export default defineEventHandler(() => [
     changefreq: 'weekly',
     priority: 0.7,
   })),
-  ...sellers.map(s => ({
+  // Только продавцы, которых площадка показывает: страница скрытого отдаёт 404
+  ...sellers.filter(s => isSellerShown(s.slug)).map(s => ({
     loc: `/seller/${s.slug}`,
     changefreq: 'weekly',
     priority: 0.6,

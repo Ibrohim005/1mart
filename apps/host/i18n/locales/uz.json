@@ -18,20 +18,20 @@
     "orderState": {
       "created": {
         "title": "Buyurtma qabul qilindi",
-        "text": "Sotuvchi buyurtmani tasdiqlaydi va yig‘ishni boshlaydi"
+        "text": "Buyurtmani tasdiqlaymiz va yig'ishni boshlaymiz"
       },
       "paid": {
         "title": "Buyurtma to‘landi",
-        "text": "Sotuvchi buyurtmani tasdiqlaydi va yig‘ishni boshlaydi"
+        "text": "Buyurtmani tasdiqlaymiz va yig'ishni boshlaymiz"
       },
       "processing": {
         "title": "Buyurtma yig‘ilmoqda",
-        "text": "Sotuvchi buyurtmani jo‘natishga tayyorlamoqda"
+        "text": "Buyurtmani jo'natishga tayyorlayapmiz"
       },
       "onTheWay": {
         "title": "Buyurtma yo‘lda",
         "text": "Taxminiy yetkazib berish — {date}",
-        "textNoDate": "Sotuvchi bog‘lanib, yetkazib berish sanasini aniqlaydi"
+        "textNoDate": "spotshop kuryeri bog'lanib, yetkazish sanasini aniqlaydi"
       },
       "readyForPickup": {
         "title": "Olib ketishga tayyor",
@@ -223,7 +223,7 @@
       },
       "ordersItem": {
         "detaliDostavki": "Yetkazib berish tafsilotlari",
-        "kurerIliProdavec": "Kuryer yoki sotuvchi",
+        "kurerIliProdavec": "spotshop kuryeri",
         "kureromAdresu": "Manzilga kuryer orqali",
         "obschayaStoimost": "Umumiy summa",
         "pomosch": "Yordam",
@@ -352,7 +352,7 @@
         "anonimnyyOtzyv": "Anonim sharh",
         "drugimPokupatelyamOchenNuzhen": "Boshqa xaridorlarga batafsil sharh juda kerak — nima yoqqanini aytib bering",
         "nedostatki": "Kamchiliklar",
-        "obyazatelnoUchtemOcenkuDostavki": "Yetkazib berish va xizmat bahosini albatta hisobga olamiz — u sotuvchi reytingiga ta'sir qiladi",
+        "obyazatelnoUchtemOcenkuDostavki": "Yetkazish va xizmat bahosini albatta hisobga olamiz — u bilan xizmatni yaxshilaymiz",
         "ostavitOtzyv": "Sharh qoldirish",
         "otpravitOtzyv": "Sharhni yuborish",
         "preimuschestva": "Afzalliklar",
@@ -435,13 +435,13 @@
         "contactBody": "Qo'llab-quvvatlash xizmatiga murojaat qiling — ish kuni davomida javob beramiz.",
         "complaintBody": "Buyurtma yoki sotuvchi bilan bog'liq muammoni yozing — murojaatingizni ko'rib chiqamiz.",
         "chatBody": "Qo'llab-quvvatlash chati 9:00 dan 21:00 gacha ishlaydi.",
-        "deliveryBody": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali yoki spotshop topshirish punktiga yetkazamiz.",
+        "deliveryBody": "O'z spotshop kuryerlarimiz orqali yoki spotshop topshirish punktiga yetkazamiz.",
         "termsConditionsBody": "spotshop marketpleysidan foydalanish shartlari.",
         "aboutH1": "spotshop nima",
         "aboutP1_1": "spotshop — kompaniyalar uchun B2B marketpleys. Platforma operatori — «Octagram» AJ, Toshkent.",
         "aboutP1_2": "Bu yerda butun O'zbekistondan tekshirilgan sotuvchilarning elektronika, maishiy texnika, kiyim, poyabzal, uy, go'zallik, sport va bolalar uchun mahsulotlari bor.",
         "aboutH2": "Bu qanday ishlaydi",
-        "aboutP2_1": "Mahsulotni tanlang, savatga qo'shing va buyurtma bering. Express 24, Maxsus Courier yoki Yandex Delivery kuryeri yetkazib beradi — yoki buyurtmani topshirish punktidan oling.",
+        "aboutP2_1": "Mahsulotni tanlang, savatga qo'shing va buyurtma bering. spotshop kuryeri yetkazib beradi — yoki buyurtmani topshirish punktidan oling.",
         "aboutP2_2": "Kompaniyalar buyurtmalarni saytdagi balansdan, u hisob raqamidan o'tkazma orqali to'ldiriladi, yoki korporativ karta bilan to'laydi. Summa band qilinadi va buyurtma tasdiqlangach, sotuvchining hisob raqamiga o'tkaziladi.",
         "aboutH3": "Xarid xavfsizligi",
         "aboutP3_1": "Har bir sotuvchi hujjatlar tekshiruvidan o'tadi, xaridorlarning baholari va sharhlari mahsulot sahifasida ko'rinadi.",
@@ -473,7 +473,7 @@
         "helpP1_1": "Buyurtma holati «Mening buyurtmalarim» bo'limida ko'rinadi. Raqam, sana, tarkib va summa ham o'sha yerda.",
         "helpP1_2": "Buyurtmani yetkazib berishga topshirilgunicha bekor qilish mumkin — tugma buyurtma kartochkasida chiqadi.",
         "helpH2": "Yetkazib berish",
-        "helpP2_1": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari orqali, shuningdek spotshop topshirish punktlariga yetkazamiz. Muddat mahsulot kartochkasida ko'rsatilgan.",
+        "helpP2_1": "O'z spotshop kuryerlarimiz orqali, shuningdek spotshop topshirish punktlariga yetkazamiz. Muddat mahsulot kartochkasida ko'rsatilgan.",
         "helpP2_2": "Kuryer vaqtni aniqlashtirish uchun yo'lga chiqishdan oldin bog'lanadi.",
         "helpH3": "To'lov va qaytarish",
         "helpP3_1": "Kompaniya balansidan yoki korporativ karta bilan to'lov.",
@@ -481,7 +481,7 @@
         "helpH4": "Javob topmadingizmi",
         "helpP4_1": "«Bizga yozing» sahifasidagi shakl orqali murojaat qiling — ish kuni davomida javob beramiz.",
         "deliveryH1": "Kuryer orqali yetkazib berish",
-        "deliveryP1_1": "Buyurtmalarni Express 24, Maxsus Courier va Yandex Delivery kuryerlari yetkazib beradi. Toshkent bo'ylab — bir kundan, viloyatlarga — 2–5 kun. Kuryer kelishdan oldin qo'ng'iroq qiladi.",
+        "deliveryP1_1": "Buyurtmalarni spotshop'ning o'z kuryerlari yetkazib beradi. Toshkent bo'ylab — bir kundan, viloyatlarga — 2–5 kun. Kuryer kelishdan oldin qo'ng'iroq qiladi.",
         "deliveryH2": "Topshirish punktlari",
         "deliveryP2_1": "spotshop topshirish punktiga yetkazib berish bepul. Buyurtma 7 kun saqlanadi; qabul qilishda mahsulot va uning to'liqligini tekshiring.",
         "deliveryH3": "Agar yetkazib berish kechiksa",
@@ -622,7 +622,7 @@
             },
             "delWho": {
               "q": "Buyurtmani kim yetkazib beradi",
-              "a": "Express 24, Maxsus Courier va Yandex Delivery kuryerlari. spotshop topshirish punktini ham tanlash mumkin - bu bepul."
+              "a": "spotshop'ning o'z kuryerlari. spotshop topshirish punktini ham tanlash mumkin - bu bepul."
             },
             "delTime": {
               "q": "Yetkazib berish qancha davom etadi",
@@ -658,7 +658,7 @@
           "intro": "O'zbekiston bo'ylab kuryer orqali yoki spotshop topshirish punktiga yetkazib beramiz.",
           "courier": {
             "title": "Kuryer orqali",
-            "fact1": "Express 24, Maxsus Courier yoki Yandex Delivery",
+            "fact1": "spotshop'ning o'z kuryerlari",
             "fact2": "Toshkent bo'ylab - bir kundan, viloyatlarga - 2-5 kun",
             "fact3": "Kuryer kelishdan oldin qo'ng'iroq qiladi"
           },
@@ -675,7 +675,7 @@
           },
           "step2": {
             "title": "Tasdiqlash",
-            "text": "Summa band qilingan, sotuvchi buyurtmani tasdiqlaydi."
+            "text": "Summa band qilindi, biz buyurtmani tasdiqlaymiz."
           },
           "step3": {
             "title": "Yetkazib berishga topshirish",
@@ -706,12 +706,12 @@
     },
     "checkout": {
       "checkout": {
-        "dostavkaProdavca": "Sotuvchi yetkazib beradi",
+        "dostavkaProdavca": "spotshop yetkazib berishi",
         "oplataProshla": "To'lov amalga oshdi",
         "oshibkaPriOplate": "To'lovda xatolik",
         "zakazOzhidanii": "Buyurtma kutilmoqda",
         "vypolnenieProshedsheeProsmotretSvoy": "Buyurtmangizni «Mening buyurtmalarim» bo'limida ko'rishingiz mumkin",
-        "ozhidaemOplatuKakTolko": "To'lovni kutmoqdamiz. To'lov o'tishi bilan buyurtma sotuvchiga yuboriladi",
+        "ozhidaemOplatuKakTolko": "To'lovni kutyapmiz. U o'tishi bilan buyurtmani yig'ishni boshlaymiz",
         "priObrabotkePlatezhaProizoshla": "To'lovni amalga oshirishda xatolik yuz berdi. Qaytadan urinib ko'ring",
         "addressEmpty": "Manzil qo'shing",
         "addressPartEntrance": "{value}-podyezd",
@@ -723,7 +723,7 @@
       },
       "deliveryCard": {
         "kakRabotaetDostavkaProdavca": "Yetkazib berish qanday ishlaydi",
-        "prodavecSvyazhetsyaChtobyUtochnit": "Sotuvchi yetkazib berish sanasi va vaqtini aniqlashtirish uchun bog'lanadi",
+        "prodavecSvyazhetsyaChtobyUtochnit": "spotshop kuryeri yetkazish sanasi va vaqtini aniqlash uchun bog'lanadi",
         "vybratDrugoy": "Boshqasini tanlash"
       },
       "orderSummary": {
@@ -738,7 +738,7 @@
         "promoLabel": "Promokod {code}",
         "youHavePromos": "Sizda {count} ta {word}",
         "deliveryUnavailable": "imkonsiz",
-        "deliveryBlockedNote": "{sellers} bu manzilga yetkazib bermaydi. Boshqa manzil tanlang yoki uning mahsulotlarini buyurtmadan olib tashlang."
+        "deliveryBlockedNote": "Ba'zi mahsulotlarni bu manzilga yetkazmaymiz. Boshqa manzilni tanlang yoki bu mahsulotlarni buyurtmadan olib tashlang."
       }
     },
     "host": {
@@ -787,7 +787,7 @@
         "openPhoto": "Suratni ochish",
         "openPhotoOf": "{author} yuklagan surat",
         "photoDialog": "Sharhdagi surat",
-        "sellerReply": "Sotuvchi javobi"
+        "sellerReply": "spotshop javobi"
       },
       "sellerCard": {
         "drugieProdukty": "Boshqa mahsulotlar",
@@ -824,7 +824,7 @@
     "searchTitle": "{query} — qidiruv"
   },
   "pdp": {
-    "buyersThisWeek": "Shu hafta {count} kishi sotib oldi",
+    "buyersThisWeek": "Haftalik buyurtmalar: {count}",
     "otherOptions": "Boshqa variantlar",
     "stockCount": "Qoldi: {n} dona",
     "sku": "Artikul",

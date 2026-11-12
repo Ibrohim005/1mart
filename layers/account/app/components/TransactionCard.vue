@@ -24,6 +24,8 @@ export interface Transaction {
   positive: boolean
   date: string
   method: string
+  /** Кто в компании оформил заказ: закупщик, бухгалтер или руководитель */
+  placedBy?: string
   /** Подпись статуса операции, если её отдаёт сервер */
   status?: string
 }
@@ -47,7 +49,8 @@ const isRefund = computed(() => props.transaction.kind === 'refund')
 <template>
   <article class="tx" :class="{ 'tx--refund': isRefund }">
     <span class="tx__icon" aria-hidden="true">
-      <UiIcon :name="isRefund ? 'rotate-left' : 'card-fill'" :size="20" />
+      <!-- Баланс компании — кошелёк, корпоративная карта — карта -->
+      <UiIcon :name="isRefund ? 'rotate-left' : transaction.method.includes('•') ? 'card-fill' : 'wallet-3-fill'" :size="20" />
     </span>
 
     <div class="tx__main">
@@ -56,6 +59,10 @@ const isRefund = computed(() => props.transaction.kind === 'refund')
         <NuxtLink :to="localePath(`/account/orders/${transaction.orderId}`)" class="tx__order">{{ transaction.orderNumber }}</NuxtLink>
       </p>
       <p class="tx__meta">{{ when }} · {{ transaction.method }}</p>
+      <p v-if="transaction.placedBy && !isRefund" class="tx__meta tx__who">
+        <UiIcon name="user" :size="14" color="currentColor" />
+        {{ $t('org.orders.placedBy', { name: transaction.placedBy }) }}
+      </p>
     </div>
 
     <div class="tx__side">
@@ -129,4 +136,5 @@ const isRefund = computed(() => props.transaction.kind === 'refund')
 .tx__currency { font-weight: 400; font-size: var(--text-sm); color: var(--color-gray); }
 
 .tx__status { margin: 3px 0 0; font-size: var(--text-xs); line-height: 16px; color: var(--color-gray); }
+.tx__who { display: flex; align-items: center; gap: 5px; margin-top: 2px; }
 </style>

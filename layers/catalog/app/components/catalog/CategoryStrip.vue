@@ -90,7 +90,7 @@ const localePath = useLocalePath()
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 16px;
+  border-radius: 10px;
   background: var(--color-topbar);
   transition: background 0.2s ease, transform 0.2s ease;
 }

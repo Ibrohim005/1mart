@@ -17,8 +17,8 @@ import { defineStore } from 'pinia'
 export const useCartStore = defineStore('cart-stub', () => {
   function ensureDetail() {}
   function quantityOf(_skuId: string | number): number { return 0 }
-  async function addItem(_skuId: string | number, _qty = 1) {}
-  async function setQuantity(_skuId: string | number, _qty: number) {}
+  async function addItem(_skuId: string | number, _qty = 1): Promise<boolean> { return false }
+  async function setQuantity(_skuId: string | number, _qty: number): Promise<boolean> { return false }
   return { ensureDetail, quantityOf, addItem, setQuantity }
 })
 

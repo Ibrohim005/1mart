@@ -2,10 +2,19 @@
 /** Блок «Ваш заказ». */
 import type { Cart } from '#shared/types/cart'
 
-defineProps<{ cart: Cart }>()
+/*
+ * B2B: у сотрудника без права оформлять (`canCheckout: false`) кнопки нет —
+ * его позиции это заявки, их оформит закупщик. У закупщика с заявками
+ * разных людей кнопка называется «Одобрить и оформить»: оформление и есть одобрение.
+ */
+const props = defineProps<{ cart: Cart }>()
 const emit = defineEmits<{ checkout: [] }>()
 const { money } = useMoney()
 const { t } = useI18n()
+const { access } = useAccessState()
+
+/** Сколько разных сотрудников в выбранных заявках */
+const requesters = computed(() => new Set(props.cart.items.filter(item => item.selected && item.requestedBy).map(item => item.requestedBy!.employeeId)).size)
 </script>
 
 <template>
@@ -32,12 +41,20 @@ const { t } = useI18n()
         <span class="summary__total-value">{{ money(cart.total) }}</span>
       </p>
 
-      <button
-        type="button"
-        class="summary__submit"
-        :disabled="!cart.selectedCount"
-        @click="emit('checkout')"
-      >{{ t('cart.checkout') }}</button>
+      <template v-if="cart.canCheckout">
+        <button
+          type="button"
+          class="summary__submit"
+          :disabled="!cart.selectedCount"
+          @click="emit('checkout')"
+        >{{ requesters ? t('org.cart.approveAndOrder') : t('cart.checkout') }}</button>
+        <p v-if="requesters" class="summary__requests">{{ t('org.cart.fromPeople', { count: requesters }) }}</p>
+      </template>
+      <div v-else class="summary__requester" role="note">
+        <p class="summary__requester-title">{{ t('org.cart.requesterTitle') }}</p>
+        <p class="summary__requester-text">{{ t('org.cart.requesterText') }}</p>
+        <p v-if="access?.limitLeft" class="summary__requester-limit">{{ t('org.cart.limitLeft', { sum: money(access.limitLeft) }) }}</p>
+      </div>
 
       <!-- Чем можно заплатить — до оформления, чтобы не было сюрпризов -->
       <p class="summary__pay">{{ $t('pay.cart.paymentTitle') }}</p>
@@ -147,4 +164,10 @@ const { t } = useI18n()
   line-height: 20px;
   color: var(--color-text);
 }
+
+.summary__requests { margin: 10px 0 0; font-size: var(--text-sm); color: var(--color-text-muted); text-align: center; }
+.summary__requester { display: flex; flex-direction: column; gap: 6px; margin-top: 18px; padding: 16px; border-radius: 12px; background: var(--color-field); }
+.summary__requester-title { margin: 0; font-weight: 600; font-size: var(--text-base); color: var(--color-text); }
+.summary__requester-text { margin: 0; font-size: var(--text-sm); line-height: 1.45; color: var(--color-text-muted); }
+.summary__requester-limit { margin: 4px 0 0; font-weight: 600; font-size: var(--text-sm); color: var(--color-brand-text); }
 </style>

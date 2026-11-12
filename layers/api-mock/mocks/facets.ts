@@ -121,6 +121,7 @@ export function brandCode(brand: string): string {
 export type FacetCode = 'brand' | 'color' | 'memory' | 'size' | 'material' | 'country'
 
 export const CATEGORY_FACETS: Record<string, FacetCode[]> = {
+  'ofis-i-kancelyariya': ['brand', 'color', 'material', 'country'],
   'elektronika': ['brand', 'color', 'memory', 'country'],
   'bytovaya-tehnika': ['brand', 'color', 'country'],
   'odezhda': ['brand', 'color', 'size', 'material', 'country'],

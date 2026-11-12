@@ -12,7 +12,8 @@ export default defineEventHandler((event) => {
 
   const list: OrderListItem[] = orders.filter((o) => {
     if (q.status && q.status !== 'all' && o.statusCode !== (q.status as OrderStatusCode)) return false
-    return matches(`${o.number} ${o.customerName}`, q.q)
+    // Поиск по номеру: покупатель продавцу не виден
+    return matches(o.number, q.q)
   })
 
   return ok(paginate(list, page, perPage))

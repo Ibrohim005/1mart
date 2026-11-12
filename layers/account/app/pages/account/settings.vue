@@ -266,8 +266,8 @@ useSeoMeta({ title: () => t('ui.account.settings.seoTitle'), robots: 'noindex, n
   border-radius: var(--control-radius);
 }
 
-.settings__save:hover { background: #0BC525; }
-.settings__save:active { background: #009317; }
+.settings__save:hover { background: #097A24; }
+.settings__save:active { background: #06621D; }
 .settings__save:disabled { opacity: 0.6; cursor: default; }
 
 .settings__logout {

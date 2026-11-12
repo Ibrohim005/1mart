@@ -8,7 +8,7 @@
     },
     "comment": {
       "title": "Buyurtmaga izoh",
-      "placeholder": "Masalan, qulay yetkazish vaqti yoki sotuvchiga istaklar"
+      "placeholder": "Masalan, qulay yetkazish vaqti yoki binoga ruxsatnoma"
     },
     "common": {
       "cancel": "Bekor qilish",
@@ -33,6 +33,7 @@
       "pickupFrom": "{date} dan olib ketish mumkin",
       "paylovLogistics": "spotshop",
       "providers": {
+        "spotshop": "spotshop kuryeri",
         "express24": "Express 24",
         "maxsus": "Maxsus Courier",
         "yandex": "Yandex Yetkazib berish"
@@ -42,7 +43,7 @@
       "card": "Korporativ karta",
       "addCard": "Korporativ karta qo'shish",
       "expires": "{date} gacha",
-      "holdHint": "Summa band qilinadi. Buyurtma tasdiqlangach, pul sotuvchining hisob raqamiga o'tkaziladi. Komissiya - 0 so'm.",
+      "holdHint": "Summa band qilinadi va buyurtma tasdiqlangach yechiladi. Komissiya - 0 so'm.",
       "balance": "Kompaniya balansi",
       "available": "Mavjud: {sum}",
       "short": "Yetishmaydi: {sum}",
@@ -56,7 +57,7 @@
       "total": "To'lovga",
       "pay": "{sum} to'lash",
       "processing": "Ishlanmoqda…",
-      "holdNote": "Summa band qilinadi. Buyurtma tasdiqlangach, pul sotuvchining hisob raqamiga o'tkaziladi, rad etilsa, xuddi shu usulda qaytariladi.",
+      "holdNote": "Summa band qilinadi. Buyurtma tasdiqlangach pul yechiladi, rad etilsa, xuddi shu usulda qaytariladi.",
       "legal": "Buyurtma berib, siz spotshop ofertasi shartlarini qabul qilasiz va shaxsiy ma'lumotlarni qayta ishlashga rozilik bildirasiz"
     },
     "antifraud": {
@@ -98,7 +99,7 @@
     },
     "stock": {
       "title": "Mahsulot mavjud emas",
-      "text": "Siz buyurtma berayotganingizda bu mahsulotlar sotuvchida tugab qoldi. Qolganini to'lash uchun ularni olib tashlang.",
+      "text": "Buyurtma berayotganingizda bu mahsulotlar tugab qoldi. Qolganini to'lash uchun ularni olib tashlang.",
       "itemNote": "{n} dona kerak — mavjud emas",
       "remove": "Buyurtmadan olib tashlash",
       "removeAll": "Hammasini olib tashlab davom etish",
@@ -121,7 +122,7 @@
     },
     "success": {
       "title": "Buyurtma rasmiylashtirildi",
-      "text": "Mablag' band qilindi, buyurtma sotuvchiga yuborildi. U tasdiqlagach, pul uning hisob raqamiga o'tkaziladi.",
+      "text": "Mablag' band qilindi, buyurtma qabul qilindi. Tasdiqlangach, ular yechiladi.",
       "order": "Buyurtma raqami",
       "orders": "Buyurtma raqamlari",
       "reserved": "Band qilindi",
@@ -146,7 +147,7 @@
       "refunded": "Mablag' qaytarilgan"
     },
     "steps": {
-      "awaiting": "Sotuvchini kutmoqda",
+      "awaiting": "Tasdiqlashni kutmoqda",
       "confirmed": "Tasdiqlandi",
       "handedToDelivery": "Yetkazishga topshirildi",
       "readyForPickup": "Olib ketishga tayyor",
@@ -156,23 +157,23 @@
     "orderState": {
       "created": {
         "title": "Buyurtma qabul qilindi",
-        "text": "Sotuvchi buyurtmani tasdiqlaydi"
+        "text": "Buyurtmani tasdiqlaymiz"
       },
       "paid": {
         "title": "Buyurtma to'langan",
-        "text": "Sotuvchi buyurtmani tasdiqlaydi"
+        "text": "Buyurtmani tasdiqlaymiz"
       },
       "processing": {
         "title": "Buyurtmaga ishlov berilmoqda",
-        "text": "Sotuvchi buyurtmani jo'natishga tayyorlamoqda"
+        "text": "Buyurtmani jo'natishga tayyorlayapmiz"
       },
       "onTheWay": {
         "title": "Buyurtma yo'lda",
         "text": "Kutilayotgan yetkazish — {date}"
       },
       "awaitingSeller": {
-        "title": "Sotuvchi tasdig'ini kutmoqda",
-        "text": "Mablag' band qilingan. Sotuvchi buyurtmani tasdiqlashi bilan ular yechiladi."
+        "title": "Tasdiqlashni kutmoqda",
+        "text": "Mablag' band qilindi. Buyurtmani tasdiqlashimiz bilan ular yechiladi."
       },
       "confirmed": {
         "title": "Buyurtma tasdiqlandi",
@@ -196,25 +197,25 @@
         "text": "Buyurtma {at} bekor qilindi. Mablag' qaytarildi"
       },
       "rejectedBySeller": {
-        "title": "Sotuvchi bekor qildi",
-        "text": "Sotuvchi buyurtmani bajara olmadi. Band qilingan mablag' qaytarildi"
+        "title": "Bekor qilindi: mahsulot mavjud emas",
+        "text": "Buyurtmani bajara olmadik. Band qilingan mablag' qaytarildi"
       },
       "returnRequested": {
         "title": "Qaytarish rasmiylashtirildi",
-        "text": "Qaytarish arizasi {at} qabul qilindi. Sotuvchi uni ko'rib chiqadi, pul o'sha to'lov usuliga qaytariladi"
+        "text": "Qaytarish arizasi {at} qabul qilindi. Biz uni ko'rib chiqamiz, pul xuddi shu to'lov usulida qaytadi"
       }
     },
     "orders": {
       "tracking": "Trek-raqam",
       "cancel": "Bekor qilish",
-      "cancelConfirmText": "Sotuvchi tasdiqlamaguncha bekor qilish mumkin. Band qilish bekor qilinadi, pul o'sha to'lov usuliga qaytadi.",
+      "cancelConfirmText": "Buyurtma tasdiqlanmaguncha bekor qilish mumkin. Band olib tashlanadi, pul xuddi shu to'lov usulida qaytadi.",
       "cancelReason": "Xaridor bekor qildi",
       "cancelDone": "Buyurtma bekor qilindi, mablag' qaytarildi",
       "return": "Qaytarishni rasmiylashtirish",
       "review": "Sharh qoldirish",
       "reviewDone": "Rahmat! Sharh yuborildi",
       "refunded": "Mablag' qaytarildi: {method}",
-      "rejectedToast": "Sotuvchi buyurtmani rad etdi. Mablag' qaytarildi",
+      "rejectedToast": "Buyurtma bekor qilindi: mahsulot mavjud emas. Mablag' qaytarildi",
       "statusChanged": "Buyurtma holati: {status}"
     },
     "return": {
@@ -230,17 +231,17 @@
       "detailsPlaceholder": "Nima noto'g'riligini yozing (ixtiyoriy)",
       "photos": "Rasm (ixtiyoriy, 5 tagacha)",
       "addPhotos": "Rasm qo'shish (5 tadan {n})",
-      "note": "Sotuvchi arizani ko'rib chiqadi. Pul siz to'lagan usulga qaytariladi.",
+      "note": "Arizani ko'rib chiqamiz. Pul siz to'lagan usulda qaytadi.",
       "submit": "Arizani yuborish",
       "done": "Qaytarish rasmiylashtirildi"
     },
     "cart": {
       "paymentTitle": "Kompaniya balansidan yoki korporativ karta bilan to'lov",
-      "deliveryNote": "Express 24, Maxsus Courier, Yandex Yetkazib berish yoki topshirish punkti"
+      "deliveryNote": "spotshop kuryeri yoki topshirish punkti"
     },
     "pdp": {
       "title": "To'lov usullari",
-      "hint": "Summa band qilinadi va buyurtma tasdiqlangach, sotuvchining hisob raqamiga o'tkaziladi",
+      "hint": "Summa band qilinadi va buyurtma tasdiqlangach yechiladi",
       "buyBoxHint": "Kompaniya balansidan yoki korporativ karta bilan to'lov",
       "balanceNote": "Kompaniyaning hisob raqamidan o'tkazma orqali to'ldiriladi"
     },

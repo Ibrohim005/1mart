@@ -113,15 +113,23 @@ export default defineNuxtConfig({
   image: {
     // Фото товаров демо-каталога (dummyjson) — оптимизируются через IPX как локальные
     domains: ['cdn.dummyjson.com'],
-    format: ['avif', 'webp'],
+    format: ['webp'],
     quality: 80,
     densities: [1, 2],
     screens: { xs: 360, sm: 480, md: 768, lg: 1024, xl: 1280, xxl: 1536 },
+    /*
+     * WebP, а не AVIF: сервер картинок пережимает фото на лету, и AVIF на
+     * каждое фото занимал сотни миллисекунд. 40 карточек держали все шесть
+     * соединений браузера, и запросы страницы (следующая порция товаров,
+     * большое фото товара) ждали в очереди по нескольку секунд.
+     */
     presets: {
-      productCard: { modifiers: { format: 'avif', width: 300, height: 300, fit: 'cover' } },
-      productGallery: { modifiers: { format: 'avif', width: 700, height: 700, fit: 'contain' } },
-      productThumb: { modifiers: { format: 'avif', width: 72, height: 72, fit: 'cover' } },
-      banner: { modifiers: { format: 'avif', width: 1280, height: 400, fit: 'cover' } },
+      // inside, а не cover: неквадратное фото (монитор, клавиатура) уменьшается целиком,
+      // в квадрат его вписывает сама карточка через object-fit: contain
+      productCard: { modifiers: { format: 'webp', width: 300, height: 300, fit: 'inside' } },
+      productGallery: { modifiers: { format: 'webp', width: 700, height: 700, fit: 'contain' } },
+      productThumb: { modifiers: { format: 'webp', width: 72, height: 72, fit: 'cover' } },
+      banner: { modifiers: { format: 'webp', width: 1280, height: 400, fit: 'cover' } },
       categoryIcon: { modifiers: { format: 'webp', width: 96, height: 96, fit: 'contain' } },
     },
   },
@@ -152,11 +160,11 @@ export default defineNuxtConfig({
      * TODO: тексты en и kaa пока повторяют русские — ждут перевода.
      */
     locales: [
-      { code: 'ru', language: 'ru-RU', name: 'Русский', files: ['ru.json', 'shell/ru.json', 'pay/ru.json'] },
-      { code: 'uz', language: 'uz-UZ', name: "O'zbekcha", files: ['uz.json', 'shell/uz.json', 'pay/uz.json'] },
-      { code: 'uz-cyrl', language: 'uz-Cyrl-UZ', name: 'Ўзбекча', files: ['uz-cyrl.json', 'shell/uz-cyrl.json', 'pay/uz-cyrl.json'] },
-      { code: 'en', language: 'en-US', name: 'English', files: ['en.json', 'shell/en.json', 'pay/en.json'] },
-      { code: 'kaa', language: 'kaa-UZ', name: 'Qaraqalpaqsha', files: ['kaa.json', 'shell/kaa.json', 'pay/kaa.json'] },
+      { code: 'ru', language: 'ru-RU', name: 'Русский', files: ['ru.json', 'shell/ru.json', 'pay/ru.json', 'org/ru.json'] },
+      { code: 'uz', language: 'uz-UZ', name: "O'zbekcha", files: ['uz.json', 'shell/uz.json', 'pay/uz.json', 'org/uz.json'] },
+      { code: 'uz-cyrl', language: 'uz-Cyrl-UZ', name: 'Ўзбекча', files: ['uz-cyrl.json', 'shell/uz-cyrl.json', 'pay/uz-cyrl.json', 'org/uz-cyrl.json'] },
+      { code: 'en', language: 'en-US', name: 'English', files: ['en.json', 'shell/en.json', 'pay/en.json', 'org/en.json'] },
+      { code: 'kaa', language: 'kaa-UZ', name: 'Qaraqalpaqsha', files: ['kaa.json', 'shell/kaa.json', 'pay/kaa.json', 'org/kaa.json'] },
     ],
     // Переводы грузятся лениво по умолчанию;
     // hreflang-альтернативы и canonical проставляются автоматически

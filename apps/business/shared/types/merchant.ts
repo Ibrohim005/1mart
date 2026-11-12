@@ -306,19 +306,12 @@ export interface OrderListItem {
   number: string
   createdAt: string
   statusCode: OrderStatusCode
-  customerName: string
   itemsCount: number
   total: Money
   paymentMethod: PaymentMethodCode
 }
 
 export interface OrderDetail extends OrderListItem {
-  customer: {
-    id: string
-    name: string
-    company?: string | null
-    phone: string
-  }
   items: OrderItemRow[]
   /** Итоги */
   subtotal: Money
@@ -327,34 +320,20 @@ export interface OrderDetail extends OrderListItem {
   commission: Money
   /** К зачислению продавцу после удержания комиссии */
   payout: Money
-  deliveryAddress: string
-  deliveryType: 'courier' | 'pickup'
+  /**
+   * Как товар уходит к покупателю. Покупатель продавцу не виден (решение заказчика
+   * 2026-11-12): заказ оформлен через площадку, а доставляет spotshop — его курьер
+   * забирает товар у продавца, или продавец сам привозит на склад spotshop.
+   */
+  handover: {
+    method: 'courierPickup' | 'dropOff'
+    /** Склад spotshop или адрес продавца, откуда забирает курьер */
+    point: string
+    /** До какого времени передать, ISO */
+    until: string
+  }
   /** Лента событий заказа */
   timeline: { code: OrderStatusCode, at: string }[]
-  comment?: string | null
-}
-
-/* --------------------------------------------------------------------------
- * Покупатели
- * ------------------------------------------------------------------------ */
-
-export interface CustomerListItem {
-  id: string
-  name: string
-  /** Для B2B: компания-покупатель */
-  company?: string | null
-  phone: string
-  ordersCount: number
-  totalSpent: Money
-  firstOrderAt: string
-  lastOrderAt: string
-}
-
-export interface CustomerDetail extends CustomerListItem {
-  email?: string | null
-  /** Средний чек */
-  avgCheck: Money
-  recentOrders: OrderListItem[]
 }
 
 /* --------------------------------------------------------------------------

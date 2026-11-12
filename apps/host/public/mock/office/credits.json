@@ -1,0 +1,281 @@
+[
+  {
+    "slug": "a4-paper",
+    "product": "Бумага офисная А4",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/9869063/",
+    "imageUrl": "https://images.pexels.com/photos/9869063/pexels-photo-9869063.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "brando-ltd-120530945",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "ballpoint-pens",
+    "product": "Ручки шариковые, набор",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/983826/",
+    "imageUrl": "https://images.pexels.com/photos/983826/pexels-photo-983826.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "jessbaileydesign",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "pencils",
+    "product": "Карандаши, набор",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/8tw1fzuLvIk",
+    "imageUrl": "https://images.unsplash.com/photo-1588014327911-a2aa31738d6a?w=1200&q=80&fm=jpg",
+    "author": "Mel Poole",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "stapler",
+    "product": "Степлер",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/OqkRizzcVx4",
+    "imageUrl": "https://images.unsplash.com/photo-1603234408844-15d80c40d580?w=1200&q=80&fm=jpg",
+    "author": "Nicolae Valera",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "paper-clips",
+    "product": "Скрепки канцелярские",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/4DPWnBrjIPg",
+    "imageUrl": "https://images.unsplash.com/photo-1512278753435-c834ff8a597a?w=1200&q=80&fm=jpg",
+    "author": "Jess Bailey",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "binder-clips",
+    "product": "Зажимы для бумаг (биндеры)",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/8099502/",
+    "imageUrl": "https://images.pexels.com/photos/8099502/pexels-photo-8099502.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "ds-stories",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "ring-binder",
+    "product": "Папка-регистратор на кольцах",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/EIB-pwIRS9c",
+    "imageUrl": "https://images.unsplash.com/photo-1743959866769-5c469c1a2a31?w=1200&q=80&fm=jpg",
+    "author": "Marjan Blan",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "file-folders",
+    "product": "Папки для документов пластиковые",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/jEUSKHWwaYc",
+    "imageUrl": "https://images.unsplash.com/photo-1733878860017-69514edb23e9?w=1200&q=80&fm=jpg",
+    "author": "Dollar Gill",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "notebook",
+    "product": "Блокнот",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/IZj7vckPGiw",
+    "imageUrl": "https://images.unsplash.com/photo-1591195852468-03a01d1375d6?w=1200&q=80&fm=jpg",
+    "author": "engin akyurt",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "sticky-notes",
+    "product": "Стикеры для заметок",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/6991442/",
+    "imageUrl": "https://images.pexels.com/photos/6991442/pexels-photo-6991442.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "ds-stories",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "markers",
+    "product": "Маркеры цветные",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/5412231/",
+    "imageUrl": "https://images.pexels.com/photos/5412231/pexels-photo-5412231.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "karola-g",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "scissors",
+    "product": "Ножницы офисные",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/8125680/",
+    "imageUrl": "https://images.pexels.com/photos/8125680/pexels-photo-8125680.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "lorenciusls",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "calculator",
+    "product": "Калькулятор настольный",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/7111494/",
+    "imageUrl": "https://images.pexels.com/photos/7111494/pexels-photo-7111494.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "tara-winstead",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "tape-dispenser",
+    "product": "Диспенсер для клейкой ленты",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/5820268/",
+    "imageUrl": "https://images.pexels.com/photos/5820268/pexels-photo-5820268.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "marina-agrelo-3547441",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "desk-organizer",
+    "product": "Органайзер настольный (стакан для ручек)",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/5706218/",
+    "imageUrl": "https://images.pexels.com/photos/5706218/pexels-photo-5706218.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "karola-g",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "mfp-printer",
+    "product": "МФУ лазерное",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/5AoOejjRUrA",
+    "imageUrl": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=1200&q=80&fm=jpg",
+    "author": "Mahrous Houses",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "toner-cartridge",
+    "product": "Картридж с тонером",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/33475146/",
+    "imageUrl": "https://images.pexels.com/photos/33475146/pexels-photo-33475146.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "zeleboba",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "laptop",
+    "product": "Ноутбук",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/AsZoi-Ar2CI",
+    "imageUrl": "https://images.unsplash.com/photo-1655226569940-b0ed83f6e268?w=1200&q=80&fm=jpg",
+    "author": "2H Media",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "monitor",
+    "product": "Монитор",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/9ixBVUCo6NU",
+    "imageUrl": "https://images.unsplash.com/photo-1666771410140-0573b232426e?w=1200&q=80&fm=jpg",
+    "author": "Mediamodifier",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "keyboard",
+    "product": "Клавиатура",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/18114576/",
+    "imageUrl": "https://images.pexels.com/photos/18114576/pexels-photo-18114576.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "monomotte",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "computer-mouse",
+    "product": "Мышь компьютерная",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/20510010/",
+    "imageUrl": "https://images.pexels.com/photos/20510010/pexels-photo-20510010.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "bertellifotografia",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "headset",
+    "product": "Гарнитура с микрофоном",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/7658202/",
+    "imageUrl": "https://images.pexels.com/photos/7658202/pexels-photo-7658202.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "pavel-danilyuk",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "office-chair",
+    "product": "Кресло офисное",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/144LTaRYmo8",
+    "imageUrl": "https://images.unsplash.com/photo-1776548759455-310ef8cd49ec?w=1200&q=80&fm=jpg",
+    "author": "Jesse Kojo Kuntoh",
+    "license": "Unsplash License"
+  },
+  {
+    "slug": "office-desk",
+    "product": "Стол офисный",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/8423864/",
+    "imageUrl": "https://images.pexels.com/photos/8423864/pexels-photo-8423864.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "pavel-danilyuk",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "projector",
+    "product": "Проектор",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/6062806/",
+    "imageUrl": "https://images.pexels.com/photos/6062806/pexels-photo-6062806.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "atomlaborblog",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "coffee-machine",
+    "product": "Кофемашина",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/38274449/",
+    "imageUrl": "https://images.pexels.com/photos/38274449/pexels-photo-38274449.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "valentin-ivantsov-2154772556",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "toilet-paper",
+    "product": "Туалетная бумага",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/5729364/",
+    "imageUrl": "https://images.pexels.com/photos/5729364/pexels-photo-5729364.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "garreth",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "trash-bin",
+    "product": "Корзина для мусора",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/6632869/",
+    "imageUrl": "https://images.pexels.com/photos/6632869/pexels-photo-6632869.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "cup-of-couple",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "document-tray",
+    "product": "Лоток для документов",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/7845307/",
+    "imageUrl": "https://images.pexels.com/photos/7845307/pexels-photo-7845307.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "rdne",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "envelopes",
+    "product": "Конверты почтовые",
+    "source": "pexels",
+    "pageUrl": "https://www.pexels.com/photo/172840/",
+    "imageUrl": "https://images.pexels.com/photos/172840/pexels-photo-172840.jpeg?auto=compress&cs=tinysrgb&w=1200",
+    "author": "ilazarova",
+    "license": "Pexels License"
+  },
+  {
+    "slug": "router",
+    "product": "Wi-Fi роутер",
+    "source": "unsplash",
+    "pageUrl": "https://unsplash.com/photos/hXVVNB6Qctg",
+    "imageUrl": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=1200&q=80&fm=jpg",
+    "author": "Compare Fibre",
+    "license": "Unsplash License"
+  }
+]

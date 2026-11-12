@@ -211,7 +211,7 @@ useSeoMeta({ title: () => t('ui.account.orders.seoTitle'), robots: 'noindex, nof
 
 .orders__more:disabled { opacity: .6; cursor: default; }
 .orders__more:not(:disabled):hover,
-.orders__retry:hover { background: #0BC525; }
+.orders__retry:hover { background: #097A24; }
 
 /* История транзакций — одна белая карточка-список, строки через тонкую линию */
 .orders__tx {

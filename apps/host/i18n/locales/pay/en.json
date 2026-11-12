@@ -8,7 +8,7 @@
     },
     "comment": {
       "title": "Order comment",
-      "placeholder": "For example, a convenient delivery time or a note for the seller"
+      "placeholder": "For example, a convenient delivery time or a building pass"
     },
     "common": {
       "cancel": "Cancel",
@@ -33,6 +33,7 @@
       "pickupFrom": "Ready from {date}",
       "paylovLogistics": "spotshop",
       "providers": {
+        "spotshop": "spotshop courier",
         "express24": "Express 24",
         "maxsus": "Maxsus Courier",
         "yandex": "Yandex Delivery"
@@ -42,7 +43,7 @@
       "card": "Corporate card",
       "addCard": "Add a corporate card",
       "expires": "exp. {date}",
-      "holdHint": "The amount is reserved. Once the order is confirmed, the money goes to the seller's settlement account. Fee: 0 UZS.",
+      "holdHint": "The amount is reserved and charged once the order is confirmed. Fee: 0 UZS.",
       "balance": "Company balance",
       "available": "Available: {sum}",
       "short": "Short by {sum}",
@@ -56,7 +57,7 @@
       "total": "To pay",
       "pay": "Pay {sum}",
       "processing": "Processing…",
-      "holdNote": "The amount is reserved. Once the order is confirmed, the money goes to the seller's settlement account. If the seller declines, it is returned the same way.",
+      "holdNote": "The amount is reserved. Once the order is confirmed it is charged; if the order is declined, it is returned the same way.",
       "legal": "By placing the order you accept the spotshop offer and consent to personal data processing"
     },
     "antifraud": {
@@ -98,7 +99,7 @@
     },
     "stock": {
       "title": "Out of stock",
-      "text": "These items ran out at the seller while you were checking out. Remove them to pay for the rest.",
+      "text": "These items ran out while you were placing the order. Remove them to pay for the rest.",
       "itemNote": "{n} pcs requested — not available",
       "remove": "Remove from order",
       "removeAll": "Remove all and continue",
@@ -121,7 +122,7 @@
     },
     "success": {
       "title": "Order placed",
-      "text": "The funds are reserved and the order has been sent to the seller. Once confirmed, the money goes to the seller's settlement account.",
+      "text": "The funds are reserved and the order is accepted. They will be charged once it is confirmed.",
       "order": "Order number",
       "orders": "Order numbers",
       "reserved": "Reserved",
@@ -146,7 +147,7 @@
       "refunded": "Funds returned"
     },
     "steps": {
-      "awaiting": "Awaiting seller",
+      "awaiting": "Awaiting confirmation",
       "confirmed": "Confirmed",
       "handedToDelivery": "Handed to delivery",
       "readyForPickup": "Ready for pickup",
@@ -156,23 +157,23 @@
     "orderState": {
       "created": {
         "title": "Order accepted",
-        "text": "The seller will confirm the order"
+        "text": "We will confirm the order"
       },
       "paid": {
         "title": "Order paid",
-        "text": "The seller will confirm the order"
+        "text": "We will confirm the order"
       },
       "processing": {
         "title": "Order is being processed",
-        "text": "The seller is preparing the order"
+        "text": "We are preparing the order for dispatch"
       },
       "onTheWay": {
         "title": "Order on the way",
         "text": "Expected delivery — {date}"
       },
       "awaitingSeller": {
-        "title": "Awaiting seller confirmation",
-        "text": "Funds are reserved and will be charged as soon as the seller confirms the order."
+        "title": "Awaiting confirmation",
+        "text": "The funds are reserved. They will be charged as soon as we confirm the order."
       },
       "confirmed": {
         "title": "Order confirmed",
@@ -196,25 +197,25 @@
         "text": "Order canceled {at}. Funds returned"
       },
       "rejectedBySeller": {
-        "title": "Canceled by seller",
-        "text": "The seller could not fulfil the order. The reserved funds have been returned"
+        "title": "Cancelled: item out of stock",
+        "text": "We could not fulfil the order. The reserved funds have been returned"
       },
       "returnRequested": {
         "title": "Return requested",
-        "text": "Return request accepted {at}. The seller will review it; money goes back to the same payment method"
+        "text": "The return request was accepted on {at}. We will review it; the money will be returned the same way you paid"
       }
     },
     "orders": {
       "tracking": "Tracking number",
       "cancel": "Cancel order",
-      "cancelConfirmText": "You can cancel until the seller confirms. The reservation is released and money returns to the same payment method.",
+      "cancelConfirmText": "You can cancel until the order is confirmed. The hold will be released and the money returned the same way you paid.",
       "cancelReason": "Canceled by the buyer",
       "cancelDone": "Order canceled, funds returned",
       "return": "Request a return",
       "review": "Leave a review",
       "reviewDone": "Thank you! Your review has been sent",
       "refunded": "Funds returned to: {method}",
-      "rejectedToast": "The seller declined the order. Funds returned",
+      "rejectedToast": "Order cancelled: item out of stock. The funds have been returned",
       "statusChanged": "Order status: {status}"
     },
     "return": {
@@ -230,17 +231,17 @@
       "detailsPlaceholder": "Describe the problem (optional)",
       "photos": "Photos (optional, up to 5)",
       "addPhotos": "Add photos ({n} of 5)",
-      "note": "The seller will review the request. Money goes back to the method you paid with.",
+      "note": "We will review the request. The money will be returned the same way you paid.",
       "submit": "Send request",
       "done": "Return requested"
     },
     "cart": {
       "paymentTitle": "Pay from company balance or with a corporate card",
-      "deliveryNote": "Express 24, Maxsus Courier, Yandex Delivery or a pickup point"
+      "deliveryNote": "spotshop courier or a pickup point"
     },
     "pdp": {
       "title": "Payment methods",
-      "hint": "The amount is reserved and goes to the seller's settlement account once the order is confirmed",
+      "hint": "The amount is reserved and charged once the order is confirmed",
       "buyBoxHint": "Pay from company balance or with a corporate card",
       "balanceNote": "Topped up by transfer from the company's settlement account"
     },

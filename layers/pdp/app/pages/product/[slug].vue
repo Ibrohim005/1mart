@@ -97,6 +97,9 @@ const promoRow = computed(() => {
   const list = banners.value ?? []
   return list.length ? [list[0]!, list[1] ?? list[0]!, list[0]!] : []
 })
+
+const { can: canDo } = useAccessState()
+const canPay = computed(() => canDo('requests.approve'))
 </script>
 
 <template>
@@ -135,19 +138,22 @@ const promoRow = computed(() => {
 
           <!-- Условия слева: правая колонка короче экрана, и кнопка покупки всегда под рукой -->
           <div class="pdp__terms">
-            <PdpInfoCard :title="$t('ui.pdp.productItem.vozvratGarantiya')" :rows="product.warranty" round-icons />
+            <!-- Без гарантии производителя в блоке документы — заголовок по содержимому -->
+            <PdpInfoCard :title="product.warranty.some(row => row.icon === 'seal-check') ? $t('ui.pdp.productItem.vozvratGarantiya') : $t('org.pdp.returnsDocs')" :rows="product.warranty" round-icons />
             <PdpInfoCard
               :title="$t('ui.pdp.productItem.oplataDostavka')"
               :rows="product.delivery"
               :link-label="$t('ui.checkout.deliveryCard.kakRabotaetDostavkaProdavca')"
             />
-            <PdpPaymentMethods class="pdp__terms-wide" :options="product.paymentOptions" />
+            <!-- Способы оплаты нужны тому, кто платит; сотрудник только заявляет -->
+            <PdpPaymentMethods v-if="canPay" class="pdp__terms-wide" :options="product.paymentOptions" />
           </div>
         </div>
 
         <div class="pdp__right sticky-aside">
           <PdpBuyBox :product="product" />
-          <PdpSellerCard :seller="product.seller" />
+          <!-- Продавец скрыт от покупателя, пока площадка не включит показ -->
+          <PdpSellerCard v-if="product.seller" :seller="product.seller" />
         </div>
       </div>
     </div>

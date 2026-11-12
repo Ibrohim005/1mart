@@ -14,7 +14,8 @@ export type PaymentMethod = 'balance' | 'card'
 export type CardNetwork = 'uzcard' | 'humo' | 'visa' | 'mastercard'
 
 /** Службы курьерской доставки, с которыми интегрирован маркетплейс */
-export type DeliveryProvider = 'express24' | 'maxsus' | 'yandex'
+/** spotshop — собственная курьерская служба площадки, основной способ доставки */
+export type DeliveryProvider = 'spotshop' | 'express24' | 'maxsus' | 'yandex'
 
 /**
  * Состояние денег по заказу: при оформлении средства только резервируются
@@ -161,10 +162,12 @@ export interface OrderCardItem {
   image: string
   quantity: number
   price: Money
-  /** Название продавца строки заказа — в одном заказе их может быть несколько. */
+  /** Название продавца строки заказа; пустая строка — продавец скрыт от покупателя (по умолчанию) */
   seller: string
   /** Статус-плашка под названием: «В пути», «Доставлен» */
   badge?: string
+  /** «Иванова А. · Бухгалтер» — кто заявил позицию; нет у заказов без заявок */
+  requestedBy?: string
 }
 
 /** Отметка в истории заказа: когда он перешёл в стадию */
@@ -205,6 +208,10 @@ export interface OrderCard {
   paymentStatus?: PaymentStatus
   /** Трек-номер службы доставки, когда заказ передан в доставку */
   tracking?: { provider?: DeliveryProvider, number: string }
+  /** «Саидова Дильноза · Закупщик» — кто оформил (одобрил) заказ в компании */
+  placedBy?: string
+  /** «Баланс компании» или «Корпоративная карта UzCard •4408» */
+  paymentMethod?: string
 }
 
 /** Данные чека (п.4.1.7.3 ТЗ): оператор, сумма, дата, замаскированный способ оплаты */
@@ -215,7 +222,7 @@ export interface PaymentReceipt {
   amount: Money
   /** «09.10.2026, 14:32» */
   date: string
-  /** «Баланс компании» или замаскированная карта: «UzCard •4408» */
+  /** «Баланс компании» или корпоративная карта: «Корпоративная карта UzCard •4408» */
   paymentMethod: string
   orderNumbers: string[]
   paymentStatus: PaymentStatus

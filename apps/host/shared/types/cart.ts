@@ -1,4 +1,5 @@
 import type { Id, Money, ProductCard, Seller } from './catalog'
+import type { Requester } from './company'
 
 export interface CartItem {
   id: Id
@@ -17,10 +18,17 @@ export interface CartItem {
   price: Money
   fullPrice: Money | null
   selected: boolean
-  seller: Seller
+  /** null — продавец скрыт от покупателя (по умолчанию), см. Product.seller */
+  seller: Seller | null
+  /**
+   * Кто заявил позицию. Корзина у компании общая: сотрудник кладёт товар —
+   * это его заявка, закупщик видит имя и роль и решает, оформлять ли.
+   * null — корзина без компании (гость) или бэкенд ещё не знает автора.
+   */
+  requestedBy: Requester | null
 }
 
-/** Группа доставки в корзине: «Доставка 1mart», «Доставка продавца» */
+/** Группа корзины: у закупщика — заявки одного сотрудника, у остальных — способ доставки */
 export interface CartGroup {
   id: string
   /** Мелкая надпись над заголовком */
@@ -40,6 +48,11 @@ export interface Cart {
   deliveryPrice: Money
   total: Money
   selectedCount: number
+  /**
+   * Может ли этот пользователь оформить заказ. Сотрудник без права одобрения
+   * только заявляет: его позиции видит закупщик, а кнопки «Оформить» у него нет.
+   */
+  canCheckout: boolean
 }
 
 export interface CartSummary {

@@ -87,7 +87,8 @@ const oldPrice = computed(() =>
           {{ item.skuOptions.map(option => option.value).join(' · ') }}
         </p>
 
-        <p class="row__seller">{{ $t('ui.cart.item.sellerLabel', { title: item.seller.title }) }}</p>
+        <!-- Продавца показываем, только если площадка его открыла; по умолчанию его нет -->
+        <p v-if="item.seller" class="row__seller">{{ $t('ui.cart.item.sellerLabel', { title: item.seller.title }) }}</p>
       </div>
 
       <label class="row__checkbox" :class="{ 'row__checkbox--on': item.selected }">

@@ -1,16 +1,30 @@
 <script setup lang="ts">
-/** Блок «О товаре или животном». Макет: about-card 740×356.1, r25.5. */
-defineProps<{ description: string }>()
+/**
+ * Блок «О товаре». Макет: about-card 740×356.1, r25.5.
+ * «Подробнее» — только если текст правда обрезан: раньше кнопка стояла и под
+ * описанием в две строки, а нажатие ничего не открывало.
+ */
+const props = defineProps<{ description: string }>()
 const expanded = ref(false)
+const clamped = ref(false)
+const text = useTemplateRef<HTMLParagraphElement>('text')
+
+function measure() {
+  const node = text.value
+  if (node && !expanded.value) clamped.value = node.scrollHeight > node.clientHeight + 1
+}
+
+onMounted(measure)
+watch(() => props.description, () => nextTick(measure))
 </script>
 
 <template>
   <section class="about">
     <h2 class="about__title">{{ $t('ui.pdp.about.tovareIliZhivotnom') }}</h2>
 
-    <p class="about__text" :class="{ 'about__text--expanded': expanded }">{{ description }}</p>
+    <p ref="text" class="about__text" :class="{ 'about__text--expanded': expanded }">{{ description }}</p>
 
-    <button type="button" class="about__more" @click="expanded = !expanded">
+    <button v-if="clamped || expanded" type="button" class="about__more" :aria-expanded="expanded" @click="expanded = !expanded">
       {{ expanded ? $t('common.collapse') : $t('common.more') }}
       <UiIcon name="alt-arrow-down" color="currentColor" :size="21" class="about__chevron" :class="{ 'about__chevron--up': expanded }" />
     </button>

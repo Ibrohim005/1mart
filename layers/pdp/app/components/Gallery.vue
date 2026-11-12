@@ -383,7 +383,7 @@ function next() {
   width: 30.4px;
   height: 30.4px;
   border-radius: 45.6px;
-  background: #49FF63;
+  background: #3DBA55;
 }
 
 .gallery__video-text {

@@ -23,16 +23,21 @@ type MenuItem =
   | { label: string, icon: string, to: string, href?: never }
   | { label: string, icon: string, href: string, to?: never }
 
-const groups: MenuItem[][] = [
+// Пункты по правам роли: баланс видит тот, кто им управляет; «Компания» есть у всех —
+// руководитель управляет там сотрудниками, остальные видят свой доступ
+const { can } = useAccessState()
+
+const groups = computed<MenuItem[][]>(() => [
   [
     { label: 'breadcrumbs.orders', to: '/account/orders', icon: 'receipt-item-fill' },
-    { label: 'pay.balance.title', to: '/account/balance', icon: 'wallet-3-fill' },
+    { label: 'org.company.title', to: '/account/company', icon: 'building-fill' },
+    ...(can('balance.manage') ? [{ label: 'pay.balance.title', to: '/account/balance', icon: 'wallet-3-fill' }] : []),
     { label: 'account.reviews', to: '/account/reviews', icon: 'star-fill' },
     { label: 'common.becomeSeller', href: sellerLandingUrl, icon: 'shop-fill' },
   ],
   [{ label: 'account.promo', to: '/account/promo', icon: 'ticket' }],
   [{ label: 'account.settings', to: '/account/settings', icon: 'setting-2' }],
-]
+])
 
 function isActive(to: string | undefined) {
   return to ? route.path.endsWith(to) : false

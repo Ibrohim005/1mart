@@ -99,19 +99,22 @@ async function change(delta: number) {
   }
 }
 
+// Купить сразу может только тот, кто оформляет заказы; сотрудник только заявляет
+const { can } = useAccessState()
+
 /** «Купить в 1 клик»: добавляем в корзину и сразу открываем оформление */
 async function buyNow() {
   if (!auth.requireAuth()) return
-  await addToCart()
-  await router.push(localePath('/checkout'))
+  if (await addToCart()) await router.push(localePath('/checkout'))
 }
 
+/** false — сервер отказал (категория отдела, лимит), причину корзина уже показала */
 async function addToCart() {
   const sku = currentSku.value
-  if (!sku) return
+  if (!sku) return false
   pending.value = true
   try {
-    await cart.addItem(sku.id, 1)
+    return await cart.addItem(sku.id, 1)
   }
   finally {
     pending.value = false
@@ -208,22 +211,24 @@ async function addToCart() {
         </div>
       </section>
 
-      <p v-if="product.deliveryNote" class="buybox__delivery">
-        <UiIcon name="tick-circle-fill" :size="18" class="buybox__check" />
-        {{ product.deliveryNote }}
-      </p>
-
-      <div class="buybox__meta">
-        <span v-if="available > 0" class="buybox__stock">
-          {{ $t('pdp.stockCount', { n: available }) }}
-        </span>
-        <span v-else-if="available === 0" class="buybox__stock buybox__stock--out">
+      <!-- Доставка и остаток — одним списком, иконки залитые и на одной линии -->
+      <ul class="buybox__facts">
+        <li v-if="product.deliveryNote" class="buybox__fact">
+          <UiIcon name="truck-fill" :size="18" class="buybox__fact-icon" />
+          {{ product.deliveryNote }}
+        </li>
+        <li v-if="available > 0" class="buybox__fact buybox__fact--stock">
+          <UiIcon name="box-fill" :size="18" class="buybox__fact-icon" />
+          {{ $t('pdp.stockCount', { n: groupDigits(available) }) }}
+        </li>
+        <li v-else-if="available === 0" class="buybox__fact buybox__fact--out">
+          <UiIcon name="box-fill" :size="18" class="buybox__fact-icon" />
           {{ $t('catalog.outOfStock') }}
-        </span>
-        <span v-if="currentSku?.barcode" class="buybox__sku">
+        </li>
+        <li v-if="currentSku?.barcode" class="buybox__fact buybox__fact--muted">
           {{ $t('pdp.sku') }}: {{ currentSku.barcode }}
-        </span>
-      </div>
+        </li>
+      </ul>
     </div>
 
     <!-- Кнопки -->
@@ -268,13 +273,14 @@ async function addToCart() {
         </button>
       </div>
 
-      <button type="button" class="buybox__oneclick" :disabled="pending || available <= 0" @click="buyNow">{{ $t('ui.pdp.buyBox.kupit1Klik') }}</button>
+      <button v-if="can('requests.approve')" type="button" class="buybox__oneclick" :disabled="pending || available <= 0" @click="buyNow">{{ $t('ui.pdp.buyBox.kupit1Klik') }}</button>
     </div>
 
     <!-- Чем можно заплатить — до оформления, без рассрочек и кредитов -->
+    <!-- Сотрудник не платит: его товар уходит заявкой закупщику -->
     <p class="buybox__pay-hint">
       <UiIcon name="card" :size="18" />
-      {{ $t('pay.pdp.buyBoxHint') }}
+      {{ can('requests.approve') ? $t('pay.pdp.buyBoxHint') : $t('org.pdp.requestHint') }}
     </p>
   </aside>
 </template>
@@ -440,40 +446,21 @@ async function addToCart() {
   cursor: not-allowed;
 }
 
-.buybox__delivery {
+.buybox__facts { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+
+.buybox__fact {
   display: flex;
   align-items: center;
-  gap: 7.9px;
-  margin: 0;
-  font-weight: 400;
+  gap: 8px;
   font-size: var(--text-base);
-  line-height: 19.1px;
-  color: #66686E;
+  line-height: 20px;
+  color: var(--color-text);
 }
 
-.buybox__check { color: var(--color-brand-text); }
-
-.buybox__meta {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0;
-}
-
-.buybox__stock {
-  font-size: var(--text-sm);
-  line-height: 16.9px;
-  color: var(--color-brand-text);
-  font-weight: 500;
-}
-
-.buybox__stock--out { color: #90949C; }
-
-.buybox__sku {
-  font-size: var(--text-sm);
-  line-height: 16.9px;
-  color: #90949C;
-}
+.buybox__fact-icon { flex: none; color: var(--color-text-muted); }
+.buybox__fact--stock .buybox__fact-icon { color: var(--color-brand-text); }
+.buybox__fact--out { color: var(--color-text-muted); }
+.buybox__fact--muted { padding-left: 26px; font-size: var(--text-sm); color: var(--color-text-muted); }
 
 /* ---------- Кнопки ---------- */
 

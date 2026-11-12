@@ -10,7 +10,7 @@ withDefaults(defineProps<{ size?: number }>(), { size: 189.3 })
 
 <template>
   <span class="mark" :style="{ width: `${size}px`, height: `${size}px` }" aria-hidden="true">
-    <UiIcon name="tick-circle-fill" color="#0AE728" :size="size * 0.876" />
+    <UiIcon name="tick-circle-fill" color="#0B8F2A" :size="size * 0.876" />
   </span>
 </template>
 
@@ -19,7 +19,7 @@ withDefaults(defineProps<{ size?: number }>(), { size: 189.3 })
   display: grid;
   place-items: center;
   flex: none;
-  border: 2px solid #0AE728;
+  border: 2px solid #0B8F2A;
   border-radius: 50%;
 }
 </style>

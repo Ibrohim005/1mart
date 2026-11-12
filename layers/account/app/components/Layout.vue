@@ -57,20 +57,23 @@ const promoRow = computed(() => {
   color: var(--color-text-muted);
 }
 
-/* Макет «Мои заказы»: крошки на y=160, две колонки — на y=252; зазор 16 */
+/*
+ * Колонки сразу под крошками, как на остальных страницах витрины (корзина,
+ * оформление): 24 px. Прежние 76 px из макета оставляли пустую полосу.
+ */
 .account__container {
   display: flex;
   gap: 16px;
   align-items: flex-start;
   width: var(--container-width);
   margin-inline: auto;
-  padding-block: 76px 52px;
+  padding-block: 24px 52px;
 }
 
 .account__content { width: 820px; }
 
 .account__title {
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   font: var(--type-page-title);
   color: var(--color-text);
 }

@@ -21,19 +21,19 @@
    * Полный стиль PlanIQ: прохладный светлый фон, белые карточки, чёрные
    * «фичевые» карточки, зелёный бренд. Этот файл грузится только в apps/business,
    * поэтому витрина (apps/host) остаётся на своей палитре. */
-  --m-brand: #0AE728;                  /* зелёный официального логотипа spotshop */
+  --m-brand: #0B8F2A;                  /* деловой тёмно-зелёный, выбор заказчика 2026-11-12 (как на витрине) */
   --m-brand-strong: #0E7A1D;           /* зелёный текст на белом и светлом: контраст от 4.5:1 */
-  --m-brand-bright: #49FF63;           /* светлая пилюля */
+  --m-brand-bright: #149B33;           /* наведение на зелёную кнопку */
   --m-brand-ink: #0A5214;              /* тёмно-зелёный текст на светло-зелёной подложке */
   --m-brand-tint: #E7FBEA;             /* мягкая подложка бренда */
   --m-brand-tint-2: #CDF6D4;
-  --m-brand-gradient: linear-gradient(135deg, #49FF63 0%, #0AE728 55%, #0BC525 100%);
-  --m-brand-ring: 0 0 0 4px rgb(10 231 40 / 22%);
+  --m-brand-gradient: linear-gradient(135deg, #149B33 0%, #0B8F2A 55%, #097A24 100%);
+  --m-brand-ring: 0 0 0 4px rgb(11 143 42 / 22%);
 
   /* Чёрная «фичевая» карточка PlanIQ (баланс, герой лендинга, баннеры) с зелёным
      свечением в углу — вместо прежнего бирюзового градиента. */
   --m-hero-gradient:
-    radial-gradient(120% 140% at 88% 8%, rgb(10 231 40 / 24%) 0%, transparent 46%),
+    radial-gradient(120% 140% at 88% 8%, rgb(11 143 42 / 24%) 0%, transparent 46%),
     linear-gradient(152deg, #1C1C1C 0%, #121212 58%, #0B0B0B 100%);
 
   /* ── Прохладная нейтральная основа PlanIQ ──────────────────────────────── */
@@ -55,7 +55,7 @@
   --m-shadow-sm: 0 1px 3px rgb(17 17 17 / 5%), 0 1px 2px rgb(17 17 17 / 4%);
   --m-shadow-md: 0 4px 10px -2px rgb(17 17 17 / 6%), 0 10px 24px -8px rgb(17 17 17 / 9%);
   --m-shadow-lg: 0 6px 16px -4px rgb(17 17 17 / 8%), 0 24px 48px -12px rgb(17 17 17 / 13%);
-  --m-shadow-brand: 0 10px 28px -10px rgb(10 231 40 / 42%);
+  --m-shadow-brand: 0 10px 28px -10px rgb(11 143 42 / 42%);
   --m-shadow-warm: 0 10px 28px -10px rgb(17 17 17 / 12%);
 
   /* ── Семантические семейства (подложка · сплошной · текст) ───────────────── */
@@ -86,15 +86,15 @@
   --m-accent-fg: #111111;
   --m-accent-gradient: linear-gradient(135deg, #2A2A2A 0%, #111111 100%);
   --m-warm-gradient:
-    radial-gradient(120% 140% at 88% 10%, rgb(10 231 40 / 20%) 0%, transparent 48%),
+    radial-gradient(120% 140% at 88% 10%, rgb(11 143 42 / 20%) 0%, transparent 48%),
     linear-gradient(150deg, #1C1C1C 0%, #111111 100%);
 
   /* ── Переопределения общих токенов (--color-*) — только для бизнес-приложения.
    * Так общие компоненты (UiButton, модалки, поля) тоже переходят в стиль
    * PlanIQ; витрина (без этого файла) остаётся на своей палитре. */
-  --color-brand: #0AE728;
-  --color-brand-dark: #0BC525;
-  --color-brand-darker: #0E7A1D;
+  --color-brand: #0B8F2A;
+  --color-brand-dark: #097A24;
+  --color-brand-darker: #06621D;
   --color-brand-tint: #E7FBEA;
   --color-text: #111111;
   --color-text-muted: #6D6D6D;
@@ -106,12 +106,12 @@
   --color-navy: #141414;               /* тёмные элементы (подвал лендинга) — PlanIQ-чёрный */
   --color-navy-2: #262626;
   --color-gray: #9A9A9A;               /* вторичный текст на тёмном */
-  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 5px rgb(10 231 40 / 55%);
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 5px rgb(11 143 42 / 55%);
 
   /* ── Цвета «на поверхности»: единый источник, чтобы не хардкодить #111/#fff ──
-   * on-brand — текст/иконка на зелёной бренд-плашке (в PlanIQ — чёрный);
+   * on-brand — текст/иконка на зелёной бренд-плашке (белый: тёмно-зелёный #0B8F2A, контраст 4.2:1);
    * on-dark  — на чёрных «фичевых» карточках и тёмном герое (белый, с тирами). */
-  --m-on-brand: #111111;
+  --m-on-brand: #FFFFFF;
   --m-on-dark: #FFFFFF;
   --m-on-dark-2: rgb(255 255 255 / 82%);   /* подзаголовки на тёмном */
   --m-on-dark-3: rgb(255 255 255 / 70%);   /* подписи на тёмном */
@@ -123,14 +123,14 @@
   --m-glass-grid: rgb(255 255 255 / 5%);   /* декоративная сетка на тёмном */
 
   --m-scrim: rgb(17 17 17 / 55%);          /* затемнение поверх фото (кнопка удаления) */
-  --m-brand-glow: rgb(10 231 40 / 24%);    /* зелёное свечение в углу тёмных карточек */
-  --m-brand-glow-soft: rgb(10 231 40 / 16%);
+  --m-brand-glow: rgb(11 143 42 / 24%);    /* зелёное свечение в углу тёмных карточек */
+  --m-brand-glow-soft: rgb(11 143 42 / 16%);
 
   /* Сочный «меш»-градиент больших блоков лендинга; текст поверх — --m-on-brand. */
   --m-mesh-gradient:
     radial-gradient(70% 90% at 12% 12%, #B8FBC2 0%, transparent 62%),
     radial-gradient(70% 90% at 92% 88%, #0FB52B 0%, transparent 60%),
-    linear-gradient(135deg, #49FF63 0%, #0AE728 55%, #0BC525 100%);
+    linear-gradient(135deg, #149B33 0%, #0B8F2A 55%, #097A24 100%);
 
   /* ── Радиусы (своя сетка, плотнее витринной) ────────────────────────────── */
   --m-radius-sm: 10px;
@@ -232,6 +232,6 @@
 input, textarea { caret-color: var(--m-brand-strong); }
 
 .btn--primary { color: #111111 !important; }
-.btn--primary:hover { background: #0BC525 !important; }
-.btn--primary:active { background: #009317 !important; }
+.btn--primary:hover { background: #097A24 !important; }
+.btn--primary:active { background: #06621D !important; }
 .btn--ghost { color: var(--m-brand-strong) !important; }

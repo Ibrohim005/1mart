@@ -33,7 +33,6 @@ export function useMerchantNav(): MerchantNavGroup[] {
       titleKey: 'm.nav.groupSales',
       items: [
         { key: 'orders', labelKey: 'm.nav.orders', icon: 'bag-2-fill', to: '/orders' },
-        { key: 'customers', labelKey: 'm.nav.customers', icon: 'profile-2user-fill', to: '/customers' },
         { key: 'reviews', labelKey: 'm.nav.reviews', icon: 'star-fill', to: '/reviews' },
       ],
     },

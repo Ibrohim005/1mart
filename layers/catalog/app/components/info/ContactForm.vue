@@ -142,7 +142,7 @@ async function submit() {
   border-radius: var(--control-radius);
 }
 
-.request__submit:hover { background: #0BC525; }
+.request__submit:hover { background: #097A24; }
 .request__submit:disabled { opacity: 0.6; cursor: default; }
 
 .request__done {

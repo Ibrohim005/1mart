@@ -43,6 +43,13 @@ export function cardHolderName(event: MockEvent) {
   return companyDetails(event).name
 }
 
+const CORPORATE_LABELS: Record<string, string> = {
+  ru: 'Корп. карта',
+  uz: 'Korporativ karta',
+  'uz-cyrl': 'Корпоратив карта',
+  en: 'Corporate card',
+}
+
 const BALANCE_LABELS: Record<string, string> = {
   'ru': 'Баланс компании',
   'uz': 'Kompaniya balansi',
@@ -130,7 +137,8 @@ export function addCard(event: MockEvent, pan: string, expires: string) {
 /** «UzCard •4408» или «Баланс компании» — подпись способа оплаты для чека и заказа */
 export function paymentMethodLabel(event: MockEvent, cardId: string | null | undefined) {
   const card = findCard(event, cardId)
-  if (card) return `${NETWORK_TITLES[card.network]} •${card.last4}`
+  // B2B: личных карт нет — только корпоративные, так и подписываем
+  if (card) return `${CORPORATE_LABELS[mockLocale(getHeader(event, 'accept-language'))] ?? CORPORATE_LABELS.ru!} ${NETWORK_TITLES[card.network]} •${card.last4}`
   return BALANCE_LABELS[mockLocale(getHeader(event, 'accept-language'))] ?? BALANCE_LABELS.ru!
 }
 

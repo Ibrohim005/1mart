@@ -18,9 +18,9 @@ const { data: promoBanners, status: promoBannersStatus } = await useApiData<Bann
 const { data: categories, status: categoriesStatus } = await useApiData<Category[]>('home:categories', '/categories/root', { lazy: true })
 // Полки — только виды, которые есть в API: discounts | recommended | wow.
 // «Хиты продаж» — это recommended, «Новинки» — wow.
-const { data: discounts, status: discountsStatus } = await useApiData<ProductCard[]>('home:discounts', '/products/shelf', { query: { kind: 'discounts', limit: 5 }, lazy: true })
-const { data: recommended, status: recommendedStatus } = await useApiData<ProductCard[]>('home:recommended', '/products/shelf', { query: { kind: 'recommended', limit: 10 }, lazy: true })
-const { data: wow, status: wowStatus } = await useApiData<ProductCard[]>('home:wow', '/products/shelf', { query: { kind: 'wow', limit: 5 }, lazy: true })
+const { data: discounts, status: discountsStatus } = await useApiData<ProductCard[]>('home:discounts', '/products/shelf', { query: { kind: 'discounts', limit: 4 }, lazy: true })
+const { data: recommended, status: recommendedStatus } = await useApiData<ProductCard[]>('home:recommended', '/products/shelf', { query: { kind: 'recommended', limit: 8 }, lazy: true })
+const { data: wow, status: wowStatus } = await useApiData<ProductCard[]>('home:wow', '/products/shelf', { query: { kind: 'wow', limit: 4 }, lazy: true })
 
 useSeoMeta({
   // Имя бренда добавляет titleTemplate — в заголовке оно было дважды
@@ -75,7 +75,7 @@ useSchemaOrg([
       :more-link="localePath('/search?kind=recommended')"
       :products="recommended ?? []"
       :loading="recommendedStatus === 'pending'"
-      :skeletons="10"
+      :skeletons="8"
     />
 
     <HomePromoBanners :banners="promoBanners ?? []" :loading="promoBannersStatus === 'pending'" />

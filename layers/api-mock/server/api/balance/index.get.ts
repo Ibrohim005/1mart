@@ -3,6 +3,8 @@ import { publicInvoice } from '../../utils/balance-view'
 import { orderSeeds } from '../../utils/orders-state'
 import { mockStampOf } from '../../utils/orders-view'
 import type { BalanceOperation, BalanceOverview } from '#shared/types/order'
+import { mockStatus } from '../../utils/mock-status'
+import { can, membership } from '../../utils/org-state'
 
 /**
  * Всё для страницы баланса: доступная сумма, резерв по заказам, реквизиты
@@ -11,6 +13,12 @@ import type { BalanceOperation, BalanceOverview } from '#shared/types/order'
  * TODO: Connect to backend endpoint GET /balance
  */
 export default defineEventHandler((event) => {
+  // Баланс видит тот, кто им управляет или платит за заказы (закупщик); сотрудник — нет
+  if (!can(event, 'balance.manage') && !can(event, 'requests.approve')) {
+    mockStatus(event, 403)
+    return fail([{ code: 'balance_forbidden', message: 'This role cannot see the company balance' }])
+  }
+
   const state = balanceState(event)
   const orders = orderSeeds(event).filter(order => order.cardId === null)
 
@@ -62,7 +70,8 @@ export default defineEventHandler((event) => {
   const overview: BalanceOverview = {
     available: { amount: state.available, currency: 'UZS' },
     reserved: { amount: reserved, currency: 'UZS' },
-    company: state.company,
+    // Название и ИНН — компании покупателя (как в разделе «Компания»), банк и счёт — из реквизитов баланса
+    company: { ...state.company, ...companyOf(membership(event)?.state.company) },
     requisites: PLATFORM_REQUISITES,
     invoices: state.invoices.map(publicInvoice),
     operations,
@@ -70,3 +79,7 @@ export default defineEventHandler((event) => {
   }
   return ok(overview)
 })
+
+function companyOf(company: { name: string, inn: string } | undefined) {
+  return company?.inn ? { name: company.name, inn: company.inn } : {}
+}

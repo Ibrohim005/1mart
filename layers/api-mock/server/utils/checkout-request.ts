@@ -22,7 +22,7 @@ export interface CheckoutRequest {
   comment: string | null
 }
 
-const PROVIDERS: DeliveryProvider[] = ['express24', 'maxsus', 'yandex']
+const PROVIDERS: DeliveryProvider[] = ['spotshop', 'express24', 'maxsus', 'yandex']
 
 export function parseCheckoutRequest(body: Record<string, unknown> | null | undefined): CheckoutRequest {
   const value = body ?? {}

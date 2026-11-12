@@ -54,7 +54,6 @@ const funnelMax = computed(() => Math.max(1, ...(data.value?.funnel ?? []).map(f
 const recentColumns = [
   { key: 'number', label: t('m.orders.colNumber') },
   { key: 'createdAt', label: t('m.orders.colDate') },
-  { key: 'customerName', label: t('m.orders.colCustomer') },
   { key: 'total', label: t('m.orders.colTotal'), align: 'right' as const },
   { key: 'statusCode', label: t('m.orders.filterStatus') },
 ]

@@ -14,4 +14,6 @@ export interface ApiError {
   code: string
   message: string
   field?: string
+  /** Числа для текста ошибки: остаток лимита и подобное (в тийинах) */
+  details?: Record<string, number | string>
 }
